@@ -1,0 +1,15 @@
+##TITLE= Parameter file, TopSpin 3.5 pl 6
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 1	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= nmrsu
+$$ 2017-11-29 12:19:41.379 +0100  nmrsu@CZC7097TW4
+$$ /opt/topspin3.5pl6/data/e3b/joachim/87Rb-CRN/1/pdata/999/used_from
+$$ process /opt/topspin3.5pl6/prog/au/bin/poptau
+##$CUREXP= <poptau>
+##$DATPATH= </opt/topspin3.5pl6/data/e3b/joachim>
+##$EXPNO= 1
+##$NAME= <87Rb-CRN>
+##$PROCNO= 1
+##END=

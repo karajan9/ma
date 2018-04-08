@@ -1,0 +1,26 @@
+Dataset :
+/opt/topspin3.5pl6/data/e3b/joachim/87Rb-CRN/12/pdata/1
+
+Spinning speed : 1.000000
+
+Peak 1 (xy -132.827 ppm)
+
+    number integral(S0) integral(S*) intensity(S0) intensity(S*)
+
+         1     -1.7e+09    -2.25e+10             0             0
+         2     6.15e+10     2.47e+10      1.76e+08      8.67e+07
+         3     1.26e+11     9.56e+10             0      2.69e+08
+         4     1.53e+11     1.44e+11             0             0
+         5     1.55e+11     1.55e+11             0             0
+         6     1.36e+10    -1.19e+10             0             0
+
+    time(mS) DS/S0(integral) DS/S0(intensity)
+
+           2               0                0
+           4          0.5985           0.5078
+           6          0.2443           0.5078
+           8         0.05875           0.5078
+          10        0.001122           0.5078
+          12           1.873           0.5078
+
+

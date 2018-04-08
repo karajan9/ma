@@ -1,0 +1,49 @@
+# Tue Dec  5 09:32:34 2017
+#$$PROBEIDENTIFIER=K2433_K459
+#$$PROBENAME=SOL
+#$$SHIMID=323232
+#
+# Active Shim Gradients
+#
+Z           		1678            
+Z2          		0               
+Z3          		0               
+Z4          		0               
+Z5          		0               
+X           		5385            
+XZ          		0               
+XZ2         		0               
+Y           		-7288           
+YZ          		0               
+YZ2         		0               
+XY          		0               
+(X2-Y2)     		0               
+#
+# Lock Parameter
+#
+FIELD		2585.000
+#
+IEEE64_VERSION_CODE 1
+#
+# Shim currents 
+#
+SHIM_SETTING [1 ]  813.83000000    
+SHIM_SETTING [2 ]  0.00000000      
+SHIM_SETTING [3 ]  0.00000000      
+SHIM_SETTING [4 ]  0.00000000      
+SHIM_SETTING [5 ]  0.00000000      
+SHIM_SETTING [6 ]  2832.51000000   
+SHIM_SETTING [7 ]  0.00000000      
+SHIM_SETTING [8 ]  0.00000000      
+SHIM_SETTING [9 ]  0.00000000      
+SHIM_SETTING [10]  0.00000000      
+SHIM_SETTING [11]  -3833.48800000  
+SHIM_SETTING [12]  0.00000000      
+SHIM_SETTING [13]  0.00000000      
+SHIM_SETTING [14]  0.00000000      
+SHIM_SETTING [15]  0.00000000      
+SHIM_SETTING [16]  0.00000000      
+SHIM_SETTING [17]  0.00000000      
+SHIM_SETTING [18]  0.00000000      
+SHIM_SETTING [19]  0.00000000      
+SHIM_SETTING [20]  0.00000000      

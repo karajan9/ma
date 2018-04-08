@@ -1,0 +1,19 @@
+Date                    : Sat Feb 18 23:56:58 2017
+Spectrometer            : OBI
+Sample                  : CRN
+Attenuation Receiver    : 0 
+Attenuation Transmitter : 14 
+Attenuation Transmitter2 : 0 
+lamor Frequency         : 97.172200 
+Pi-Length               : 7e-06 
+Experiment              : Hahn Echo in- and out-phase 
+Sampling Rate           : 1000000.000000 
+Accumulations           : 200 
+Echo Time               : 0.000014 
+Echo Width              : 0.000005 
+Indep. Variable         : tau 
+Repetition time         : 0.1 
+Evolution time tau      : 1.5e-05 
+Setting Temperature     : 350.0 
+Cryostat Temperature    : 0 
+Sample Temperature      : 348.85 

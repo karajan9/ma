@@ -1,0 +1,27 @@
+##TITLE= Audit trail, TopSpin 3.5 pl 6
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= nmrsu
+$$ /opt/topspin3.5pl6/data/e3b/joachim/87Rb-CRN/2/pdata/997/auditp.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2017-11-29 15:37:41.712 +0100>,<nmrsu>,<CZC7097TW4>,<go4>,<TopSpin 3.5.6>,
+      <created by zg
+	started at 2017-11-29 13:41:46.476 +0100,
+	POWCHK disabled, PULCHK disabled,
+       configuration hash MD5:
+       C7 21 83 B3 55 B6 13 BE 17 D3 10 D6 B3 AD AF B7
+       data hash MD5: 8K
+       FC F6 9A 09 74 C5 7D D0 48 F1 FE FB 97 9F 4A B2>)
+(   2,<2017-11-29 16:32:11.339 +0100>,<nmrsu>,<CZC7097TW4>,<proc1d>,<TopSpin 3.5.6>,
+      <Start of raw data processing
+       ls NSP = 4 SI = 21992 
+       data hash MD5: 21992
+       A3 39 F5 C3 3D 12 10 BC CB 6C B6 67 B9 1D 89 85>)
+(   3,<2017-11-29 16:32:15.193 +0100>,<nmrsu>,<CZC7097TW4>,<proc1d>,<TopSpin 3.5.6>,
+      <efp LB = 0.3 FT_mod = 6 PKNL = 1 SI = 21992 PHC0 = -72.8103 PHC1 = -135.2 
+       data hash MD5: 21992
+       3B 34 7C F9 96 86 17 C7 F2 C9 CC 87 4B A1 4A A6>)
+##END=
+
+$$ hash MD5
+$$ 77 71 27 A6 E8 4E CC C8 0A E3 90 6A 70 24 39 78

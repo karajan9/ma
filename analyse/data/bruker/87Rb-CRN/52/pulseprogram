@@ -1,0 +1,230 @@
+# 1 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/exsy5ps12.jb"
+;exsy12
+;avance-version (24.07.2017)
+;
+;
+;
+;$CLASS=Solid
+;$DIM=2D
+;$TYPE=exsy
+;$SUBTYPE=
+;$COMMENT=
+
+
+# 1 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/Avance.incl" 1
+;Avance3.incl
+;   for AV III
+;
+;avance-version (13/06/17)
+;
+;$CLASS=HighRes Incl
+;$COMMENT=
+# 169 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/Avance.incl"
+;$Id: Avance3.incl,v 1.10.2.2 2013/08/30 09:43:33 ber Exp $
+# 13 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/exsy5ps12.jb" 2
+
+
+# 16 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/exsy5ps12.jb"
+"p2=p1*2"
+"d13=d12-de-d8"
+
+
+# 1 "mc_line 20 file /opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/exsy5ps12.jb exp. def. part of mc cmd. before ze"
+; dimension 2D; AQ_mode  (F1) States
+define delay MCWRK
+define delay MCREST
+define delay d0orig
+"d0orig=d0"
+define loopcounter t1loop
+"t1loop=0"
+define loopcounter ph1loop
+"ph1loop=0"
+define loopcounter ST1CNT
+"ST1CNT = td1 / 2"
+"MCREST = 10m - 10m"
+"MCWRK = 0.142857*10m"
+
+    dccorr
+# 20 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/exsy5ps12.jb"
+1 ze
+# 1 "mc_line 20 file /opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/exsy5ps12.jb exp. def. of mc cmd. after ze"
+LBLAV, MCWRK
+      "d0=d0orig + t1loop * in0 "
+      "phval1 = (ph1loop % 2) * 90"
+      MCWRK ip1 + phval1
+      "phval2 = (ph1loop % 2) * 90"
+      MCWRK ip2 + phval2
+# 21 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/exsy5ps12.jb"
+# 1 "mc_line 21 file /opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/exsy5ps12.jb exp. start label for mc cmd."
+2 MCWRK  * 3 do:f2
+LBLF1, MCWRK  * 3
+LBLST1, MCWRK 
+  MCREST
+# 22 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/exsy5ps12.jb"
+# 27 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/exsy5ps12.jb"
+  d1
+  (p1 pl1 ph1):f1 (1u cpds1):f2
+  d11
+  (p2 pl1 ph2):f1
+  d11
+  d0
+  (p1 pl1 ph3):f1
+  d4 do:f2
+  (p1 pl1 ph4):f1 (1u cpds1):f2
+  d12
+  (p2 pl1 ph5):f1
+  d13
+  go=2 ph31
+  1u do:f2
+# 1 "mc_line 41 file /opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/exsy5ps12.jb exp. mc cmd. in line"
+  MCWRK  wr #0 if #0 zd 
+
+  "ph1loop+=1"
+      "d0=d0orig + t1loop * in0 "
+      "phval1 = (ph1loop % 2) * 90"
+      MCWRK ip1 + phval1
+      "phval2 = (ph1loop % 2) * 90"
+      MCWRK ip2 + phval2
+  lo to LBLF1 times 2
+  MCWRK 
+
+  "t1loop+=1"
+      "d0=d0orig + t1loop * in0 "
+      "phval1 = (ph1loop % 2) * 90"
+      MCWRK ip1 + phval1
+      "phval2 = (ph1loop % 2) * 90"
+      MCWRK ip2 + phval2
+  lo to LBLST1 times ST1CNT
+  MCWRK 
+  "t1loop=0"
+  "ph1loop=0"
+  MCWRK rf #0
+  lo to LBLAV times tdav
+# 42 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/exsy5ps12.jb"
+exit
+
+
+ph1=0 2 0 2 0 2 0 2 2 0 2 0 2 0 2 0 
+    2 0 2 0 2 0 2 0 0 2 0 2 0 2 0 2 
+    1 3 1 3 1 3 1 3 3 1 3 1 3 1 3 1 
+    3 1 3 1 3 1 3 1 1 3 1 3 1 3 1 3 
+    0 2 0 2 0 2 0 2 2 0 2 0 2 0 2 0 
+    2 0 2 0 2 0 2 0 0 2 0 2 0 2 0 2 
+    1 3 1 3 1 3 1 3 3 1 3 1 3 1 3 1 
+    3 1 3 1 3 1 3 1 1 3 1 3 1 3 1 3 
+    0 2 0 2 0 2 0 2 2 0 2 0 2 0 2 0 
+    2 0 2 0 2 0 2 0 0 2 0 2 0 2 0 2 
+    1 3 1 3 1 3 1 3 3 1 3 1 3 1 3 1 
+    3 1 3 1 3 1 3 1 1 3 1 3 1 3 1 3 
+    0 2 0 2 0 2 0 2 2 0 2 0 2 0 2 0 
+    2 0 2 0 2 0 2 0 0 2 0 2 0 2 0 2 
+    1 3 1 3 1 3 1 3 3 1 3 1 3 1 3 1 
+    3 1 3 1 3 1 3 1 1 3 1 3 1 3 1 3
+ph2=3 3 1 1 0 0 2 2 1 1 3 3 2 2 0 0 
+    1 1 3 3 2 2 0 0 3 3 1 1 0 0 2 2 
+    0 0 2 2 1 1 3 3 2 2 0 0 3 3 1 1 
+    2 2 0 0 3 3 1 1 0 0 2 2 1 1 3 3 
+    3 3 1 1 0 0 2 2 1 1 3 3 2 2 0 0 
+    1 1 3 3 2 2 0 0 3 3 1 1 0 0 2 2 
+    0 0 2 2 1 1 3 3 2 2 0 0 3 3 1 1 
+    2 2 0 0 3 3 1 1 0 0 2 2 1 1 3 3 
+    3 3 1 1 0 0 2 2 1 1 3 3 2 2 0 0 
+    1 1 3 3 2 2 0 0 3 3 1 1 0 0 2 2 
+    0 0 2 2 1 1 3 3 2 2 0 0 3 3 1 1 
+    2 2 0 0 3 3 1 1 0 0 2 2 1 1 3 3 
+    3 3 1 1 0 0 2 2 1 1 3 3 2 2 0 0 
+    1 1 3 3 2 2 0 0 3 3 1 1 0 0 2 2 
+    0 0 2 2 1 1 3 3 2 2 0 0 3 3 1 1 
+    2 2 0 0 3 3 1 1 0 0 2 2 1 1 3 3
+ph3=0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+    0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+    1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+    1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+    0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+    0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+    1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+    1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+    0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+    0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+    1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+    1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+    0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+    0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+    1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+    1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ph4=2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 
+    2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 
+    2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 
+    2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 
+    2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 
+    2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 
+    2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 
+    2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 
+    2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 
+    2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 
+    2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 
+    2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 
+    2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 
+    2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 
+    2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 
+    2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0
+ph5=3 1 3 1 3 1 3 1 3 1 3 1 3 1 3 1 
+    1 3 1 3 1 3 1 3 1 3 1 3 1 3 1 3 
+    3 1 3 1 3 1 3 1 3 1 3 1 3 1 3 1 
+    1 3 1 3 1 3 1 3 1 3 1 3 1 3 1 3 
+    1 3 1 3 1 3 1 3 1 3 1 3 1 3 1 3 
+    3 1 3 1 3 1 3 1 3 1 3 1 3 1 3 1 
+    1 3 1 3 1 3 1 3 1 3 1 3 1 3 1 3 
+    3 1 3 1 3 1 3 1 3 1 3 1 3 1 3 1 
+    0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 
+    2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 
+    0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 
+    2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 
+    2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 
+    0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 
+    2 0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 
+    0 2 0 2 0 2 0 2 0 2 0 2 0 2 0 2
+ph20=0
+ph31=0 2 0 2 2 0 2 0 0 2 0 2 2 0 2 0 
+     2 0 2 0 0 2 0 2 2 0 2 0 0 2 0 2 
+     0 2 0 2 2 0 2 0 0 2 0 2 2 0 2 0 
+     2 0 2 0 0 2 0 2 2 0 2 0 0 2 0 2 
+     0 2 0 2 2 0 2 0 0 2 0 2 2 0 2 0 
+     2 0 2 0 0 2 0 2 2 0 2 0 0 2 0 2 
+     0 2 0 2 2 0 2 0 0 2 0 2 2 0 2 0 
+     2 0 2 0 0 2 0 2 2 0 2 0 0 2 0 2 
+     2 0 2 0 0 2 0 2 2 0 2 0 0 2 0 2 
+     0 2 0 2 2 0 2 0 0 2 0 2 2 0 2 0 
+     2 0 2 0 0 2 0 2 2 0 2 0 0 2 0 2 
+     0 2 0 2 2 0 2 0 0 2 0 2 2 0 2 0 
+     2 0 2 0 0 2 0 2 2 0 2 0 0 2 0 2 
+     0 2 0 2 2 0 2 0 0 2 0 2 2 0 2 0 
+     2 0 2 0 0 2 0 2 2 0 2 0 0 2 0 2 
+     0 2 0 2 2 0 2 0 0 2 0 2 2 0 2 0
+# 146 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/exsy5ps12.jb"
+;pl1 : f1 channel - power level for pulse (default)
+;p1 : f1 channel -  90 degree high power pulse
+;p2 : f1 channel - 180 degree high power pulse
+;d0 : incremented delay (2D)
+;d1 : relaxation delay; 1-5 * T1
+;d4 : Mixing time
+;d8 : trigger time
+;d11 : short refocussing delay (after first pulse)
+;d12: short refocussing delay (before last pulse)
+;in0: increment for evolution time
+;nd0: 1
+;ns: 256 * n
+;ds: 16
+;td1: number of experiments
+;FnMODE: States-TPPI, TPPI, States or QSEQ
+
+
+;Processing
+# 165 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/exsy5ps12.jb"
+;PHC0(F1): 90
+;PHC1(F1): -180
+;FCOR(F1): 1
+
+
+# 171 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/exsy5ps12.jb"
+;$Id: noesydfphrl,v 1.8 2012/01/31 17:49:27 ber Exp $

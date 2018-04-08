@@ -1,0 +1,46 @@
+##TITLE= Parameter file, TopSpin 3.5 pl 6
+##JCAMPDX= 5.0
+##DATATYPE= Parameter Values
+##NPOINTS= 35	$$ modification sequence number
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= nmrsu
+$$ 2017-12-07 11:04:50.129 +0100  nmrsu@CZC7097TW4
+$$ /opt/topspin3.5pl6/data/e3b/joachim/87Rb-CRN/41/pdata/1/t1par
+$$ process /opt/topspin3.5pl6/prog/mod/dataserver
+##$BIGDEL= 100
+##$CALCDN= yes
+##$COMPNO= 1
+##$CONV= 1e-05
+##$CURSOR= 1
+##$DRIFT= 5
+##$EDGUESS= 0
+##$EDPARM= 0
+##$FCTTYPE= 0
+##$FIDNUMB= 1
+##$FITT1T2= 1
+##$FITTYPE= 1
+##$GAMM= 10000
+##$GRADIEN= 1
+##$GUESSES= (0..23)
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+##$INC= 1
+##$INTRNG= 1
+##$LISTINC= 0.001
+##$LISTTYP= <vdlist>
+##$LITDEL= 10
+##$MAXPNTS= 20
+##$NUMPNTS= 20
+##$NUMTERM= 3
+##$PARM= (0..11)
+0 1.03628880429555 0.000299401176475198 0 0 0 0 0 0 0 0 0
+##$PDTYP= <pd>
+##$REGIONS= 1
+##$SHOWINT= yes
+##$SHOWPP= yes
+##$SHOWTXT= 1
+##$START= 1
+##$X_END= 0.001
+##$X_START= 9e-06
+##$Y_END= 3.942297e+11
+##$Y_START= 0
+##END=

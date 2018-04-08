@@ -1,0 +1,14 @@
+##TITLE= Audit trail, TopSpin 3.5 pl 6
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= nmrsu
+$$ /opt/topspin3.5pl6/data/e3b/joachim/87Rb-CRN/53/pdata/999/auditp.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2017-12-08 14:49:20.688 +0100>,<nmrsu>,<CZC7097TW4>,<poptau>,<TopSpin 3.5.6>,
+      <created by poptau
+       data hash MD5: 17568
+       01 7B 7F 07 EA 55 16 AB C0 66 66 2D 3B 7C 65 12>)
+##END=
+
+$$ hash MD5
+$$ 06 D4 F1 BF 3B EC 0C 8C 06 E0 04 F1 93 E1 8E A0

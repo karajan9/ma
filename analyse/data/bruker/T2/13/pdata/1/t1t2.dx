@@ -1,0 +1,44 @@
+##TITLE= List of Points
+##JCAMPDX= 5.0
+##DATA TYPE= LINK
+##BLOCKS= 1	$$ is the number of fits or point lists
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= nmrsu
+$$ 2017-12-01 16:39:13.791 +0100  nmrsu@CZC7097TW4
+$$ /opt/topspin3.5pl6/data/e3b/joachim/87Rb-CRN/13/pdata/1/t1t2.dx
+##XUNITS= sec
+##YUNITS= a.u.
+##MINX=   9.000000e-06
+##MAXX=   1.000000e-03
+##MINY=  -1.013608e-02
+##MAXY=   1.000000e+00
+##TITLE= Peak No. 1 at 1908.633 ppm, t1/t2, I[0] = -1.100e-01, P =  7.855e-01, T =  105.959u
+##JCAMP-DX= 5.0
+##DATA TYPE= Relaxation Data
+$$
+##$FITFKT= t1/t2( -1.100101e-01,   7.855496e-01,   1.059594e-04)
+$$
+##NPOINTS= 20
+##XYPOINTS= (XY..XY)
+ 9.000e-06,  1.000000e+00
+ 1.500e-05,  7.384638e-01
+ 2.400e-05,  4.658732e-01
+ 4.000e-05,  2.029277e-01
+ 6.500e-05,  5.427293e-02
+ 1.070e-04,  8.407688e-03
+ 1.760e-04,  3.529330e-03
+ 2.890e-04,  3.057993e-03
+ 4.750e-04, -6.724649e-03
+ 7.800e-04, -1.526995e-03
+ 1.200e-05,  8.585937e-01
+ 1.900e-05,  6.039254e-01
+ 3.100e-05,  3.300962e-01
+ 5.100e-05,  1.214634e-01
+ 8.400e-05,  2.342051e-02
+ 1.380e-04,  9.360852e-04
+ 2.260e-04,  4.409084e-03
+ 3.710e-04,  3.384542e-03
+ 6.090e-04, -1.013608e-02
+ 1.000e-03,  3.451681e-03
+##END= $$ End of List for Peak No. 1
+##END= $$ End of List of Points

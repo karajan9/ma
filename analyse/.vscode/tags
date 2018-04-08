@@ -1,0 +1,852 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+D	../data/lineshape/lineshape_sim.py	/^D = 3.5$/;"	kind:variable	line:52
+F2_raw.py	../scripts/F2_raw.py	1;"	kind:file	line:1
+T1	../data/bruker/T1 Joachim/auswertung.py	/^T1 = []$/;"	kind:variable	line:137
+T1	../data/bruker/T1 Joachim/auswertung.py	/^T1 = np.array(T1)$/;"	kind:variable	line:149
+T1	../data/bruker/T1/auswertung.py	/^T1 = []$/;"	kind:variable	line:235
+T1	../data/bruker/T1/auswertung.py	/^T1 = np.array(T1)$/;"	kind:variable	line:253
+T1	../data/bruker/scripts/auswertung.py	/^T1 = 2.6$/;"	kind:variable	line:40
+T1	../data/bruker/scripts/auswertung.py	/^T1 = T1fit[0]$/;"	kind:variable	line:264
+T1_meta.py	../scripts/T1_meta.py	1;"	kind:file	line:1
+T1_raw.py	../scripts/T1_raw.py	1;"	kind:file	line:1
+T1err	../data/bruker/T1 Joachim/auswertung.py	/^T1err = []$/;"	kind:variable	line:138
+T1err	../data/bruker/T1 Joachim/auswertung.py	/^T1err = np.array(T1err)$/;"	kind:variable	line:150
+T1err	../data/bruker/T1/auswertung.py	/^T1err = []$/;"	kind:variable	line:236
+T1err	../data/bruker/T1/auswertung.py	/^T1err = np.array(T1err)$/;"	kind:variable	line:254
+T2_meta.py	../scripts/T2_meta.py	1;"	kind:file	line:1
+T2_raw.py	../scripts/T2_raw.py	1;"	kind:file	line:1
+TC	../data/bruker/scripts/auswertung.py	/^TC = 9.27e-3$/;"	kind:variable	line:42
+TCcos	../data/bruker/scripts/auswertung.py	/^TCcos = []$/;"	kind:variable	line:267
+TCcos	../data/bruker/scripts/auswertung.py	/^TCcos = np.array(TCcos)$/;"	kind:variable	line:311
+TCsin	../data/bruker/scripts/auswertung.py	/^TCsin = []$/;"	kind:variable	line:268
+TCsin	../data/bruker/scripts/auswertung.py	/^TCsin = np.array(TCsin)$/;"	kind:variable	line:312
+T_VF	../data/lineshape/lineshape_sim.py	/^T_VF = 294$/;"	kind:variable	line:53
+activation_energy	../scripts/old/crn_t1_beta.py	/^def activation_energy(temp):$/;"	kind:function	line:20
+adv_header_string	../data/bruker/SPEK/csv_to_dofft.py	/^                            adv_header_string = adv_header_string + "%s:%s\\n" % ($/;"	kind:variable	line:28
+adv_header_string	../data/bruker/SPEK/csv_to_dofft.py	/^                        adv_header_string = adv_header_string + "%s:%s\\n" % (l,$/;"	kind:variable	line:32
+adv_header_string	../data/bruker/SPEK/csv_to_dofft.py	/^                        adv_header_string = adv_header_string + "%s:\\n" % (l)$/;"	kind:variable	line:25
+adv_header_string	../data/bruker/SPEK/csv_to_dofft.py	/^                adv_header_string = adv_header_string + "%s:%s\\n" % (j, k)$/;"	kind:variable	line:35
+adv_header_string	../data/bruker/SPEK/csv_to_dofft.py	/^                adv_header_string = adv_header_string + "%s:\\n" % (j)$/;"	kind:variable	line:22
+adv_header_string	../data/bruker/SPEK/csv_to_dofft.py	/^        adv_header_string = ""$/;"	kind:variable	line:19
+adv_header_string	../data/bruker/scripts/csv_to_dofft.py	/^                                                adv_header_string=adv_header_string+"%s:%s\\n" %(p,q)$/;"	kind:variable	line:28
+adv_header_string	../data/bruker/scripts/csv_to_dofft.py	/^                                        adv_header_string=adv_header_string+"%s:%s\\n" %(l,m)$/;"	kind:variable	line:31
+adv_header_string	../data/bruker/scripts/csv_to_dofft.py	/^                                        adv_header_string=adv_header_string+"%s:\\n" %(l)$/;"	kind:variable	line:25
+adv_header_string	../data/bruker/scripts/csv_to_dofft.py	/^                        adv_header_string=adv_header_string+"%s:%s\\n" %(j,k)$/;"	kind:variable	line:33
+adv_header_string	../data/bruker/scripts/csv_to_dofft.py	/^                        adv_header_string=adv_header_string+"%s:\\n" %(j)$/;"	kind:variable	line:22
+adv_header_string	../data/bruker/scripts/csv_to_dofft.py	/^        adv_header_string=""$/;"	kind:variable	line:19
+all_dirs	../data/170918/plots/backup/crn_spek_pulslenabh.py	/^all_dirs = "\/home\/jens\/Documents\/projekte\/crn\/170918\/SPEKkombiniert\/temp_abh"$/;"	kind:variable	line:167
+all_dirs	../data/170918/plots/crn_spek_pulslenabh.py	/^all_dirs = home_dir + "\/data\/170918\/SPEKkombiniert\/temp_abh\/305K"$/;"	kind:variable	line:201
+all_dirs	../scripts/old/crn_spek_pulslenabh.py	/^all_dirs = "\/home\/jens\/Documents\/projekte\/crn\/170918\/SPEKkombiniert\/temp_abh"$/;"	kind:variable	line:111
+alpha	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    alpha=1.0,$/;"	kind:variable	line:343
+alpha	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    alpha=1.0,$/;"	kind:variable	line:381
+analyze_data	../data/170918/plots/backup/crn_spek_pulslenabh.py	/^def analyze_data(directory, label):$/;"	kind:function	line:117
+analyze_data	../data/170918/plots/crn_spek_pulslenabh.py	/^def analyze_data(directory, label):$/;"	kind:function	line:129
+analyze_data	../data/bruker/SPEK/crn_spek.py	/^def analyze_data(directory, temp, label=""):$/;"	kind:function	line:24
+analyze_data	../scripts/F2_raw.py	/^def analyze_data(directory, t1_data, index, verbose=True):$/;"	kind:function	line:12
+analyze_data	../scripts/T1_raw.py	/^def analyze_data(directory, verbose=True):$/;"	kind:function	line:12
+analyze_data	../scripts/T2_raw.py	/^def analyze_data(directory, verbose=True):$/;"	kind:function	line:12
+analyze_data	../scripts/old/crn_spek.py	/^def analyze_data(directory, label=""):$/;"	kind:function	line:19
+analyze_data	../scripts/old/crn_spek_vergleich.py	/^def analyze_data(directory, label=""):$/;"	kind:function	line:20
+analyze_data	../scripts/old/crn_t1.py	/^def analyze_data(directory, label):$/;"	kind:function	line:17
+analyze_data	../scripts/old/crn_t2.py	/^def analyze_data(directory, label):$/;"	kind:function	line:18
+antialiased	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    antialiased=False,$/;"	kind:variable	line:344
+antialiased	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    antialiased=False,$/;"	kind:variable	line:382
+apo_function	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^apo_function = np.exp(-1.0 \/ 2.0 * (mesh_t2 * apodisation * 2 * np.pi)**2 -$/;"	kind:variable	line:160
+apodisation	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^apodisation = 500$/;"	kind:variable	line:27
+auswertung.py	../data/bruker/T1 Joachim/auswertung.py	1;"	kind:file	line:1
+auswertung.py	../data/bruker/T1/auswertung.py	1;"	kind:file	line:1
+auswertung.py	../data/bruker/T2/auswertung.py	1;"	kind:file	line:1
+auswertung.py	../data/bruker/scripts/auswertung.py	1;"	kind:file	line:1
+ax1	../data/bruker/T1 Joachim/auswertung.py	/^ax1 = fig.add_subplot(1,1,1)$/;"	kind:variable	line:157
+ax1	../data/bruker/T1/auswertung.py	/^ax1 = fig.add_subplot(1, 1, 1)$/;"	kind:variable	line:261
+ax1	../data/bruker/scripts/auswertung.py	/^ax1 = fig.add_subplot(3, 1, 1)$/;"	kind:variable	line:330
+ax2	../data/bruker/scripts/auswertung.py	/^ax2 = fig.add_subplot(3, 1, 3)$/;"	kind:variable	line:337
+ax3	../data/bruker/scripts/auswertung.py	/^ax3 = fig.add_subplot(3, 1, 2)$/;"	kind:variable	line:342
+axis1	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^axis1 = fig.add_subplot(2, 2, 1, projection="3d")$/;"	kind:variable	line:326
+axis1	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^axis1 = fig.add_subplot(2, 2, 3, projection="3d")$/;"	kind:variable	line:364
+axis2	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^axis2 = fig.add_subplot(2, 2, 2, aspect='equal')$/;"	kind:variable	line:348
+axis2	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^axis2 = fig.add_subplot(2, 2, 4, aspect='equal')$/;"	kind:variable	line:386
+axispapermess	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^axispapermess = figpaper.add_subplot(1, 1, 1, aspect='equal')$/;"	kind:variable	line:415
+beta1	../data/bruker/T1 Joachim/auswertung.py	/^beta1 = []$/;"	kind:variable	line:139
+beta1	../data/bruker/T1 Joachim/auswertung.py	/^beta1 = np.array(beta1)$/;"	kind:variable	line:151
+beta1	../data/bruker/T1/auswertung.py	/^beta1 = []$/;"	kind:variable	line:237
+beta1	../data/bruker/T1/auswertung.py	/^beta1 = np.array(beta1)$/;"	kind:variable	line:255
+beta1	../data/bruker/scripts/auswertung.py	/^beta1 = 1.0$/;"	kind:variable	line:41
+beta1	../data/bruker/scripts/auswertung.py	/^beta1 = T1fit[3]$/;"	kind:variable	line:265
+beta1err	../data/bruker/T1 Joachim/auswertung.py	/^beta1err = []$/;"	kind:variable	line:140
+beta1err	../data/bruker/T1 Joachim/auswertung.py	/^beta1err = np.array(beta1err)$/;"	kind:variable	line:152
+beta1err	../data/bruker/T1/auswertung.py	/^beta1err = []$/;"	kind:variable	line:238
+beta1err	../data/bruker/T1/auswertung.py	/^beta1err = np.array(beta1err)$/;"	kind:variable	line:256
+betaC	../data/bruker/scripts/auswertung.py	/^betaC = 1.0$/;"	kind:variable	line:43
+beta_b	../scripts/old/crn_t1_beta.py	/^beta_b = data_b[:,1]$/;"	kind:variable	line:48
+beta_t1	../scripts/old/crn_f2_div.py	/^    beta_t1 = t1data[(2*i)+1, 4]$/;"	kind:variable	line:226
+calc_fullwidth_xmax	../data/170918/plots/backup/nmr_lib.py	/^def calc_fullwidth_xmax(x=0.5, spek_fn=None):$/;"	kind:function	line:151
+calc_fullwidth_xmax	../data/170918/plots/nmr_lib.py	/^def calc_fullwidth_xmax(x=0.5, spek_fn=None):$/;"	kind:function	line:151
+calc_fullwidth_xmax	../data/lineshape/lineshape_sim.py	/^def calc_fullwidth_xmax(x, y, height=0.5):$/;"	kind:function	line:16
+calc_fullwidth_xmax	../scripts/nmr_lib.py	/^def calc_fullwidth_xmax(x=0.5, spek_fn=None):$/;"	kind:function	line:168
+calc_fullwidth_xmax	../scripts/old/nmr_lib2.py	/^def calc_fullwidth_xmax(x=0.5, spek_fn=None):$/;"	kind:function	line:158
+calc_spek_diff	../data/170918/plots/backup/nmr_lib.py	/^def calc_spek_diff(comparison_real, x=0.5, spek_fn=None):$/;"	kind:function	line:165
+calc_spek_diff	../data/170918/plots/nmr_lib.py	/^def calc_spek_diff(comparison_real, x=0.5, spek_fn=None):$/;"	kind:function	line:165
+calc_spek_diff	../scripts/nmr_lib.py	/^def calc_spek_diff(comparison_real, x=0.5, spek_fn=None):$/;"	kind:function	line:182
+calc_spek_diff	../scripts/old/nmr_lib2.py	/^def calc_spek_diff(comparison_real, x=0.5, spek_fn=None):$/;"	kind:function	line:172
+cb	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^cb = figpaper.colorbar(sm, orientation='horizontal', cax=cbar_ax_paper)$/;"	kind:variable	line:442
+cbar_ax	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^cbar_ax = fig.add_axes([0.1, 0.08, 0.8, 0.01])$/;"	kind:variable	line:402
+cbar_ax_paper	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^cbar_ax_paper = figpaper.add_axes([0.18, 0.06, 0.77, 0.01])$/;"	kind:variable	line:436
+cc_max	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^cc_max = np.max(fft_cos)$/;"	kind:variable	line:298
+cc_max	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^cc_max = np.max(fft_cos)$/;"	kind:variable	line:312
+cc_min	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^cc_min = np.min(fft_cos)$/;"	kind:variable	line:299
+cc_min	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^cc_min = np.min(fft_cos)$/;"	kind:variable	line:313
+cc_span	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^cc_span = cc_max - cc_min$/;"	kind:variable	line:300
+cc_span	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^cc_span = cc_max - cc_min$/;"	kind:variable	line:314
+ccount	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    ccount=len(fft_cos),$/;"	kind:variable	line:341
+ccount	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    ccount=len(fft_sin),$/;"	kind:variable	line:379
+cmap	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    cmap=cm.jet,$/;"	kind:variable	line:342
+cmap	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    cmap=cm.jet,$/;"	kind:variable	line:354
+cmap	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    cmap=cm.jet,$/;"	kind:variable	line:380
+cmap	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    cmap=cm.jet,$/;"	kind:variable	line:392
+cmap	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    cmap=cm.jet,$/;"	kind:variable	line:429
+cmplx	../scripts/old/crn_f2_div.py	/^    cmplx = to_cmplx(real, imag)$/;"	kind:variable	line:231
+cmplx	../scripts/old/crn_maxfinder.py	/^cmplx = np.empty(real.shape, dtype=complex)$/;"	kind:variable	line:26
+cmplx_sel	../scripts/old/crn_maxfinder.py	/^cmplx_sel = cmplx[start_index:end_index]$/;"	kind:variable	line:29
+crn_f2_div.py	../scripts/old/crn_f2_div.py	1;"	kind:file	line:1
+crn_f2_show.py	../scripts/old/crn_f2_show.py	1;"	kind:file	line:1
+crn_f2_ts.py	../scripts/old/crn_f2_ts.py	1;"	kind:file	line:1
+crn_maxfinder.py	../scripts/old/crn_maxfinder.py	1;"	kind:file	line:1
+crn_meta_t1.py	../data/crn/data/T1/crn_meta_t1.py	1;"	kind:file	line:1
+crn_meta_t1.py	../scripts/old/crn_meta_t1.py	1;"	kind:file	line:1
+crn_meta_t2.py	../data/crn/data/T2/crn_meta_t2.py	1;"	kind:file	line:1
+crn_meta_t2.py	../scripts/old/crn_meta_t2.py	1;"	kind:file	line:1
+crn_spek.py	../data/bruker/SPEK/crn_spek.py	1;"	kind:file	line:1
+crn_spek.py	../scripts/old/crn_spek.py	1;"	kind:file	line:1
+crn_spek_plot.py	../data/crn/data/SPEK/crn_spek_plot.py	1;"	kind:file	line:1
+crn_spek_plot.py	../scripts/old/crn_spek_plot.py	1;"	kind:file	line:1
+crn_spek_pulslenabh.py	../data/170918/plots/backup/crn_spek_pulslenabh.py	1;"	kind:file	line:1
+crn_spek_pulslenabh.py	../data/170918/plots/crn_spek_pulslenabh.py	1;"	kind:file	line:1
+crn_spek_pulslenabh.py	../scripts/old/crn_spek_pulslenabh.py	1;"	kind:file	line:1
+crn_spek_t1.py	../scripts/old/crn_spek_t1.py	1;"	kind:file	line:1
+crn_spek_vergleich.py	../scripts/old/crn_spek_vergleich.py	1;"	kind:file	line:1
+crn_t1.py	../scripts/old/crn_t1.py	1;"	kind:file	line:1
+crn_t1_beta.py	../scripts/old/crn_t1_beta.py	1;"	kind:file	line:1
+crn_t1_ts.py	../scripts/old/crn_t1_ts.py	1;"	kind:file	line:1
+crn_t2.py	../scripts/old/crn_t2.py	1;"	kind:file	line:1
+crn_t2_ts.py	../scripts/old/crn_t2_ts.py	1;"	kind:file	line:1
+cropped	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^cropped = np.zeros(dshape)$/;"	kind:variable	line:54
+csv_to_dofft.py	../data/bruker/SPEK/csv_to_dofft.py	1;"	kind:file	line:1
+csv_to_dofft.py	../data/bruker/scripts/csv_to_dofft.py	1;"	kind:file	line:1
+data	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^data = np.frombuffer(f.read(), dtype="<i4")$/;"	kind:variable	line:48
+data	../scripts/T1_meta.py	/^    data = np.loadtxt(file)$/;"	kind:variable	line:17
+data	../scripts/T1_meta.py	/^    data = np.loadtxt(file)$/;"	kind:variable	line:24
+data	../scripts/T2_meta.py	/^    data = np.loadtxt(file)$/;"	kind:variable	line:17
+data	../scripts/T2_meta.py	/^    data = np.loadtxt(file)$/;"	kind:variable	line:24
+data	../scripts/old/crn_maxfinder.py	/^data = np.loadtxt(fn)$/;"	kind:variable	line:14
+data	../scripts/old/crn_spek_plot.py	/^data = np.loadtxt("\/home\/jens\/Documents\/projekte\/crn\/170817\/SPEK\/spek_fwhm.data")$/;"	kind:variable	line:69
+data	../scripts/old/crn_spek_t1.py	/^data = np.loadtxt(file_name)$/;"	kind:variable	line:30
+data	../scripts/old/crn_spek_t1.py	/^data = np.loadtxt(file_name)$/;"	kind:variable	line:52
+data	../scripts/old/crn_t1_beta.py	/^data = np.loadtxt(fn_extern)$/;"	kind:variable	line:37
+data_b	../scripts/old/crn_t1_beta.py	/^data_b = np.loadtxt(fn)$/;"	kind:variable	line:46
+data_dir	../scripts/F2_raw.py	/^data_dir = home_dir + "\/data\/" + data_id + "\/F2"$/;"	kind:variable	line:97
+data_dir	../scripts/T1_meta.py	/^data_dir = home_dir + "\/data"$/;"	kind:variable	line:12
+data_dir	../scripts/T1_raw.py	/^data_dir = home_dir + "\/data\/" + data_id + "\/T1"$/;"	kind:variable	line:80
+data_dir	../scripts/T2_meta.py	/^data_dir = home_dir + "\/data"$/;"	kind:variable	line:12
+data_dir	../scripts/T2_raw.py	/^data_dir = home_dir + "\/data\/" + data_id + "\/T2"$/;"	kind:variable	line:76
+data_fft	../data/lineshape/lineshape_sim.py	/^    data_fft = np.loadtxt(fn)$/;"	kind:variable	line:31
+data_fft	../data/lineshape/lineshape_sim.py	/^    data_fft = np.loadtxt(fn)$/;"	kind:variable	line:41
+data_id	../scripts/F2_raw.py	/^data_id = "170828"$/;"	kind:variable	line:96
+data_id	../scripts/T1_raw.py	/^data_id = "170807"$/;"	kind:variable	line:79
+data_id	../scripts/T2_raw.py	/^data_id = "170807"$/;"	kind:variable	line:75
+data_t1	../scripts/old/crn_spek_t1.py	/^data_t1 = np.loadtxt(fn_t1)$/;"	kind:variable	line:24
+data_t1	../scripts/old/crn_spek_t1.py	/^data_t1 = np.loadtxt(fn_t1)$/;"	kind:variable	line:46
+delimiter	../data/bruker/scripts/auswertung.py	/^    delimiter="\\t",$/;"	kind:variable	line:317
+delimiter	../data/bruker/scripts/auswertung.py	/^    delimiter="\\t",$/;"	kind:variable	line:322
+diff	../data/170918/plots/backup/crn_spek_pulslenabh.py	/^def diff(directory):$/;"	kind:function	line:60
+diff	../data/170918/plots/crn_spek_pulslenabh.py	/^def diff(directory):$/;"	kind:function	line:70
+diff	../scripts/old/crn_spek_pulslenabh.py	/^def diff(directory):$/;"	kind:function	line:58
+diff2	../data/170918/plots/backup/crn_spek_pulslenabh.py	/^def diff2(directory):$/;"	kind:function	line:85
+diff2	../data/170918/plots/crn_spek_pulslenabh.py	/^def diff2(directory):$/;"	kind:function	line:96
+diff2	../scripts/old/crn_spek_pulslenabh.py	/^def diff2(directory):$/;"	kind:function	line:82
+dir_305	../data/170918/plots/crn_spek_pulslenabh.py	/^dir_305 = home_dir + "\/data\/170918\/SPEKkombiniert\/temp_abh\/305K"$/;"	kind:variable	line:183
+directory	../data/bruker/SPEK/crn_spek.py	/^directory = "\/home\/jens\/Documents\/projekte\/crn\/bruker\/SPEK"$/;"	kind:variable	line:83
+directory	../data/lineshape/lineshape_sim.py	/^directory = "\/home\/jens\/Documents\/simulation\/Ergebnisse\/lineshape\/run1"$/;"	kind:variable	line:9
+directory	../scripts/old/crn_f2_ts.py	/^directory = "\/home\/jens\/Documents\/projekte\/crn\/170706\/F2COS\/1289_CRN_F2_280K"$/;"	kind:variable	line:120
+directory	../scripts/old/crn_maxfinder.py	/^directory = "\/home\/jens\/Documents\/projekte\/crn\/170706\/T1"$/;"	kind:variable	line:8
+directory	../scripts/old/crn_spek.py	/^directory = "\/home\/jens\/Documents\/projekte\/crn\/170912\/SPEK\/tau0015"$/;"	kind:variable	line:66
+directory	../scripts/old/crn_spek_plot.py	/^directory = "\/home\/jens\/Documents\/projekte\/crn\/170817\/SPEK"$/;"	kind:variable	line:63
+directory	../scripts/old/crn_spek_vergleich.py	/^directory = "\/home\/jens\/Documents\/projekte\/crn\/170906\/SPEK\/330K"$/;"	kind:variable	line:68
+directory	../scripts/old/crn_t1_ts.py	/^directory = "\/home\/jens\/Documents\/projekte\/crn\/170731\/T1\/1399_CRN_T1_360K"$/;"	kind:variable	line:130
+directory	../scripts/old/crn_t2_ts.py	/^directory = "\/home\/jens\/Documents\/projekte\/crn\/170706\/T2\/1256_CRN_T2_230K"$/;"	kind:variable	line:102
+dirnamescos	../data/bruker/scripts/auswertung.py	/^dirnamescos = [$/;"	kind:variable	line:5
+dirnamessin	../data/bruker/scripts/auswertung.py	/^dirnamessin = [$/;"	kind:variable	line:19
+dirnamet1	../data/bruker/T1 Joachim/auswertung.py	/^dirnamet1=["12", "14", "17", "20", "23", "25", "28", "30", "33", "35", "38", "40", "43", "46"]$/;"	kind:variable	line:5
+dirnamet1	../data/bruker/T1/auswertung.py	/^dirnamet1 = [$/;"	kind:variable	line:8
+dirnamet1	../data/bruker/T2/auswertung.py	/^dirnamet1 = [$/;"	kind:variable	line:8
+dirnamet2	../data/bruker/T2/auswertung.py	/^dirnamet2 = [$/;"	kind:variable	line:19
+dirs	../data/bruker/SPEK/crn_spek.py	/^dirs = np.array([$/;"	kind:variable	line:66
+dirs	../scripts/old/crn_spek_plot.py	/^dirs = [$/;"	kind:variable	line:22
+do_beta	../data/crn/data/T1/crn_meta_t1.py	/^def do_beta():$/;"	kind:function	line:55
+do_beta	../data/crn/data/T2/crn_meta_t2.py	/^def do_beta():$/;"	kind:function	line:43
+do_beta	../scripts/old/crn_meta_t1.py	/^def do_beta():$/;"	kind:function	line:53
+do_beta	../scripts/old/crn_meta_t2.py	/^def do_beta():$/;"	kind:function	line:41
+do_t1	../data/bruker/T2/auswertung.py	/^def do_t1():$/;"	kind:function	line:316
+do_t1	../data/crn/data/T1/crn_meta_t1.py	/^def do_t1():$/;"	kind:function	line:21
+do_t1	../scripts/old/crn_meta_t1.py	/^def do_t1():$/;"	kind:function	line:21
+do_t2	../data/bruker/T2/auswertung.py	/^def do_t2():$/;"	kind:function	line:350
+do_t2	../data/crn/data/T2/crn_meta_t2.py	/^def do_t2():$/;"	kind:function	line:20
+do_t2	../scripts/old/crn_meta_t2.py	/^def do_t2():$/;"	kind:function	line:20
+double_lorentz	../data/170918/plots/backup/nmr_lib.py	/^def double_lorentz(x, a1, gamma1, x01, a2, gamma2, x02, xoff):$/;"	kind:function	line:40
+double_lorentz	../data/170918/plots/nmr_lib.py	/^def double_lorentz(x, a1, gamma1, x01, a2, gamma2, x02, xoff):$/;"	kind:function	line:40
+double_lorentz	../data/crn/data/SPEK/nmr_lib.py	/^def double_lorentz(x, a1, gamma1, x01, a2, gamma2, x02, xoff):$/;"	kind:function	line:36
+double_lorentz	../data/crn/data/T1/nmr_lib.py	/^def double_lorentz(x, a1, gamma1, x01, a2, gamma2, x02, xoff):$/;"	kind:function	line:36
+double_lorentz	../data/crn/data/T2/nmr_lib.py	/^def double_lorentz(x, a1, gamma1, x01, a2, gamma2, x02, xoff):$/;"	kind:function	line:36
+double_lorentz	../scripts/nmr_lib.py	/^def double_lorentz(x, a1, gamma1, x01, a2, gamma2, x02, xoff):$/;"	kind:function	line:46
+double_lorentz	../scripts/old/nmr_lib2.py	/^def double_lorentz(x, a1, gamma1, x01, a2, gamma2, x02, xoff):$/;"	kind:function	line:42
+dpi	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    dpi=1200)$/;"	kind:variable	line:448
+dpi	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    dpi=1200)$/;"	kind:variable	line:455
+dshape	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^dshape = (int(td_2 \/ 2), 2, int(td_1 \/ 2), 2)$/;"	kind:variable	line:45
+dw	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^dw = 0.5e-6$/;"	kind:variable	line:21
+dw	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^dw = dw * 2$/;"	kind:variable	line:38
+dw	../data/bruker/T1 Joachim/auswertung.py	/^dw=1e-6 #Dwelltime, in Topspin als DW bezeichnet, Zeit zwischen zwei Punkten$/;"	kind:variable	line:14
+dw	../data/bruker/T1 Joachim/auswertung.py	/^dw=dw*2 #Bruker verdoppelt immer nocheinmal die dwell time$/;"	kind:variable	line:19
+dw	../data/bruker/T1/auswertung.py	/^dw = 1e-6  # Dwelltime, in Topspin als DW bezeichnet, Zeit zwischen zwei Punkten$/;"	kind:variable	line:21
+dw	../data/bruker/T1/auswertung.py	/^dw = dw * 2  # Bruker verdoppelt immer nocheinmal die dwell time$/;"	kind:variable	line:28
+dw	../data/bruker/T2/auswertung.py	/^dw = 1e-6  # Dwelltime, in Topspin als DW bezeichnet, Zeit zwischen zwei Punkten$/;"	kind:variable	line:31
+dw	../data/bruker/T2/auswertung.py	/^dw = dw * 2  # Bruker verdoppelt immer nocheinmal die dwell time$/;"	kind:variable	line:32
+dw	../data/bruker/scripts/auswertung.py	/^dw = 1e-6  #Dwelltime, in Topspin als DW bezeichnet, Zeit zwischen zwei Punkten$/;"	kind:variable	line:37
+dw	../data/bruker/scripts/auswertung.py	/^dw = dw * 2  #Bruker verdoppelt immer nocheinmal die dwell time$/;"	kind:variable	line:47
+end_index	../scripts/old/crn_maxfinder.py	/^end_index = np.argmin(np.abs(time - end_time))$/;"	kind:variable	line:22
+end_time	../scripts/old/crn_maxfinder.py	/^end_time = 35e-6$/;"	kind:variable	line:21
+extract_bruker_f2	../data/bruker/T1 Joachim/auswertung.py	/^def extract_bruker_f2(folder, trigger_time, phase, tp, T1, beta1, TC, betaC, holdtc=False, functionname=""):$/;"	kind:function	line:104
+extract_bruker_f2	../data/bruker/T1/auswertung.py	/^def extract_bruker_f2(folder,$/;"	kind:function	line:164
+extract_bruker_f2	../data/bruker/T2/auswertung.py	/^def extract_bruker_f2(folder,$/;"	kind:function	line:245
+extract_bruker_f2	../data/bruker/scripts/auswertung.py	/^def extract_bruker_f2(folder,$/;"	kind:function	line:172
+extract_bruker_generic	../data/bruker/T1 Joachim/auswertung.py	/^def extract_bruker_generic(folder, trigger_time, phase):$/;"	kind:function	line:28
+extract_bruker_generic	../data/bruker/T1/auswertung.py	/^def extract_bruker_generic(folder, trigger_time, phase):$/;"	kind:function	line:42
+extract_bruker_generic	../data/bruker/T2/auswertung.py	/^def extract_bruker_generic(folder, trigger_time, phase):$/;"	kind:function	line:52
+extract_bruker_generic	../data/bruker/scripts/auswertung.py	/^def extract_bruker_generic(folder, trigger_time, phase):$/;"	kind:function	line:61
+extract_bruker_t1	../data/bruker/T1 Joachim/auswertung.py	/^def extract_bruker_t1(folder, trigger_time, phase, T1, beta1):$/;"	kind:function	line:72
+extract_bruker_t1	../data/bruker/T1/auswertung.py	/^def extract_bruker_t1(folder, trigger_time, phase, T1, beta1):$/;"	kind:function	line:93
+extract_bruker_t1	../data/bruker/T2/auswertung.py	/^def extract_bruker_t1(folder, trigger_time, phase, T1, beta1):$/;"	kind:function	line:103
+extract_bruker_t1	../data/bruker/scripts/auswertung.py	/^def extract_bruker_t1(folder, trigger_time, phase, T1, beta1):$/;"	kind:function	line:112
+extract_bruker_t2	../data/bruker/T2/auswertung.py	/^def extract_bruker_t2(folder, trigger_time, phase, T2, beta1):$/;"	kind:function	line:174
+f	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^f = open("ser", "rb")$/;"	kind:variable	line:47
+f2	../data/170918/plots/backup/nmr_lib.py	/^def f2(tm, tau, beta, Z, M0, Moff):$/;"	kind:function	line:24
+f2	../data/170918/plots/nmr_lib.py	/^def f2(tm, tau, beta, Z, M0, Moff):$/;"	kind:function	line:24
+f2	../data/crn/data/SPEK/nmr_lib.py	/^def f2(tm, tau, beta, Z, M0, Moff):$/;"	kind:function	line:24
+f2	../data/crn/data/T1/nmr_lib.py	/^def f2(tm, tau, beta, Z, M0, Moff):$/;"	kind:function	line:24
+f2	../data/crn/data/T2/nmr_lib.py	/^def f2(tm, tau, beta, Z, M0, Moff):$/;"	kind:function	line:24
+f2	../scripts/nmr_lib.py	/^def f2(tm, tau, beta, Z, M0, Moff):$/;"	kind:function	line:29
+f2	../scripts/old/crn_f2_div.py	/^def f2(tm, tau, beta, Z, M0, Moff):$/;"	kind:function	line:30
+f2	../scripts/old/crn_f2_show.py	/^def f2(x, p4, p5, p6, p7):$/;"	kind:function	line:24
+f2	../scripts/old/crn_f2_ts.py	/^def f2(x, p4, p5, p6, p7):$/;"	kind:function	line:24
+f2	../scripts/old/nmr_lib2.py	/^def f2(tm, tau, beta, Z, M0, Moff):$/;"	kind:function	line:25
+f2_t1	../scripts/nmr_lib.py	/^def f2_t1(x, M0, t1, beta, Moff):$/;"	kind:function	line:25
+f2t1	../scripts/old/crn_f2_show.py	/^def f2t1(x, p1, p4):$/;"	kind:function	line:14
+f2t1	../scripts/old/crn_f2_ts.py	/^def f2t1(x, p1, p4):$/;"	kind:function	line:14
+fft_2_cos	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^fft_2_cos = np.real(np.fft.fft(signal_cc, n=fftpoints_f1, axis=1))$/;"	kind:variable	line:233
+fft_2_sin	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^fft_2_sin = np.imag(np.fft.fft(signal_ss, n=fftpoints_f1, axis=1))$/;"	kind:variable	line:234
+fft_cos	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^fft_cos = (fft_cos - cc_min) \/ cc_span$/;"	kind:variable	line:308
+fft_cos	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^fft_cos = fft_cos.compress($/;"	kind:variable	line:257
+fft_cos	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^fft_cos = np.fft.fftshift(fft_cos)$/;"	kind:variable	line:241
+fft_cos	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^fft_cos = np.real(np.fft.fft(fft_2_cos, n=fftpoints_f2, axis=0))$/;"	kind:variable	line:236
+fft_cos	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^fft_cos = symmetrise(fft_cos, both=False)$/;"	kind:variable	line:287
+fft_sin	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^fft_sin = (fft_sin - ss_min) \/ ss_span$/;"	kind:variable	line:309
+fft_sin	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^fft_sin = fft_sin.compress($/;"	kind:variable	line:260
+fft_sin	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^fft_sin = np.fft.fftshift(fft_sin)$/;"	kind:variable	line:242
+fft_sin	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^fft_sin = np.real(np.fft.fft(1j * fft_2_sin, n=fftpoints_f2, axis=0))$/;"	kind:variable	line:237
+fft_sin	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^fft_sin = symmetrise(fft_sin, both=False)$/;"	kind:variable	line:288
+fft_sum	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^fft_sum = (fft_sum - spek_min) \/ spek_span$/;"	kind:variable	line:310
+fft_sum	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^fft_sum = fft_cos - sinweight * fft_sin$/;"	kind:variable	line:239
+fft_sum	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^fft_sum = fft_sum.compress($/;"	kind:variable	line:263
+fft_sum	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^fft_sum = np.fft.fftshift(fft_sum)$/;"	kind:variable	line:243
+fft_sum	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^fft_sum = symmetrise(fft_sum, both=False)$/;"	kind:variable	line:289
+fftpoints_f1	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^fftpoints_f1 = 4096$/;"	kind:variable	line:30
+fftpoints_f2	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^fftpoints_f2 = 1024$/;"	kind:variable	line:31
+fig	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^fig = plt.figure(figsize=(14.0 \/ 2.54, 16.0 \/ 2.54), dpi=1200)$/;"	kind:variable	line:324
+fig	../data/bruker/T1 Joachim/auswertung.py	/^fig=plt.figure(figsize=(32\/2.54, 18\/2.54))$/;"	kind:variable	line:155
+fig	../data/bruker/T1/auswertung.py	/^fig = plt.figure(figsize=(32 \/ 2.54, 18 \/ 2.54))$/;"	kind:variable	line:259
+fig	../data/bruker/scripts/auswertung.py	/^fig = plt.figure(figsize=(32 \/ 2.54, 18 \/ 2.54))$/;"	kind:variable	line:328
+figpaper	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^figpaper = plt.figure(figsize=(6.5 \/ 2.54, 7.5 \/ 2.54))$/;"	kind:variable	line:413
+file_name	../scripts/old/crn_spek_plot.py	/^file_name = "\/home\/jens\/Documents\/projekte\/crn\/170807\/SPEK\/spek_fwhm.data"$/;"	kind:variable	line:40
+file_name	../scripts/old/crn_spek_t1.py	/^file_name = "\/home\/jens\/Documents\/projekte\/crn\/170807\/SPEK\/spek_fwhm_test.data"$/;"	kind:variable	line:20
+file_name	../scripts/old/crn_spek_t1.py	/^file_name = "\/home\/jens\/Documents\/projekte\/crn\/170817\/SPEK\/spek_fwhm.data"$/;"	kind:variable	line:42
+file_names	../scripts/old/crn_spek_plot.py	/^file_names = [$/;"	kind:variable	line:41
+find_phase	../scripts/old/crn_f2_show.py	/^def find_phase(start, end, steps, echo_real, echo_imag):$/;"	kind:function	line:76
+find_phase	../scripts/old/crn_f2_ts.py	/^def find_phase(start, end, steps, echo_real, echo_imag):$/;"	kind:function	line:77
+find_phase	../scripts/old/crn_t1_ts.py	/^def find_phase(start, end, steps, echo_real, echo_imag):$/;"	kind:function	line:66
+find_phase	../scripts/old/crn_t2_ts.py	/^def find_phase(start, end, steps, echo_real, echo_imag):$/;"	kind:function	line:66
+fit_data	../scripts/old/crn_f2_show.py	/^def fit_data(tm, cmplx):$/;"	kind:function	line:90
+fit_data	../scripts/old/crn_f2_ts.py	/^def fit_data(tm, cmplx):$/;"	kind:function	line:91
+fit_data	../scripts/old/crn_t1_ts.py	/^def fit_data(reptime, cmplx):$/;"	kind:function	line:80
+fit_data	../scripts/old/crn_t2_ts.py	/^def fit_data(reptime, cmplx):$/;"	kind:function	line:80
+fit_double_lorentz	../data/170918/plots/backup/nmr_lib.py	/^def fit_double_lorentz(freq, data, sigma=None):$/;"	kind:function	line:278
+fit_double_lorentz	../data/170918/plots/nmr_lib.py	/^def fit_double_lorentz(freq, data, sigma=None):$/;"	kind:function	line:278
+fit_double_lorentz	../data/crn/data/SPEK/nmr_lib.py	/^def fit_double_lorentz(freq, data, sigma=None):$/;"	kind:function	line:211
+fit_double_lorentz	../data/crn/data/T1/nmr_lib.py	/^def fit_double_lorentz(freq, data, sigma=None):$/;"	kind:function	line:211
+fit_double_lorentz	../data/crn/data/T2/nmr_lib.py	/^def fit_double_lorentz(freq, data, sigma=None):$/;"	kind:function	line:211
+fit_double_lorentz	../scripts/nmr_lib.py	/^def fit_double_lorentz(freq, data, sigma=None):$/;"	kind:function	line:313
+fit_double_lorentz	../scripts/old/nmr_lib2.py	/^def fit_double_lorentz(freq, data, sigma=None):$/;"	kind:function	line:303
+fit_f2	../data/170918/plots/backup/nmr_lib.py	/^def fit_f2(tm, cmplx, sigma=None):$/;"	kind:function	line:229
+fit_f2	../data/170918/plots/nmr_lib.py	/^def fit_f2(tm, cmplx, sigma=None):$/;"	kind:function	line:229
+fit_f2	../data/crn/data/SPEK/nmr_lib.py	/^def fit_f2(tm, cmplx, sigma=None):$/;"	kind:function	line:181
+fit_f2	../data/crn/data/T1/nmr_lib.py	/^def fit_f2(tm, cmplx, sigma=None):$/;"	kind:function	line:181
+fit_f2	../data/crn/data/T2/nmr_lib.py	/^def fit_f2(tm, cmplx, sigma=None):$/;"	kind:function	line:181
+fit_f2	../scripts/nmr_lib.py	/^def fit_f2(tm, cmplx, sigma=None):$/;"	kind:function	line:249
+fit_f2	../scripts/old/crn_f2_div.py	/^def fit_f2(tm, cmplx, sigma=None):$/;"	kind:function	line:120
+fit_f2	../scripts/old/nmr_lib2.py	/^def fit_f2(tm, cmplx, sigma=None):$/;"	kind:function	line:239
+fit_gauss	../data/170918/plots/backup/nmr_lib.py	/^def fit_gauss(freq, data, sigma=None):$/;"	kind:function	line:258
+fit_gauss	../data/170918/plots/nmr_lib.py	/^def fit_gauss(freq, data, sigma=None):$/;"	kind:function	line:258
+fit_gauss	../data/crn/data/SPEK/nmr_lib.py	/^def fit_gauss(freq, data, sigma=None):$/;"	kind:function	line:191
+fit_gauss	../data/crn/data/T1/nmr_lib.py	/^def fit_gauss(freq, data, sigma=None):$/;"	kind:function	line:191
+fit_gauss	../data/crn/data/T2/nmr_lib.py	/^def fit_gauss(freq, data, sigma=None):$/;"	kind:function	line:191
+fit_gauss	../scripts/nmr_lib.py	/^def fit_gauss(freq, data, sigma=None):$/;"	kind:function	line:291
+fit_gauss	../scripts/old/nmr_lib2.py	/^def fit_gauss(freq, data, sigma=None):$/;"	kind:function	line:281
+fit_kohlrausch	../data/170918/plots/backup/nmr_lib.py	/^def fit_kohlrausch(time, cmplx, sigma=None, p0=[2500, 0.001, 1.1, 0]):$/;"	kind:function	line:239
+fit_kohlrausch	../data/170918/plots/nmr_lib.py	/^def fit_kohlrausch(time, cmplx, sigma=None, p0=[2500, 0.001, 1.1, 0]):$/;"	kind:function	line:239
+fit_kohlrausch	../scripts/nmr_lib.py	/^def fit_kohlrausch(time, cmplx, sigma=None, p0=[2500, 0.001, 1.1, 0]):$/;"	kind:function	line:260
+fit_kohlrausch	../scripts/old/nmr_lib2.py	/^def fit_kohlrausch(time, cmplx, sigma=None, p0=[2500, 0.001, 1.1, 0]):$/;"	kind:function	line:250
+fit_linear	../data/170918/plots/backup/nmr_lib.py	/^def fit_linear(x, y, sigma=None):$/;"	kind:function	line:197
+fit_linear	../data/170918/plots/nmr_lib.py	/^def fit_linear(x, y, sigma=None):$/;"	kind:function	line:197
+fit_linear	../data/crn/data/SPEK/nmr_lib.py	/^def fit_linear(x, y, sigma=None):$/;"	kind:function	line:149
+fit_linear	../data/crn/data/T1/nmr_lib.py	/^def fit_linear(x, y, sigma=None):$/;"	kind:function	line:149
+fit_linear	../data/crn/data/T2/nmr_lib.py	/^def fit_linear(x, y, sigma=None):$/;"	kind:function	line:149
+fit_linear	../scripts/nmr_lib.py	/^def fit_linear(x, y, sigma=None):$/;"	kind:function	line:214
+fit_linear	../scripts/old/nmr_lib2.py	/^def fit_linear(x, y, sigma=None):$/;"	kind:function	line:204
+fit_lorentz	../data/170918/plots/backup/nmr_lib.py	/^def fit_lorentz(freq, data, sigma=None):$/;"	kind:function	line:268
+fit_lorentz	../data/170918/plots/nmr_lib.py	/^def fit_lorentz(freq, data, sigma=None):$/;"	kind:function	line:268
+fit_lorentz	../data/crn/data/SPEK/nmr_lib.py	/^def fit_lorentz(freq, data, sigma=None):$/;"	kind:function	line:201
+fit_lorentz	../data/crn/data/T1/nmr_lib.py	/^def fit_lorentz(freq, data, sigma=None):$/;"	kind:function	line:201
+fit_lorentz	../data/crn/data/T2/nmr_lib.py	/^def fit_lorentz(freq, data, sigma=None):$/;"	kind:function	line:201
+fit_lorentz	../scripts/nmr_lib.py	/^def fit_lorentz(freq, data, sigma=None):$/;"	kind:function	line:302
+fit_lorentz	../scripts/old/nmr_lib2.py	/^def fit_lorentz(freq, data, sigma=None):$/;"	kind:function	line:292
+fit_refit_t1	../scripts/old/crn_f2_div.py	/^def fit_refit_t1(tm, cmplx, sigma=None):$/;"	kind:function	line:128
+fit_spek	../data/170918/plots/backup/nmr_lib.py	/^def fit_spek(time, data, sigma=None, p0=[2500, 0.001, 1.1, 0],$/;"	kind:function	line:248
+fit_spek	../data/170918/plots/nmr_lib.py	/^def fit_spek(time, data, sigma=None, p0=[2500, 0.001, 1.1, 0],$/;"	kind:function	line:248
+fit_spek	../scripts/nmr_lib.py	/^def fit_spek(time,$/;"	kind:function	line:271
+fit_spek	../scripts/old/nmr_lib2.py	/^def fit_spek(time,$/;"	kind:function	line:261
+fit_t1	../data/170918/plots/backup/nmr_lib.py	/^def fit_t1(reptime, cmplx, sigma=None):$/;"	kind:function	line:202
+fit_t1	../data/170918/plots/nmr_lib.py	/^def fit_t1(reptime, cmplx, sigma=None):$/;"	kind:function	line:202
+fit_t1	../data/crn/data/SPEK/nmr_lib.py	/^def fit_t1(reptime, cmplx, sigma=None):$/;"	kind:function	line:154
+fit_t1	../data/crn/data/T1/nmr_lib.py	/^def fit_t1(reptime, cmplx, sigma=None):$/;"	kind:function	line:154
+fit_t1	../data/crn/data/T2/nmr_lib.py	/^def fit_t1(reptime, cmplx, sigma=None):$/;"	kind:function	line:154
+fit_t1	../scripts/nmr_lib.py	/^def fit_t1(reptime, cmplx, sigma=None):$/;"	kind:function	line:219
+fit_t1	../scripts/old/nmr_lib2.py	/^def fit_t1(reptime, cmplx, sigma=None):$/;"	kind:function	line:209
+fit_t2	../data/170918/plots/backup/nmr_lib.py	/^def fit_t2(tau, cmplx, sigma=None):$/;"	kind:function	line:211
+fit_t2	../data/170918/plots/nmr_lib.py	/^def fit_t2(tau, cmplx, sigma=None):$/;"	kind:function	line:211
+fit_t2	../data/crn/data/SPEK/nmr_lib.py	/^def fit_t2(tau, cmplx, sigma=None):$/;"	kind:function	line:163
+fit_t2	../data/crn/data/T1/nmr_lib.py	/^def fit_t2(tau, cmplx, sigma=None):$/;"	kind:function	line:163
+fit_t2	../data/crn/data/T2/nmr_lib.py	/^def fit_t2(tau, cmplx, sigma=None):$/;"	kind:function	line:163
+fit_t2	../scripts/nmr_lib.py	/^def fit_t2(tau, cmplx, sigma=None):$/;"	kind:function	line:229
+fit_t2	../scripts/old/nmr_lib2.py	/^def fit_t2(tau, cmplx, sigma=None):$/;"	kind:function	line:219
+fit_t2_fest	../data/170918/plots/backup/nmr_lib.py	/^def fit_t2_fest(tau, cmplx, sigma=None):$/;"	kind:function	line:220
+fit_t2_fest	../data/170918/plots/nmr_lib.py	/^def fit_t2_fest(tau, cmplx, sigma=None):$/;"	kind:function	line:220
+fit_t2_fest	../data/crn/data/SPEK/nmr_lib.py	/^def fit_t2_fest(tau, cmplx, sigma=None):$/;"	kind:function	line:172
+fit_t2_fest	../data/crn/data/T1/nmr_lib.py	/^def fit_t2_fest(tau, cmplx, sigma=None):$/;"	kind:function	line:172
+fit_t2_fest	../data/crn/data/T2/nmr_lib.py	/^def fit_t2_fest(tau, cmplx, sigma=None):$/;"	kind:function	line:172
+fit_t2_fest	../scripts/nmr_lib.py	/^def fit_t2_fest(tau, cmplx, sigma=None):$/;"	kind:function	line:239
+fit_t2_fest	../scripts/old/nmr_lib2.py	/^def fit_t2_fest(tau, cmplx, sigma=None):$/;"	kind:function	line:229
+fn	../scripts/old/crn_maxfinder.py	/^fn = "1279_CRN_T1_270K\/CRN_T1_270K_1279_20.ts"$/;"	kind:variable	line:12
+fn	../scripts/old/crn_t1_beta.py	/^fn = "\/home\/jens\/Documents\/lit\/CRN\/zürn paper daten\/beta-zuern.data"$/;"	kind:variable	line:44
+fn_extern	../scripts/old/crn_t1_beta.py	/^fn_extern = "\/home\/jens\/Documents\/lit\/CRN\/zürn paper daten\/t1-zuern.data"$/;"	kind:variable	line:35
+fn_fft	../data/lineshape/lineshape_sim.py	/^fn_fft = glob.glob(directory + "\/*.fid.fft")$/;"	kind:variable	line:10
+fn_fft	../data/lineshape/lineshape_sim.py	/^fn_fft = sorted(fn_fft, key=lambda a: float(a.split("!")[1]))$/;"	kind:variable	line:11
+fn_t1	../scripts/old/crn_spek_t1.py	/^fn_t1 = "\/home\/jens\/Documents\/projekte\/crn\/170807\/T1\/t1_test.data"$/;"	kind:variable	line:22
+fn_t1	../scripts/old/crn_spek_t1.py	/^fn_t1 = "\/home\/jens\/Documents\/projekte\/crn\/170817\/T1\/t1.data"$/;"	kind:variable	line:44
+freq1	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^freq1 = np.fft.fftshift(np.fft.fftfreq(fftpoints_f1, dw))$/;"	kind:variable	line:229
+freq2	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^freq2 = np.fft.fftshift(np.fft.fftfreq(fftpoints_f2, in0))$/;"	kind:variable	line:230
+fu	../data/bruker/T1 Joachim/auswertung.py	/^def fu(x, *param):$/;"	kind:function	line:22
+fu	../data/bruker/T1/auswertung.py	/^def fu(x, *param):$/;"	kind:function	line:32
+fu	../data/bruker/T2/auswertung.py	/^def fu(x, *param):$/;"	kind:function	line:42
+fu	../data/bruker/scripts/auswertung.py	/^def fu(x, *param):$/;"	kind:function	line:51
+functionname	../data/bruker/scripts/auswertung.py	/^        functionname="cos")$/;"	kind:variable	line:284
+functionname	../data/bruker/scripts/auswertung.py	/^        functionname="sin")$/;"	kind:variable	line:303
+fwhm	../data/170918/plots/backup/crn_spek_pulslenabh.py	/^def fwhm(directory):$/;"	kind:function	line:30
+fwhm	../data/170918/plots/crn_spek_pulslenabh.py	/^def fwhm(directory):$/;"	kind:function	line:39
+fwhm	../data/lineshape/lineshape_sim.py	/^    fwhm = calc_fullwidth_xmax(data_fft[:, 1], data_fft[:, 2])$/;"	kind:variable	line:42
+fwhm	../scripts/old/crn_spek_pulslenabh.py	/^def fwhm(directory):$/;"	kind:function	line:30
+fwhms	../data/lineshape/lineshape_sim.py	/^fwhms = np.empty(11)$/;"	kind:variable	line:38
+g	../data/bruker/T1 Joachim/auswertung.py	/^def g(x,*param):$/;"	kind:function	line:25
+g	../data/bruker/T1/auswertung.py	/^def g(x, *param):$/;"	kind:function	line:38
+g	../data/bruker/T2/auswertung.py	/^def g(x, *param):$/;"	kind:function	line:48
+g	../data/bruker/scripts/auswertung.py	/^def g(x, *param):$/;"	kind:function	line:57
+gamma	../scripts/old/crn_spek_t1.py	/^gamma = data[:,5]$/;"	kind:variable	line:33
+gamma	../scripts/old/crn_spek_t1.py	/^gamma = data[:,5]$/;"	kind:variable	line:55
+gamma_err	../scripts/old/crn_spek_t1.py	/^gamma_err = data[:,6]$/;"	kind:variable	line:34
+gamma_err	../scripts/old/crn_spek_t1.py	/^gamma_err = data[:,6]$/;"	kind:variable	line:56
+gauss	../data/170918/plots/backup/nmr_lib.py	/^def gauss(x, a, mu, sigma):$/;"	kind:function	line:32
+gauss	../data/170918/plots/nmr_lib.py	/^def gauss(x, a, mu, sigma):$/;"	kind:function	line:32
+gauss	../data/crn/data/SPEK/nmr_lib.py	/^def gauss(x, a, mu, sigma):$/;"	kind:function	line:28
+gauss	../data/crn/data/T1/nmr_lib.py	/^def gauss(x, a, mu, sigma):$/;"	kind:function	line:28
+gauss	../data/crn/data/T2/nmr_lib.py	/^def gauss(x, a, mu, sigma):$/;"	kind:function	line:28
+gauss	../scripts/nmr_lib.py	/^def gauss(x, a, mu, sigma):$/;"	kind:function	line:38
+gauss	../scripts/old/nmr_lib2.py	/^def gauss(x, a, mu, sigma):$/;"	kind:function	line:34
+generate2dspectrum.py	../data/bruker/2DSPEK/52/generate2dspectrum.py	1;"	kind:file	line:1
+get_analyse	../scripts/F2_raw.py	/^def get_analyse(data_dir, verbose=True, resultfile=""):$/;"	kind:function	line:62
+get_analyse	../scripts/T1_raw.py	/^def get_analyse(data_dir, verbose=True, resultfile=""):$/;"	kind:function	line:53
+get_analyse	../scripts/T2_raw.py	/^def get_analyse(data_dir, verbose=True, resultfile=""):$/;"	kind:function	line:49
+get_experiment_number	../data/170918/plots/backup/nmr_lib.py	/^def get_experiment_number(directory):$/;"	kind:function	line:138
+get_experiment_number	../data/170918/plots/nmr_lib.py	/^def get_experiment_number(directory):$/;"	kind:function	line:138
+get_experiment_number	../data/crn/data/SPEK/nmr_lib.py	/^def get_experiment_number(directory):$/;"	kind:function	line:132
+get_experiment_number	../data/crn/data/T1/nmr_lib.py	/^def get_experiment_number(directory):$/;"	kind:function	line:132
+get_experiment_number	../data/crn/data/T2/nmr_lib.py	/^def get_experiment_number(directory):$/;"	kind:function	line:132
+get_experiment_number	../scripts/nmr_lib.py	/^def get_experiment_number(directory):$/;"	kind:function	line:155
+get_experiment_number	../scripts/old/nmr_lib2.py	/^def get_experiment_number(directory):$/;"	kind:function	line:145
+get_tau	../data/170918/plots/backup/nmr_lib.py	/^def get_tau(directory):$/;"	kind:function	line:142
+get_tau	../data/170918/plots/nmr_lib.py	/^def get_tau(directory):$/;"	kind:function	line:142
+get_tau	../scripts/nmr_lib.py	/^def get_tau(directory):$/;"	kind:function	line:159
+get_tau	../scripts/old/nmr_lib2.py	/^def get_tau(directory):$/;"	kind:function	line:149
+get_temperature	../data/170918/plots/backup/nmr_lib.py	/^def get_temperature(directory):$/;"	kind:function	line:129
+get_temperature	../data/170918/plots/nmr_lib.py	/^def get_temperature(directory):$/;"	kind:function	line:129
+get_temperature	../data/crn/data/SPEK/nmr_lib.py	/^def get_temperature(directory):$/;"	kind:function	line:123
+get_temperature	../data/crn/data/T1/nmr_lib.py	/^def get_temperature(directory):$/;"	kind:function	line:123
+get_temperature	../data/crn/data/T2/nmr_lib.py	/^def get_temperature(directory):$/;"	kind:function	line:123
+get_temperature	../scripts/nmr_lib.py	/^def get_temperature(directory):$/;"	kind:function	line:146
+get_temperature	../scripts/old/nmr_lib2.py	/^def get_temperature(directory):$/;"	kind:function	line:136
+grpdly	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^grpdly = 68 + 8$/;"	kind:variable	line:23
+grpdly	../data/bruker/T1 Joachim/auswertung.py	/^grpdly=68 #wie viel ist vor dem eigentlich zu messenden Signal (meist durch Variable grpdly gegeben, welche bei allen euren Messungen 68 war)$/;"	kind:variable	line:15
+grpdly	../data/bruker/T1/auswertung.py	/^grpdly = 68  # wie viel ist vor dem eigentlich zu messenden Signal$/;"	kind:variable	line:22
+grpdly	../data/bruker/T2/auswertung.py	/^grpdly = 68  # wie viel ist vor dem eigentlich zu messenden Signal$/;"	kind:variable	line:33
+grpdly	../data/bruker/scripts/auswertung.py	/^grpdly = 68  #wie viel ist vor dem eigentlich zu messenden Signal (meist durch Variable grpdly gegeben, welche bei allen euren Messungen 68 war)$/;"	kind:variable	line:38
+header	../data/bruker/SPEK/csv_to_dofft.py	/^                header=header_string)$/;"	kind:variable	line:49
+header	../data/bruker/SPEK/csv_to_dofft.py	/^                header=header_string)$/;"	kind:variable	line:69
+header	../data/bruker/scripts/auswertung.py	/^    header="tp TC TCerr betaC betaCerr Z Zerr T1 T1err beta1 beta1err M0 M1")$/;"	kind:variable	line:318
+header	../data/bruker/scripts/auswertung.py	/^    header="tp TC TCerr betaC betaCerr Z Zerr T1 T1err beta1 beta1err M0 M1")$/;"	kind:variable	line:323
+header_file	../data/bruker/SPEK/csv_to_dofft.py	/^        header_file = open(".\/%s\/adv_header.txt" % (subdir), "w")$/;"	kind:variable	line:72
+header_file	../data/bruker/scripts/csv_to_dofft.py	/^        header_file=open(".\/%s\/adv_header.txt" %(subdir), "w")$/;"	kind:variable	line:53
+header_string	../data/bruker/SPEK/csv_to_dofft.py	/^                header_string = header_string + "%s:%s\\n" % (j, k)$/;"	kind:variable	line:18
+header_string	../data/bruker/SPEK/csv_to_dofft.py	/^        header_string = "ndim:%i\\n" % (udic["ndim"])$/;"	kind:variable	line:14
+header_string	../data/bruker/scripts/csv_to_dofft.py	/^                header_string=header_string+"%s:%s\\n" %(j,k)$/;"	kind:variable	line:18
+header_string	../data/bruker/scripts/csv_to_dofft.py	/^        header_string="ndim:%i\\n" %(udic["ndim"])$/;"	kind:variable	line:14
+holdtc	../data/bruker/scripts/auswertung.py	/^        holdtc=False,$/;"	kind:variable	line:302
+holdtc	../data/bruker/scripts/auswertung.py	/^        holdtc=holdtccos[i],$/;"	kind:variable	line:283
+holdtccos	../data/bruker/scripts/auswertung.py	/^holdtccos = [$/;"	kind:variable	line:15
+home_dir	../data/170918/plots/backup/crn_spek_pulslenabh.py	/^home_dir = "\/home\/jens\/Documents\/projekte\/crn\/170912\/T2"$/;"	kind:variable	line:184
+home_dir	../data/170918/plots/crn_spek_pulslenabh.py	/^home_dir = "\/home\/jens\/Documents\/projekte\/crn\/170912\/T2"$/;"	kind:variable	line:220
+home_dir	../data/170918/plots/crn_spek_pulslenabh.py	/^home_dir = "\/home\/karajan\/uni\/master\/analyse"$/;"	kind:variable	line:7
+home_dir	../scripts/F2_raw.py	/^home_dir = "\/home\/karajan\/uni\/master\/analyse"$/;"	kind:variable	line:4
+home_dir	../scripts/T1_meta.py	/^home_dir = "\/home\/karajan\/uni\/master\/analyse"$/;"	kind:variable	line:4
+home_dir	../scripts/T1_raw.py	/^home_dir = "\/home\/karajan\/uni\/master\/analyse"$/;"	kind:variable	line:4
+home_dir	../scripts/T2_meta.py	/^home_dir = "\/home\/karajan\/uni\/master\/analyse"$/;"	kind:variable	line:4
+home_dir	../scripts/T2_raw.py	/^home_dir = "\/home\/karajan\/uni\/master\/analyse"$/;"	kind:variable	line:4
+home_dir	../scripts/old/crn_f2_div.py	/^home_dir = "\/home\/jens\/Documents\/projekte\/crn\/170714"$/;"	kind:variable	line:218
+home_dir	../scripts/old/crn_f2_show.py	/^home_dir = "\/home\/jens\/Documents\/projekte\/crn\/170710\/F2COS\/290K"$/;"	kind:variable	line:143
+home_dir	../scripts/old/crn_t1.py	/^home_dir = "\/home\/jens\/Documents\/projekte\/crn\/170918\/T1"$/;"	kind:variable	line:46
+home_dir	../scripts/old/crn_t2.py	/^home_dir = "\/home\/jens\/Documents\/projekte\/crn\/170918\/T2"$/;"	kind:variable	line:63
+id_t1	../scripts/old/crn_spek_t1.py	/^id_t1 = data_t1[:,0]$/;"	kind:variable	line:25
+id_t1	../scripts/old/crn_spek_t1.py	/^id_t1 = data_t1[:,0]$/;"	kind:variable	line:47
+ids	../scripts/old/crn_spek_t1.py	/^ids = data[:,0]$/;"	kind:variable	line:31
+ids	../scripts/old/crn_spek_t1.py	/^ids = data[:,0]$/;"	kind:variable	line:53
+imag	../scripts/old/crn_maxfinder.py	/^imag = data[:,3]$/;"	kind:variable	line:17
+in0	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^in0 = 4e-6$/;"	kind:variable	line:22
+k_b	../scripts/old/crn_t1_beta.py	/^k_b = 1.38e-23$/;"	kind:variable	line:18
+kohlrausch	../data/170918/plots/backup/nmr_lib.py	/^def kohlrausch(x, M0, tau, beta, Moff):$/;"	kind:function	line:28
+kohlrausch	../data/170918/plots/nmr_lib.py	/^def kohlrausch(x, M0, tau, beta, Moff):$/;"	kind:function	line:28
+kohlrausch	../scripts/nmr_lib.py	/^def kohlrausch(x, M0, tau, beta, Moff):$/;"	kind:function	line:34
+kohlrausch	../scripts/old/nmr_lib2.py	/^def kohlrausch(x, M0, tau, beta, Moff):$/;"	kind:function	line:30
+l11	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^l11 = 1.0$/;"	kind:variable	line:40
+l12	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^l12 = 70.0$/;"	kind:variable	line:41
+l21	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^l21 = 2.0$/;"	kind:variable	line:42
+l22	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^l22 = 50.0$/;"	kind:variable	line:43
+labels	../data/lineshape/lineshape_sim.py	/^labels = sorted(float(fn.split("!")[1]) for fn in fn_fft)$/;"	kind:variable	line:12
+labels	../scripts/old/crn_f2_div.py	/^labels = ["SIN",$/;"	kind:variable	line:219
+labels	../scripts/old/crn_spek_plot.py	/^labels = ["355 K", "350 K", "345 K", "340 K", "330 K", "325 K", $/;"	kind:variable	line:67
+labels	../scripts/old/crn_spek_plot.py	/^labels = [$/;"	kind:variable	line:28
+labels	../scripts/old/crn_spek_plot.py	/^labels = [$/;"	kind:variable	line:47
+labels	../scripts/old/crn_t1_beta.py	/^labels = "Beta Zürn"$/;"	kind:variable	line:45
+labels_extern	../scripts/old/crn_t1_beta.py	/^labels_extern = "Zürn T1"$/;"	kind:variable	line:36
+levels	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^levels = np.linspace(cc_min, cc_max - cc_span * 90.0 \/ 100.0, 40)$/;"	kind:variable	line:322
+levels	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^levels = np.linspace(spek_min + spek_span * l11 \/ 100.0,$/;"	kind:variable	line:410
+levels	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^levels = np.linspace(ss_min, ss_max - ss_span * 90.0 \/ 100.0, 40)$/;"	kind:variable	line:362
+levels_cc	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^levels_cc = np.linspace($/;"	kind:variable	line:186
+levels_cc	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^levels_cc = np.linspace($/;"	kind:variable	line:65
+levels_ss	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^levels_ss = np.linspace($/;"	kind:variable	line:191
+levels_ss	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^levels_ss = np.linspace($/;"	kind:variable	line:70
+linear	../data/170918/plots/backup/nmr_lib.py	/^def linear(x, b, m):$/;"	kind:function	line:8
+linear	../data/170918/plots/nmr_lib.py	/^def linear(x, b, m):$/;"	kind:function	line:8
+linear	../data/crn/data/SPEK/nmr_lib.py	/^def linear(x, b, m):$/;"	kind:function	line:8
+linear	../data/crn/data/T1/nmr_lib.py	/^def linear(x, b, m):$/;"	kind:function	line:8
+linear	../data/crn/data/T2/nmr_lib.py	/^def linear(x, b, m):$/;"	kind:function	line:8
+linear	../scripts/nmr_lib.py	/^def linear(x, b, m):$/;"	kind:function	line:9
+linear	../scripts/old/nmr_lib2.py	/^def linear(x, b, m):$/;"	kind:function	line:9
+lineshape_sim.py	../data/lineshape/lineshape_sim.py	1;"	kind:file	line:1
+linewidths	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    linewidths=[0.2] * len(levels))$/;"	kind:variable	line:355
+linewidths	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    linewidths=[0.2] * len(levels))$/;"	kind:variable	line:393
+linewidths	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    linewidths=[0.4] * len(levels),$/;"	kind:variable	line:430
+load_FWHM	../data/170918/plots/backup/nmr_lib.py	/^def load_FWHM(fn):$/;"	kind:function	line:82
+load_FWHM	../data/170918/plots/nmr_lib.py	/^def load_FWHM(fn):$/;"	kind:function	line:82
+load_FWHM	../data/crn/data/SPEK/nmr_lib.py	/^def load_FWHM(fn):$/;"	kind:function	line:78
+load_FWHM	../data/crn/data/T1/nmr_lib.py	/^def load_FWHM(fn):$/;"	kind:function	line:78
+load_FWHM	../data/crn/data/T2/nmr_lib.py	/^def load_FWHM(fn):$/;"	kind:function	line:78
+load_FWHM	../scripts/nmr_lib.py	/^def load_FWHM(fn):$/;"	kind:function	line:88
+load_FWHM	../scripts/old/nmr_lib2.py	/^def load_FWHM(fn):$/;"	kind:function	line:84
+load_FWHMs	../data/170918/plots/backup/nmr_lib.py	/^def load_FWHMs(directory):$/;"	kind:function	line:70
+load_FWHMs	../data/170918/plots/nmr_lib.py	/^def load_FWHMs(directory):$/;"	kind:function	line:70
+load_FWHMs	../data/crn/data/SPEK/nmr_lib.py	/^def load_FWHMs(directory):$/;"	kind:function	line:66
+load_FWHMs	../data/crn/data/T1/nmr_lib.py	/^def load_FWHMs(directory):$/;"	kind:function	line:66
+load_FWHMs	../data/crn/data/T2/nmr_lib.py	/^def load_FWHMs(directory):$/;"	kind:function	line:66
+load_FWHMs	../scripts/nmr_lib.py	/^def load_FWHMs(directory):$/;"	kind:function	line:76
+load_FWHMs	../scripts/old/nmr_lib2.py	/^def load_FWHMs(directory):$/;"	kind:function	line:72
+load_data	../data/170918/plots/backup/nmr_lib.py	/^def load_data():$/;"	kind:function	line:59
+load_data	../data/170918/plots/nmr_lib.py	/^def load_data():$/;"	kind:function	line:59
+load_data	../data/crn/data/SPEK/nmr_lib.py	/^def load_data():$/;"	kind:function	line:55
+load_data	../data/crn/data/T1/nmr_lib.py	/^def load_data():$/;"	kind:function	line:55
+load_data	../data/crn/data/T2/nmr_lib.py	/^def load_data():$/;"	kind:function	line:55
+load_data	../scripts/nmr_lib.py	/^def load_data(directory):$/;"	kind:function	line:65
+load_data	../scripts/old/crn_f2_div.py	/^def load_data():$/;"	kind:function	line:54
+load_data	../scripts/old/crn_f2_show.py	/^def load_data():$/;"	kind:function	line:29
+load_data	../scripts/old/crn_f2_ts.py	/^def load_data():$/;"	kind:function	line:29
+load_data	../scripts/old/crn_t1_ts.py	/^def load_data():$/;"	kind:function	line:18
+load_data	../scripts/old/crn_t2_ts.py	/^def load_data():$/;"	kind:function	line:18
+load_data	../scripts/old/nmr_lib2.py	/^def load_data():$/;"	kind:function	line:61
+load_spek	../data/170918/plots/backup/nmr_lib.py	/^def load_spek(fn_nmr=None):$/;"	kind:function	line:49
+load_spek	../data/170918/plots/backup/nmr_lib.py	/^def load_spek(fn_spek=None):$/;"	kind:function	line:94
+load_spek	../data/170918/plots/nmr_lib.py	/^def load_spek(fn_nmr=None):$/;"	kind:function	line:49
+load_spek	../data/170918/plots/nmr_lib.py	/^def load_spek(fn_spek=None):$/;"	kind:function	line:94
+load_spek	../data/crn/data/SPEK/nmr_lib.py	/^def load_spek(fn_nmr=None):$/;"	kind:function	line:45
+load_spek	../data/crn/data/SPEK/nmr_lib.py	/^def load_spek(fn_spek=None):$/;"	kind:function	line:90
+load_spek	../data/crn/data/T1/nmr_lib.py	/^def load_spek(fn_nmr=None):$/;"	kind:function	line:45
+load_spek	../data/crn/data/T1/nmr_lib.py	/^def load_spek(fn_spek=None):$/;"	kind:function	line:90
+load_spek	../data/crn/data/T2/nmr_lib.py	/^def load_spek(fn_nmr=None):$/;"	kind:function	line:45
+load_spek	../data/crn/data/T2/nmr_lib.py	/^def load_spek(fn_spek=None):$/;"	kind:function	line:90
+load_spek	../scripts/nmr_lib.py	/^def load_spek(fn_nmr=None):$/;"	kind:function	line:55
+load_spek	../scripts/nmr_lib.py	/^def load_spek(fn_spek=None):$/;"	kind:function	line:106
+load_spek	../scripts/old/nmr_lib2.py	/^def load_spek(fn_nmr=None):$/;"	kind:function	line:51
+load_spek	../scripts/old/nmr_lib2.py	/^def load_spek(fn_spek=None):$/;"	kind:function	line:96
+load_ts	../scripts/old/crn_f2_div.py	/^def load_ts():$/;"	kind:function	line:35
+lorentz	../data/170918/plots/backup/nmr_lib.py	/^def lorentz(x, a, gamma, x0):$/;"	kind:function	line:36
+lorentz	../data/170918/plots/nmr_lib.py	/^def lorentz(x, a, gamma, x0):$/;"	kind:function	line:36
+lorentz	../data/crn/data/SPEK/nmr_lib.py	/^def lorentz(x, a, gamma, x0):$/;"	kind:function	line:32
+lorentz	../data/crn/data/T1/nmr_lib.py	/^def lorentz(x, a, gamma, x0):$/;"	kind:function	line:32
+lorentz	../data/crn/data/T2/nmr_lib.py	/^def lorentz(x, a, gamma, x0):$/;"	kind:function	line:32
+lorentz	../scripts/nmr_lib.py	/^def lorentz(x, a, gamma, x0):$/;"	kind:function	line:42
+lorentz	../scripts/old/nmr_lib2.py	/^def lorentz(x, a, gamma, x0):$/;"	kind:function	line:38
+max_phase	../scripts/old/crn_maxfinder.py	/^        max_phase = ph$/;"	kind:variable	line:41
+max_phase	../scripts/old/crn_maxfinder.py	/^max_phase = 0$/;"	kind:variable	line:32
+max_time	../scripts/old/crn_maxfinder.py	/^        max_time = time[np.argmax(np.abs(temp.real)) + start_index]$/;"	kind:variable	line:42
+max_time	../scripts/old/crn_maxfinder.py	/^max_time = 0$/;"	kind:variable	line:33
+max_value	../scripts/old/crn_maxfinder.py	/^        max_value = temp_max$/;"	kind:variable	line:40
+max_value	../scripts/old/crn_maxfinder.py	/^max_value = 0$/;"	kind:variable	line:31
+maxtplot	../data/bruker/T1 Joachim/auswertung.py	/^maxtplot = 150e-6$/;"	kind:variable	line:17
+maxtplot	../data/bruker/T1/auswertung.py	/^maxtplot = 150e-6$/;"	kind:variable	line:26
+maxtplot	../data/bruker/T2/auswertung.py	/^maxtplot = 150e-6$/;"	kind:variable	line:37
+maxtplot	../data/bruker/scripts/auswertung.py	/^maxtplot = 150e-6$/;"	kind:variable	line:45
+mesh_f1	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^mesh_f1 = mesh_f1.compress($/;"	kind:variable	line:253
+mesh_f2	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^mesh_f2 = mesh_f2.compress($/;"	kind:variable	line:250
+newerrfilec	../data/bruker/scripts/auswertung.py	/^newerrfilec = []$/;"	kind:variable	line:270
+newerrfiles	../data/bruker/scripts/auswertung.py	/^newerrfiles = []$/;"	kind:variable	line:271
+nmr_lib.py	../data/170918/plots/backup/nmr_lib.py	1;"	kind:file	line:1
+nmr_lib.py	../data/170918/plots/nmr_lib.py	1;"	kind:file	line:1
+nmr_lib.py	../data/crn/data/SPEK/nmr_lib.py	1;"	kind:file	line:1
+nmr_lib.py	../data/crn/data/T1/nmr_lib.py	1;"	kind:file	line:1
+nmr_lib.py	../data/crn/data/T2/nmr_lib.py	1;"	kind:file	line:1
+nmr_lib.py	../scripts/nmr_lib.py	1;"	kind:file	line:1
+nmr_lib2.py	../scripts/old/nmr_lib2.py	1;"	kind:file	line:1
+norm	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^norm = matplotlib.colors.Normalize(vmin=0.0, vmax=0.5)$/;"	kind:variable	line:438
+p2	../scripts/old/crn_f2_show.py	/^p2 = 6.662e-3$/;"	kind:variable	line:22
+p2	../scripts/old/crn_f2_ts.py	/^p2 = 6.662e-3$/;"	kind:variable	line:22
+p3	../scripts/old/crn_f2_show.py	/^p3 = 0.642$/;"	kind:variable	line:23
+p3	../scripts/old/crn_f2_ts.py	/^p3 = 0.642$/;"	kind:variable	line:23
+phase	../data/bruker/SPEK/csv_to_dofft.py	/^            phase = 180 \/ 180. * np.pi$/;"	kind:variable	line:54
+phase	../data/bruker/scripts/csv_to_dofft.py	/^                phase=180\/180.*np.pi$/;"	kind:variable	line:43
+phase	../scripts/old/crn_maxfinder.py	/^phase = max_phase$/;"	kind:variable	line:44
+phase_cos	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^phase_cos = 92.0 * np.pi \/ 180.0  # Phase for the phase correction$/;"	kind:variable	line:25
+phase_finder	../data/170918/plots/backup/nmr_lib.py	/^def phase_finder(phase, cmplx):$/;"	kind:function	line:45
+phase_finder	../data/170918/plots/nmr_lib.py	/^def phase_finder(phase, cmplx):$/;"	kind:function	line:45
+phase_finder	../data/crn/data/SPEK/nmr_lib.py	/^def phase_finder(phase, cmplx):$/;"	kind:function	line:41
+phase_finder	../data/crn/data/T1/nmr_lib.py	/^def phase_finder(phase, cmplx):$/;"	kind:function	line:41
+phase_finder	../data/crn/data/T2/nmr_lib.py	/^def phase_finder(phase, cmplx):$/;"	kind:function	line:41
+phase_finder	../scripts/nmr_lib.py	/^def phase_finder(phase, cmplx):$/;"	kind:function	line:51
+phase_finder	../scripts/old/crn_f2_div.py	/^def phase_finder(phase, cmplx):$/;"	kind:function	line:14
+phase_finder	../scripts/old/nmr_lib2.py	/^def phase_finder(phase, cmplx):$/;"	kind:function	line:47
+phase_fit	../data/170918/plots/backup/nmr_lib.py	/^def phase_fit(cmplx, start_phase):$/;"	kind:function	line:184
+phase_fit	../data/170918/plots/nmr_lib.py	/^def phase_fit(cmplx, start_phase):$/;"	kind:function	line:184
+phase_fit	../data/crn/data/SPEK/nmr_lib.py	/^def phase_fit(cmplx, start_phase):$/;"	kind:function	line:136
+phase_fit	../data/crn/data/T1/nmr_lib.py	/^def phase_fit(cmplx, start_phase):$/;"	kind:function	line:136
+phase_fit	../data/crn/data/T2/nmr_lib.py	/^def phase_fit(cmplx, start_phase):$/;"	kind:function	line:136
+phase_fit	../scripts/nmr_lib.py	/^def phase_fit(cmplx, start_phase):$/;"	kind:function	line:201
+phase_fit	../scripts/old/crn_f2_div.py	/^def phase_fit(cmplx, start_phase):$/;"	kind:function	line:110
+phase_fit	../scripts/old/nmr_lib2.py	/^def phase_fit(cmplx, start_phase):$/;"	kind:function	line:191
+phase_min	../scripts/old/crn_f2_div.py	/^def phase_min(phase, cmplx):$/;"	kind:function	line:10
+phase_shift	../data/170918/plots/backup/nmr_lib.py	/^def phase_shift(phase, cmplx):$/;"	kind:function	line:189
+phase_shift	../data/170918/plots/nmr_lib.py	/^def phase_shift(phase, cmplx):$/;"	kind:function	line:189
+phase_shift	../data/crn/data/SPEK/nmr_lib.py	/^def phase_shift(phase, cmplx):$/;"	kind:function	line:141
+phase_shift	../data/crn/data/T1/nmr_lib.py	/^def phase_shift(phase, cmplx):$/;"	kind:function	line:141
+phase_shift	../data/crn/data/T2/nmr_lib.py	/^def phase_shift(phase, cmplx):$/;"	kind:function	line:141
+phase_shift	../scripts/nmr_lib.py	/^def phase_shift(phase, cmplx):$/;"	kind:function	line:206
+phase_shift	../scripts/old/crn_f2_div.py	/^def phase_shift(phase, cmplx):$/;"	kind:function	line:85
+phase_shift	../scripts/old/crn_f2_show.py	/^def phase_shift(phase, echo_real, echo_imag):$/;"	kind:function	line:68
+phase_shift	../scripts/old/crn_f2_ts.py	/^def phase_shift(phase, echo_real, echo_imag):$/;"	kind:function	line:68
+phase_shift	../scripts/old/crn_t1_ts.py	/^def phase_shift(phase, echo_real, echo_imag):$/;"	kind:function	line:57
+phase_shift	../scripts/old/crn_t2_ts.py	/^def phase_shift(phase, echo_real, echo_imag):$/;"	kind:function	line:57
+phase_shift	../scripts/old/nmr_lib2.py	/^def phase_shift(phase, cmplx):$/;"	kind:function	line:196
+phase_sin	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^phase_sin = 2.0 * np.pi \/ 180.0$/;"	kind:variable	line:26
+phasecos	../data/bruker/scripts/auswertung.py	/^phasecos = np.array([35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35$/;"	kind:variable	line:13
+phasesin	../data/bruker/scripts/auswertung.py	/^phasesin = np.array([35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35$/;"	kind:variable	line:27
+pick_peaks	../scripts/old/crn_f2_div.py	/^def pick_peaks(time, real, imag):$/;"	kind:function	line:65
+pick_peaks	../scripts/old/crn_f2_show.py	/^def pick_peaks(time, real, imag):$/;"	kind:function	line:48
+pick_peaks	../scripts/old/crn_f2_ts.py	/^def pick_peaks(time, real, imag):$/;"	kind:function	line:48
+pick_peaks	../scripts/old/crn_t1_ts.py	/^def pick_peaks(time, real, imag):$/;"	kind:function	line:37
+pick_peaks	../scripts/old/crn_t2_ts.py	/^def pick_peaks(time, real, imag):$/;"	kind:function	line:37
+pl1	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^pl1 = axis1.plot_surface($/;"	kind:variable	line:336
+pl1	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^pl1 = axis1.plot_surface($/;"	kind:variable	line:374
+pl2	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^pl2 = axis2.contour($/;"	kind:variable	line:349
+pl2	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^pl2 = axis2.contour($/;"	kind:variable	line:387
+plot_cmplx	../scripts/old/crn_f2_div.py	/^def plot_cmplx(tm, cmplx, label=""):$/;"	kind:function	line:141
+plot_data	../data/170918/plots/backup/nmr_lib.py	/^def plot_data(time, data, label="", linestyle="-"):$/;"	kind:function	line:307
+plot_data	../data/170918/plots/nmr_lib.py	/^def plot_data(time, data, label="", linestyle="-"):$/;"	kind:function	line:307
+plot_data	../data/crn/data/SPEK/nmr_lib.py	/^def plot_data(time, data, label="", linestyle="-"):$/;"	kind:function	line:240
+plot_data	../data/crn/data/T1/nmr_lib.py	/^def plot_data(time, data, label="", linestyle="-"):$/;"	kind:function	line:240
+plot_data	../data/crn/data/T2/nmr_lib.py	/^def plot_data(time, data, label="", linestyle="-"):$/;"	kind:function	line:240
+plot_data	../scripts/nmr_lib.py	/^def plot_data(time, data, label="", linestyle="-"):$/;"	kind:function	line:350
+plot_data	../scripts/old/crn_f2_div.py	/^def plot_data(tm, data, label=""):$/;"	kind:function	line:146
+plot_data	../scripts/old/crn_f2_show.py	/^def plot_data(tm, cmplx):$/;"	kind:function	line:108
+plot_data	../scripts/old/crn_f2_ts.py	/^def plot_data(tm, cmplx):$/;"	kind:function	line:105
+plot_data	../scripts/old/crn_t1_ts.py	/^def plot_data(reptime, cmplx, label=""):$/;"	kind:function	line:101
+plot_data	../scripts/old/crn_t2_ts.py	/^def plot_data(reptime, cmplx, p, fit):$/;"	kind:function	line:86
+plot_data	../scripts/old/nmr_lib2.py	/^def plot_data(time, data, label="", linestyle="-"):$/;"	kind:function	line:340
+plot_data_fit	../scripts/old/crn_f2_ts.py	/^def plot_data_fit(tm, cmplx, p, fit):$/;"	kind:function	line:97
+plot_descriptions	../scripts/old/crn_f2_div.py	/^def plot_descriptions():$/;"	kind:function	line:151
+plot_descriptions	../scripts/old/crn_t1_ts.py	/^def plot_descriptions():$/;"	kind:function	line:112
+plot_fit	../data/170918/plots/backup/nmr_lib.py	/^def plot_fit(time, fit, p, label=""):$/;"	kind:function	line:288
+plot_fit	../data/170918/plots/nmr_lib.py	/^def plot_fit(time, fit, p, label=""):$/;"	kind:function	line:288
+plot_fit	../data/crn/data/SPEK/nmr_lib.py	/^def plot_fit(time, fit, p, label=""):$/;"	kind:function	line:221
+plot_fit	../data/crn/data/T1/nmr_lib.py	/^def plot_fit(time, fit, p, label=""):$/;"	kind:function	line:221
+plot_fit	../data/crn/data/T2/nmr_lib.py	/^def plot_fit(time, fit, p, label=""):$/;"	kind:function	line:221
+plot_fit	../scripts/nmr_lib.py	/^def plot_fit(time, fit, p, label=""):$/;"	kind:function	line:329
+plot_fit	../scripts/old/crn_f2_div.py	/^def plot_fit(tm, fit, p, label=""):$/;"	kind:function	line:134
+plot_fit	../scripts/old/crn_f2_show.py	/^def plot_fit(tm, fit):$/;"	kind:function	line:96
+plot_fit	../scripts/old/crn_t1_ts.py	/^def plot_fit(reptime, fit, p):$/;"	kind:function	line:93
+plot_fit	../scripts/old/nmr_lib2.py	/^def plot_fit(time, fit, p, label=""):$/;"	kind:function	line:319
+plot_fwhm	../data/crn/data/SPEK/crn_spek_plot.py	/^def plot_fwhm():$/;"	kind:function	line:72
+plot_fwhm	../data/lineshape/lineshape_sim.py	/^def plot_fwhm():$/;"	kind:function	line:61
+plot_limits	../data/170918/plots/backup/nmr_lib.py	/^def plot_limits(xmin=None, xmax=None, ymin=None, ymax=None):$/;"	kind:function	line:311
+plot_limits	../data/170918/plots/nmr_lib.py	/^def plot_limits(xmin=None, xmax=None, ymin=None, ymax=None):$/;"	kind:function	line:311
+plot_limits	../data/crn/data/SPEK/nmr_lib.py	/^def plot_limits(xmin=None, xmax=None, ymin=None, ymax=None):$/;"	kind:function	line:244
+plot_limits	../data/crn/data/T1/nmr_lib.py	/^def plot_limits(xmin=None, xmax=None, ymin=None, ymax=None):$/;"	kind:function	line:244
+plot_limits	../data/crn/data/T2/nmr_lib.py	/^def plot_limits(xmin=None, xmax=None, ymin=None, ymax=None):$/;"	kind:function	line:244
+plot_limits	../scripts/nmr_lib.py	/^def plot_limits(xmin=None, xmax=None, ymin=None, ymax=None):$/;"	kind:function	line:354
+plot_limits	../scripts/old/crn_f2_div.py	/^def plot_limits(xmin=None, xmax=None, ymin=None, ymax=None):$/;"	kind:function	line:158
+plot_limits	../scripts/old/nmr_lib2.py	/^def plot_limits(xmin=None, xmax=None, ymin=None, ymax=None):$/;"	kind:function	line:344
+plot_maxima	../data/crn/data/SPEK/crn_spek_plot.py	/^def plot_maxima():$/;"	kind:function	line:40
+plot_setup	../data/170918/plots/backup/crn_spek_pulslenabh.py	/^def plot_setup():$/;"	kind:function	line:8
+plot_setup	../data/170918/plots/crn_spek_pulslenabh.py	/^def plot_setup():$/;"	kind:function	line:14
+plot_setup	../data/bruker/SPEK/crn_spek.py	/^def plot_setup():$/;"	kind:function	line:12
+plot_setup	../data/crn/data/SPEK/crn_spek_plot.py	/^def plot_setup():$/;"	kind:function	line:8
+plot_setup	../data/crn/data/T1/crn_meta_t1.py	/^def plot_setup():$/;"	kind:function	line:8
+plot_setup	../data/crn/data/T2/crn_meta_t2.py	/^def plot_setup():$/;"	kind:function	line:8
+plot_setup	../scripts/old/crn_meta_t1.py	/^def plot_setup():$/;"	kind:function	line:8
+plot_setup	../scripts/old/crn_meta_t2.py	/^def plot_setup():$/;"	kind:function	line:8
+plot_setup	../scripts/old/crn_spek.py	/^def plot_setup():$/;"	kind:function	line:8
+plot_setup	../scripts/old/crn_spek_plot.py	/^def plot_setup():$/;"	kind:function	line:8
+plot_setup	../scripts/old/crn_spek_pulslenabh.py	/^def plot_setup():$/;"	kind:function	line:8
+plot_setup	../scripts/old/crn_spek_t1.py	/^def plot_setup():$/;"	kind:function	line:8
+plot_setup	../scripts/old/crn_spek_vergleich.py	/^def plot_setup():$/;"	kind:function	line:8
+plot_setup	../scripts/old/crn_t1.py	/^def plot_setup():$/;"	kind:function	line:7
+plot_setup	../scripts/old/crn_t1_beta.py	/^def plot_setup():$/;"	kind:function	line:8
+plot_setup	../scripts/old/crn_t2.py	/^def plot_setup():$/;"	kind:function	line:8
+plot_spek	../data/170918/plots/backup/crn_spek_pulslenabh.py	/^def plot_spek(directory):$/;"	kind:function	line:15
+plot_spek	../data/170918/plots/crn_spek_pulslenabh.py	/^def plot_spek(directory, take):$/;"	kind:function	line:22
+plot_spek	../scripts/old/crn_spek_pulslenabh.py	/^def plot_spek(directory):$/;"	kind:function	line:15
+plot_spek_multi	../data/crn/data/SPEK/crn_spek_plot.py	/^def plot_spek_multi():$/;"	kind:function	line:104
+plotfrom	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^plotfrom = 0e-6$/;"	kind:variable	line:35
+plotto	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^plotto = 400e-6$/;"	kind:variable	line:36
+plpapermess	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^plpapermess = axispapermess.contour($/;"	kind:variable	line:424
+prt11	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^prt11 = int(plotfrom \/ dw)$/;"	kind:variable	line:76
+prt12	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^prt12 = int(plotto \/ dw)$/;"	kind:variable	line:77
+prt21	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^prt21 = int(plotfrom \/ in0)$/;"	kind:variable	line:78
+prt22	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^prt22 = int(plotto \/ in0)$/;"	kind:variable	line:79
+quick_analyze	../data/bruker/SPEK/crn_spek.py	/^def quick_analyze(directory, temp):$/;"	kind:function	line:50
+quick_analyze	../scripts/old/crn_spek.py	/^def quick_analyze(directory):$/;"	kind:function	line:45
+randverteilung_cos_d1	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^randverteilung_cos_d1 = fft_cos.sum(axis=0)$/;"	kind:variable	line:291
+randverteilung_cos_d2	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^randverteilung_cos_d2 = fft_cos.sum(axis=1)$/;"	kind:variable	line:292
+randverteilung_sin_d1	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^randverteilung_sin_d1 = fft_sin.sum(axis=0)$/;"	kind:variable	line:293
+randverteilung_sin_d2	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^randverteilung_sin_d2 = fft_sin.sum(axis=1)$/;"	kind:variable	line:294
+randverteilung_summe_d1	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^randverteilung_summe_d1 = fft_sum.sum(axis=0)$/;"	kind:variable	line:295
+randverteilung_summe_d2	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^randverteilung_summe_d2 = fft_sum.sum(axis=1)$/;"	kind:variable	line:296
+rcount	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    rcount=len(fft_cos),$/;"	kind:variable	line:340
+rcount	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    rcount=len(fft_sin),$/;"	kind:variable	line:378
+real	../scripts/old/crn_maxfinder.py	/^real = data[:,1]$/;"	kind:variable	line:16
+refit_t1	../scripts/old/crn_f2_div.py	/^def refit_t1(x, p1, p4):$/;"	kind:function	line:22
+save_plot	../data/170918/plots/backup/nmr_lib.py	/^def save_plot(fn=None):$/;"	kind:function	line:331
+save_plot	../data/170918/plots/nmr_lib.py	/^def save_plot(fn=None):$/;"	kind:function	line:331
+save_plot	../data/crn/data/SPEK/nmr_lib.py	/^def save_plot(fn=None):$/;"	kind:function	line:264
+save_plot	../data/crn/data/T1/nmr_lib.py	/^def save_plot(fn=None):$/;"	kind:function	line:264
+save_plot	../data/crn/data/T2/nmr_lib.py	/^def save_plot(fn=None):$/;"	kind:function	line:264
+save_plot	../scripts/nmr_lib.py	/^def save_plot(fn=None):$/;"	kind:function	line:374
+save_plot	../scripts/old/crn_f2_div.py	/^def save_plot(fn=None):$/;"	kind:function	line:178
+save_plot	../scripts/old/crn_t1_ts.py	/^def save_plot(fn=None):$/;"	kind:function	line:119
+save_plot	../scripts/old/nmr_lib2.py	/^def save_plot(fn=None):$/;"	kind:function	line:364
+scatter_cmplx	../data/170918/plots/backup/nmr_lib.py	/^def scatter_cmplx(time, cmplx, label=""):$/;"	kind:function	line:302
+scatter_cmplx	../data/170918/plots/nmr_lib.py	/^def scatter_cmplx(time, cmplx, label=""):$/;"	kind:function	line:302
+scatter_cmplx	../data/crn/data/SPEK/nmr_lib.py	/^def scatter_cmplx(time, cmplx, label=""):$/;"	kind:function	line:235
+scatter_cmplx	../data/crn/data/T1/nmr_lib.py	/^def scatter_cmplx(time, cmplx, label=""):$/;"	kind:function	line:235
+scatter_cmplx	../data/crn/data/T2/nmr_lib.py	/^def scatter_cmplx(time, cmplx, label=""):$/;"	kind:function	line:235
+scatter_cmplx	../scripts/nmr_lib.py	/^def scatter_cmplx(time, cmplx, label=""):$/;"	kind:function	line:345
+scatter_cmplx	../scripts/old/nmr_lib2.py	/^def scatter_cmplx(time, cmplx, label=""):$/;"	kind:function	line:335
+scatter_data	../data/170918/plots/backup/nmr_lib.py	/^def scatter_data(time, data, label="", marker="x"):$/;"	kind:function	line:294
+scatter_data	../data/170918/plots/nmr_lib.py	/^def scatter_data(time, data, label="", marker="x"):$/;"	kind:function	line:294
+scatter_data	../data/crn/data/SPEK/nmr_lib.py	/^def scatter_data(time, data, label="", marker="x"):$/;"	kind:function	line:227
+scatter_data	../data/crn/data/T1/nmr_lib.py	/^def scatter_data(time, data, label="", marker="x"):$/;"	kind:function	line:227
+scatter_data	../data/crn/data/T2/nmr_lib.py	/^def scatter_data(time, data, label="", marker="x"):$/;"	kind:function	line:227
+scatter_data	../scripts/nmr_lib.py	/^def scatter_data(time, data, label="", marker="x"):$/;"	kind:function	line:335
+scatter_data	../scripts/old/nmr_lib2.py	/^def scatter_data(time, data, label="", marker="x"):$/;"	kind:function	line:325
+select_data	../data/170918/plots/backup/nmr_lib.py	/^def select_data(start, end, data, indexor=None, remove=False, select_indexor=False):$/;"	kind:function	line:108
+select_data	../data/170918/plots/nmr_lib.py	/^def select_data(start, end, data, indexor=None, remove=False, select_indexor=False):$/;"	kind:function	line:108
+select_data	../data/crn/data/SPEK/nmr_lib.py	/^def select_data(start, end, data, indexor=None, remove=False, select_indexor=False):$/;"	kind:function	line:102
+select_data	../data/crn/data/T1/nmr_lib.py	/^def select_data(start, end, data, indexor=None, remove=False, select_indexor=False):$/;"	kind:function	line:102
+select_data	../data/crn/data/T2/nmr_lib.py	/^def select_data(start, end, data, indexor=None, remove=False, select_indexor=False):$/;"	kind:function	line:102
+select_data	../scripts/nmr_lib.py	/^def select_data(start,$/;"	kind:function	line:120
+select_data	../scripts/old/crn_f2_div.py	/^def select_data(skip_start, skip_end, tm, echo_real, echo_imag):$/;"	kind:function	line:79
+select_data	../scripts/old/crn_f2_show.py	/^def select_data(skip_start, skip_end, tm, echo_real, echo_imag):$/;"	kind:function	line:62
+select_data	../scripts/old/crn_f2_ts.py	/^def select_data(skip_start, skip_end, tm, echo_real, echo_imag):$/;"	kind:function	line:62
+select_data	../scripts/old/crn_t1_ts.py	/^def select_data(skip_start, skip_end, reptime, echo_real, echo_imag):$/;"	kind:function	line:51
+select_data	../scripts/old/crn_t2_ts.py	/^def select_data(skip_start, skip_end, reptime, echo_real, echo_imag):$/;"	kind:function	line:51
+select_data	../scripts/old/nmr_lib2.py	/^def select_data(start,$/;"	kind:function	line:110
+show_plot	../data/170918/plots/backup/nmr_lib.py	/^def show_plot():$/;"	kind:function	line:326
+show_plot	../data/170918/plots/nmr_lib.py	/^def show_plot():$/;"	kind:function	line:326
+show_plot	../data/crn/data/SPEK/nmr_lib.py	/^def show_plot():$/;"	kind:function	line:259
+show_plot	../data/crn/data/T1/nmr_lib.py	/^def show_plot():$/;"	kind:function	line:259
+show_plot	../data/crn/data/T2/nmr_lib.py	/^def show_plot():$/;"	kind:function	line:259
+show_plot	../scripts/nmr_lib.py	/^def show_plot():$/;"	kind:function	line:369
+show_plot	../scripts/old/crn_f2_div.py	/^def show_plot():$/;"	kind:function	line:173
+show_plot	../scripts/old/crn_f2_show.py	/^def show_plot():$/;"	kind:function	line:116
+show_plot	../scripts/old/crn_t1_ts.py	/^def show_plot():$/;"	kind:function	line:107
+show_plot	../scripts/old/nmr_lib2.py	/^def show_plot():$/;"	kind:function	line:359
+signal_cc	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^signal_cc = cropped[:, 0, :, 0] + 1j * cropped[:, 0, :, 1]$/;"	kind:variable	line:62
+signal_cc	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^signal_cc = signal_cc * apo_function$/;"	kind:variable	line:162
+signal_cc	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^signal_cc = signal_cc * np.exp(1j * phase_cos)$/;"	kind:variable	line:156
+signal_ss	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^signal_ss = cropped[:, 1, :, 0] + 1j * cropped[:, 1, :, 1]$/;"	kind:variable	line:63
+signal_ss	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^signal_ss = signal_ss * apo_function$/;"	kind:variable	line:163
+signal_ss	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^signal_ss = signal_ss * np.exp(1j * phase_sin)$/;"	kind:variable	line:157
+sinweight	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^sinweight = 1.0$/;"	kind:variable	line:28
+slice_mask_d1	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^slice_mask_d1 = np.logical_and(mesh_f2[0, :] >= spekwidth_min,$/;"	kind:variable	line:245
+slice_mask_d2	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^slice_mask_d2 = np.logical_and(mesh_f1[:, 0] >= spekwidth_min,$/;"	kind:variable	line:247
+sm	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^sm = plt.cm.ScalarMappable(norm=norm, cmap=plpapermess.cmap)$/;"	kind:variable	line:439
+sort_values	../data/170918/plots/backup/nmr_lib.py	/^def sort_values(time, data):$/;"	kind:function	line:193
+sort_values	../data/170918/plots/nmr_lib.py	/^def sort_values(time, data):$/;"	kind:function	line:193
+sort_values	../data/crn/data/SPEK/nmr_lib.py	/^def sort_values(time, data):$/;"	kind:function	line:145
+sort_values	../data/crn/data/T1/nmr_lib.py	/^def sort_values(time, data):$/;"	kind:function	line:145
+sort_values	../data/crn/data/T2/nmr_lib.py	/^def sort_values(time, data):$/;"	kind:function	line:145
+sort_values	../scripts/nmr_lib.py	/^def sort_values(time, data):$/;"	kind:function	line:210
+sort_values	../scripts/old/crn_f2_div.py	/^def sort_values(time, data):$/;"	kind:function	line:116
+sort_values	../scripts/old/nmr_lib2.py	/^def sort_values(time, data):$/;"	kind:function	line:200
+spek_max	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^spek_max = np.max(fft_sum)$/;"	kind:variable	line:304
+spek_max	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^spek_max = np.max(fft_sum)$/;"	kind:variable	line:318
+spek_min	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^spek_min = np.min(fft_sum)$/;"	kind:variable	line:305
+spek_min	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^spek_min = np.min(fft_sum)$/;"	kind:variable	line:319
+spek_span	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^spek_span = spek_max - spek_min$/;"	kind:variable	line:306
+spek_span	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^spek_span = spek_max - spek_min$/;"	kind:variable	line:320
+spekwidth_max	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^spekwidth_max = 50000.0$/;"	kind:variable	line:34
+spekwidth_min	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^spekwidth_min = -70000.0$/;"	kind:variable	line:33
+ss_max	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^ss_max = np.max(fft_sin)$/;"	kind:variable	line:301
+ss_max	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^ss_max = np.max(fft_sin)$/;"	kind:variable	line:315
+ss_min	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^ss_min = np.min(fft_sin)$/;"	kind:variable	line:302
+ss_min	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^ss_min = np.min(fft_sin)$/;"	kind:variable	line:316
+ss_span	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^ss_span = ss_max - ss_min$/;"	kind:variable	line:303
+ss_span	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^ss_span = ss_max - ss_min$/;"	kind:variable	line:317
+start_index	../scripts/old/crn_maxfinder.py	/^start_index = np.argmin(np.abs(time - start_time))$/;"	kind:variable	line:20
+start_time	../scripts/old/crn_maxfinder.py	/^start_time = 0e-6$/;"	kind:variable	line:19
+subdirs	../data/bruker/SPEK/csv_to_dofft.py	/^subdirs = [x for x in os.listdir(".") if os.path.isdir(x)]$/;"	kind:variable	line:6
+subdirs	../data/bruker/scripts/csv_to_dofft.py	/^subdirs = [x for x in os.listdir(".") if os.path.isdir(x)]$/;"	kind:variable	line:6
+sugested_cc	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^sugested_cc = -np.angle(signal_cc[0:3, 0:5].mean())$/;"	kind:variable	line:148
+sugested_ss	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^sugested_ss = -np.angle(signal_ss[1:3, 0:5].mean())$/;"	kind:variable	line:149
+symmetrise	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^def symmetrise(spektrum, both=False):$/;"	kind:function	line:268
+t1	../data/170918/plots/backup/nmr_lib.py	/^def t1(x, M0, t1, beta, Moff):$/;"	kind:function	line:12
+t1	../data/170918/plots/nmr_lib.py	/^def t1(x, M0, t1, beta, Moff):$/;"	kind:function	line:12
+t1	../data/crn/data/SPEK/nmr_lib.py	/^def t1(x, M0, t1, beta, Moff):$/;"	kind:function	line:12
+t1	../data/crn/data/T1/nmr_lib.py	/^def t1(x, M0, t1, beta, Moff):$/;"	kind:function	line:12
+t1	../data/crn/data/T2/nmr_lib.py	/^def t1(x, M0, t1, beta, Moff):$/;"	kind:function	line:12
+t1	../scripts/nmr_lib.py	/^def t1(x, M0, t1, beta, Moff):$/;"	kind:function	line:13
+t1	../scripts/old/crn_f2_div.py	/^    t1 = t1data[(2*i)+1, 3]$/;"	kind:variable	line:225
+t1	../scripts/old/crn_f2_div.py	/^def t1(x, p1, p2, p3, p4):$/;"	kind:function	line:18
+t1	../scripts/old/crn_f2_show.py	/^def t1(x, p1, p2, p3, p4):$/;"	kind:function	line:10
+t1	../scripts/old/crn_f2_ts.py	/^def t1(x, p1, p2, p3, p4):$/;"	kind:function	line:10
+t1	../scripts/old/crn_spek_t1.py	/^t1 = data_t1[:,3]$/;"	kind:variable	line:27
+t1	../scripts/old/crn_spek_t1.py	/^t1 = data_t1[:,3]$/;"	kind:variable	line:49
+t1	../scripts/old/crn_t1_beta.py	/^t1 = data[:,1]$/;"	kind:variable	line:39
+t1	../scripts/old/crn_t1_ts.py	/^def t1(x, p1, p2, p3, p4):$/;"	kind:function	line:10
+t1	../scripts/old/crn_t2_ts.py	/^def t1(x, p1, p2, p3, p4):$/;"	kind:function	line:10
+t1	../scripts/old/nmr_lib2.py	/^def t1(x, M0, t1, beta, Moff):$/;"	kind:function	line:13
+t1_err	../scripts/old/crn_spek_t1.py	/^t1_err = data_t1[:,4]$/;"	kind:variable	line:28
+t1_err	../scripts/old/crn_spek_t1.py	/^t1_err = data_t1[:,4]$/;"	kind:variable	line:50
+t1_file	../scripts/F2_raw.py	/^t1_file = home_dir + "\/data\/" +  data_id + "\/T1\/T1_" + data_id + ".data"$/;"	kind:variable	line:112
+t1data	../scripts/F2_raw.py	/^t1data = np.loadtxt(t1_file)$/;"	kind:variable	line:113
+t1data	../scripts/old/crn_f2_div.py	/^t1data = np.loadtxt("\/home\/jens\/Documents\/projekte\/crn\/170713\/T1_300_310.txt")$/;"	kind:variable	line:216
+t1files	../scripts/T1_meta.py	/^t1files = glob.glob(data_dir + "\/*\/T1\/T1_*.data")$/;"	kind:variable	line:13
+t1measurementfolder	../data/bruker/scripts/auswertung.py	/^t1measurementfolder = "43"$/;"	kind:variable	line:32
+t1phase	../data/bruker/T1 Joachim/auswertung.py	/^t1phase=12*np.pi\/180$/;"	kind:variable	line:9
+t1phase	../data/bruker/T1/auswertung.py	/^t1phase = 12 * np.pi \/ 180$/;"	kind:variable	line:18
+t1phase	../data/bruker/T2/auswertung.py	/^t1phase = 12 * np.pi \/ 180$/;"	kind:variable	line:17
+t1phase	../data/bruker/scripts/auswertung.py	/^t1phase = 35 * np.pi \/ 180$/;"	kind:variable	line:33
+t1trigger_time	../data/bruker/scripts/auswertung.py	/^t1trigger_time = 0e-6$/;"	kind:variable	line:34
+t2	../data/170918/plots/backup/nmr_lib.py	/^def t2(x, M0, t2, beta, Moff):$/;"	kind:function	line:16
+t2	../data/170918/plots/nmr_lib.py	/^def t2(x, M0, t2, beta, Moff):$/;"	kind:function	line:16
+t2	../data/crn/data/SPEK/nmr_lib.py	/^def t2(x, M0, t2, beta, Moff):$/;"	kind:function	line:16
+t2	../data/crn/data/T1/nmr_lib.py	/^def t2(x, M0, t2, beta, Moff):$/;"	kind:function	line:16
+t2	../data/crn/data/T2/nmr_lib.py	/^def t2(x, M0, t2, beta, Moff):$/;"	kind:function	line:16
+t2	../scripts/nmr_lib.py	/^def t2(x, M0, t2, beta, Moff):$/;"	kind:function	line:17
+t2	../scripts/old/crn_f2_div.py	/^def t2(x, p1, p2, p3, p4):$/;"	kind:function	line:26
+t2	../scripts/old/crn_f2_show.py	/^def t2(x, p1, p2, p3, p4):$/;"	kind:function	line:18
+t2	../scripts/old/crn_f2_ts.py	/^def t2(x, p1, p2, p3, p4):$/;"	kind:function	line:18
+t2	../scripts/old/crn_t1_ts.py	/^def t2(x, p1, p2, p3, p4):$/;"	kind:function	line:14
+t2	../scripts/old/crn_t2_ts.py	/^def t2(x, p1, p2, p3, p4):$/;"	kind:function	line:14
+t2	../scripts/old/nmr_lib2.py	/^def t2(x, M0, t2, beta, Moff):$/;"	kind:function	line:17
+t2_fest	../data/170918/plots/backup/nmr_lib.py	/^def t2_fest(x, M0, t2):$/;"	kind:function	line:20
+t2_fest	../data/170918/plots/nmr_lib.py	/^def t2_fest(x, M0, t2):$/;"	kind:function	line:20
+t2_fest	../data/crn/data/SPEK/nmr_lib.py	/^def t2_fest(x, M0, t2):$/;"	kind:function	line:20
+t2_fest	../data/crn/data/T1/nmr_lib.py	/^def t2_fest(x, M0, t2):$/;"	kind:function	line:20
+t2_fest	../data/crn/data/T2/nmr_lib.py	/^def t2_fest(x, M0, t2):$/;"	kind:function	line:20
+t2_fest	../scripts/nmr_lib.py	/^def t2_fest(x, M0, t2):$/;"	kind:function	line:21
+t2_fest	../scripts/old/nmr_lib2.py	/^def t2_fest(x, M0, t2):$/;"	kind:function	line:21
+t2files	../scripts/T2_meta.py	/^t2files = glob.glob(data_dir + "\/*\/T2\/T2_*.data")$/;"	kind:variable	line:13
+t2phase	../data/bruker/T2/auswertung.py	/^t2phase = 12 * np.pi \/ 180$/;"	kind:variable	line:28
+tau_c	../data/lineshape/lineshape_sim.py	/^def tau_c(T):$/;"	kind:function	line:56
+tau_co	../data/lineshape/lineshape_sim.py	/^tau_co = 5.1e-14$/;"	kind:variable	line:51
+td_1	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^td_1 = 16384$/;"	kind:variable	line:19
+td_2	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^td_2 = 512$/;"	kind:variable	line:20
+temp	../data/bruker/SPEK/crn_spek.py	/^temp = np.array([$/;"	kind:variable	line:62
+temp	../scripts/old/crn_maxfinder.py	/^    temp = cmplx_sel * np.exp(-2*np.pi * ph\/360 * 1j)$/;"	kind:variable	line:36
+temp	../scripts/old/crn_spek_t1.py	/^temp = data[:,1]$/;"	kind:variable	line:32
+temp	../scripts/old/crn_spek_t1.py	/^temp = data[:,1]$/;"	kind:variable	line:54
+temp	../scripts/old/crn_spek_t1.py	/^temp = data_t1[:,1]$/;"	kind:variable	line:26
+temp	../scripts/old/crn_spek_t1.py	/^temp = data_t1[:,1]$/;"	kind:variable	line:48
+temp	../scripts/old/crn_t1_beta.py	/^temp = data[:,0]$/;"	kind:variable	line:38
+temp_b	../scripts/old/crn_t1_beta.py	/^temp_b = data_b[:,0]$/;"	kind:variable	line:47
+temp_max	../scripts/old/crn_maxfinder.py	/^    temp_max = np.max(np.abs(temp.real))$/;"	kind:variable	line:37
+tempdata	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^tempdata = np.zeros(dshape)$/;"	kind:variable	line:51
+tempt1	../data/bruker/T1 Joachim/auswertung.py	/^tempt1 = np.array(tempt1)$/;"	kind:variable	line:153
+tempt1	../data/bruker/T1 Joachim/auswertung.py	/^tempt1=[380.0, 390.0, 375.0, 385.0, 370.0, 365.0, 360.0, 355.0, 350.0, 345.0, 340.0, 330.0, 335.0, 320.0]$/;"	kind:variable	line:6
+tempt1	../data/bruker/T1/auswertung.py	/^tempt1 = [$/;"	kind:variable	line:12
+tempt1	../data/bruker/T1/auswertung.py	/^tempt1 = np.array(tempt1)$/;"	kind:variable	line:257
+tempt1	../data/bruker/T2/auswertung.py	/^tempt1 = np.array([$/;"	kind:variable	line:12
+tempt2	../data/bruker/T2/auswertung.py	/^tempt2 = np.array([$/;"	kind:variable	line:23
+time	../scripts/old/crn_maxfinder.py	/^time = data[:,0]$/;"	kind:variable	line:15
+times_1	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^times_1 = dw * np.arange(0, int(td_1 \/ 2))$/;"	kind:variable	line:57
+times_2	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^times_2 = in0 * np.arange(0, int(td_2 \/ 2))$/;"	kind:variable	line:58
+to_cmplx	../data/170918/plots/backup/nmr_lib.py	/^def to_cmplx(real, imag):$/;"	kind:function	line:122
+to_cmplx	../data/170918/plots/nmr_lib.py	/^def to_cmplx(real, imag):$/;"	kind:function	line:122
+to_cmplx	../data/crn/data/SPEK/nmr_lib.py	/^def to_cmplx(real, imag):$/;"	kind:function	line:116
+to_cmplx	../data/crn/data/T1/nmr_lib.py	/^def to_cmplx(real, imag):$/;"	kind:function	line:116
+to_cmplx	../data/crn/data/T2/nmr_lib.py	/^def to_cmplx(real, imag):$/;"	kind:function	line:116
+to_cmplx	../scripts/nmr_lib.py	/^def to_cmplx(real, imag):$/;"	kind:function	line:139
+to_cmplx	../scripts/old/crn_f2_div.py	/^def to_cmplx(real, imag):$/;"	kind:function	line:89
+to_cmplx	../scripts/old/nmr_lib2.py	/^def to_cmplx(real, imag):$/;"	kind:function	line:129
+tpcos	../data/bruker/scripts/auswertung.py	/^tpcos = [$/;"	kind:variable	line:9
+tpsin	../data/bruker/scripts/auswertung.py	/^tpsin = [$/;"	kind:variable	line:23
+trigger_time_f2	../data/bruker/scripts/auswertung.py	/^trigger_time_f2 = 0e-6$/;"	kind:variable	line:30
+trigger_time_t1	../data/bruker/T1 Joachim/auswertung.py	/^trigger_time_t1=4e-6$/;"	kind:variable	line:8
+trigger_time_t1	../data/bruker/T1/auswertung.py	/^trigger_time_t1 = 4e-6$/;"	kind:variable	line:17
+trigger_time_t1	../data/bruker/T2/auswertung.py	/^trigger_time_t1 = 4e-6$/;"	kind:variable	line:16
+trigger_time_t2	../data/bruker/T2/auswertung.py	/^trigger_time_t2 = 2e-6$/;"	kind:variable	line:27
+udic	../data/bruker/SPEK/csv_to_dofft.py	/^        udic = ng.bruker.guess_udic(dic, data)$/;"	kind:variable	line:12
+udic	../data/bruker/scripts/csv_to_dofft.py	/^        udic = ng.bruker.guess_udic(dic,data)$/;"	kind:variable	line:12
+vmax	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    vmax=0.5)$/;"	kind:variable	line:432
+vmax	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    vmax=spek_max)$/;"	kind:variable	line:346
+vmax	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    vmax=spek_max)$/;"	kind:variable	line:384
+vmin	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    vmin=0.0,$/;"	kind:variable	line:431
+vmin	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    vmin=spek_min,$/;"	kind:variable	line:345
+vmin	../data/bruker/2DSPEK/52/generate2dspectrum.py	/^    vmin=spek_min,$/;"	kind:variable	line:383
+x	../scripts/old/crn_t1_beta.py	/^x = np.linspace(0, 0.06)$/;"	kind:variable	line:26

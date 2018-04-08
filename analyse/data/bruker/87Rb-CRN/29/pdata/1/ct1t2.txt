@@ -1,0 +1,36 @@
+Dataset :
+ /opt/topspin3.5pl6/data/e3b/joachim/87Rb-CRN/29/pdata/1
+AREA fit :
+ I[t]=P*exp(-t/T2)
+
+20 points for Integral 1,  Integral Region from 0.075 to -234.063 ppm
+Results     Comp. 1    
+
+P     =    7.695e-01
+T2    =      48.990u
+SD    =    1.687e-01
+
+    tau    ppm     integral    intensity
+
+    9.000u  -130.374   2.6649e+11     eliminated
+   15.000u  -130.374   1.4256e+11     eliminated
+   24.000u  -130.374   5.5915e+10     eliminated
+   40.000u  -130.374    1.011e+10     eliminated
+   65.000u  -130.374   5.0207e+08     eliminated
+  107.000u  -130.374  -2.3591e+08     eliminated
+  176.000u  -130.374  -2.3996e+08     eliminated
+  289.000u  -130.374  -3.8566e+07     eliminated
+  475.000u  -130.374  -1.8809e+07     eliminated
+  780.000u  -130.374   4.8646e+08     eliminated
+   12.000u  -130.374   1.9545e+11     eliminated
+   19.000u  -130.374   9.3263e+10     eliminated
+   31.000u  -130.374   2.6712e+10     eliminated
+   51.000u  -130.374   3.3472e+09     eliminated
+   84.000u  -130.374   1.0007e+09     eliminated
+  138.000u  -130.374  -7.4286e+08     eliminated
+  226.000u  -130.374  -2.1487e+08     eliminated
+  371.000u  -130.374   8.7632e+08     eliminated
+  609.000u  -130.374  -2.2514e+08     eliminated
+    1.000m  -130.374   1.8553e+08     eliminated
+
+

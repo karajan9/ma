@@ -1,0 +1,61 @@
+
+Current Data Parameters
+NAME           87Rb-CRN              
+EXPNO                17              
+PROCNO                1              
+
+F2 - Acquisition Parameters
+Date_          20171204              
+Time              15.21 h            
+INSTRUM           spect              
+PROBHD   K2433_K459 (SO              
+PULPROG     hahnecho.jb              
+TD                 8192              
+SOLVENT                              
+NS                 1024              
+DS                    0              
+SWH          500000.000 Hz           
+FIDRES       122.070312 Hz           
+AQ            0.0081920 sec          
+RG                   32              
+DW                1.000 usec         
+DE                 6.50 usec         
+TE                375.0 K            
+D1           0.10000000 sec          
+D6           0.00001500 sec          
+D7           0.00000450 sec          
+D8           0.00000400 sec          
+TDav                  1              
+VDLIST      87rb-crn-t1              
+ZGOPTNS            -Dt1              
+vd           0.00001000 sec          
+SFO1        130.9736217 MHz          
+NUC1               87Rb              
+P1                 2.50 usec         
+P2                 5.00 usec         
+PLW1        50.00000000 W            
+
+F1 - Acquisition parameters
+TD                    5              
+SFO1           400.2619 MHz          
+FIDRES      1600.000000 Hz           
+SW                9.993 ppm          
+FnMODE               QF              
+
+F2 - Processing parameters
+SI                17120              
+SF          130.9736119 MHz          
+WDW                  EM              
+SSB      0              
+LB               100.00 Hz           
+GB       0              
+PC                 4.00              
+
+F1 - Processing parameters
+SI                   32              
+MC2                  QF              
+SF          400.2700003 MHz          
+WDW                  no              
+SSB      0              
+LB       0 Hz           
+GB       0              
