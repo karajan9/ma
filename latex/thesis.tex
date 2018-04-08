@@ -153,7 +153,12 @@ sorting=nyt
 % \usepackage{lscape}
 
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
-		\node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+    \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\usepackage{braket}
+
+\usepackage{wrapfig}
 
 %------------------------------------------------------------------------------
 %-------------------------    Angaben zur Arbeit   ----------------------------
