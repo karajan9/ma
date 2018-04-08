@@ -1,0 +1,190 @@
+% GNUPLOT: LaTeX picture with Postscript
+\begingroup
+  \makeatletter
+  \providecommand\color[2][]{%
+    \GenericError{(gnuplot) \space\space\space\@spaces}{%
+      Package color not loaded in conjunction with
+      terminal option `colourtext'%
+    }{See the gnuplot documentation for explanation.%
+    }{Either use 'blacktext' in gnuplot or load the package
+      color.sty in LaTeX.}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\includegraphics[2][]{%
+    \GenericError{(gnuplot) \space\space\space\@spaces}{%
+      Package graphicx or graphics not loaded%
+    }{See the gnuplot documentation for explanation.%
+    }{The gnuplot epslatex terminal needs graphicx.sty or graphics.sty.}%
+    \renewcommand\includegraphics[2][]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \@ifundefined{ifGPcolor}{%
+    \newif\ifGPcolor
+    \GPcolortrue
+  }{}%
+  \@ifundefined{ifGPblacktext}{%
+    \newif\ifGPblacktext
+    \GPblacktextfalse
+  }{}%
+  % define a \g@addto@macro without @ in the name:
+  \let\gplgaddtomacro\g@addto@macro
+  % define empty templates for all commands taking text:
+  \gdef\gplbacktext{}%
+  \gdef\gplfronttext{}%
+  \makeatother
+  \ifGPblacktext
+    % no textcolor at all
+    \def\colorrgb#1{}%
+    \def\colorgray#1{}%
+  \else
+    % gray or color?
+    \ifGPcolor
+      \def\colorrgb#1{\color[rgb]{#1}}%
+      \def\colorgray#1{\color[gray]{#1}}%
+      \expandafter\def\csname LTw\endcsname{\color{white}}%
+      \expandafter\def\csname LTb\endcsname{\color{black}}%
+      \expandafter\def\csname LTa\endcsname{\color{black}}%
+      \expandafter\def\csname LT0\endcsname{\color[rgb]{1,0,0}}%
+      \expandafter\def\csname LT1\endcsname{\color[rgb]{0,1,0}}%
+      \expandafter\def\csname LT2\endcsname{\color[rgb]{0,0,1}}%
+      \expandafter\def\csname LT3\endcsname{\color[rgb]{1,0,1}}%
+      \expandafter\def\csname LT4\endcsname{\color[rgb]{0,1,1}}%
+      \expandafter\def\csname LT5\endcsname{\color[rgb]{1,1,0}}%
+      \expandafter\def\csname LT6\endcsname{\color[rgb]{0,0,0}}%
+      \expandafter\def\csname LT7\endcsname{\color[rgb]{1,0.3,0}}%
+      \expandafter\def\csname LT8\endcsname{\color[rgb]{0.5,0.5,0.5}}%
+    \else
+      % gray
+      \def\colorrgb#1{\color{black}}%
+      \def\colorgray#1{\color[gray]{#1}}%
+      \expandafter\def\csname LTw\endcsname{\color{white}}%
+      \expandafter\def\csname LTb\endcsname{\color{black}}%
+      \expandafter\def\csname LTa\endcsname{\color{black}}%
+      \expandafter\def\csname LT0\endcsname{\color{black}}%
+      \expandafter\def\csname LT1\endcsname{\color{black}}%
+      \expandafter\def\csname LT2\endcsname{\color{black}}%
+      \expandafter\def\csname LT3\endcsname{\color{black}}%
+      \expandafter\def\csname LT4\endcsname{\color{black}}%
+      \expandafter\def\csname LT5\endcsname{\color{black}}%
+      \expandafter\def\csname LT6\endcsname{\color{black}}%
+      \expandafter\def\csname LT7\endcsname{\color{black}}%
+      \expandafter\def\csname LT8\endcsname{\color{black}}%
+    \fi
+  \fi
+    \setlength{\unitlength}{0.0500bp}%
+    \ifx\gptboxheight\undefined%
+      \newlength{\gptboxheight}%
+      \newlength{\gptboxwidth}%
+      \newsavebox{\gptboxtext}%
+    \fi%
+    \setlength{\fboxrule}{0.5pt}%
+    \setlength{\fboxsep}{1pt}%
+\begin{picture}(7370.00,9070.00)%
+    \gplgaddtomacro\gplbacktext{%
+      \csname LTb\endcsname%
+      \put(605,6668){\makebox(0,0)[r]{\strut{}$0$}}%
+      \put(605,7039){\makebox(0,0)[r]{\strut{}$0.2$}}%
+      \put(605,7410){\makebox(0,0)[r]{\strut{}$0.4$}}%
+      \put(605,7781){\makebox(0,0)[r]{\strut{}$0.6$}}%
+      \put(605,8152){\makebox(0,0)[r]{\strut{}$0.8$}}%
+      \put(605,8523){\makebox(0,0)[r]{\strut{}$1$}}%
+      \put(737,6355){\makebox(0,0){\strut{}}}%
+      \put(1433,6355){\makebox(0,0){\strut{}}}%
+      \put(2129,6355){\makebox(0,0){\strut{}}}%
+      \put(2825,6355){\makebox(0,0){\strut{}}}%
+      \put(3521,6355){\makebox(0,0){\strut{}}}%
+      \put(4216,6355){\makebox(0,0){\strut{}}}%
+      \put(4912,6355){\makebox(0,0){\strut{}}}%
+      \put(5608,6355){\makebox(0,0){\strut{}}}%
+      \put(6304,6355){\makebox(0,0){\strut{}}}%
+      \put(7000,6355){\makebox(0,0){\strut{}}}%
+      \put(744,6807){\makebox(0,0)[l]{\strut{}$N=2$}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+      \csname LTb\endcsname%
+      \put(-33,7595){\rotatebox{-270}{\makebox(0,0){\strut{}$ Z_{\sin\sin} $}}}%
+      \csname LTb\endcsname%
+      \put(6013,7188){\makebox(0,0)[r]{\strut{}$\eta=0.0$}}%
+      \csname LTb\endcsname%
+      \put(6013,6968){\makebox(0,0)[r]{\strut{}$\eta=0.5$}}%
+      \csname LTb\endcsname%
+      \put(6013,6748){\makebox(0,0)[r]{\strut{}$\eta=1.0$}}%
+    }%
+    \gplgaddtomacro\gplbacktext{%
+      \csname LTb\endcsname%
+      \put(605,4628){\makebox(0,0)[r]{\strut{}$0$}}%
+      \put(605,4999){\makebox(0,0)[r]{\strut{}$0.2$}}%
+      \put(605,5370){\makebox(0,0)[r]{\strut{}$0.4$}}%
+      \put(605,5740){\makebox(0,0)[r]{\strut{}$0.6$}}%
+      \put(605,6111){\makebox(0,0)[r]{\strut{}$0.8$}}%
+      \put(605,6482){\makebox(0,0)[r]{\strut{}$1$}}%
+      \put(737,4315){\makebox(0,0){\strut{}}}%
+      \put(1433,4315){\makebox(0,0){\strut{}}}%
+      \put(2129,4315){\makebox(0,0){\strut{}}}%
+      \put(2825,4315){\makebox(0,0){\strut{}}}%
+      \put(3521,4315){\makebox(0,0){\strut{}}}%
+      \put(4216,4315){\makebox(0,0){\strut{}}}%
+      \put(4912,4315){\makebox(0,0){\strut{}}}%
+      \put(5608,4315){\makebox(0,0){\strut{}}}%
+      \put(6304,4315){\makebox(0,0){\strut{}}}%
+      \put(7000,4315){\makebox(0,0){\strut{}}}%
+      \put(744,4767){\makebox(0,0)[l]{\strut{}$N=3$}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+      \csname LTb\endcsname%
+      \put(-33,5555){\rotatebox{-270}{\makebox(0,0){\strut{}$ Z_{\sin\sin} $}}}%
+    }%
+    \gplgaddtomacro\gplbacktext{%
+      \csname LTb\endcsname%
+      \put(605,2587){\makebox(0,0)[r]{\strut{}$0$}}%
+      \put(605,2958){\makebox(0,0)[r]{\strut{}$0.2$}}%
+      \put(605,3329){\makebox(0,0)[r]{\strut{}$0.4$}}%
+      \put(605,3700){\makebox(0,0)[r]{\strut{}$0.6$}}%
+      \put(605,4071){\makebox(0,0)[r]{\strut{}$0.8$}}%
+      \put(605,4442){\makebox(0,0)[r]{\strut{}$1$}}%
+      \put(737,2274){\makebox(0,0){\strut{}}}%
+      \put(1433,2274){\makebox(0,0){\strut{}}}%
+      \put(2129,2274){\makebox(0,0){\strut{}}}%
+      \put(2825,2274){\makebox(0,0){\strut{}}}%
+      \put(3521,2274){\makebox(0,0){\strut{}}}%
+      \put(4216,2274){\makebox(0,0){\strut{}}}%
+      \put(4912,2274){\makebox(0,0){\strut{}}}%
+      \put(5608,2274){\makebox(0,0){\strut{}}}%
+      \put(6304,2274){\makebox(0,0){\strut{}}}%
+      \put(7000,2274){\makebox(0,0){\strut{}}}%
+      \put(744,2726){\makebox(0,0)[l]{\strut{}$N=4$}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+      \csname LTb\endcsname%
+      \put(-33,3514){\rotatebox{-270}{\makebox(0,0){\strut{}$ Z_{\sin\sin} $}}}%
+    }%
+    \gplgaddtomacro\gplbacktext{%
+      \csname LTb\endcsname%
+      \put(605,546){\makebox(0,0)[r]{\strut{}$0$}}%
+      \put(605,917){\makebox(0,0)[r]{\strut{}$0.2$}}%
+      \put(605,1288){\makebox(0,0)[r]{\strut{}$0.4$}}%
+      \put(605,1659){\makebox(0,0)[r]{\strut{}$0.6$}}%
+      \put(605,2030){\makebox(0,0)[r]{\strut{}$0.8$}}%
+      \put(605,2401){\makebox(0,0)[r]{\strut{}$1$}}%
+      \put(737,233){\makebox(0,0){\strut{}$0$}}%
+      \put(1433,233){\makebox(0,0){\strut{}$10$}}%
+      \put(2129,233){\makebox(0,0){\strut{}$20$}}%
+      \put(2825,233){\makebox(0,0){\strut{}$30$}}%
+      \put(3521,233){\makebox(0,0){\strut{}$40$}}%
+      \put(4216,233){\makebox(0,0){\strut{}$50$}}%
+      \put(4912,233){\makebox(0,0){\strut{}$60$}}%
+      \put(5608,233){\makebox(0,0){\strut{}$70$}}%
+      \put(6304,233){\makebox(0,0){\strut{}$80$}}%
+      \put(7000,233){\makebox(0,0){\strut{}$90$}}%
+      \put(744,685){\makebox(0,0)[l]{\strut{}$N>4$}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+      \csname LTb\endcsname%
+      \put(-33,1473){\rotatebox{-270}{\makebox(0,0){\strut{}$ Z_{\sin\sin} $}}}%
+      \put(3868,-97){\makebox(0,0){\strut{}$ \psi \left[ \si{\degree} \right] $}}%
+    }%
+    \gplbacktext
+    \put(0,0){\includegraphics{graphics/qww2ordentlicharbeit}}%
+    \gplfronttext
+  \end{picture}%
+\endgroup

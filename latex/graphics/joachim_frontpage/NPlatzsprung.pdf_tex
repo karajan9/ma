@@ -1,0 +1,67 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'NPlatzsprung.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{265.94589354bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.60930952)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{NPlatzsprung.pdf}}%
+    \put(0.4890304,0.09195961){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.27073176\unitlength}\raggedright $ \psi $\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{NPlatzsprung.pdf}}%
+    \put(0.40056451,0.55338248){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.58163126\unitlength}\raggedright $ \SI{360}{\degree}/N $\end{minipage}}}%
+    \put(0.04718308,0.62000004){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.51624509\unitlength}\raggedright $ z^{\text{HAS 1}} $\end{minipage}}}%
+    \put(-0.03320262,0.52302552){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.51361298\unitlength}\raggedright $ x^{\text{HAS 1}} $\end{minipage}}}%
+    \put(-0.02771778,0.43708323){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.52376542\unitlength}\raggedright $ y^{\text{HAS 1}} $\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{NPlatzsprung.pdf}}%
+    \put(0.10253852,0.41746742){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.52376542\unitlength}\raggedright $ \chi $\end{minipage}}}%
+    \put(0.88023301,0.57506131){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.51624509\unitlength}\raggedright $ z^{\text{HAS 2}} $\end{minipage}}}%
+    \put(0.84557623,0.60889851){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.51361298\unitlength}\raggedright $ y^{\text{HAS 2}} $\end{minipage}}}%
+    \put(0.91347597,0.53035631){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.52376542\unitlength}\raggedright $ x^{\text{HAS 2}} $\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{NPlatzsprung.pdf}}%
+    \put(0.81156602,0.5917062){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.52376542\unitlength}\raggedright $ \chi $\end{minipage}}}%
+  \end{picture}%
+\endgroup%

@@ -1,0 +1,72 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'theorieHasImsLabSystem.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{337.57956437bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.69743032)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{theorieHasImsLabSystem.pdf}}%
+    \put(0.43389847,0.55552779){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.37916987\unitlength}\raggedright $ z^{\text{IMS}} $\end{minipage}}}%
+    \put(0.64777397,0.21816813){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.37916987\unitlength}\raggedright $ y^{\text{IMS}} $\end{minipage}}}%
+    \put(0.82153196,0.08410449){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.37916987\unitlength}\raggedright $ x^{\text{IMS}} $\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{theorieHasImsLabSystem.pdf}}%
+    \put(0.61298853,0.14182639){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.22513211\unitlength}\raggedright $ \phi $\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{theorieHasImsLabSystem.pdf}}%
+    \put(0.4447319,0.247283){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.22513211\unitlength}\raggedright $ \theta $\end{minipage}}}%
+    \put(0.61696643,0.35824109){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.37916987\unitlength}\raggedright $ z^{\text{LAB}} $\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{theorieHasImsLabSystem.pdf}}%
+    \put(0.10686445,0.62188263){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.37916987\unitlength}\raggedright $ z^{\text{HAS}} $\end{minipage}}}%
+    \put(0.33407015,0.53242224){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.37916987\unitlength}\raggedright $ x^{\text{HAS}} $\end{minipage}}}%
+    \put(0.23127957,0.51583356){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.37916987\unitlength}\raggedright $ y^{\text{HAS}} $\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{theorieHasImsLabSystem.pdf}}%
+    \put(0.37423,0.22891696){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.22513211\unitlength}\raggedright $ \beta $\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{theorieHasImsLabSystem.pdf}}%
+    \put(0.3641583,0.14123393){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.22513211\unitlength}\raggedright $ \alpha $\end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{theorieHasImsLabSystem.pdf}}%
+    \put(0.27084696,0.44456984){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.22513211\unitlength}\raggedright $ \gamma $\end{minipage}}}%
+  \end{picture}%
+\endgroup%
