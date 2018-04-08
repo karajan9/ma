@@ -1,0 +1,130 @@
+Masterplan
+
+    Mo Di Mi Do Fr Sa So
+1   19 20 21 22 23 24 25
+2   26 27 28 29 30 31 01
+3   02 03 04 05 06 07 08
+4   09 10 11 12 13 14 15
+5   16 17 18 19 20 21 22
+    23 24
+
+
+0:  - Grundriss für jeden Abschnitt/Teil
+
+1:  - Daten auswerten
+    - Alle Daten nach Origin verschiffen (-> Style Guide?)
+    - Alle Plots machen
+    - Experimentelle Details korrekturfertig schreiben
+    - Grafiken raussuchen
+
+2:  - Theorie besprechen und schreiben
+    - Experimente (Ofen, Simulation) besprechen
+    - Theorie korrekturfertig schreiben
+
+3:  - Experiment besprechen und schreiben
+    - Experiment korrekturfertig schreiben und zusammensetzen
+
+4:  - Alles zusammenbringen, Details machen und korrigieren
+    - Literaturverzeichnis
+    - Einleitung und Schluss
+    - Finales Korrekturlesen lassen
+
+5:  - Korrekturlesen
+    - Drucken
+    - Abgeben
+
+
+
+Was gibt es noch alles zu tun?
+
+Ich habe noch ca. 96 Stunden
+
+    42  - Theorie schreiben
+Do       1  · Was soll alles in die Theorie rein?
+                · NMR Grundlagen
+                · T_1 und T_2
+                · Pulsfolgen
+                · Quadrupol-WW
+                · CRN
+         1  · Wo kriege ich die Informationen her?
+        11  · Informationen sammeln + Joachim/Roland fragen
+             5  · Joachims/Jonas/Michales Arbeit lesen
+             3  · Fachbücher lesen, Internet befragen
+             1  · Fragen sammeln und sortieren
+             2  · Fragen stellen und Antworten notieren
+Fr      15  · So weit aufschreiben wie es geht
+             2  · T_1 und T_2
+             3  · Pulsfolgen
+             4  · Quadrupol-WW
+             4  · CRN
+Sa           2  · NMR Grundlagen
+         1  · Fragen sammeln und organisieren
+         4  · Fragen versuchen zu beantworten
+         2  · Joachim/Roland fragen und Antworten notieren
+         3  · Antworten einarbeiten
+So       4  · Texte fertig machen
+    37  - Resultate ausformulieren
+         1  · Überlegen, was sonst noch alles rein soll, Notizen durchsehen
+         1  · Struktur planen
+         1  · Umstrukturieren
+        21  · Ausformulieren so weit es geht
+             3  · T_1 + BRUKER
+             3  · T_2 + BRUKER
+Mo           3  · F_2
+             2  · SPEKDYN
+            10  · SPEK 
+                 1  · + BRUKER
+                 4  · + SIM
+Di               4  · + THEO
+         4  · Fragen und offene Enden finden
+             2  · Durchlesen und Notizen machen
+             2  · Checken ob alles passt
+         2  · Joachim oder Roland fragen
+         3  · Antworten einarbeiten
+Mi       4  · Texte fertig machen
+     5  - Plots finalisieren
+         1  · Welche Plots muss ich noch alles verbessern?
+         4  · Verbessern
+    14  - Simulation schreiben
+         1  · Wie detailliert soll die Simulation beschrieben werden?
+         2  · Groben Umriss planen
+Do       4  · So weit aufschreiben wie es geht
+         1  · Fragen sammeln
+         2  · Joachim ausfragen
+         2  · Antworten einarbeiten
+         2  · Text fertig machen
+    --------------------------------------------------------------------------
+Fr   8  - Exp. Details zu Ende bringen
+         2  · Rolands Anmerkungen einbringen
+         1  · Was muss ich noch alles hinzufügen oder verbessern?
+         5  · Hinzufügen und verbessern
+     9  - Finden, was noch unrund ist
+         2  · Alles, was ich gemacht habe durchlesen
+         2  · Durchlesen lassen
+Sa       2  · Gucken, wo es mir komisch vorkommt
+         3  · Verbessern
+     8  - Physikalische Idee verstehen
+         2  · Eckert Paper lesen
+         2  · Joachims oder Michaels Arbeit lesen
+         2  · Mit Joachim über zweite Ordnung reden
+         2  · Mit Roland reden
+So   6  - Einleitung und Schluss
+         1  · Inspiration holen, was da so alles reingehört
+         2  · Ziel dieser Arbeit verstehen und formulieren
+         3  · Die zu Einleitung und Schluss formen
+     5  - Literaturverzeichnis
+         1  · Schauen, dass ich nichts unzitiert lasse
+         2  · Quellen finden und hinzufügen
+         1  · Literaturverzeichnis durchsehen, dass es ordentlich ist
+         1  · Ordentlich machen
+Mo  11  - Alles zusammenbringen, Details machen und korrigieren
+         1  · Alles an die richtigen Stellen kopieren
+         2  · Links richtig setzen
+         4  · Durchlesen und Kommentare machen
+         4  · Korrigieren
+Di   3  - Finales Korrekturlesen lassen
+         1  · Überlegen, wer alles Korrekturlesen würde
+         1  · Bestes Timing fürs Korrekturlesen?
+         1  · Diese Leute fragen
+
+148 Stunden, das sind etwa 15 Tage. 

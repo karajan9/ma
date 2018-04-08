@@ -1,0 +1,105 @@
+Plan für Woche 1
+
+
+- Grundriss für jeden Abschnitt/Teil
+    - Einleitung, was geschah vorher, was sind Erwartungen für Experimente
+    - Echos, F2, Pulsfolgen Bruker
+    - Quadrupol WW
+    - CRN, ionische Schmelze, Glaszustand, \beta-Prozess
+    - T1 \beta
+    - T2 Messungen + \beta
+    - Suche nach dem \beta-Prozess
+        - F2 Messungen
+        - Spektren
+    - Spektren
+        - FWHM, mit T1 einberechnet -> Eckert
+        - Maxima/Schwerpunkt
+        - 2D Spektrum
+    - Simulation
+        - Modelle: Czjzek, Oktaeder
+        - Bestimmen von Korrelationszeiten durch 2D-Diagonale
+        - Vergleich Simulation/Experiment
+
+    - Gerüste abtippen
+
+
+- Daten auswerten, Alle Daten nach Origin verschiffen (-> Style Guide?), Plots
+    - T2: \beta festhalten, wenn es merkwürdig aussieht
+    - T2: Warum sehen die Bruker-Daten so anders aus? -> Rohdaten
+    - Rohdaten T1, T2 hübsch machen
+    - F2 für tiefe Temperaturen und kleine Zeiten
+    - Linienformänderungen
+    - Rohspektren beider Spektrometer 
+
+
+- Grafiken raussuchen
+    - Was für Grafiken brauche ich (außer für Spektrometer und Ofen)?
+    - Wo bekomme ich die her
+    - Mit Quelle sammeln
+
+
+- Experimentelle Details korrekturfertig schreiben
+    - Latex Gerüst raussuchen und aufbereiten
+    - Schauen, was mir nach alles an Infos fehlt
+    - Wo kriege ich die Infos her? MAs von Joachim/Jonas/Julius
+    - Überlegen, was ich für Grafiken/Skizzen ich brauche
+    - Wo bekomme ich die Grafiken/Skizzen her?
+    - Fotos machen
+
+    - Aufbauten von Ofen und Spektrometer besorgen
+    - Aufbauten formulieren
+    - Formulierte Aufbauten abschreiben
+    - Lücken suchen
+    - Lücken füllen
+    - Details und hübsch machen
+
+    - An Roland geben
+
+
+
+Do                       22
+Fr  08 -- 12 14 16 -- -- 22
+Sa  08 10 -- -- -- -- 20 22
+So  08 10 -- 14 16 18 20 22
+~ 34h
+
+
+
+
+Fr: Vormittag:
+        .75 - Wo kriege ich die Infos her? MAs von Joachim/Jonas/Julius
+        .25 - Wo bekomme ich die Grafiken/Skizzen her?
+        1   - Aufbauten von Ofen und Spektrometer besorgen
+    Nachmittag:
+        .5  - Fotos machen
+        2   - Aufbauten formulieren
+    Fahrt: Grundriss 4x
+    Abend:
+        .5  - Formulierte Aufbauten abschreiben
+
+Sa: Vormittag:
+        1   - Lücken suchen
+        .5  - Latex Gerüst raussuchen und aufbereiten
+    Fahrt: Grundriss 4x
+    Mittag:
+        2   - Lücken füllen
+    Abend:
+        2   - Details und hübsch machen
+So: Vormittag:
+        .5  - T2: \beta festhalten, wenn es merkwürdig aussieht
+        .5  - T2: Warum sehen die Bruker-Daten so anders aus? -> Rohdaten
+        .5  - Rohdaten T1, T2 hübsch machen
+        .5  - F2 für tiefe Temperaturen und kleine Zeiten
+        .5  - Linienformänderungen
+        .5  - Rohspektren beider Spektrometer 
+    Nachmittag:
+        - Alle Daten nach Origin verschiffen (-> Style Guide?) 3h
+    Abend:
+        Grundriss 15x + Abtippen
+
+
+
+- Grafiken raussuchen
+    - Was für Grafiken brauche ich (außer für Spektrometer und Ofen)?
+    - Wo bekomme ich die her
+    - Mit Quelle sammeln
