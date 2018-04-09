@@ -117,7 +117,9 @@ $C_\gamma$ ist dabei eine vom Hamiltonoperator abhängige Konstante.
 Wird diese Gleichung unter Ausnutzung von Kommutatorrelationen gelöst, ergeben sich folgende Gleichungen, die zur longitudinalen bzw. transversalen Relaxation korrespondieren:
 \begin{align}
     \Braket{\frac{\text{d} \hat{I}_z}{\text{d}t}} =& - C_\gamma \sum_{l = 0}^2 \sum_{m = -l}^l (-1)^{l+m} \left[\hat{T}_{l,m}, \hat{T}_{l,-m}\right] \times m J_{l,m}(m \omega_0) \label{eqn:long_relax_theorie} \\
-    \Braket{\frac{\text{d} \hat{I}_\pm}{\text{d}t}} =& - C_\gamma \sum_{l = 0}^2 \sum_{m = -l}^l (-1)^{l+m} \left[\hat{T}_{l,m \pm 1}, \hat{T}_{l,-m}\right] \times \sqrt{l(l+1) - m(m \pm 1)} \times m J_{l,m}(m \omega_0) \label{eqn:trans_relax_theorie}
+\begin{split}
+    \Braket{\frac{\text{d} \hat{I}_\pm}{\text{d}t}} =& - C_\gamma \sum_{l = 0}^2 \sum_{m = -l}^l (-1)^{l+m} \left[\hat{T}_{l,m \pm 1}, \hat{T}_{l,-m}\right] \\ &\times \sqrt{l(l+1) - m(m \pm 1)} \times m J_{l,m}(m \omega_0) \label{eqn:trans_relax_theorie}
+\end{split}
 \end{align}
 
 
@@ -200,7 +202,9 @@ Wird für eine solche Messung ein FID (free induction decay) aufgenommen, so lä
 
 Neben der hier vorgestellten Spektraldichte $J(\omega)$, die von einer einzelnen Korrelationszeit $\tau_c$ zur Beschreibung der Molekülbewegung ausgeht, existieren noch weitere Modelle, denen verschiedene Verteilungen von $\tau_c$ zugrunde liegen. Bekannte Spektraldichten sind von Cole-Cole ($J_{CC}$) und von Cole-Davidson ($J_{CD}$) \cite[S. 105-108]{beckmann_relaxation}, angepasst mit dem entsprechenden Vorfaktor aus Formel \eqref{eqn:spektraldichte_j}:
 \begin{align}
-    J_{CC}(\omega, \tau_c, \alpha) &= \frac{\pi^2}{5} {C_Q}^2 \left( 1 + \frac{\eta^2}{3} \right) \frac{2}{\omega} \sin \left( \frac{\alpha \pi}{2} \right) \left[ \frac{(\omega \tau_c)^\alpha}{1 + (\omega \tau_c)^{2\alpha} + 2 (\omega \tau_c)^\alpha \cos (\alpha \pi / 2)} \right], \\
+\begin{split}
+    J_{CC}(\omega, \tau_c, \alpha) &= \frac{\pi^2}{5} {C_Q}^2 \left( 1 + \frac{\eta^2}{3} \right) \frac{2}{\omega} \sin \left( \frac{\alpha \pi}{2} \right) \\ &\times \left[ \frac{(\omega \tau_c)^\alpha}{1 + (\omega \tau_c)^{2\alpha} + 2 (\omega \tau_c)^\alpha \cos (\alpha \pi / 2)} \right],
+\end{split} \\
     J_{CD}(\omega, \tau_c, \gamma) &= \frac{\pi^2}{5} {C_Q}^2 \left( 1 + \frac{\eta^2}{3} \right) \frac{2}{\omega} \left\{ \frac{\sin [\gamma \arctan(\omega \tau_c)]}{(1 + \omega^2 {\tau_c}^2)^{2\gamma}} \right\}
 \end{align}
 Für $\alpha = 1$ bzw. $\gamma = 1$ korrespondieren diese Spektraldichten zu BPP.

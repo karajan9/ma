@@ -3,23 +3,33 @@
 
 \section{$T_1$} \label{section:res:T_1}
 
-Larmorfrequenz überall $\omega_L = 2 \pi \cdot \SI{97.1722}{MHz}$, sofern nicht anders notiert.
+Vor dem Beginn jeder NMR-Messung ist es sinnvoll, $T_1$ im zu untersuchenden Temperaturgebiet zu vermessen. Dies ist hilfreich um wichtige Parameter der Messungen abzustecken und mögliche Hindernisse im Vorhinein erahnen zu können. So sollte zwischen allen Messungen eine Zeit von mindestens $4 T_1$ gewartet werden, um sicherzugehen, dass sich die Magnetisierung in guter Näherung wieder im Gleichgewichtszustand befindet. Wird $T_1$ also im Laufe der Messung bei anderen Temperaturen länger, muss hierauf Rücksicht genommen werden. Wird $T_1$ auf der anderen Seite sehr kurz, kann es passieren, dass Signale sehr schnell zerfallen und den Experimentierenden mit einem schlechten Signal-Rausch-Verhältnis zurücklassen. Hinzu kommt, dass der Verlauf von $T_1$ nach Formel *** wertvolle Information über die Dynamik in der untersuchten Probe liefern kann. Zuletzt bietet diese recht einfache und reproduzierbare Messung die Möglichkeit, den Aufbau und die Probe auf Übereinstimmung mit Literaturdaten hin zu überprüfen. Daher wurden zu allen untersuchten Temperaturen $T_1$-Messungen aufgenommen.
 
+Zur Bestimmung von $T_1$ wurde eine Invertierungs-Pulsfolge mit Hahn-Echo verwendet. Dabei war die Evolutionszeit $t_p = \SI{15}{\micro s}$.
+
+Aufgenommen am OBI ($\SI{300}{MHz}$) mit Länge eines Pi-Pulses $\tau = \SI{7.6}{\micro s}$. Larmorfrequenz überall $\omega_L = 2 \pi \cdot \SI{97.1722}{MHz}$, sofern nicht anders notiert. ***
+
+Repräsentative Rohdaten einer solchen Messung sind in Abbildung \ref{fig:res:T_1_roh} zu sehen. An die Daten wurden Fits mit $T_1$ und $\beta$ als freien Parametern entsprechend Gleichung \eqref{eqn:theo:T_2_fit} angelegt -- diese sind als Linien dargestellt. Die Daten wurden hier zudem auf den Bereich zwischen $1$ und $-1$ normiert, um einen besseren Vergleich zuzulassen. Es ist zu erkennen, dass die Fits eine gute Repräsentation der Daten ermöglichen.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plots/T1/t1_roh.pdf}
 	\end{center}
 	\caption{$T_1$ Rohdaten} \label{fig:res:T_1_roh}
 \end{figure}
-Aufgenommen am OBI ($\SI{300}{MHz}$) mit Invertierung, dann Hahnecho, $\tau = \SI{15}{\micro s}$. Länge eines Pi-Pulses $\tau = \SI{7.6}{\micro s}$. Punkte sind Messwerte, Linien Fits mit Kohlrausch-Funktion.
+Während sich die Kurven zwischen $\SI{305}{\kelvin}$ und $\SI{325}{\kelvin}$ sehr ähneln, verschieben sich die Kurven und damit auch die $T_1$-Werte bei höheren Temperaturen zu kürzeren Zeiten.
+
+Dies lässt sich auch in der Gesamtübersicht aller aufgenommenen $T_1$-Daten in Abbildung \ref{fig:res:T_1} erkennen. Während die $T_1$-Zeiten bei Temperaturen von $\SI{250}{\kelvin}$ bis $\SI{325}{\kelvin}$ nahezu unverändert im unteren Millisekunden-Bereich liegen, verkürzen sie sich bei steigenden Temperaturen bis in den zweistelligen Mikrosekunden-Bereich. Es ist ein $T_1$-Minimum bei etwa $\SI{390}{\kelvin}$ auszumachen, ehe die $T_1$-Zeiten stagnieren oder sogar länger werden.
+
+Während die Unsicherheiten weitestgehend vernachlässigbar sind, sind starke Schwankungen über $\SI{390}{\kelvin}$ zu erkennen. Die dort aufgenommenen Daten kann nicht mehr Bedeutung als einer groben Idee der Tatsachen zugemessen werden.
+
+Abgesehen von dem erwähnten Temperaturbereich ist eine gute Übereinstimmung zu den $T_1$-Daten von Zürn \cite{zuern_paper} und zwischen Messungen mit überlappenden Temperaturbereichen zu erkennen, was darauf schließen lässt, dass diese Daten gut reproduzierbar sind.
 
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plots/T1/t1.pdf}
 	\end{center}
-	\caption{$T_1$ gegen Temperatur} \label{fig:res:T_1}
+	\caption{$T_1$ aus Fits nach Gleichung \eqref{eqn:theo:T_2_fit}. Unterschiedliche Farben indizieren hierbei gesonderte Messreihen; gelbe Punkte bieten einen Vergleich mit Daten von Zürn.} \label{fig:res:T_1}
 \end{figure}
-Ergebnisse der Fits, hier die $\tau$s. Gute Übereinstimmung mit Zürn, außer bei hohen Temperaturen.
 
 \begin{figure}
 	\begin{center}
@@ -253,7 +263,7 @@ Werden die resultierenden Zeitkonstanten zusammen mit $T_2$ aufgetragen, zeigt s
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plots/SPEKDYN/spekdyn_t2.pdf}
 	\end{center}
-	\caption{$\tau$ aus FWHM im Vergleich mit $\T_2$} \label{fig:res:spekdyn_t2}
+	\caption{$\tau$ aus FWHM im Vergleich mit $T_2$} \label{fig:res:spekdyn_t2}
 \end{figure}
 
 
