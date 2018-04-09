@@ -29,16 +29,16 @@ Diese Gleichung lässt sich durch:
     M_y (t) &= M_y(0) \sin(\omega_L t - \phi) \\
     M_z (t) &= M_z(0).
 \end{align}
-lösen.
+lösen; diese sind bekannt als Bloch-Gleichungen.
 
-Dies bedeutet, dass aus der Gleichgewichtsorientierung $M_z$ ausgelenkte magnetische Dipole nicht zu dieser zurück relaxieren, sondern eine Ausweichbewegung vollziehen und mit der Kreisfrequenz $\omega = \omega_L$ um die Achse des Magnetfeldes präzedieren.
+Dies bedeutet, dass aus der Gleichgewichtsorientierung $M_z(\infty) = M_\infty$ ausgelenkte magnetische Dipole nicht zu dieser zurück relaxieren, sondern eine Ausweichbewegung vollziehen und mit der Kreisfrequenz $\omega = \omega_L$ um die Achse des Magnetfeldes präzedieren.
 
 Um die folgenden Überlegungen einfacher zu gestalten, wird nun von dem Laborsystem in ein rotierendes Koordinatensystem übergegangen. Die Drehung des Koordinatensystems soll der der Magnetisierung dabei dergestalt gleichen, dass diese im neuen Koordinatensystem stationär erscheint; dies bedeutet also eine Drehung des Koordinatensystems um die Magnetfeldachse mit einer Kreisfrequenz $\omega_L$.
 
 Dies hat nach Formel \eqref{eqn:lamorfrequenz} zur Folge, dass das Magnetfeld $B_0$ im rotierenden Koordinatensystem als geschwächt erscheint: $B_\text{eff} = B_0 - \frac{\omega}{\gamma}$. Ist $\omega = \omega_L$, so ist das effektive Magnetfeld null.
 
 
-Neben diesem Vorwissen ist es nötig, Spins aktiv beeinflussen zu können, um in der Lage zu sein effektiv Informationen zu sammeln. Daher wird häufig die Probe in einer Spule untergebracht, deren Achse senkrecht zu der des Magnetfeldes steht; die Konvention richtet diese Spule entlang der x-Achse aus. Wird an der Spule eine Wechselspannung angelegt, werden die Spins einem entsprechenden Magnetfeld $\vec{B}_1 = 2 B_{1,x} \cos(\omega_1 t)$ ausgesetzt.
+Neben diesem Vorwissen ist es nötig, Spins aktiv beeinflussen zu können, um in der Lage zu sein effektiv Informationen zu sammeln. Daher wird häufig die Probe in einer Spule untergebracht, deren Achse senkrecht zu der des Magnetfeldes steht; die Konvention richtet diese Spule entlang der $x$-Achse aus. Wird an der Spule eine Wechselspannung angelegt, werden die Spins einem entsprechenden Magnetfeld $\vec{B}_1 = 2 B_{1,x} \cos(\omega_1 t)$ ausgesetzt.
 
 Da die Spule im Laborsystem stationär ist, rotiert das entstehende Magnetfeld im rotierenden Koordinatensystem mit $-\omega$. Um dies zu vermeiden wird $B_1$ als Superposition zweier Drehungen dargestellt:
 \begin{align}
@@ -52,7 +52,11 @@ Im rotierenden Koordinatensystem ergibt sich dies nun zu
 \end{align}
 was bedeutet, dass sich das Magnetfeld als eine Superposition aus einem stationären Teil und einem Teil, der mit $-2\omega$ rotiert, darstellen lässt. Letzter kann aufgrund der hohen Frequenz vernachlässigt werden -- dies ist als „rotating wave approximation“ bekannt --, sodass nur der stationäre Anteil im rotierenden Koordinatensystem verbleibt.
 
-Wird das $B_1$-Feld vom Experimentierenden aktiviert, so vollführt die mittlere Magnetisierung nach Formel \eqref{eqn:drehmoment} eine Präzessionsbewegung senkrecht zu diesem Magnetfeld. Mit einem Puls einer bestimmten Länge lassen sich die Magnetisierung so beispielsweise mit einem 90$^\circ$-Puls in die x-y-Ebene klappen oder mit einem 180$^\circ$-Puls invertieren. Durch das Kombinieren von Pulsen lassen sich Pulsfolgen entwickeln, um interessante Eigenschaften einer Probe zu untersuchen.
+Wird das $B_1$-Feld vom Experimentierenden aktiviert, so vollführt die mittlere Magnetisierung nach Formel \eqref{eqn:drehmoment} eine Präzessionsbewegung senkrecht zu diesem Magnetfeld. Mit einem Puls einer bestimmten Länge
+\begin{align}
+	t_\text{Puls} = \frac{\phi}{- \gamma B_1} \label{eqn:theo:pulslaenge}
+\end{align}
+lässt sich die Magnetisierung $M_\infty$ so beispielsweise mit einem $\phi = \SI{90}{\degree}$-Puls in die $x$-$y$-Ebene, auch Detektionsebene genannt, klappen oder mit einem 180$^\circ$-Puls invertieren. Durch das Kombinieren von Pulsen lassen sich Pulsfolgen entwickeln, um interessante Eigenschaften einer Probe zu untersuchen. Einige dieser werden in Kapitel \ref{section:exp:pulsfolgen} vorgestellt.
 
 In allen realen Systemen gibt es durch unterschiedliche Wechselwirkungen Relaxationen der longitudinalen und transversalen Magnetisierung, welche im nächsten Kapitel behandelt werden sollen.
 
@@ -205,69 +209,31 @@ Für $\alpha = 1$ bzw. $\gamma = 1$ korrespondieren diese Spektraldichten zu BPP
 
 
 
-\section{Theoretische Beschreibung experimenteller CRN-Daten} \label{section:theo:daten}
-
-
-Es wurde untersucht, ob vorliegende gemessenen Daten mit den beschriebenen Theorien in Einklang gebracht werden können. Dafür wurden die Daten zu $T_1$, zu Spektren untersucht; die $T_1$-Daten stammen dabei aus Messungen von C. Zürn \cite{zuern_paper} an einer 2Ca(NO$_3$)$_2$-3RbNO$_3$-Probe, während alle weiteren Daten mit der von Zürn verwendeten Probe im Rahmen dieser Masterarbeit aufgenommen wurden.
-
-Um eine Übereinstimmung zur Theorie feststellen zu können, müssen sich alle Datensätze mit dem gleichen Satz geteilter Parameter beschreiben lassen. Im Falle der Spektraldichte $J(\omega)$ sind dies $C_Q$ und $\tau_{co}$; für $J_{CC}$ und $J_{CD}$ sind $\alpha$ bzw. $\gamma$ zusätzliche Parameter.
-
-Nach \cite{PIMENOV199793} wird für CRN für die Korrelationszeit ein Vogel-Fulcher-Gesetz
-\begin{align}
-    \tau_c = \tau_{co} \exp \left( \frac{D T_\text{VF}}{T-T_\text{VF}} \right)
-\end{align}
-mit dem strength index $D = \SI{3.5}{}$, der Vogel-Fulcher-Temperatur $T_\text{VF} = \SI{294}{K}$ und dem Frequenzfaktor $\tau_{co} = \SI{5.1e-14}{s}$ (der beim Vergleich mit den Daten dennoch als freier Parameter angesehen werden soll um dem Fit eine größtmögliche Flexibilität zu erlauben) angenommen.
-
-\begin{wrapfigure}{r}{0.5\textwidth}
-  \vspace{-20pt}
-  \begin{center}
-    \includegraphics[width=0.49\textwidth]{graphics/zwischenbericht/tau_c_arrhenius_vogel_fulcher.pdf}
-  \end{center}
-  \vspace{-20pt}
-  \caption{Vergleich von Korrelationszeiten basierend auf Vogel-Fulcher-Gesetz \label{fig:korrelationszeiten}}
-\end{wrapfigure}
-Am $T_1$-Minimum nach Gleichung \eqref{eqn:bpp} gilt $\omega \tau_c \approx \SI{0.61}{}$ \cite[S. 629]{omegatau061}. Das $T_1$-Minimum kann in den Daten bei etwa $T_\text{min} = \SI{390}{K}$ gefunden werden; die Larmorfrequenz liegt bei $\omega_L = \SI{97.1722}{MHz}$, was bedeutet, dass bei $T_\text{min}$ gilt $\tau_c \approx \frac{\SI{0.61}{}}{\omega_L} \approx \SI{6.28}{\nano s}$. Vergleicht man das Vogel-Fulcher-Gesetz mit diesem Punkt, lässt sich erkennen, dass eine gute Übereinstimmung vorliegt.
-
-
-Die aufgenommenen Daten unterstützen eine biexponentielle Interpretation wie in \eqref{eqn:trans_relax} nur schwerlich, daher wurde lediglich der deutlich zu beobachtende Anteil des Zentralübergangs, $\Delta_c$ und $\omega_c^{(2)}$, für die entsprechenden FWHM- bzw. Schwerpunkts-Daten betrachtet. Für die $T_1$-Daten wird Formel \eqref{eqn:bpp} verwendet. Um einen Ausgangspunkt für die Analyse zu schaffen, wurden alle Fits per Hand erstellt, wobei durch das Ändern der Parameter versucht wurde eine möglichst gute Übereinstimmung zu erreichen.
-
-Für die Spektraldichte $J(\omega)$ kann, wie in Abbildung \ref{fig:triple_vergleich} zu sehen, mit $\eta^2 = 42 - 24 \sqrt{3} \approx \SI{0.43}{}$ \cite{caer} und den Parametern $C_Q = \SI{3e6}{Hz}$ und $\tau_c = \SI{3.9e-14}{s}$ eine vergleichsweise gute Übereinstimmung für die $T_1$-Werte erreicht werden, die Flanken unterscheiden sich jedoch deutlich. Die Abweichungen der FWHM-Werten und der Schwerpunkte sind mit einem Faktor von etwa 4 bzw. etwa 2 bedeutend.
-\begin{figure}[htbp]
-    \includegraphics[width=\textwidth]{graphics/zwischenbericht/J_fertig.pdf}
-    \caption{Vergleich der $T_1$-, FWHM- und Schwerpunkts-Daten (in blau) und der angepassten Theoriekurven (in orange). \label{fig:triple_vergleich}}
-\end{figure}
-
-Eine mögliche Erklärung für die Abweichung der FWHM-Werte könnte sein, dass in diesem Fall nicht, wie nach Formel \eqref{eqn:fwhm}, nur $T_2$, sondern auch das bei Temperaturen um $\SI{400}{K}$ mit etwa $\SI{50}{\micro s}$ äußerst kurze $T_1$ zur Verbreiterung des Spektrums und damit zu dessen FWHM-Werten beiträgt. Erste Versuche, den Effekt der $T_1$-Relaxation aus dem Spektrum herauszurechnen, scheinen vielversprechend. Für die Abweichungen der Schwerpunkts-Daten von der Theorie steht eine entsprechende Erklärung noch aus.
-
-Aus diesem Grund jedoch soll für die Spektraldichten $J_{CC}$ und $J_{CD}$ die FWHM-Werte zunächst nicht betrachtet werden. Gleiches gilt für den Schwerpunkt, da die entsprechenden Imaginärteile der Spektraldichten, $Q_{CC}$ und $Q_{CD}$, nicht zur Verfügung stehen.
-
-Für die Parameter $C_Q = \SI{2.85e6}{Hz}$, $\tau_c = \SI{7e-15}{s}$ und $\alpha = \SI{0.38}{}$ kann mit der Spektraldichte $J_{CC}$ in diesem Temperaturbereich eine noch bessere Übereinstimmung zu den $T_1$-Daten erzielt werden, für die Parameter $C_Q = \SI{2.7e6}{Hz}$, $\tau_c = \SI{4.4e-14}{s}$ und $\gamma = \SI{0.66}{}$ erreicht die Spektraldichte $J_{CD}$ eine leicht bessere Übereinstimmung als die Spektraldichte $J$; die entsprechenden Plots sind in Abbildung \ref{fig:j_cc_j_cd} zu finden.
-% \begin{figure}[htbp]
-%     \subfigure{\includegraphics[width=0.49\textwidth]{graphics/zwischenbericht/J_cc.pdf}}\hfill
-%     \subfigure{\includegraphics[width=0.49\textwidth]{graphics/zwischenbericht/J_cd.pdf}}
-%     \caption{Spektraldichten $J_{CC}$ (links) und $J_{CD}$ (rechts), angepasst an die Daten \label{fig:j_cc_j_cd}}
-% \end{figure}
-Die nächsten Schritte in dieser Untersuchung sollen darin bestehen, die Auswirkungen der $T_1$-Relaxation auf die Spektrums-Breite zu bestimmen und schlussendlich zu ergründen, ob sich die Messdaten sich mit diesen Theorien zufriedenstellend erklären lassen.
-
-
-
-
-
-\section{Echos} \label{section:theo:echos}
+\section{Pulsfolgen} \label{section:exp:pulsfolgen}
 
 Um Größen wie $T_1$ und $T_2$ zu messen, werden unterschiedliche Pulsfolgen, also Sequenzen von RF-Pulsen mit bestimmten Längen und Abständen zwischeneinander, ausgenutzt.
 
 Um die longitudinale Relaxation $T_1$ zu messen, wurde folgende Pulsfolge verwendet:
+
 *** Bild
-Der erste Puls, ein $\SI{180}{\degree}$-Puls, invertiert die Magnetisierung von $M_\infty$ zu $M_{-\infty}$, wonach diese anfängt zu relaxieren. Da die longitudinale Magnetisierung aufgrund der Spulengeometrie nicht detektierbar ist, muss sie mit $\SI{90}{\degree}$-Puls in die Detektionsebene geklappt werden. Wird dies nach der Evolutionszeit $t_p$ getan, kann also die relaxierende Magnetisierung in Abhängigkeit von $t_p$ bestimmt werden. Der letzte Puls, ein $\SI{180}{\degree}$-Puls, wird Hahn-Echo genannt. Häufig liegen die Momente direkt nach einem Puls in der Totzeit des Detektors, sodass die Magnetisierung faktisch erst gemessen werden kann, wenn sie eine gewisse Zeit abgeklungen ist. Um dieses Problem zu umgehen wird das Hahn-Echo verwendet. 
 
+Der erste Puls, ein $\SI{180}{\degree}$-Puls, invertiert die Magnetisierung von dem Gleichgewichtszustand $M_\infty$ zu $-M_\infty$, wonach sie anfängt zu relaxieren. Da die longitudinale Magnetisierung entlang $M_z$ aufgrund der Spulengeometrie nicht detektierbar ist, muss sie mit $\SI{90}{\degree}$-Puls in die Detektionsebene geklappt werden. Wird dies nach der Wartezeit $t_w$ getan, kann also die relaxierende Magnetisierung in Abhängigkeit von $t_w$ bestimmt werden und so Aufschluss über $T_1$ gewonnen werden.
 
+Der letzte Puls, ein $t_p = \SI{180}{\degree}$-Puls, wird Hahn-Echo genannt. Häufig liegen die Momente direkt nach einem Puls in der Totzeit des Detektors, sodass die Magnetisierung faktisch erst gemessen werden kann, wenn sie eine gewisse Zeit vergangen ist, in der aber auch die Magnetisierung abklingt. Um dieses Problem zu umgehen wird das Hahn-Echo verwendet. Mit diesem können dephasierende Anteile der Magnetisierung, welche linear in $I_z$ sind, refokussiert werden. Zu den betroffenen Wechselwirkungen zählen zum Beispiel *** und lokale Feldinhomogenitäten. Nicht jedoch wiedergewonnen werden können Teile der Magnetisierung, die durch $T_2$-Effekte verloren wurden. Damit dieser Einfluss bei den Messungen konstant ist, wird in diesem Fall das gleiche $t_p$ für alle Messungen verwendet. *** Quelle
 
+Es lässt sich so aber offensichtlich mit folgender Pulsfolge $T_2$ bestimmen:
 
-Nach einer Zeit $\tau_x$ *** nach dem letzten Puls einer Pulsfolge wird die Magnetisierung mit einem $\SI{180}{\degree}$-Puls umgeklappt. Die angesammelten Phasen werden in gleicher Weise subtrahiert, sodass nach der Zeit $2 \tau_x$ *** ein Echo mit maximaler Magnetisierung zu detektieren ist. Das Hahn-Echo kann Teile der Magnetisierung refokussieren, die linear in $I_z$ sind. Dazu zählen zum Beispiel *** und lokale Feldinhomogenitäten. Nicht jedoch wiedergewonnen werden können Teile der Magnetisierung, die durch *** -> T2 verloren wurden. Damit dieser Einfluss bei den Messungen konstant ist, wird in diesem Fall das gleiche $\tau_x$ *** für alle Messungen verwendet.
+*** Bild
 
-Es lässt sich so aber offensichtlich mit folgender Pulsfolge $T_2$ bestimmen: Ein $\SI{90}{\degree}$-Puls kippt die Magnetisierung aus dem Gleichgewicht in die Detektionsebene, wo sie sodann anfängt zu dephasieren. Nach der Zeit $\tau_x$ *** wird ein Hahn-Echo durchgeführt und nach $2 \tau_x$ kann die verbliebene Stärke der Magnetisierung gemessen werden. $T_2$ kann so in Abhängigkeit von $\tau_x$ *** aufgenommen werden.
+Ein $\SI{90}{\degree}$-Puls kippt die Magnetisierung aus dem Gleichgewicht in die Detektionsebene, wo sie sodann anfängt zu dephasieren. Nach der Zeit $t_p$ wird ein Hahn-Echo durchgeführt und nach $2 t_p$ kann die verbliebene Stärke der Magnetisierung gemessen werden. $T_2$ kann so in Abhängigkeit von $t_p$ aufgenommen werden.
 
-Sowohl an $T_1$- als auch an $T_2$-Daten können Varianten einer Kohlrauschfunktion gefittet werden
-*** Formeln
-Dabei handelt es sich um Exponentialfunktionen, die mit einem Exponenten $\beta$ gestrecjt werden können. Dieser Exponent erlaubt Abweichungen von der BPP-Theorie, die vin einer einzelnen Korrelationszeit $\tau_c$ ausgeht. ***
+Sowohl an $T_1$- als auch an $T_2$-Daten können Varianten einer Kohlrauschfunktion gefittet werden.
+
+\begin{align}
+	M_{T_1} (t_w) &= M_0 \left[ 1 - 2 \exp{ \left(- { \left( \frac{t_w}{T_1} \right) }^{\beta_{T_1}} \right)} \right] + M_\text{off} \label{eqn:theo:T_1_fit} \\
+    M_{T_2} (t_p) &= M_0 \exp{ \left(- { \left( \frac{2 t_p}{T_2} \right) }^{\beta_{T_2}} \right)} + M_\text{off} \label{eqn:theo:T_2_fit}
+\end{align}
+
+Dabei handelt es sich um Exponentialfunktionen, die mit einem Exponenten $\beta$ gestreckt werden können. Dieser Exponent erlaubt Abweichungen von der BPP-Theorie, die von einer einzelnen Korrelationszeit $\tau_c$ ausgeht. ***
+
+Es ist anzumerken, dass nicht spezifiziert wurde, um welche Achse die Pulse ausgeführt werden müssen. Dies liegt daran, dass es für die meisten Pulse mehrere Optionen gibt: Egal ob die Gleichgewichtsmagnetisierung mit einem $\SI{180}{\degree}$-Puls oder einem $\SI{-180}{\degree}$-Puls invertiert wird, ob um die $x$-Achse oder die $y$-Achse -- das Ergebnis ist immer die invertierte Magnetisierung $-M_\infty$. In der Praxis wird daher eine Kombination aus mehreren verschiedenen Pulsfolgen verwendet, die aber alle das gleiche Ergebnis liefern. Werden die Ergebnisse gemittelt, verstärken sich die Signale und unerwünschte Anteile -- beispielsweise durch leicht falsch gewählte Pulslängen -- mitteln sich heraus. So können weitere Fehlerquellen eliminiert werden.

@@ -57,6 +57,8 @@ Ergebnisse der Fits, hier die $\tau$s. Hohe Unsicherheit bei hohen Temperaturen 
 Ergebnisse der Fits, hier die $\beta$. Hohe Unsicherheit bei hohen Temperaturen wegen niedrigen $T_2$ und entsprechend kleinen Daten.
 
 
+
+
 \section{$F_2$} \label{section:res:F_2}
 
 \begin{figure}
@@ -72,7 +74,7 @@ Aufgenommen am OBI ($\SI{300}{MHz}$) mit stimuliertem Echo Sin-Sin 3-Puls-Folge,
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plots/F2/f2_fit.pdf}
 	\end{center}
-	\caption{$F_2$ geteilt durch Fit} \label{fig:res:T_2}
+	\caption{$F_2$ geteilt durch Fit} \label{fig:res:F_2_T_1}
 \end{figure}
 Messdaten geteilt durch schwarze Linie. Bei Zeiten höher als mehrere Hundert ms schwanken die Daten stark (da ungefähr 0 durch 0 geteilt wird), daher werden sie abgeschnitten. An die Daten wird ein weiterer Kohlrausch-Fit gelegt. Sin-Sin und Cos-Cos zeigen sehr ähnliche Ergebnisse. Temperaturen 300K und 310K, Ergebnisse ähnlich.
 
@@ -81,9 +83,9 @@ Messdaten geteilt durch schwarze Linie. Bei Zeiten höher als mehrere Hundert ms
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plots/F2/f2_tieftemp.pdf}
 	\end{center}
-	\caption{$F_2$ bei tiefen Temperaturen} \label{fig:res:beta_T_2}
+	\caption{$F_2$ bei tiefen Temperaturen} \label{fig:res:F_2_tieftemp}
 \end{figure}
-Für tiefere Temperaturen (hier 280K) ist quasi kein Unterschied zweischen $F_2$ und $T_1$ zu erkennen.
+Für tiefere Temperaturen (hier 280K) ist quasi kein Unterschied zwischen $F_2$ und $T_1$ zu erkennen.
 
 
 \section{Spektren} \label{section:res:spektren}
@@ -309,3 +311,62 @@ Es gibt Abweichungen bei den Halbwertsbreiten. Es wäre aufgrund der Larmorfrequ
 	\end{center}
 	\caption{Bruker Schwerpunkt} \label{fig:res:bruker_mean}
 \end{figure}
+
+
+
+
+
+\section{Theoretische Beschreibung experimenteller CRN-Daten} \label{section:theo:daten}
+
+
+Es wurde untersucht, ob vorliegende gemessenen Daten mit den beschriebenen Theorien in Einklang gebracht werden können. Dafür wurden die Daten zu $T_1$, zu Spektren untersucht; die $T_1$-Daten stammen dabei aus Messungen von C. Zürn \cite{zuern_paper} an einer 2Ca(NO$_3$)$_2$-3RbNO$_3$-Probe, während alle weiteren Daten mit der von Zürn verwendeten Probe im Rahmen dieser Masterarbeit aufgenommen wurden.
+
+Um eine Übereinstimmung zur Theorie feststellen zu können, müssen sich alle Datensätze mit dem gleichen Satz geteilter Parameter beschreiben lassen. Im Falle der Spektraldichte $J(\omega)$ sind dies $C_Q$ und $\tau_{co}$; für $J_{CC}$ und $J_{CD}$ sind $\alpha$ bzw. $\gamma$ zusätzliche Parameter.
+
+Nach \cite{PIMENOV199793} wird für CRN für die Korrelationszeit ein Vogel-Fulcher-Gesetz
+\begin{align}
+	\tau_c = \tau_{co} \exp \left( \frac{D T_\text{VF}}{T-T_\text{VF}} \right) 
+\end{align}
+mit dem strength index $D = \SI{3.5}{}$, der Vogel-Fulcher-Temperatur $T_\text{VF} = \SI{294}{K}$ und dem Frequenzfaktor $\tau_{co} = \SI{5.1e-14}{s}$ (der beim Vergleich mit den Daten dennoch als freier Parameter angesehen werden soll um dem Fit eine größtmögliche Flexibilität zu erlauben) angenommen.
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+	\vspace{-20pt}
+	\begin{center}
+		\includegraphics[width=0.49\textwidth]{graphics/zwischenbericht/tau_c_arrhenius_vogel_fulcher.pdf}
+	\end{center}
+	\vspace{-20pt}
+	\caption{Vergleich von Korrelationszeiten basierend auf Vogel-Fulcher-Gesetz \label{fig:korrelationszeiten}}
+\end{wrapfigure}
+Am $T_1$-Minimum nach Gleichung \eqref{eqn:bpp} gilt $\omega \tau_c \approx \SI{0.61}{}$ \cite[S. 629]{omegatau061}. Das $T_1$-Minimum kann in den Daten bei etwa $T_\text{min} = \SI{390}{K}$ gefunden werden; die Larmorfrequenz liegt bei $\omega_L = \SI{97.1722}{MHz}$, was bedeutet, dass bei $T_\text{min}$ gilt $\tau_c \approx \frac{\SI{0.61}{}}{\omega_L} \approx \SI{6.28}{\nano s}$. Vergleicht man das Vogel-Fulcher-Gesetz mit diesem Punkt, lässt sich erkennen, dass eine gute Übereinstimmung vorliegt.
+
+
+Die aufgenommenen Daten unterstützen eine biexponentielle Interpretation wie in \eqref{eqn:trans_relax} nur schwerlich, daher wurde lediglich der deutlich zu beobachtende Anteil des Zentralübergangs, $\Delta_c$ und $\omega_c^{(2)}$, für die entsprechenden FWHM- bzw. Schwerpunkts-Daten betrachtet. Für die $T_1$-Daten wird Formel \eqref{eqn:bpp} verwendet. Um einen Ausgangspunkt für die Analyse zu schaffen, wurden alle Fits per Hand erstellt, wobei durch das Ändern der Parameter versucht wurde eine möglichst gute Übereinstimmung zu erreichen.
+
+Für die Spektraldichte $J(\omega)$ kann, wie in Abbildung \ref{fig:triple_vergleich} zu sehen, mit $\eta^2 = 42 - 24 \sqrt{3} \approx \SI{0.43}{}$ \cite{caer} und den Parametern $C_Q = \SI{3e6}{Hz}$ und $\tau_c = \SI{3.9e-14}{s}$ eine vergleichsweise gute Übereinstimmung für die $T_1$-Werte erreicht werden, die Flanken unterscheiden sich jedoch deutlich. Die Abweichungen der FWHM-Werten und der Schwerpunkte sind mit einem Faktor von etwa 4 bzw. etwa 2 bedeutend.
+\begin{figure}[htbp]
+	\includegraphics[width=\textwidth]{graphics/zwischenbericht/J_fertig.pdf}
+	\caption{Vergleich der $T_1$-, FWHM- und Schwerpunkts-Daten (in blau) und der angepassten Theoriekurven (in orange). \label{fig:triple_vergleich}}
+\end{figure}
+
+Eine mögliche Erklärung für die Abweichung der FWHM-Werte könnte sein, dass in diesem Fall nicht, wie nach Formel \eqref{eqn:fwhm}, nur $T_2$, sondern auch das bei Temperaturen um $\SI{400}{K}$ mit etwa $\SI{50}{\micro s}$ äußerst kurze $T_1$ zur Verbreiterung des Spektrums und damit zu dessen FWHM-Werten beiträgt. Erste Versuche, den Effekt der $T_1$-Relaxation aus dem Spektrum herauszurechnen, scheinen vielversprechend. Für die Abweichungen der Schwerpunkts-Daten von der Theorie steht eine entsprechende Erklärung noch aus.
+
+Aus diesem Grund jedoch soll für die Spektraldichten $J_{CC}$ und $J_{CD}$ die FWHM-Werte zunächst nicht betrachtet werden. Gleiches gilt für den Schwerpunkt, da die entsprechenden Imaginärteile der Spektraldichten, $Q_{CC}$ und $Q_{CD}$, nicht zur Verfügung stehen.
+
+Für die Parameter $C_Q = \SI{2.85e6}{Hz}$, $\tau_c = \SI{7e-15}{s}$ und $\alpha = \SI{0.38}{}$ kann mit der Spektraldichte $J_{CC}$ in diesem Temperaturbereich eine noch bessere Übereinstimmung zu den $T_1$-Daten erzielt werden, für die Parameter $C_Q = \SI{2.7e6}{Hz}$, $\tau_c = \SI{4.4e-14}{s}$ und $\gamma = \SI{0.66}{}$ erreicht die Spektraldichte $J_{CD}$ eine leicht bessere Übereinstimmung als die Spektraldichte $J$; die entsprechenden Plots sind in Abbildung \ref{fig:j_cc_j_cd} zu finden.
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\includegraphics[width=0.95\textwidth]{graphics/zwischenbericht/J_cc.pdf}
+	\end{subfigure}%
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\includegraphics[width=0.95\textwidth]{graphics/zwischenbericht/J_cd.pdf}
+	\end{subfigure}
+	\caption{Spektraldichten $J_{CC}$ (links) und $J_{CD}$ (rechts), angepasst an die Daten}
+	\label{fig:j_cc_j_cd}
+\end{figure}
+
+Die nächsten Schritte in dieser Untersuchung sollen darin bestehen, die Auswirkungen der $T_1$-Relaxation auf die Spektrums-Breite zu bestimmen und schlussendlich zu ergründen, ob sich die Messdaten sich mit diesen Theorien zufriedenstellend erklären lassen.
+
+
