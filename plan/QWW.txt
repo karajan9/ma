@@ -1,0 +1,37 @@
+
+Wechselwirkung des Kernquadrupolmoments mit dem EFG-Tensor
+
+    Elektrischer Quadrupol
+Meist sehr stark & dominant, sorgt für kurze Relaxationszeiten und damit breite Spektren.
+Tritt erst ab I >= 1 auf. Dann ist die Ladung nicht mehr kugelförmig, sondern elliptisch verteilt (nicht symmetrisch).
+Äußeres E-Feld kann ein Moment ausüben: Quadrupol-Moment
+
+
+
+
+
+eQ > 0 -> Zigarre, eQ < 0 -> Scheibe
+e²qQ / h = Q-Kopplungskonstante in Frequenzeinheiten.
+
+
+    Eigenschaften
+Unabhängig von der Stärke des Magnetfeldes (keine Abhängigkeit von \omega_L) -- im Gegensatz zu CS
+
+    EFG
+Entsteht durch Eletronenverteilungen benachbarter Kerne
+symmetrisch (ist Gradient. Reihenfolge der Ableitungen im konservativen Potential egal)
+spurfrei (aus der Laplace-Gleichung. Spur des Tensors gleich Divergenz des el. Feldes. Gegeben durch Ladung im eingeschlossenen Volumen. Hier Vol. infinitesimal klein, Spur = 0)
+Auf Hauptachsenform (PAS) bringen. Sortieren nach |V_zz| >= |V_yy| >= |V_xx|
+eq = V_zz, \eta = (V_xx - V_yy) / V_zz
+
+Hochfeldnäherung: H_Z (Zeemann) deutlich stärker als H_Q (Quadrupol)
+-> Störungsrechnung
+H = H_Z + H_Q
+
+    1. Ordnung
+
+
+
+    2. Ordnung
+Starke Feldgradienten führen zu 2. Ordnung -> wie?
+Zentralresonanzlinie verschiebt sich (der isotrope Anteil)
