@@ -1,4 +1,4 @@
-all: build/thesis.pdf build/thesis-compressed.pdf
+all: build/thesis.pdf
 
 
 TeXOptions = -xelatex \
