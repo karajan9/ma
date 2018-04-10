@@ -1,6 +1,8 @@
 \chapter{Experimentelle Resultate und Analysen}
 \label{chapter:experiment}
 
+Alle Fits werden durch eine least-squares-Methode erstellt. ***
+
 \section{$T_1$} \label{section:res:T_1}
 
 Vor dem Beginn jeder NMR-Messung ist es sinnvoll, $T_1$ im zu untersuchenden Temperaturgebiet zu vermessen. Dies ist hilfreich um wichtige Parameter der Messungen abzustecken und mögliche Hindernisse im Vorhinein erahnen zu können. So sollte zwischen allen Messungen eine Zeit von mindestens $4 T_1$ gewartet werden, um sicherzugehen, dass sich die Magnetisierung in guter Näherung wieder im Gleichgewichtszustand befindet. Wird $T_1$ also im Laufe der Messung bei anderen Temperaturen länger, muss hierauf Rücksicht genommen werden. Wird $T_1$ auf der anderen Seite sehr kurz, kann es passieren, dass Signale sehr schnell zerfallen und den Experimentierenden mit einem schlechten Signal-Rausch-Verhältnis zurücklassen. Hinzu kommt, dass der Verlauf von $T_1$ nach Formel *** wertvolle Information über die Dynamik in der untersuchten Probe liefern kann. Zuletzt bietet diese recht einfache und reproduzierbare Messung die Möglichkeit, den Aufbau und die Probe auf Übereinstimmung mit Literaturdaten hin zu überprüfen. Daher wurden zu allen untersuchten Temperaturen $T_1$-Messungen aufgenommen.
@@ -86,7 +88,7 @@ An diese wurden Fit-Funktionen nach \eqref{eqn:theo:T_2_fit} angelegt, welche al
 
 Abbildung \label{fig:res:T_2} zeigt eine Übersicht über die aufgenommen $T_2$-Werte mit den zugehörigen $\beta$ der Fits. Unter $\SI{320}{\kelvin}$ verbleiben erstere im niedrigen Millisekunden-Bereich, ehe sie deutlich kürzer werden und sich bei etwa $\SI{360}{\kelvin}$ ein Minimum zeigt. Die Werte des Bruker-Spektrometers sind hiermit in guter Übereinstimmung, wobei wiederum festzuhalten ist, dass die Messunsicherheiten geringer sind. Ein zweites Minimum zeigt sich bei etwa $\SI{400}{\kelvin}$, das, ebenso wie das erste, im zweistelligen Mikrosekunden-Bereich liegt. Zwischen $\SI{400}{\kelvin}$ und $\SI{410}{\kelvin}$ ist zu erkennen, dass -- wohl durch die Kürze von $T_2$ bei diesen Temperaturen -- deutlich größere Unsicherheiten als im Rest der Messreihe vorliegen, wo sie in guter Näherung vernachlässigbar sind. 
 
-Auch die $\beta$-Werte zeigen bei höheren Temperaturen deutlich größere Unsicherheiten, hier allerdings schon zwischen $\SI{390}{\kelvin}$ und $\SI{425}{\kelvin}$, was eine Bestimmung der Werte verkompliziert. Sie scheinen zwischen $\SI{1}{}$ und $\SI{2}{}$ zu liegen. Bei tieferen Temperaturen klärt sich das Bild etwas: Während die Daten des OHI-Spektrometers ein $\beta$ zwischen $\SI{1}{}$ und $\SI{1.5}{}$ bei Temperaturen bis $\SI{350}{\kelvin}$ suggerieren, zeigen die Daten des Bruker-Spektrometers ein $\beta$ um $\SI{1}{}$ -- mit geringerer Unsicherheit. Bei nochmals tieferen Temperaturen scheint $\beta$ konsistent bei rund $\SI{1}{}$ zu liegen.
+Auch die $\beta$-Werte zeigen bei höheren Temperaturen deutlich größere Unsicherheiten, hier allerdings schon zwischen $\SI{390}{\kelvin}$ und $\SI{425}{\kelvin}$, was eine Bestimmung der Werte verkompliziert. Sie scheinen zwischen $\SI{1}{}$ und $\SI{2}{}$ zu liegen. Bei tieferen Temperaturen klärt sich das Bild etwas: Während die Daten des OBI-Spektrometers ein $\beta$ zwischen $\SI{1}{}$ und $\SI{1.5}{}$ bei Temperaturen bis $\SI{350}{\kelvin}$ suggerieren, zeigen die Daten des Bruker-Spektrometers ein $\beta$ um $\SI{1}{}$ -- mit geringerer Unsicherheit. Bei nochmals tieferen Temperaturen scheint $\beta$ konsistent bei rund $\SI{1}{}$ zu liegen.
 
 \begin{figure}
 	\begin{center}
@@ -117,38 +119,63 @@ Auch die $\beta$-Werte zeigen bei höheren Temperaturen deutlich größere Unsic
 \end{figure}
 
 
-********************************************************************
 
 
 \section{$F_2$} \label{section:res:F_2}
 
+Mit der Absicht einen möglichen Betaprozess zu identifizieren, wurden $F_2$-Messungen, also stimulierte Echos, durchgeführt. Dazu wurden am Spektrometer OBI über eine Reihe von Temperaturen von $\SI{230}{\kelvin}$ bis $\SI{310}{\kelvin}$ und Evolutionszeiten von $\SI{50}{\micro s}$ bis $\SI{1000}{\micro s}$ Messungen durchgeführt. Es wurde eine Drei-Puls-Folge verwendet und sowohl C ***
 
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/F2/f2_fits.pdf}
-	\end{center}
-	\caption{$F_2$ Fits} \label{fig:res:F_2_fit}
-\end{figure}
-Aufgenommen am OBI ($\SI{300}{MHz}$) mit stimuliertem Echo Sin-Sin 3-Puls-Folge, Evolutionszeit $t_p = \SI{1}{\milli s}$. Punkte sind Messwerte, grüne Linie ist Kohlrausch-Fit an Messwerte, schwarze Linie der gleiche Fit, aber $\tau$ und $\beta$ ausgetauscht für $T_1$ und $\beta_{T_1}$ aus einer $T_1$-Messung. Dieses Vorgehen wurde gewählt, weil die Daten keinen Fit mit zwei $\tau$ gleichzeitig unterstützen, aber dennoch einen Unterschied zum reinen $T_1$ zeigen. Temperatur 310K
-
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/F2/f2_fit.pdf}
-	\end{center}
-	\caption{$F_2$ geteilt durch Fit} \label{fig:res:F_2_T_1}
-\end{figure}
-Messdaten geteilt durch schwarze Linie. Bei Zeiten höher als mehrere Hundert ms schwanken die Daten stark (da ungefähr 0 durch 0 geteilt wird), daher werden sie abgeschnitten. An die Daten wird ein weiterer Kohlrausch-Fit gelegt. Sin-Sin und Cos-Cos zeigen sehr ähnliche Ergebnisse. Temperaturen 300K und 310K, Ergebnisse ähnlich.
-
-
+Die meisten ähnelten der hier beispielhaft ausgewählten Messung bei $\SI{280}{\kelvin}$ und einer Evolutionszeit von $t_p = \SI{1000}{\micro s}$: Die Daten lassen sich schwerlich oder gar nicht von einer $T_1$-Kurve unterscheiden, die bei gleicher Temperatur aufgenommen wurde, wie in Abbildung \ref{fig:res:F_2_tieftemp} zu sehen. Es scheint daher nicht möglich, in diesem Temperaturbereich mit dieser Methode Aussagen über mögliche Dynamik treffen zu können.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plots/F2/f2_tieftemp.pdf}
 	\end{center}
 	\caption{$F_2$ bei tiefen Temperaturen} \label{fig:res:F_2_tieftemp}
 \end{figure}
-Für tiefere Temperaturen (hier 280K) ist quasi kein Unterschied zwischen $F_2$ und $T_1$ zu erkennen.
+
+Lediglich bei den Temperaturen $\SI{300}{\kelvin}$ und $\SI{310}{\kelvin}$, sowie $t_p = \SI{1000}{\micro s}$ konnte ein nennenswerter Unterschied zu reinen $T_1$-Kurven beobachtet werden; die entsprechenden Messungen sollen im Folgenden besprochen werden.
+
+Einen Fit der Form *** (Formel) direkt an die Messwerte anzulegen erwies sich als schwierig, daher wurde folgende Schritte für eine Auswertung durchgeführt: An die Daten wurde folgende Funktion gefittet:
+\begin{align}
+	M_{F_2} (t_m) = M_0 \left[ \exp{ \left(- { \left( \frac{t_m}{F_2} \right) }^{\beta_{F_2}} \right)} \right] + M_\text{off} \label{eqn:res:F_2_fit}
+\end{align}
+Dieser Fit stellt die grüne Kurve in Abbildung \ref{fig:res:F_2_fit} dar.
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{graphics/plots/F2/f2_fits.pdf}
+	\end{center}
+	\caption{$F_2$ Fits} \label{fig:res:F_2_fit}
+\end{figure}
+Die Werte $F_2$ und $\beta_{F_2}$ wurden dann durch $T_1$ und $\beta_{T_1}$ einer $T_1$-Messung gleicher Temperatur ersetzt -- das Resultat ist als schwarze Kurve gezeigt. Dieses Vorgehen macht es möglich, die $T_1$-Kurve an die $F_2$-Daten anzupassen. Es wurden nun die Daten durch die angepasste $T_1$-Kurve um den entsprechenden Anteil zu eliminieren. Das Resultat ist in Abbildung \ref{fig:res:F_2_T_1} gezeigt.
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{graphics/plots/F2/f2_fit.pdf}
+	\end{center}
+	\caption{$F_2$ geteilt durch Fit, 310K} \label{fig:res:F_2_T_1}
+\end{figure}
+Da die Daten bei Mischzeiten von über $\SI{100}{\milli s}$ stark streuen wurden sie nicht dargestellt. An verbleibenden Punkte wiederum kann ein Kohlrausch-Fit angelegt werden, um über den beschriebenen Umweg zu einer Funktion ähnlich der aus Formel *** zu gelangen.
+
+Es wurden je zwei Messungen einer Cos-Cos-Pulsfolge und einer Sin-Sin-Pulsfolge bei $\SI{310}{\kelvin}$ durchgeführt, sowie je eine Messung bei $\SI{300}{\kelvin}$. Die Resultate finden sich in Tabelle \ref{tab:res:F_2}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lllll}
+		\hline
+		Temperatur & Sin-Sin $\tau$ & Sin-Sin $\beta$ & Cos-Cos $\tau$ & Cos-Cos $\beta$ \\ \hline
+		$\SI{300}{\kelvin}$ (Lauf 1) & $\SI{5.26 (94)}{\milli s}$ & $\SI{0.95 (18)}{}$ & $\SI{3.68 (63)}{\milli s}$ & $\SI{1.30 (34)}{}$ \\
+		$\SI{310}{\kelvin}$ (Lauf 1) & $\SI{3.27 (122)}{\milli s}$ & $\SI{1.12 (56)}{}$ & $\SI{9.95 (432)}{\milli s}$ & $\SI{0.74 (21)}{}$ \\
+		$\SI{310}{\kelvin}$ (Lauf 2) & $\SI{4.23 (37)}{\milli s}$ & $\SI{1.01 (10)}{}$ & $\SI{3.28 (7)}{\milli s}$ & $\SI{0.71 (1)}{}$ \\
+		 \hline
+	\end{tabular}
+	\caption{Resultate der $F_2$-Messungen. Sin-Sin und Cos-Cos beziehen sich auf die jeweils verwendete Pulsfolge, $\tau$ und $\beta$ sind die mit den Fits bestimmten Parameter der Zeitkonstante und der Streckung der Exponentialfunktion. \label{tab:res:F_2}}
+\end{table}
+
+Es ist zu erkennen, dass die Größen zwischen den zwei Durchläufen teils mehr schwanken als zwischen zwei Temperaturen oder im Vergleich zwischen Sin-Sin- und Cos-Cos-Pulsfolgen. Da die Unsicherheiten zudem in Fällen beinahe $\SI{50}{\percent}$ erreicht, müssen diese Ergebnisse mit Vorsicht genossen werden. Es ist aber klar, dass sich die Zeitkonstanten nicht in einem Bereich befinden, wo sie für einen Betaprozess nach den Überlegungen zu erwarten wären. ***
+
+
+********************************************************************
+
+
 
 
 \section{Spektren} \label{section:res:spektren}
