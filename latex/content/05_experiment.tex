@@ -9,6 +9,9 @@ Zur Bestimmung von $T_1$ wurde eine Invertierungs-Pulsfolge mit Hahn-Echo verwen
 
 Aufgenommen am OBI ($\SI{300}{MHz}$) mit Länge eines Pi-Pulses $\tau = \SI{7.6}{\micro s}$. Larmorfrequenz überall $\omega_L = 2 \pi \cdot \SI{97.1722}{MHz}$, sofern nicht anders notiert. ***
 
+Aufgenommen am Bruker ***  Neben dem $\SI{300}{MHz}$-Spektrometer wurden auch einige Messungen an einem $\SI{400}{MHz}$ Spektrometer von Bruker durchgeführt.
+
+
 Repräsentative Rohdaten einer solchen Messung sind in Abbildung \ref{fig:res:T_1_roh} zu sehen. An die Daten wurden Fits mit $T_1$ und $\beta$ als freien Parametern entsprechend Gleichung \eqref{eqn:theo:T_2_fit} angelegt -- diese sind als Linien dargestellt. Die Daten wurden hier zudem auf den Bereich zwischen $1$ und $-1$ normiert, um einen besseren Vergleich zuzulassen. Es ist zu erkennen, dass die Fits eine gute Repräsentation der Daten ermöglichen.
 \begin{figure}
 	\begin{center}
@@ -22,13 +25,13 @@ Dies lässt sich auch in der Gesamtübersicht aller aufgenommenen $T_1$-Daten in
 
 Während die Unsicherheiten weitestgehend vernachlässigbar sind, sind starke Schwankungen über $\SI{390}{\kelvin}$ zu erkennen. Die dort aufgenommenen Daten kann nicht mehr Bedeutung als einer groben Idee der Tatsachen zugemessen werden.
 
-Abgesehen von dem erwähnten Temperaturbereich ist eine gute Übereinstimmung zu den $T_1$-Daten von Zürn \cite{zuern_paper} und zwischen Messungen mit überlappenden Temperaturbereichen zu erkennen, was darauf schließen lässt, dass diese Daten gut reproduzierbar sind.
+Abgesehen von dem erwähnten Temperaturbereich ist eine gute Übereinstimmung zu den $T_1$-Daten von Zürn \cite{zuern_paper} und zwischen Messungen mit überlappenden Temperaturbereichen zu erkennen, was darauf schließen lässt, dass diese Daten gut reproduzierbar sind. Die am Bruker-Spektrometer aufgenommenen Daten folgen dem gleichen Verlauf und zeigen bis auf den Temperaturbereich zwischen $\SI{360}{\kelvin}$ und $\SI{390}{\kelvin}$ keinen nennenswerte Differenzen; dort aber sind die gemessenen $T_1$-Daten zu leicht längeren Zeiten verschoben.
 
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plots/T1/t1.pdf}
 	\end{center}
-	\caption{$T_1$ aus Fits nach Gleichung \eqref{eqn:theo:T_2_fit}. Unterschiedliche Farben indizieren hierbei gesonderte Messreihen; gelbe Punkte bieten einen Vergleich mit Daten von Zürn.} \label{fig:res:T_1}
+	\caption{$T_1$ aus Fits nach Gleichung \eqref{eqn:theo:T_1_fit}. Unterschiedliche Farben indizieren hierbei gesonderte Messreihen; gelbe Punkte bieten einen Vergleich mit Daten von Zürn.} \label{fig:res:T_1}
 \end{figure}
 
 \begin{figure}
@@ -38,14 +41,39 @@ Abgesehen von dem erwähnten Temperaturbereich ist eine gute Übereinstimmung zu
 	\caption{$\beta_{T_1}$} \label{fig:res:beta_T_1}
 \end{figure}
 
-********************************************************************
 
-Im oberen Teil der Abbildung \ref{fig:res:T_1} sind die entsprechenden $\beta$ der Fits zu sehen. Von einem Wert von $\SI{0.6}{}$ bei tieferen Temperaturen steigen sie zu einem Wert von etwa $\SI{0.9}{}$ bei Temperaturen über $\SI{350}{\kelvin}$.
+Im oberen Teil der Abbildung \ref{fig:res:T_1} sind die entsprechenden $\beta$ der Fits zu sehen. Von einem Wert von $\SI{0.6}{}$ bei tieferen Temperaturen steigen sie zu einem Wert von etwa $\SI{0.9}{}$ bei Temperaturen über $\SI{350}{\kelvin}$. Dies entspricht etwa den Ergebnissen von Zürn.
 
-$\beta$ der Fits. Hohe Schwankung bei Temperaturen 340-380 K, da $T_1$ sehr kurz sich und dementsprechend die Signale klein. Temperaturen über 380K abgeschnitten, da Unsicherheit zu groß.
+Abweichungen gibt es lediglich bei den höheren Temperaturen, wo ein $\beta$ laut \cite{zuern_paper} nahe $\SI{1.0}{}$ liegt, allerdings mit größeren Messunsicherheiten, welche auch hier bei Temperaturen über $\SI{350}{\kelvin}$ zu beobachten sind. Werte über $\SI{380}{\kelvin}$ wurden ausgelassen, da die Messunsicherheiten zu groß waren, als dass den Werten eine Aussage zugestanden werden könnte. Diese stammen daher, dass mit den verwendeten Apparaturen nicht verlässlich Datenpunkte vor $\SI{10}{\micro s}$ aufgenommen werden können. Wenn die $T_1$ Zeit aber in der gleichen Größenordnung liegt und zum Zeitpunkt des $T_1$-Werts das Signal auf etwa $1/e$ abgefallen ist, ist es verständlich, dass ein Fit Schwierigkeiten bereiten kann. Lösen ließe sich dies theoretisch mit einer längeren Evolutionszeit des verwendeten Echos, dies ist aufgrund der kurzen $T_1$- und $T_2$-Zeiten in diesem Temperaturbereich jedoch nicht möglich -- das entstehende Signal ist zu klein um effektiv vom Rauschen getrennt zu werden.
+
+Dennoch ist auffällig, dass trotz der Unsicherheiten von $\beta$ eine relativ gute Übereinstimmung mit den Daten von Zürn vorliegt -- auch von zwei Messreihen zwischen $\SI{315}{\kelvin}$ und $\SI{340}{\kelvin}$ produzierte $\beta$ mit einer Differenz von etwa $\SI{0.1}{}$, sind die entsprechenden $T_1$ in Übereinstimmung miteinander und mit der Literatur. Insofern ist fraglich, welche Aussagekraft den exakten Werten von $\beta$ zugemessen werden kann.
+
+Die Unsicherheiten der mit dem Bruker-Spektrometer bestimmten $\beta$ ist vergleichsweise gering. Dies ist mit der höheren Qualität der Daten (besonders auch in Abbildung \ref{fig:res:bruker_linienform} zu erkennen) und den niedrigeren $T_1$-Werten zu erklären.
+
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_t1.pdf}
+	\end{center}
+	\caption{Bruker $T_1$} \label{fig:res:bruker_t1}
+\end{figure}
+Die $T_1$-Werte und die dazugehörigen $\beta$ zeigen gute Übereinstimmung zu den anderen Daten auf.
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_t1beta.pdf}
+	\end{center}
+	\caption{Bruker $\beta{T_1}$} \label{fig:res:bruker_beta_t1}
+\end{figure}
+
 
 
 \section{$T_2$} \label{section:res:T_2}
+
+Ähnlich wie $T_1$ ist auch $T_2$ eine wichtige Größe, die Parameter für folgende Messungen bestimmen, oder Aufschluss über Dynamiken geben kann. Die praktikablen Längen von Echos werden von $T_2$ begrenzt. ***
+
+In Abbildung \ref{fig:res:T_2_roh} sind exemplarisch Rohdaten verschiedener Temperaturen zu sehen. Diese wurden mit einem Hahn-Echo mit $\tau = \SI{15}{\micro s}$ aufgenommen und auf den Bereich zwischen $\SI{0}{}$ und $\SI{1}{}$ normiert.
+
+Bruker *** 
 
 \begin{figure}
 	\begin{center}
@@ -53,7 +81,12 @@ $\beta$ der Fits. Hohe Schwankung bei Temperaturen 340-380 K, da $T_1$ sehr kurz
 	\end{center}
 	\caption{$T_2$ Rohdaten} \label{fig:res:T_2_roh}
 \end{figure}
-Aufgenommen am OBI ($\SI{300}{MHz}$) mit Hahnecho, $\tau = \SI{15}{\micro s}$. Länge eines Pi-Pulses $\tau = \SI{7.6}{\micro s}$. Punkte sind Messwerte, Linien Fits mit Kohlrausch-Funktion.
+
+An diese wurden Fit-Funktionen nach \eqref{eqn:theo:T_2_fit} angelegt, welche als Linien dargestellt sind. Es lässt sich mit den Fits eine gute Übereinstimmung zu den Daten erzielen. Auch hier lässt sich erkennen, dass $T_2$ bei Temperaturen bis etwa $\SI{320}{\kelvin}$ nahezu konstant verbleibt, und zu hoheren Temperaturen kleiner wird.
+
+Abbildung \label{fig:res:T_2} zeigt eine Übersicht über die aufgenommen $T_2$-Werte mit den zugehörigen $\beta$ der Fits. Unter $\SI{320}{\kelvin}$ verbleiben erstere im niedrigen Millisekunden-Bereich, ehe sie deutlich kürzer werden und sich bei etwa $\SI{360}{\kelvin}$ ein Minimum zeigt. Die Werte des Bruker-Spektrometers sind hiermit in guter Übereinstimmung, wobei wiederum festzuhalten ist, dass die Messunsicherheiten geringer sind. Ein zweites Minimum zeigt sich bei etwa $\SI{400}{\kelvin}$, das, ebenso wie das erste, im zweistelligen Mikrosekunden-Bereich liegt. Zwischen $\SI{400}{\kelvin}$ und $\SI{410}{\kelvin}$ ist zu erkennen, dass -- wohl durch die Kürze von $T_2$ bei diesen Temperaturen -- deutlich größere Unsicherheiten als im Rest der Messreihe vorliegen, wo sie in guter Näherung vernachlässigbar sind. 
+
+Auch die $\beta$-Werte zeigen bei höheren Temperaturen deutlich größere Unsicherheiten, hier allerdings schon zwischen $\SI{390}{\kelvin}$ und $\SI{425}{\kelvin}$, was eine Bestimmung der Werte verkompliziert. Sie scheinen zwischen $\SI{1}{}$ und $\SI{2}{}$ zu liegen. Bei tieferen Temperaturen klärt sich das Bild etwas: Während die Daten des OHI-Spektrometers ein $\beta$ zwischen $\SI{1}{}$ und $\SI{1.5}{}$ bei Temperaturen bis $\SI{350}{\kelvin}$ suggerieren, zeigen die Daten des Bruker-Spektrometers ein $\beta$ um $\SI{1}{}$ -- mit geringerer Unsicherheit. Bei nochmals tieferen Temperaturen scheint $\beta$ konsistent bei rund $\SI{1}{}$ zu liegen.
 
 \begin{figure}
 	\begin{center}
@@ -61,7 +94,6 @@ Aufgenommen am OBI ($\SI{300}{MHz}$) mit Hahnecho, $\tau = \SI{15}{\micro s}$. L
 	\end{center}
 	\caption{$T_2$ gegen Temperatur} \label{fig:res:T_2}
 \end{figure}
-Ergebnisse der Fits, hier die $\tau$s. Hohe Unsicherheit bei hohen Temperaturen wegen niedrigen $T_2$ und entsprechend kleinen Daten.
 
 \begin{figure}
 	\begin{center}
@@ -69,12 +101,28 @@ Ergebnisse der Fits, hier die $\tau$s. Hohe Unsicherheit bei hohen Temperaturen 
 	\end{center}
 	\caption{$\beta_{T_2}$ gegen Temperatur} \label{fig:res:beta_T_2}
 \end{figure}
-Ergebnisse der Fits, hier die $\beta$. Hohe Unsicherheit bei hohen Temperaturen wegen niedrigen $T_2$ und entsprechend kleinen Daten.
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_t2.pdf}
+	\end{center}
+	\caption{Bruker $T_2$} \label{fig:res:bruker_t2}
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_t2beta.pdf}
+	\end{center}
+	\caption{Bruker $\beta{T_2}$} \label{fig:res:bruker_beta_t2}
+\end{figure}
 
 
+********************************************************************
 
 
 \section{$F_2$} \label{section:res:F_2}
+
+
 
 \begin{figure}
 	\begin{center}
@@ -111,9 +159,19 @@ Für tiefere Temperaturen (hier 280K) ist quasi kein Unterschied zwischen $F_2$ 
 	\end{center}
 	\caption{Spektren Linienform} \label{fig:res:spek_linienform}
 \end{figure}
-Aufgenommen am OBI ($\SI{300}{MHz}$) mit Hahnecho, $\tau = \SI{15}{\micro s}$. Länge eines Pi-Pulses $\tau = \SI{7.6}{\micro s}$. Alle Spektren mit $\SI{500}{Hz}$ apodisiert.
+Aufgenommen am OBI ($\SI{300}{MHz}$) mit Hahn-Echo, $\tau = \SI{15}{\micro s}$. Länge eines Pi-Pulses $\tau = \SI{7.6}{\micro s}$. Alle Spektren mit $\SI{500}{Hz}$ apodisiert.
 
 Bei tiefen Temperaturen eine Czjzek-Form, die sich über weite Temperaturen (235K - 350K) fast unverändert so hält. Darüber ändert sich die Linienform, Lorentz ist ein guter Fit. Schwerpunkt verschiebt sich zu niedrigeren Frequenzen. Minimum ist bei 367K, darüber wird das Spektrum breiter, hat Maximum bei etwa 410K, ehe es wieder schmaler wird. Schwerpunkt verschiebt sich ab 375K wieder gegen 0, wo es ab 400K verweilt.
+
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_lineshape.pdf}
+	\end{center}
+	\caption{Bruker Linienform} \label{fig:res:bruker_linienform}
+\end{figure}
+Die Linienform gleicht den der anderen Daten. Es ist die gute Qualität der Daten zu beachten.
+
 
 
 \begin{figure}
@@ -123,6 +181,14 @@ Bei tiefen Temperaturen eine Czjzek-Form, die sich über weite Temperaturen (235
 	\caption{Spektren FWHM} \label{fig:res:spek_fwhm}
 \end{figure}
 Um Beobachtungen zu quantisieren zwei Messgrößen: FWHM (Halbwertsbreite) und Schwerpunkt. Zwischen 350K und 360K sind die Spektren sehr verrauscht, ebenso bei 400K bis 420K; dort wurden Lorentz-Fits an die Spektren angelegt.
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_fwhm.pdf}
+	\end{center}
+	\caption{Bruker FWHM} \label{fig:res:bruker_fwhm}
+\end{figure}
+Es gibt Abweichungen bei den Halbwertsbreiten. Es wäre aufgrund der Larmorfrequenzen (und der larmorfrequenzabhängigkeit des Quadrupol-WW) ein Verhältnis von 4:3 zu erwarten, was aber nicht ganz zutrifft. Messungen an einem $\SI{600}{MHz}$-Spektrometer wären hilfreich um Aussagen über die chemische Verschiebung machen zu können.
 
 
 \begin{figure}
@@ -143,7 +209,7 @@ angenommen. Lorentz hat zwei Parameter, Maximum $f_0$ (und Schwerpunkt) und Halb
     H(t) = \int_{-\infty}^{\infty} h(t) \text{d} t \\
     H(f) = \frac{2}{a} \cdot \frac{(a/2\pi)^2}{((a/2\pi)^2) + (f - f_0)^2}
 \end{align}
-mit der Halbwertsbreite $\gamma = a/\pi$.
+mit der Halbwertsbreite $2 \gamma = a/\pi$.
 
 Das ursprüngliche Zeitsignal soll durch die $T_1$-Kurve geteilt werden, um den Einfluss herauszurechnen. Dafür werden ein Kohlrausch mit $\beta = 1$ angenommen, damit sich die Rechnung einfacher gestaltet:
 \begin{align}
@@ -163,6 +229,13 @@ Fouriertransformiert ergibt sich die modifizierte Halbwertsbreite $2\gamma = 2(\
 	\caption{Spektren Schwerpunkt} \label{fig:res:spek_mean}
 \end{figure}
 Schwerpunkte; bei den stark verrauschten Spektren wurden die Werte wieder aus Lorentz-Fits bestimmt.
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_mean.pdf} 
+	\end{center}
+	\caption{Bruker Schwerpunkt} \label{fig:res:bruker_mean}
+\end{figure}
 
 
 \section{Simulation} \label{section:res:sim}
@@ -270,63 +343,6 @@ Werden die resultierenden Zeitkonstanten zusammen mit $T_2$ aufgetragen, zeigt s
 	\end{center}
 	\caption{$\tau$ aus FWHM im Vergleich mit $T_2$} \label{fig:res:spekdyn_t2}
 \end{figure}
-
-
-
-\section{Bruker} \label{section:res:bruker}
-
-Neben dem $\SI{300}{MHz}$-Spektrometer wurden auch einige Messungen an einem $\SI{400}{MHz}$ Spektrometer von Bruker durchgeführt.
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_t1.pdf}
-	\end{center}
-	\caption{Bruker $T_1$} \label{fig:res:bruker_t1}
-\end{figure}
-Die $T_1$-Werte und die dazugehörigen $\beta$ zeigen gute Übereinstimmung zu den anderen Daten auf.
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_t1beta.pdf}
-	\end{center}
-	\caption{Bruker $\beta{T_1}$} \label{fig:res:bruker_beta_t1}
-\end{figure}
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_t2.pdf}
-	\end{center}
-	\caption{Bruker $T_2$} \label{fig:res:bruker_t2}
-\end{figure}
-Die $T_2$-Werte und die dazugehörigen $\beta$ zeigen gute Übereinstimmung zu den anderen Daten auf, lediglich bei den hohen Temperaturen bei $\beta$ zeigen sich Abweichungen. Dies könnte der schlechten Datenqualität der Daten vom $\SI{300}{MHz}$-Spektrometer geschuldet sein.
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_t2beta.pdf}
-	\end{center}
-	\caption{Bruker $\beta{T_2}$} \label{fig:res:bruker_beta_t2}
-\end{figure}
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_lineshape.pdf}
-	\end{center}
-	\caption{Bruker Linienform} \label{fig:res:bruker_linienform}
-\end{figure}
-Die Linienform gleicht den der anderen Daten. Es ist die gute Qualität der Daten zu beachten.
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_fwhm.pdf}
-	\end{center}
-	\caption{Bruker FWHM} \label{fig:res:bruker_fwhm}
-\end{figure}
-Es gibt Abweichungen bei den Halbwertsbreiten. Es wäre aufgrund der Larmorfrequenzen (und der larmorfrequenzabhängigkeit des Quadrupol-WW) ein Verhältnis von 4:3 zu erwarten, was aber nicht ganz zutrifft. Messungen an einem $\SI{600}{MHz}$-Spektrometer wären hilfreich um Aussagen über die chemische Verschiebung machen zu können.
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_mean.pdf} 
-	\end{center}
-	\caption{Bruker Schwerpunkt} \label{fig:res:bruker_mean}
-\end{figure}
-
 
 
 
