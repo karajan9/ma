@@ -213,7 +213,7 @@ Es wurde eine weitere, ähnliche Auswertung wurde durchgeführt, wobei anstatt d
 
 Der zweite Abschnitt dieser Arbeit beschäftigt sich mit der Linienform-Untersuchung an CRN. Bei der Auswertung von Spektren wurde eine ungewöhnlich erscheinende Verbreiterung der Spektren in einem Temperaturbereich beobachtet, wo, aufgrund von Bewegungsverschmälerung, eher kleinere Halbwertsbreiten zu erwarten wären. Zur Untersuchung der Gegebenheiten wurden, neben einer vielzahl von experimenteller Spektren, Computer-Simulationen angefertigt, und versucht eine theoretische Erklärung der Daten zu bieten.
 
-Um eine Übersicht zu schaffen, werden zuerst die Linienformen der Spektren aus den verschiedenen Quellen in Abhängigkeit der Temperatur präsentiert. Abbildung \ref{fig:res:spek_linienform} zeigt die am OBI-Spektrometer aufgenommenen Spektren; die Temperaturen reichen von etwa $\SI{234}{\kelvin}$ bis etwa $\SI{435}{\kelvin}$. Sie wurden mit einem Hahn-Echo mit einer Evolutionszeit von $t_p = \SI{15}{\micro s}$ aufgenommen und mit $\SI{500}{Hz}$ apodisiert. Die Spektren wurden in mehreren Messreihen aufgenommen und stellen eine repräsentative Auswahl dar, die es erlaubt, den Verlauf der Linienform nachzuvollziehen, ohne zu stark an Übersicht zu verlieren.
+Um eine Übersicht zu schaffen, werden zuerst die Linienformen der Spektren aus den verschiedenen Quellen in Abhängigkeit der Temperatur präsentiert. Abbildung \ref{fig:res:spek_linienform} zeigt die am OBI-Spektrometer aufgenommenen Spektren; die Temperaturen reichen von etwa $\SI{234}{\kelvin}$ bis etwa $\SI{435}{\kelvin}$. Sie wurden mit einem Hahn-Echo mit einer Evolutionszeit von $t_p = \SI{15}{\micro s}$ aufgenommen und mit $\SI{500}{Hz}$ apodisiert. Es wurden je $\SI{8192}{}$ Datenpunkte mit einer Frequenz von $\SI{2}{MHz}$ erstellt. Die Spektren wurden in mehreren Messreihen aufgenommen und stellen eine repräsentative Auswahl dar, die es erlaubt, den Verlauf der Linienform nachzuvollziehen, ohne zu stark an Übersicht zu verlieren.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plots/SPEK/spek_lineshape.pdf}
@@ -222,36 +222,31 @@ Um eine Übersicht zu schaffen, werden zuerst die Linienformen der Spektren aus 
 \end{figure}
 Bei tiefen Temperaturen ist eine Form zu beobachten, die der des Czjzek-Spektrums aus Kapitel (***) ähnelt. Diese hält sich über weite Temperaturen, von etwa $\SI{235}{\kelvin}$ bis etwa $\SI{350}{\kelvin}$, fast unverändert. Zu höheren Temperaturen ändert sich die Linienform, sie nimmt die einer Lorentz-Funktion an, während die Spektren gleichzeitig schmaler werden und sich der Schwerpunkt zu niedrigeren Frequenzen verschiebt. Diese Bewegung findet ein Ende bei etwa $\SI{367}{\kelvin}$: Zu höheren Temperaturen verbreitern sich die Spektren wieder, ehe sie ab $\SI{410}{\kelvin}$ wieder schmaler werden. Der Schwerpunkt verschiebt sich ab 375K wieder gegen $\SI{0}{Hz}$, wo es ab 400K verweilt. Die Linienform ändert sich nicht mehr.
 
-Es ist auffällig, dass die Qualität der Spektren stark mit der Temperatur schwankt. Zwischen $\SI{235}{\kelvin}$ und $\SI{350}{\kelvin}$, $\SI{363}{\kelvin}$ und $\SI{387}{\kelvin}$, sowie zwischen $\SI{430}{\kelvin}$ und $\SI{435}{\kelvin}$ weisen die Spektren vergleichsweise geringes Rauschen und somit eine glattere Form auf. 
+Es ist auffällig, dass die Qualität der Spektren stark mit der Temperatur schwankt. Zwischen $\SI{235}{\kelvin}$ und $\SI{350}{\kelvin}$, $\SI{363}{\kelvin}$ und $\SI{387}{\kelvin}$, sowie zwischen $\SI{430}{\kelvin}$ und $\SI{435}{\kelvin}$ weisen die Spektren vergleichsweise geringes Rauschen und somit eine glattere Form auf. Das abschnittweise höhere Schwankungen lassen sich durch $T_2$-Minima bei den entsprechenden Temperaturen erklären -- diese sorgen für einen schnellen Abfall des Signals und entsprechend verrauschte Spektren. *** Lorentz
 
-
-********************************************************************
-
-
-
-
-
-
-
-Aufgenommen am OBI ($\SI{300}{MHz}$) mit Hahn-Echo, $\tau = \SI{15}{\micro s}$. Länge eines Pi-Pulses $\tau = \SI{7.6}{\micro s}$. Alle Spektren mit $\SI{500}{Hz}$ apodisiert.
-
+Die am Bruker-Spektrometer aufgenommenen Spektren decken einen Temperaturbereich von $\SI{310}{\kelvin}$ bis $\SI{390}{\kelvin}$ ab, und wurden ebenfalls mit einem Hahn-Echo mit einer Evolutionszeit von $\SI{15}{\micro s}$ erstellt und mit $\SI{500}{Hz}$ apodisiert. Hier wurden je $\SI{4096}{}$ Datenpunkte mit einer Frequenz von $\SI{0.5}{MHz}$ aufgenommen. Da mit diesem Spektrometer weitaus weniger Spektren erstellt wurden als mit dem OBI-Spektrometer können in Abbildung \ref{fig:res:bruker_linienform} alle Spektren präsentiert werden.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_lineshape.pdf}
 	\end{center}
 	\caption{Bruker Linienform} \label{fig:res:bruker_linienform}
 \end{figure}
-Die Linienform gleicht den der anderen Daten. Es ist die gute Qualität der Daten zu beachten.
+Der Verlauf der Linienform gleicht den Beschriebenen in dem entsprechenden Temperaturbereich gut. Es ist das geringe Rauschen der Spektren zu beachten, das, wie auch insbesondere die $T_2$-Daten ein Beleg für hohe Datenqualität des Bruker-Spektrometers in diesem Kontext ist.
 
+Als Ergänzung zu den experimentellen Daten wurden simulierte Spektren angefertigt. Dazu wurde die in Kapitel (***) vorgestellte Simulations-Software verwendet. Es wurden FIDs mit $\SI{4096}{}$ Datenpunkten mit einem Abstand von je $\SI{0.5}{\micro s}$, was einer Frequenz von $\SI{0.5}{MHz}$ entspricht, aufgenommen. Um einen Mittelwert zu bilden wurden, je nach Spektrum, zwischen $10^{7}$ und $10^{9}$ einzelne Simulationen gemittelt. Als Modell wurde ein isotroper Zufallssprung gewählt, welcher eine Czjzek-Verteilung als Ausgangspunkt hat; dieses war der simulierten Quadrupol-Wechselwirkung zweiter Ordnung ausgesetzt. Zur Bestimmung der Lebensdauer eines bestimmten Zustandes wird eine Exponentialverteilung genutzt, deren Parameter, die Lebenszeit, eine Verknüpfung mit Temperaturen ermöglicht. Es wurde eine Vogel-Fulcher-Funktion für die Lebenszeit mit den Parametern für CRN aus Kapitel (*** Andere $\tau_c$s, zum Beispiel aus DOI: 10.1103/PhysRevE.81.051504 zeigen keinen großen Unterschied.) verwendet. Die resultierenden Spektren sind in Abbildung \ref{fig:res:sim_linienform} zu sehen.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plots/SIM/sim_lineshape.pdf}
 	\end{center}
 	\caption{Simulation Linienform} \label{fig:res:sim_linienform}
 \end{figure}
-Das Verhalten der Linienform der Spektren sollte mit Random-Walk-Simulationen untersucht werden. Dazu wurde ein isotroper Zufallssprung verwendet. Ausgangsverteilung wurde zufällig aus Czjzek-Verteilung gezogen. Es wurde ein FID simuliert, Wechselwirkung war Quadrupol-WW 2. Ordnung. Dwelltime (Zeit zwischen zwei Samples): $\SI{0.5}{\micro s}$). Lebenszeiten der Zustände sind exponentiell verteilt, es wird ein Erwartungswert angegeben. Aus diesem wird mit Vogel-Fulcher-$\tau_{c}$ mit Werten aus dem 4er-Papier die Temperatur bestimmt. Andere $\tau_c$s, zum Beispiel aus DOI: 10.1103/PhysRevE.81.051504 zeigen keinen großen Unterschied.
+Bei tiefen Temperaturen gleichen die simulierten Spektren den experimentellen sehr. (*** extra Vergleich?) Auch ist der Übergang zur Lorentz-Form, verbunden mit der Verschiebung des Schwerpunkts und Verschmälerung der Spektren bei etwa der gleichen Temperatur zu beobachten. Die simulierten Spektren ändern Schwerpunkt oder Halbwertsbreite jedoch zu keiner Temperatur in entgegengesetzter Richtung und verschmälern mit steigender Temperatur lediglich.
 
-Die Linienform sieht der des Experiments recht ähnlich, nur zu hohen Temperaturen werden die Spektren immer schmaler, anstatt wieder breiter zu werden.
+
+
+********************************************************************
+
+
 
 
 
