@@ -153,7 +153,8 @@ Die Werte $F_2$ und $\beta_{F_2}$ wurden dann durch $T_1$ und $\beta_{T_1}$ eine
 	\end{center}
 	\caption{$F_2$ geteilt durch Fit, 310K} \label{fig:res:F_2_T_1}
 \end{figure}
-Da die Daten bei Mischzeiten von über $\SI{100}{\milli s}$ stark streuen wurden sie nicht dargestellt. An verbleibenden Punkte wiederum kann ein Kohlrausch-Fit angelegt werden, um über den beschriebenen Umweg zu einer Funktion ähnlich der aus Formel *** zu gelangen.
+Da die Daten bei Mischzeiten von über Eine ähnliche Auswertung wurde durchgeführt, wobei anstatt der Halbwertsbreite die Amplitude bei einer bestimmten Frequenz (beispielsweise )
+ stark streuen wurden sie nicht dargestellt. An verbleibenden Punkte wiederum kann ein Kohlrausch-Fit angelegt werden, um über den beschriebenen Umweg zu einer Funktion ähnlich der aus Formel *** zu gelangen.
 
 Es wurden je zwei Messungen einer Cos-Cos-Pulsfolge und einer Sin-Sin-Pulsfolge bei $\SI{310}{\kelvin}$ durchgeführt, sowie je eine Messung bei $\SI{300}{\kelvin}$. Die Resultate finden sich in Tabelle \ref{tab:res:F_2}
 
@@ -173,23 +174,63 @@ Es wurden je zwei Messungen einer Cos-Cos-Pulsfolge und einer Sin-Sin-Pulsfolge 
 Es ist zu erkennen, dass die Größen zwischen den zwei Durchläufen teils mehr schwanken als zwischen zwei Temperaturen oder im Vergleich zwischen Sin-Sin- und Cos-Cos-Pulsfolgen. Da die Unsicherheiten zudem in Fällen beinahe $\SI{50}{\percent}$ erreicht, müssen diese Ergebnisse mit Vorsicht genossen werden. Es ist aber klar, dass sich die Zeitkonstanten nicht in einem Bereich befinden, wo sie für einen Betaprozess nach den Überlegungen zu erwarten wären. ***
 
 
-********************************************************************
+
+\section{Spektren Dynamik} \label{section:res:spekdyn}
+
+Eine weitere Untersuchung zu möglicher Dynamik wurde an der sich ändernden Linienform von pulslängenabhängigen Spektren durchgeführt. Die Details von CRN-Spektren sollen in einem späteren Abschnitt diskutiert werden.
+
+Es wurde beobachtet, dass Spektren die mit einem Hahn-Echo mit unterschiedlicher Evolutionszeit aufgenommen wurden, eine unterschiedliche Linienform zeigen. Die Halbwertsbreiten der normierten Spektren ist also evolutionszeitabhängig, und das bei verschiedenen Temperaturen in verschiedenen Maßen. Dies lässt sich in Abbildung \ref{fig:res:spekdyn_305K} im Vergleich mit Abbildung \ref{fig:res:spekdyn_325K} erkennen, wo pulslängenabhängige Spektren für die Temperaturen $\SI{305}{\kelvin}$ bzw. $\SI{325}{\kelvin}$ gezeigt sind.
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{graphics/plots/SPEKDYN/spekdyn_305K.pdf}
+	\end{center}
+	\caption{Spektren Linienform($\tau$) 305K} \label{fig:res:spekdyn_305K}
+\end{figure}
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{graphics/plots/SPEKDYN/spekdyn_325K.pdf}
+	\end{center}
+	\caption{Spektren Linienform($\tau$) 325K} \label{fig:res:spekdyn_325K}
+\end{figure}
+Alle Spektren wurden mit dem OBI-Spektrometer aufgenommen; dabei wurde ein Hahn-Echo mit variabler Evolutionszeit verwendet und die Spektren mit $\SI{500}{Hz}$ apodisiert.
+
+Zur Untersuchung dieses Phänomens wurde für jede Temperatur die Halbwertsbreite gegen die Evolutionszeit $t_p$ aufgetragen. Da die Spektren bei hohen Pulslängen teils sehr verrauscht sind, wurden die aufgetragengen Evolutionszeiten auf $\SI{2}{\milli s}$ begrenzt. Da diese Daten wurden Kohlrausch-Fits angelegt, die, zusammen mit dem Daten, als durchgezogene Linien in Abbildung \ref{fig:res:spekdyn_fits} zu sehen sind.
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{graphics/plots/SPEKDYN/spekdyn_fits.pdf}
+	\end{center}
+	\caption{FWHM Fits} \label{fig:res:spekdyn_fits}
+\end{figure}
+
+
+Es wurde eine weitere, ähnliche Auswertung wurde durchgeführt, wobei anstatt der Halbwertsbreite die Amplitude bei einer bestimmten Frequenz (beispielsweise bei $\SI{-10}{\kilo Hz}$) als Variable genommen wurde. Die Ergebnisse glichen der der Halbwertsbreiten-Betrachtung, waren aber durchgehend mit größeren Unsicherheiten behaftet. Dies lässt sich durch die stark verrauschten Spektren bei hohen Evolutionszeiten erklären, die zu stark schwankenden Amplituden führen, welche wiederum einen guten Fit der Daten schwierig gestalten.
+
 
 
 
 
 \section{Spektren} \label{section:res:spektren}
 
+Der zweite Abschnitt dieser Arbeit beschäftigt sich mit der Linienform-Untersuchung an CRN. Bei der Auswertung von Spektren wurde eine ungewöhnlich erscheinende Verbreiterung der Spektren in einem Temperaturbereich beobachtet, wo, aufgrund von Bewegungsverschmälerung, eher kleinere Halbwertsbreiten zu erwarten wären. Zur Untersuchung der Gegebenheiten wurden, neben einer vielzahl von experimenteller Spektren, Computer-Simulationen angefertigt, und versucht eine theoretische Erklärung der Daten zu bieten.
+
+Um eine Übersicht zu schaffen, werden zuerst die Linienformen der Spektren aus den verschiedenen Quellen in Abhängigkeit der Temperatur präsentiert. Abbildung \ref{fig:res:spek_linienform} zeigt die am OBI-Spektrometer aufgenommenen Spektren; die Temperaturen reichen von etwa $\SI{234}{\kelvin}$ bis etwa $\SI{435}{\kelvin}$. Sie wurden mit einem Hahn-Echo mit einer Evolutionszeit von $t_p = \SI{15}{\micro s}$ aufgenommen und mit $\SI{500}{Hz}$ apodisiert.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plots/SPEK/spek_lineshape.pdf}
 	\end{center}
 	\caption{Spektren Linienform} \label{fig:res:spek_linienform}
 \end{figure}
+Bei tiefen Temperaturen ist eine Form zu beobachten, die der des Czjzek-Spektrums aus Kapitel (***) ähnelt. Diese hält sich über weite Temperaturen, von etwa $\SI{234}{\kelvin}$ bis etwa $\SI{435}{\kelvin}$ fast unverändert. Darüber ändert sich die Linienform, Lorentz ist ein guter Fit. Schwerpunkt verschiebt sich zu niedrigeren Frequenzen. Minimum ist bei 367K, darüber wird das Spektrum breiter, hat Maximum bei etwa 410K, ehe es wieder schmaler wird. Schwerpunkt verschiebt sich ab 375K wieder gegen 0, wo es ab 400K verweilt.
+
+********************************************************************
+
+
+
+
+
+
+
 Aufgenommen am OBI ($\SI{300}{MHz}$) mit Hahn-Echo, $\tau = \SI{15}{\micro s}$. Länge eines Pi-Pulses $\tau = \SI{7.6}{\micro s}$. Alle Spektren mit $\SI{500}{Hz}$ apodisiert.
-
-Bei tiefen Temperaturen eine Czjzek-Form, die sich über weite Temperaturen (235K - 350K) fast unverändert so hält. Darüber ändert sich die Linienform, Lorentz ist ein guter Fit. Schwerpunkt verschiebt sich zu niedrigeren Frequenzen. Minimum ist bei 367K, darüber wird das Spektrum breiter, hat Maximum bei etwa 410K, ehe es wieder schmaler wird. Schwerpunkt verschiebt sich ab 375K wieder gegen 0, wo es ab 400K verweilt.
-
 
 \begin{figure}
 	\begin{center}
@@ -198,6 +239,20 @@ Bei tiefen Temperaturen eine Czjzek-Form, die sich über weite Temperaturen (235
 	\caption{Bruker Linienform} \label{fig:res:bruker_linienform}
 \end{figure}
 Die Linienform gleicht den der anderen Daten. Es ist die gute Qualität der Daten zu beachten.
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{graphics/plots/SIM/sim_lineshape.pdf}
+	\end{center}
+	\caption{Simulation Linienform} \label{fig:res:sim_linienform}
+\end{figure}
+Das Verhalten der Linienform der Spektren sollte mit Random-Walk-Simulationen untersucht werden. Dazu wurde ein isotroper Zufallssprung verwendet. Ausgangsverteilung wurde zufällig aus Czjzek-Verteilung gezogen. Es wurde ein FID simuliert, Wechselwirkung war Quadrupol-WW 2. Ordnung. Dwelltime (Zeit zwischen zwei Samples): $\SI{0.5}{\micro s}$). Lebenszeiten der Zustände sind exponentiell verteilt, es wird ein Erwartungswert angegeben. Aus diesem wird mit Vogel-Fulcher-$\tau_{c}$ mit Werten aus dem 4er-Papier die Temperatur bestimmt. Andere $\tau_c$s, zum Beispiel aus DOI: 10.1103/PhysRevE.81.051504 zeigen keinen großen Unterschied.
+
+Die Linienform sieht der des Experiments recht ähnlich, nur zu hohen Temperaturen werden die Spektren immer schmaler, anstatt wieder breiter zu werden.
+
+
+
+
 
 
 
@@ -248,6 +303,16 @@ Fouriertransformiert ergibt sich die modifizierte Halbwertsbreite $2\gamma = 2(\
 
 Übrig bleibt ein kleinerer Peak (-> Theorie). Bei Temperaturen über 410K konnte keine Korrektur vorgenommen werden, weil die $T_1$-Werte da zu stark streuen.
 
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{graphics/plots/SIM/sim_fwhm.pdf}
+	\end{center}
+	\caption{Simulation FWHM} \label{fig:res:sim_fwhm}
+\end{figure}
+Zusätzlich zeigt die Halbwertsbreite einen Peak bei ca. 350K. Dies kann daran liegen, dass hier der Übergang von der Czjzek-Form mit einer Spitze zur abgerundeten Lorentz-Form ist. Das Abrunden verschiebt die halbe Höhe zu niedrigeren Werten, daher der Peak. Die experimentellen Spektren zeigen aufgrund von Störungen auch bei niedrigeren keine perfekte Spitze und daher auch keinen Peak in der Halbwertsbreite beim Übergang.
+
+
+
 
 \begin{figure}
 	\begin{center}
@@ -265,33 +330,26 @@ Schwerpunkte; bei den stark verrauschten Spektren wurden die Werte wieder aus Lo
 \end{figure}
 
 
-\section{Simulation} \label{section:res:sim}
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/SIM/sim_lineshape.pdf}
-	\end{center}
-	\caption{Simulation Linienform} \label{fig:res:sim_linienform}
-\end{figure}
-Das Verhalten der Linienform der Spektren sollte mit Random-Walk-Simulationen untersucht werden. Dazu wurde ein isotroper Zufallssprung verwendet. Ausgangsverteilung wurde zufällig aus Czjzek-Verteilung gezogen. Es wurde ein FID simuliert, Wechselwirkung war Quadrupol-WW 2. Ordnung. Dwelltime (Zeit zwischen zwei Samples): $\SI{0.5}{\micro s}$). Lebenszeiten der Zustände sind exponentiell verteilt, es wird ein Erwartungswert angegeben. Aus diesem wird mit Vogel-Fulcher-$\tau_{c}$ mit Werten aus dem 4er-Papier die Temperatur bestimmt. Andere $\tau_c$s, zum Beispiel aus DOI: 10.1103/PhysRevE.81.051504 zeigen keinen großen Unterschied.
-
-Die Linienform sieht der des Experiments recht ähnlich, nur zu hohen Temperaturen werden die Spektren immer schmaler, anstatt wieder breiter zu werden. 
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/SIM/sim_fwhm.pdf}
-	\end{center}
-	\caption{Simulation FWHM} \label{fig:res:sim_fwhm}
-\end{figure}
-Zusätzlich zeigt die Halbwertsbreite einen Peak bei ca. 350K. Dies kann daran liegen, dass hier der Übergang von der Czjzek-Form mit einer Spitze zur abgerundeten Lorentz-Form ist. Das Abrunden verschiebt die halbe Höhe zu niedrigeren Werten, daher der Peak. Die experimentellen Spektren zeigen aufgrund von Störungen auch bei niedrigeren keine perfekte Spitze und daher auch keinen Peak in der Halbwertsbreite beim Übergang.
-
-
 % \begin{figure} % ***
 % 	\begin{center}
 % 		\includegraphics[width=\textwidth]{graphics/plots/SIM/sim_mean.pdf} 
 % 	\end{center}
 % 	\caption{Simulation Schwerpunkt} \label{fig:res:sim_mean}
 % \end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -332,45 +390,6 @@ Alle drei Spektraldichten zeigen zwar gute, aber keine perfekten Übereinstimmun
 	\end{center}
 	\caption{Spektraldichte $J_{DC}$} \label{fig:res:theorie_j_dc}
 \end{figure}
-
-
-
-
-\section{Spektren Dynamik} \label{section:res:spekdyn}
-
-Werden pulslängenabhängige Spektren aufgenommen, zeigt sich für unterschiedliche Temperaturen (hier beispielshaft 305K und 325K) ein unterschiedliches Verhalten der Linienform. Diese Tatsache soll verwendet werden, um an Information über die Dynamik zu kommen, die der Lienienformänderung zugrunde liegt.
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/SPEKDYN/spekdyn_305K.pdf}
-	\end{center}
-	\caption{Spektren Linienform($\tau$) 305K} \label{fig:res:spekdyn_305K}
-\end{figure}
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/SPEKDYN/spekdyn_325K.pdf}
-	\end{center}
-	\caption{Spektren Linienform($\tau$) 325K} \label{fig:res:spekdyn_325K}
-\end{figure}
-
-Dafür wird wird die Halbwertsbreite gegen die Pulslänge aufgetragen. Da die Spektren bei hohen Pulslängen teils sehr verrauscht sind, wurden hier für tiefe Temperaturen die Pulslängen auf $t_p = \SI{2}{\milli s}$ beschränkt.
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/SPEKDYN/spekdyn_fits.pdf}
-	\end{center}
-	\caption{FWHM Fits} \label{fig:res:spekdyn_fits}
-\end{figure}
-An die mit Punkten dargestellten Daten wurde ein Kohlrausch-Fit angelegt, gezeigt als durchgezogene Linie.
-
-Werden die resultierenden Zeitkonstanten zusammen mit $T_2$ aufgetragen, zeigt sich eine hohe Ähnlichkeit, was vermuten lässt, dass mit der Methode $T_2$ gemessen wurde.
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/SPEKDYN/spekdyn_t2.pdf}
-	\end{center}
-	\caption{$\tau$ aus FWHM im Vergleich mit $T_2$} \label{fig:res:spekdyn_t2}
-\end{figure}
-
 
 
 
@@ -428,3 +447,12 @@ Für die Parameter $C_Q = \SI{2.85e6}{Hz}$, $\tau_c = \SI{7e-15}{s}$ und $\alpha
 Die nächsten Schritte in dieser Untersuchung sollen darin bestehen, die Auswirkungen der $T_1$-Relaxation auf die Spektrums-Breite zu bestimmen und schlussendlich zu ergründen, ob sich die Messdaten sich mit diesen Theorien zufriedenstellend erklären lassen.
 
 
+
+
+Werden die resultierenden Zeitkonstanten zusammen mit $T_2$ aufgetragen, zeigt sich eine hohe Ähnlichkeit, was vermuten lässt, dass mit der Methode $T_2$ gemessen wurde.
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{graphics/plots/SPEKDYN/spekdyn_t2.pdf}
+	\end{center}
+	\caption{$\tau$ aus FWHM im Vergleich mit $T_2$} \label{fig:res:spekdyn_t2}
+\end{figure}
