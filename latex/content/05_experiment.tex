@@ -233,34 +233,33 @@ Die am Bruker-Spektrometer aufgenommenen Spektren decken einen Temperaturbereich
 \end{figure}
 Der Verlauf der Linienform gleicht den Beschriebenen in dem entsprechenden Temperaturbereich gut. Es ist das geringe Rauschen der Spektren zu beachten, das, wie auch insbesondere die $T_2$-Daten ein Beleg für hohe Datenqualität des Bruker-Spektrometers in diesem Kontext ist.
 
-Als Ergänzung zu den experimentellen Daten wurden simulierte Spektren angefertigt. Dazu wurde die in Kapitel (***) vorgestellte Simulations-Software verwendet. Es wurden FIDs mit $\SI{4096}{}$ Datenpunkten mit einem Abstand von je $\SI{0.5}{\micro s}$, was einer Frequenz von $\SI{0.5}{MHz}$ entspricht, aufgenommen. Um einen Mittelwert zu bilden wurden, je nach Spektrum, zwischen $10^{7}$ und $10^{9}$ einzelne Simulationen gemittelt. Als Modell wurde ein isotroper Zufallssprung gewählt, welcher eine Czjzek-Verteilung als Ausgangspunkt hat; dieses war der simulierten Quadrupol-Wechselwirkung zweiter Ordnung ausgesetzt. Zur Bestimmung der Lebensdauer eines bestimmten Zustandes wird eine Exponentialverteilung genutzt, deren Parameter, die Lebenszeit, eine Verknüpfung mit Temperaturen ermöglicht. Es wurde eine Vogel-Fulcher-Funktion für die Lebenszeit mit den Parametern für CRN aus Kapitel (*** Andere $\tau_c$s, zum Beispiel aus DOI: 10.1103/PhysRevE.81.051504 zeigen keinen großen Unterschied.) verwendet. Die resultierenden Spektren sind in Abbildung \ref{fig:res:sim_linienform} zu sehen.
+Als Ergänzung zu den experimentellen Daten wurden simulierte Spektren angefertigt. Dazu wurde die in Kapitel (***) vorgestellte Simulations-Software verwendet. Es wurden FIDs mit $\SI{4096}{}$ Datenpunkten mit einem Abstand von je $\SI{0.5}{\micro s}$, was einer Frequenz von $\SI{0.5}{MHz}$ entspricht, aufgenommen. Um einen Mittelwert zu bilden wurden, je nach Spektrum, zwischen $10^{7}$ und $10^{9}$ einzelne Simulationen gemittelt. Als Modell wurde ein isotroper Zufallssprung gewählt, welcher eine Czjzek-Verteilung als Ausgangspunkt hat; dieses war der simulierten Quadrupol-Wechselwirkung zweiter Ordnung ausgesetzt. Zur Bestimmung der Lebensdauer eines bestimmten Zustandes wird eine Exponentialverteilung genutzt, deren Parameter, die Lebenszeit, eine Verknüpfung mit Temperaturen ermöglicht. Es wurde eine Vogel-Fulcher-Funktion für die Lebenszeit mit den Parametern für CRN aus Kapitel (*** Andere $\tau_c$s, zum Beispiel aus DOI: 10.1103/PhysRevE.81.051504 zeigen keinen großen Unterschied.) verwendet. Zur besseren Vergleichbarkeit werden im Folgenden die Spektren mit den so berechneten Temperaturen anstatt mit den Lebenszeiten referenziert. Die resultierenden Spektren sind in Abbildung \ref{fig:res:sim_linienform} zu sehen.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plots/SIM/sim_lineshape.pdf}
 	\end{center}
 	\caption{Simulation Linienform} \label{fig:res:sim_linienform}
 \end{figure}
-Bei tiefen Temperaturen gleichen die simulierten Spektren den experimentellen sehr. (*** extra Vergleich?) Auch ist der Übergang zur Lorentz-Form, verbunden mit der Verschiebung des Schwerpunkts und Verschmälerung der Spektren bei etwa der gleichen Temperatur zu beobachten. Die simulierten Spektren ändern Schwerpunkt oder Halbwertsbreite jedoch zu keiner Temperatur in entgegengesetzter Richtung und verschmälern mit steigender Temperatur lediglich.
+Bei tiefen Temperaturen gleichen die simulierten Spektren den experimentellen. (*** extra Vergleich?) Auch ist der Übergang zur Lorentz-Form, verbunden mit der Verschiebung des Schwerpunkts und Verschmälerung der Spektren bei etwa der gleichen Temperatur von $\SI{350}{\kelvin}$ zu beobachten. Im Gegensatz zu den experimentellen Spektren werden die simulierten Spektren mit steigender Temperatur jedoch immer schmaler und ändern den Schwerpunkt nicht mehr.
 
 
-
-********************************************************************
-
-
-
-
-
-
-
-
-
+Um eine quantitative Behandlung der Spektren zu ermöglichen wurden zwei Messgrößen verwendet: Die Halbwertsbreite (also die Breite auf der Höhe der Hälfte des Maximums) und der Schwerpunkt der Spektren. Um bei den stark verrauschten Spektren zwischen $\SI{350}{\kelvin}$ und $\SI{360}{\kelvin}$, und zwischen $\SI{390}{\kelvin}$ und $\SI{430}{\kelvin}$ gut vergleichbare Werte zu erhalten, wurde ein Lorentz-Fit der Form
+\begin{align}
+	L(f) = \frac{1}{\pi \gamma} \cdot \frac{\gamma^2}{\gamma^2 + (f - f_0)^2} \label{eqn:res:lorentz}
+\end{align}
+mit einer least-squares-Methode an die Spektren angelegt. So entspricht $2 \gamma$ der Halbwertsbreite und das Maximum $f_0$, aufgrund der Symmetrie der Funktion, dem Schwerpunkt. Die so gewonnenen Halbwertsbreiten sind in Abbildung \ref{fig:res:spek_fwhm} zu sehen.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plots/SPEK/spek_fwhm.pdf}
 	\end{center}
 	\caption{Spektren FWHM} \label{fig:res:spek_fwhm}
 \end{figure}
-Um Beobachtungen zu quantisieren zwei Messgrößen: FWHM (Halbwertsbreite) und Schwerpunkt. Zwischen 350K und 360K sind die Spektren sehr verrauscht, ebenso bei 400K bis 420K; dort wurden Lorentz-Fits an die Spektren angelegt.
+
+
+********************************************************************
+
+
+
 
 \begin{figure}
 	\begin{center}
