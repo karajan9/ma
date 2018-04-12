@@ -11,10 +11,9 @@ home_dir = "/home/karajan/uni/master/analyse"
 sys.path.append(os.path.abspath("/home/karajan/uni/master/analyse/scripts"))
 from nmr_lib import *
 
-
-
 # %%
 # CRN taus
+
 
 def tau_c_4er(T):
     tau_co = 5.1e-14
@@ -69,7 +68,6 @@ tau_c_4er(347)
 
 # labels
 
-
 # %%
 # rename and rescale
 directory = "/home/karajan/uni/master/analyse/data/lineshape/rename"
@@ -79,10 +77,15 @@ labels = np.array(sorted(float(fn.split("!")[1]) for fn in fn_fft))
 
 for i, fn in enumerate(fn_fft):
     data_fft = np.loadtxt(fn)
-    data_fft[:,1] /= 10000
+    data_fft[:, 1] /= 10000
     print(data_fft)
-    np.savetxt(fn, data_fft, delimiter='	', header='i	omega	re	im	r	phi', footer='', comments='#')
-
+    np.savetxt(
+        fn,
+        data_fft,
+        delimiter='	',
+        header='i	omega	re	im	r	phi',
+        footer='',
+        comments='#')
 
 # %%
 # invert
@@ -93,10 +96,15 @@ labels = np.array(sorted(float(fn.split("!")[1]) for fn in fn_fft))
 
 for i, fn in enumerate(fn_fft):
     data_fft = np.loadtxt(fn)
-    data_fft[:,2] = data_fft[:,2][::-1]
-    data_fft[:,3] = data_fft[:,3][::-1] * -1
-    np.savetxt(fn, data_fft, delimiter='	', header='i	omega	re	im	r	phi', footer='', comments='#')
-
+    data_fft[:, 2] = data_fft[:, 2][::-1]
+    data_fft[:, 3] = data_fft[:, 3][::-1] * -1
+    np.savetxt(
+        fn,
+        data_fft,
+        delimiter='	',
+        header='i	omega	re	im	r	phi',
+        footer='',
+        comments='#')
 
 # %%
 # invert
@@ -108,11 +116,16 @@ labels = np.array(sorted(float(fn.split("!")[1]) for fn in fn_fft))
 
 for i, fn in enumerate(fn_fft):
     data_fft = np.loadtxt(fn)
-    data_fft[:,2] = data_fft[:,2] * -1
-    print(data_fft[:,2])
+    data_fft[:, 2] = data_fft[:, 2] * -1
+    print(data_fft[:, 2])
     # data_fft[:,3] = data_fft[:,3][::-1]
-    np.savetxt(fn, data_fft, delimiter='	', header='i	omega	re	im	r	phi', footer='', comments='#')
-
+    np.savetxt(
+        fn,
+        data_fft,
+        delimiter='	',
+        header='i	omega	re	im	r	phi',
+        footer='',
+        comments='#')
 
 # %%
 # plot fft
@@ -125,7 +138,7 @@ fn_fft = glob.glob(directory + "/*.spec.nmr")
 fn_fft = sorted(fn_fft, key=lambda a: float(a.split("!")[1]))
 labels = np.array(sorted(float(fn.split("!")[1]) for fn in fn_fft))
 
-plt.rcParams['figure.figsize'] = (8, 12)
+# plt.rcParams['figure.figsize'] = (8, 12)
 for i, fn in enumerate(fn_fft[::-1]):
     data_fft = np.loadtxt(fn, comments="!")
     # cmplx = to_cmplx(data_fft[:, 2], data_fft[:, 3])
@@ -134,19 +147,17 @@ for i, fn in enumerate(fn_fft[::-1]):
     data = data_fft[:, 1]
     temp = np.round(T_VFT_4er(labels[::-1][i]), 2)
     # plt.plot(data_fft[:, 1], cmplx.real - 0.1*i, label=temp)
-    plt.plot(data_fft[:, 0], data / np.max(data) - 0.1*i, label=temp)
-
+    plt.plot(data_fft[:, 0], data / np.max(data) - 0.1 * i, label=temp)
 
 # directory = "/home/karajan/uni/master/analyse/data/lineshape/run5 dw05"
 # fn_fft = glob.glob(directory + "/*.fid.fft")
 # fn_fft = sorted(fn_fft, key=lambda a: float(a.split("!")[1]))
 # labels = np.array(sorted(float(fn.split("!")[1]) for fn in fn_fft))
 
-# # plt.rcParams['figure.figsize'] = (12, 8)
+# # # plt.rcParams['figure.figsize'] = (12, 8)
 # for i, fn in enumerate(fn_fft):
 #     data_fft = np.loadtxt(fn)
 #     plt.plot(data_fft[:, 1], data_fft[:, 2], label=labels[i])
-
 
 plt.xlim(-75000, 50000)
 plt.legend(loc=5)
@@ -157,7 +168,6 @@ plt.title("Simulation Lineshape")
 
 save_plot(plt, "/home/karajan/uni/master/analyse/plots/SIM/sim_lineshape2")
 
-
 # %%
 # plot dofft
 directory = "/home/karajan/uni/master/analyse/data/lineshape/run3/noapo"
@@ -165,22 +175,22 @@ fn_apo = glob.glob(directory + "/*.fid.dat.spec.nmr")
 fn_apo = sorted(fn_apo, key=lambda a: float(a.split("!")[1]))
 labels = np.array(sorted(float(fn.split("!")[1]) for fn in fn_apo))
 
-plt.rcParams['figure.figsize'] = (12, 8)
+# plt.rcParams['figure.figsize'] = (12, 8)
 for i, fn in enumerate(fn_apo):
     data_fft = np.loadtxt(fn, comments="!")
     # plt.plot(data_fft[:, 0], data_fft[:, 1], label=labels[i])
-    plt.plot(data_fft[:, 0], data_fft[:, 1] / np.max(data_fft[:, 1]),
-            label=labels[i])
+    plt.plot(
+        data_fft[:, 0],
+        data_fft[:, 1] / np.max(data_fft[:, 1]),
+        label=labels[i])
 
 plt.xlim(-1000, 500)
 # plt.xlim(-500000, 500000)
 plt.legend()
 
-
-
 # %%
 # dofft plotten
-plt.rcParams['figure.figsize'] = (12, 8)
+# plt.rcParams['figure.figsize'] = (12, 8)
 for i, fn in enumerate(fn_apo):
     data_fft = np.loadtxt(fn, comments="!")
     plt.plot(data_fft[:, 1], data_fft[:, 2], label=labels[i])
@@ -213,7 +223,6 @@ def get_fwhm_temp_t1():
         t1temps = np.hstack([t1temps, data[:, 1]])
         t1t1 = np.hstack([t1t1, data[:, 3]])
 
-
     spek_dir = "/home/karajan/uni/master/analyse/data/crn/data/SPEK/"
     spek_fn = [
         spek_dir + "spek_230K_280K.data",
@@ -237,7 +246,7 @@ def get_fwhm_temp_t1():
         tempindex = np.argmin(np.abs(t1temps - temp))
         spekt1[i] = t1t1[tempindex]
 
-    spekfwhm_t1 = spekfwhm - 1/spekt1/np.pi
+    spekfwhm_t1 = spekfwhm - 1 / spekt1 / np.pi
     return spektemps, spekfwhm, spekt1, spekfwhm_t1
 
 
@@ -245,24 +254,24 @@ def get_fwhm_temp_t1_2():
     homedir = "/home/karajan/uni/master/analyse/data/crn/data/"
     fwhm_data = np.loadtxt(homedir + "SPEK/spek_342K_380K.data")
     t1_data = np.loadtxt(homedir + "T1/t1_342K_380K.data")
-    temp_f = fwhm_data[:,1]
-    gamma = fwhm_data[:,5]
-    t1 = t1_data[:,3]
+    temp_f = fwhm_data[:, 1]
+    gamma = fwhm_data[:, 5]
+    t1 = t1_data[:, 3]
     fwhm_data2 = np.loadtxt(homedir + "SPEK/spek_360K_440K.data")
     t1_data2 = np.loadtxt(homedir + "T1/t1_360K_440K_170807.data")
-    temp_f2 = fwhm_data2[:,1]
-    gamma2 = fwhm_data2[:,5]
-    t12 = t1_data2[:,3]
+    temp_f2 = fwhm_data2[:, 1]
+    gamma2 = fwhm_data2[:, 5]
+    t12 = t1_data2[:, 3]
 
-    return np.hstack([temp_f, temp_f2[6:]]), np.hstack([(gamma-1/t1[1::2]/2/np.pi)*2, (gamma2[6:]-1/t12[6:]/2/np.pi)*2])
+    return np.hstack([temp_f, temp_f2[6:]]), np.hstack(
+        [(gamma - 1 / t1[1::2] / 2 / np.pi) * 2,
+         (gamma2[6:] - 1 / t12[6:] / 2 / np.pi) * 2])
 
 
 # # test ob richtige Temperaturen gefunden wurden
 # plt.yscale("log")
 # plt.scatter(t1temps, t1t1)
 # plt.scatter(spektemps, spekt1)
-
-
 
 # %%
 # T1 rausrechnen
@@ -283,7 +292,7 @@ save_plot(plt, "/home/karajan/uni/master/analyse/plots/SPEK/spek_fwhm")
 
 # %%
 # Sim FWHM
-plt.rcParams['figure.figsize'] = (12, 8)
+# plt.rcParams['figure.figsize'] = (12, 8)
 def calc_fullwidth_xmax(x, y, height=0.5):
     spek_argmax = np.argmax(y)
     spek_max = y[spek_argmax]
@@ -317,7 +326,6 @@ for i, fn in enumerate(fn_fft):
 
 plt.scatter(T_VFT_4er(labels), fwhms, label="shift=0")
 plt.ylim(-3000, 300000)
-
 
 directory = "/home/karajan/uni/master/analyse/data/lineshape/rename"
 fn_fft = glob.glob(directory + "/*.fid.fft")
@@ -354,12 +362,11 @@ for i, fn in enumerate(fn_apo):
     maxims[i], means[i], fwhm[i], temp = get_dofft_info(fn)
 
 # FWHM Exp / Sim Vergleich
-plt.scatter(T_VFT_4er(labels / 128), fwhm*100*2*np.pi, color="r")
-
+plt.scatter(T_VFT_4er(labels / 128), fwhm * 100 * 2 * np.pi, color="r")
 
 # %%
 # FWHM plotten
-plt.rcParams['figure.figsize'] = (12, 8)
+# plt.rcParams['figure.figsize'] = (12, 8)
 
 
 def plot_fwhm():
@@ -393,8 +400,6 @@ plot_fwhm()
 # plt.scatter(T_VFT_4er(labels), fwhms / 125.0, color="g")
 # plt.scatter(T_VFT_4er(labels / 128), fwhms / 125.0, color="r")
 
-
-
 # %%
 # plot Maxima
 spek_dir = "/home/karajan/uni/master/analyse/data/crn/data/SPEK/"
@@ -407,6 +412,7 @@ spek_fn = [
     spek_dir + "spek_360K_440K.data",
     spek_dir + "spek_305K_345K.data",
 ]
+
 
 def plot_maxima():
     plt.xlabel("Temperatur [K]")
@@ -447,6 +453,43 @@ def get_dofft_info(fn):
     return maxim, mean, fwhm, temp
 
 
+def get_multi_info(dirs):
+    maxims = np.empty(0)
+    means = np.empty(0)
+    fwhms = np.empty(0)
+    temps = np.empty(0)
+    for spek_dir in dirs:
+        fn_spek = glob.glob(spek_dir + "/*/*.spec.nmr")
+        for i, fn in enumerate(fn_spek):
+            maxim, mean, fwhm, temp = get_dofft_info(fn)
+            maxims = np.hstack([maxims, maxim])
+            means = np.hstack([means, mean])
+            fwhms = np.hstack([fwhms, fwhm])
+            temps = np.hstack([temps, temp])
+
+    return temps, fwhms, means, maxims
+
+
+def get_bruker_info():
+    home_bruker = "/home/karajan/uni/master/ma/analyse/data/bruker/SPEK/"
+    return get_multi_info(home_bruker)
+
+
+def get_obi_info():
+    home_spek = "/home/karajan/uni/master/analyse/data/"
+    spek_dirs = [
+        home_spek + "170706/SPEK",
+        home_spek + "170713/SPEK",
+        home_spek + "170731/spektren",
+        home_spek + "170807/SPEK",
+        home_spek + "170817/SPEK",
+        home_spek + "170828/SPEK",
+        home_spek + "170906/SPEK/tau15",
+        home_spek + "170912/SPEK/tau_abh/tau0015",
+    ]
+    return get_multi_info(spek_dirs)
+
+
 def plot_dofft(kind):
     home_spek = "/home/karajan/uni/master/analyse/data/"
     spek_dirs = [
@@ -469,31 +512,33 @@ def plot_dofft(kind):
         for i, fn in enumerate(fn_spek):
             maxims[i], means[i], fwhm[i], temps[i] = get_dofft_info(fn)
         if kind == "fwhm":
-            plt.scatter(temps, fwhm / 1e3, marker="o")
+            plt.scatter(temps, fwhm / 1e3, color="tab:blue", marker="v")
         elif kind == "maxim":
-            plt.scatter(temps, maxims / 1e3, marker="o")
+            plt.scatter(temps, maxims / 1e3, color="tab:blue", marker="v")
         elif kind == "mean":
-            plt.scatter(temps, means / 1e3, marker="o")
+            plt.scatter(temps, means / 1e3, color="tab:blue", marker="v")
 
 
 directory = "/home/karajan/uni/master/analyse/data/lineshape/joined"
 
 fn_apo = glob.glob(directory + "/*.fid.dat.spec.nmr")
 fn_apo = sorted(fn_apo, key=lambda a: float(a.split("!")[1]))
-labels = np.array(sorted(float(fn.split("!")[1]) for fn in fn_apo))
+stemps = np.array(sorted(float(fn.split("!")[1]) for fn in fn_apo))
 
-maxims = np.empty(len(fn_apo))
-means = np.empty(len(fn_apo))
-fwhm = np.empty(len(fn_apo))
+smaxims = np.empty(len(fn_apo))
+smeans = np.empty(len(fn_apo))
+sfwhms = np.empty(len(fn_apo))
 for i, fn in enumerate(fn_apo):
-    maxims[i], means[i], fwhm[i], temp = get_dofft_info(fn)
-
+    smaxims[i], smeans[i], sfwhms[i], stemp = get_dofft_info(fn)
+# factor = 1000
+# smaxims /= factor
+# smeans /= factor
+# sfwhms /= factor
 
 print(labels)
 
-plt.rcParams['figure.figsize'] = (12, 8)
+# plt.rcParams['figure.figsize'] = (12, 8)
 
-factor = 1000
 # # FWHM Exp / Sim Vergleich
 # plt.scatter(T_VFT_4er(labels), fwhm / factor, color="r")
 # # plt.scatter(T_VFT_aug(labels / 128), fwhm/8, color="r")
@@ -511,7 +556,6 @@ factor = 1000
 # save_plot(plt, "/home/karajan/uni/master/analyse/plots/SIM/sim_fwhm")
 # plt.show()
 
-
 # # Maxim Exp / Sim Vergleich
 # plt.scatter(T_VFT_4er(labels / 128), maxims/8, color="r", marker="^")
 # # plt.scatter(T_VFT_aug(labels / 128), maxims/8, color="g", marker="^")
@@ -519,19 +563,31 @@ factor = 1000
 # plot_dofft("maxim")
 
 # Mean Exp / Sim Vergleich
-plt.scatter(T_VFT_4er(labels), means / factor, color="r", marker="^")
+plt.scatter(
+    T_VFT_4er(stemps),
+    smeans / 1e3,
+    color="tab:green",
+    marker="^",
+    label="Simulation")
 # plt.scatter(T_VFT_aug(labels / 128), means / 15, color="g", marker="^")
 # plt.scatter(T_mauro_aug(labels / 128), means / 15, color="y", marker="^")
-plot_dofft("mean")
-plt.ylim(- 25, 5)
+otemps, ofwhms, omeans, omaxims = get_obi_info()
+plt.scatter(otemps, omeans / 1e3, color="tab:blue", marker="v", label="OBI")
+
+btemps, bfwhms, bmeans, bmaxims = get_bruker_info()
+plt.scatter(btemps, bmeans / 1e3, color="tab:red", marker="s", label="Bruker")
+
+print(btemps)
+
+# plot_dofft("mean")
+# plt.ylim(-25, 5)
 plt.xlabel("Temperatur [K]")
 plt.ylabel("Schwerpunkt [kHz]")
+plt.legend()
 # plt.title("CRN FWHM mit $T_1$-Korrektur")
-plt.title("CRN Schwerpunkt")
+# plt.title("CRN Schwerpunkt")
 # save_plot(plt, "/home/karajan/uni/master/analyse/plots/SPEK/spek_mean")
 # save_plot(plt, "/home/karajan/uni/master/analyse/plots/SIM/sim_mean")
-
-
 
 # %%
 # Single Spektren Vergleich
@@ -548,7 +604,6 @@ plt.title("CRN Schwerpunkt")
 # plt.xlim(-2e5, 2e5)
 # save_plot(plt, "/home/karajan/uni/master/analyse/plots/SIM/sim_exp_347")
 
-
 home_dir = "/home/karajan/uni/master/analyse/data/"
 simfn = "lineshape/joined/lineshape_lifetime!3395656250000.0!.fid.dat.spec.nmr"
 sim = np.loadtxt(home_dir + simfn, comments="!")
@@ -560,14 +615,13 @@ plt.plot(exp2[:, 0], exp2[:, 1])
 plt.xlim(-2e5, 2e5)
 save_plot(plt, "/home/karajan/uni/master/analyse/plots/SIM/sim_exp_310")
 
-
 # %%
 # Exp Lineshape Vergleich
 # print("."); print("."); print("."); print("."); print("."); print(".")
 # print("."); print("."); print("."); print("."); print("."); print(".")
 # print("."); print("."); print("."); print("."); print("."); print(".")
 
-plt.rcParams['figure.figsize'] = (12, 12)
+# plt.rcParams['figure.figsize'] = (12, 12)
 
 home_spek = "/home/karajan/uni/master/analyse/data/"
 spek_dirs = [
@@ -596,9 +650,10 @@ for spek_dir in spek_dirs:
 
     for i, fn in enumerate(fn_spek):
         data_dofft = np.loadtxt(fn, comments="!")
-        plt.plot(data_dofft[:, 0],
-                 data_dofft[:, 1] / np.max(data_dofft[:, 1]) - i * 0.2,
-                 label=temps[i])
+        plt.plot(
+            data_dofft[:, 0],
+            data_dofft[:, 1] / np.max(data_dofft[:, 1]) - i * 0.2,
+            label=temps[i])
 
 plt.legend(loc='right')
 plt.xlim(-100000, 100000)

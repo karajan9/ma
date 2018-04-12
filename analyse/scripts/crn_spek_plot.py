@@ -143,7 +143,7 @@ def plot_maxima_bruker():
 plot_dofft("mean")
 plot_maxima_bruker()
 plt.legend()
-save_plot(plt, "/home/karajan/uni/master/analyse/plots/BRUKER/bruker_mean")
+# save_plot(plt, "/home/karajan/uni/master/analyse/plots/BRUKER/bruker_mean")
 
 
 # %%
@@ -232,9 +232,11 @@ def plot_fwhm_bruker():
         label="Bruker",
         fmt='s')
 
+plt.xlim(370, 400)
+plt.ylim(5, 25)
 plot_fwhm_bruker()
 plt.legend(loc=3)
-save_plot(plt, "/home/karajan/uni/master/analyse/plots/BRUKER/bruker_fwhm")
+# save_plot(plt, "/home/karajan/uni/master/analyse/plots/BRUKER/bruker_fwhm")
 
 
 # %%
@@ -305,6 +307,6 @@ def plot_spek_multi():
 plt.xlim(-100, 100)
 plot_spek_multi()
 plt.legend(loc=5)
-save_plot(plt, "/home/karajan/uni/master/analyse/plots/BRUKER/bruker_lineshape")
+# save_plot(plt, "/home/karajan/uni/master/analyse/plots/BRUKER/bruker_lineshape")
 
 show_plot()
