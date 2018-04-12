@@ -254,20 +254,20 @@ mit einer least-squares-Methode an die Spektren angelegt. So entspricht $2 \gamm
 	\end{center}
 	\caption{Spektren FWHM} \label{fig:res:spek_fwhm}
 \end{figure}
+Es ist zu erkennen, dass die Werte der Halbwertsbreite etwa dem entsprechen, was nach einer Betrachtung der Spektren zu erwarten wäre: Von einem breiteren Spektrum bei niedrigen Temperaturen gehen die Breiten zu einem Minimum bei etwa $\SI{375}{\kelvin}$ über, um nach einem Maximum bei etwa $\SI{400}{\kelvin}$ erneut abzufallen.
+
+Dieser Verlauf der am OBI-Spektrometer aufgenommenen Spektren folgen auch die Halbwertsbreiten der am Bruker-Spektrometer produzierten Daten. Letztere liegen allerdings konstant bei niedrigeren Werten. Das Verhältnis entspricht aber auch nicht durchgehend dem Verhältnis $4:3$, was die unterschiedlichen Larmorfrequenzen suggestieren würden; es liegt bei tiefen Temperaturen etwas niedriger und bei höheren Temperaturen etwas höher. So ist im Bereich zwischen $\SI{310}{\kelvin}$ und $\SI{350}{\kelvin}$ ein Verhältnis von etwa $\SI{1.15}{}:1$ zu finden, zwischen $\SI{360}{\kelvin}$ und $\SI{390}{\kelvin}$ ein Verhältnis von $\SI{1.45}{}:1$ bis $\SI{1.55}{}:1$.
+
+Der Verlauf der Halbwertsbreiten der simulierten Spektren unterscheidet sich deutlich von dem der experimentellen Spektren. Während der grobe Verlauf übereinstimmt -- von breiten Spektren bei tiefen Temperaturen zu schmalen Spektren bei höheren Temperaturen -- sind starke Abweichungen zu sehen. Die simulierten Spektren werden zu höheren Temperaturen zunehmend schmaler, während die experimentellen Spektren ein weiteres Maximum aufweisen. Zudem ist ein Maximum der Halbwertsbreite der simulierten Spektren bei etwa $\SI{345}{\kelvin}$ beobachten, während die Halbwertsbreite der experimentellen Spektren einen fließenden Übergang der Breite von hohen zu tiefen Temperaturen zeigen.
+
+Es sollte darauf aufmerksam gemacht werden, dass die Halbwertsbreite nicht ausschließlich von der Breite des Spektrums abhängt, sondern zudem von der Form der Spitze beeinflusst wird, welche das Maximum und damit die Hälfte des Maximums bestimmt. Sind, wie bei den simulierten Spektren, extrem gut definierte Maxima zu sehen, drückt dies den Wert der Halbwertsbreiten im Vergleich zu den experimentellen Halbwertsbreiten nach unten. Dies erklärt den Abfall der Halbwertsbreiten der simulierten Spektren zu tieferen Temperaturen: Hier sind sehr scharfe Spitzen vorhanden, während die Lorentz-Form der höheren Temperaturen gleichermaßen abgerundete Spitzen aufweisen.
+
 
 
 ********************************************************************
 
 
-
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_fwhm.pdf}
-	\end{center}
-	\caption{Bruker FWHM} \label{fig:res:bruker_fwhm}
-\end{figure}
-Es gibt Abweichungen bei den Halbwertsbreiten. Es wäre aufgrund der Larmorfrequenzen (und der larmorfrequenzabhängigkeit des Quadrupol-WW) ein Verhältnis von 4:3 zu erwarten, was aber nicht ganz zutrifft. Messungen an einem $\SI{600}{MHz}$-Spektrometer wären hilfreich um Aussagen über die chemische Verschiebung machen zu können.
+ Messungen an einem $\SI{600}{MHz}$-Spektrometer wären hilfreich um Aussagen über die chemische Verschiebung machen zu können.
 
 
 \begin{figure}
