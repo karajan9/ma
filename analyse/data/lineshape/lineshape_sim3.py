@@ -130,7 +130,11 @@ for i, fn in enumerate(fn_fft[::-1]):
     data = data_fft[:, 1]
     temp = np.round(T_VFT_4er(labels[::-1][i]), 2)
     # plt.plot(data_fft[:, 1], cmplx.real - 0.1*i, label=temp)
-    plt.plot(data_fft[:, 0], data / np.max(data) - 0.1 * i, label=temp)
+    plt.plot(
+        data_fft[:, 0] / 1e3,
+        data / np.max(data) - 0.1 * i,
+        label="{} K ≙ {:.1e} s".format(np.round(temp, 1), labels[::-1][i]),
+        linewidth=1.2)
 
 # directory = "/home/karajan/uni/master/analyse/data/lineshape/run5 dw05"
 # fn_fft = glob.glob(directory + "/*.fid.fft")
@@ -142,14 +146,22 @@ for i, fn in enumerate(fn_fft[::-1]):
 #     data_fft = np.loadtxt(fn)
 #     plt.plot(data_fft[:, 1], data_fft[:, 2], label=labels[i])
 
-plt.xlim(-75000, 50000)
-plt.legend(loc=5)
 
+plt.gcf().set_size_inches(6, 7)
+plt.legend(bbox_to_anchor=(1.02, 1.02), loc="upper left")
+plt.xlabel("Frequenz [kHz]")
+plt.tick_params(
+    which="both", direction="in", top=True, right=True, labelleft=False)
+plt.xlim(-100, 100)
 plt.xlabel("Frequenz [Hz]")
 # plt.ylabel("Magnetisierung (a.u.)")
-plt.title("Simulation Lineshape")
+# plt.title("Simulation Lineshape")
 
-save_plot(plt, "/home/karajan/uni/master/analyse/plots/SIM/sim_lineshape2")
+save_plot(plt,
+          "/home/karajan/uni/master/ma/analyse/plots/SPEK2/sim_lineshape")
+
+
+
 
 # %%
 # plot dofft
@@ -502,6 +514,7 @@ btemps, bfwhms, bmeans, bmaxims = get_bruker_info()
 #     label="Bruker")
 
 # # plt.xlim(340, 370)
+# # plt.gcf().set_size_inches(7.5, 5)
 # plt.gca().tick_params(direction="in", top="on", right="on")
 # # plt.ylim(-25, 5)
 # plt.xlabel("Temperatur [K]")
@@ -536,7 +549,10 @@ plt.scatter(
     marker="D",
     label="Bruker")
 
+
 # plt.xlim(340, 370)
+# plt.gcf().set_size_inches(9, 6)
+# plt.gcf().set_size_inches(7.5, 5)
 plt.gca().tick_params(direction="in", top="on", right="on")
 plt.ylim(-25, 5)
 plt.xlabel("Temperatur [K]")
@@ -575,6 +591,10 @@ plt.plot(exp2[:, 0], exp2[:, 1])
 plt.xlim(-2e5, 2e5)
 save_plot(plt, "/home/karajan/uni/master/analyse/plots/SIM/sim_exp_310")
 
+
+
+
+
 # %%
 # Exp Lineshape Vergleich
 # print("."); print("."); print("."); print("."); print("."); print(".")
@@ -611,19 +631,25 @@ for spek_dir in spek_dirs:
     for i, fn in enumerate(fn_spek):
         data_dofft = np.loadtxt(fn, comments="!")
         plt.plot(
-            data_dofft[:, 0],
+            data_dofft[:, 0] / 1e3,
             data_dofft[:, 1] / np.max(data_dofft[:, 1]) - i * 0.2,
-            label=temps[i])
+            label="{} K".format(np.round(temps[i], 1)),
+            linewidth=1.2)
 
-plt.legend(loc='right')
-plt.xlim(-100000, 100000)
+
+plt.gcf().set_size_inches(6, 5)
+# plt.legend(loc='right')
+plt.legend(bbox_to_anchor=(1.02, 1.02), loc="upper left")
+plt.xlim(-100, 100)
 # plt.show()
 
-plt.xlabel("Frequenz [Hz]")
+plt.xlabel("Frequenz [kHz]")
+plt.tick_params(
+    which="both", direction="in", top=True, right=True, labelleft=False)
+
 # plt.ylabel("Schwerpunkt [kHz]")
-# plt.title("CRN FWHM mit $T_1$-Korrektur")
-plt.title("CRN Lineshape")
-# save_plot(plt, "/home/karajan/uni/master/analyse/plots/SPEK/spek_lineshape")
+save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEK2/spek_lineshape")
+
 
 
 # %%

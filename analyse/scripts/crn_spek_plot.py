@@ -293,10 +293,11 @@ def plot_spek_multi():
         plt.plot(
             freq / 1e3,
             cmplx.real / cmplx.real.max() - i * 0.1,
-            label=temp[i])
-        plot_setup()
+            label="{} K".format(np.round(temp[i], 1)),
+            linewidth=1.2)
+        # plot_setup()
 
-    plt.title("Bruker Spektren")
+    # plt.title("Bruker Spektren")
     # try:
     #     p_value, p_error, fit = fit_lorentz(freq,
     #                                         cmplx.real / cmplx.real.max())
@@ -325,9 +326,15 @@ def plot_spek_multi():
 # save_plot("/home/jens/Documents/projekte/crn/data/SPEK/maxima_bruker")
 # plot_fwhm_bruker()
 # save_plot("/home/jens/Documents/projekte/crn/data/SPEK/fwhm_bruker")
-plt.xlim(-100, 100)
 plot_spek_multi()
-plt.legend(loc=5)
-# save_plot(plt, "/home/karajan/uni/master/analyse/plots/BRUKER/bruker_lineshape")
 
-show_plot()
+plt.gcf().set_size_inches(6, 5)
+plt.tick_params(
+    which="both", direction="in", top=True, right=True, labelleft=False)
+plt.xlim(-100, 100)
+plt.xlabel("Frequenz [kHz]")
+plt.legend(bbox_to_anchor=(1.02, 1.02), loc="upper left")
+save_plot(plt,
+          "/home/karajan/uni/master/ma/analyse/plots/SPEK2/bruker_lineshape")
+
+# show_plot()
