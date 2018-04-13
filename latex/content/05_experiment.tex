@@ -165,33 +165,36 @@ Es wurde eine weitere, ähnliche Auswertung wurde durchgeführt, wobei anstatt d
 
 Der zweite Abschnitt dieser Arbeit beschäftigt sich mit der Linienform-Untersuchung an CRN. Bei der Auswertung von Spektren wurde eine ungewöhnlich erscheinende Verbreiterung der Spektren in einem Temperaturbereich beobachtet, wo, aufgrund von Bewegungsverschmälerung, eher kleinere Halbwertsbreiten zu erwarten wären. Zur Untersuchung der Gegebenheiten wurden, neben einer vielzahl von experimenteller Spektren, Computer-Simulationen angefertigt, und versucht eine theoretische Erklärung der Daten zu bieten.
 
-Um eine Übersicht zu schaffen, werden zuerst die Linienformen der Spektren aus den verschiedenen Quellen in Abhängigkeit der Temperatur präsentiert. Abbildung \ref{fig:res:spek_linienform} zeigt die am OBI-Spektrometer aufgenommenen Spektren; die Temperaturen reichen von etwa $\SI{234}{\kelvin}$ bis etwa $\SI{435}{\kelvin}$. Sie wurden mit einem Hahn-Echo mit einer Evolutionszeit von $t_p = \SI{15}{\micro s}$ aufgenommen und mit $\SI{500}{Hz}$ apodisiert. Es wurden je $\SI{8192}{}$ Datenpunkte mit einer Frequenz von $\SI{2}{MHz}$ erstellt. Die Spektren wurden in mehreren Messreihen aufgenommen und stellen eine repräsentative Auswahl dar, die es erlaubt, den Verlauf der Linienform nachzuvollziehen, ohne zu stark an Übersicht zu verlieren.
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/SPEK/spek_lineshape.pdf}
+		\includegraphics[width=\textwidth]{graphics/plot/spek_lineshape.pdf}
 	\end{center}
 	\caption{Spektren Linienform} \label{fig:res:spek_linienform}
 \end{figure}
+Um eine Übersicht zu schaffen, werden zuerst die Linienformen der Spektren aus den verschiedenen Quellen in Abhängigkeit der Temperatur präsentiert. Abbildung \ref{fig:res:spek_linienform} zeigt die am OBI-Spektrometer aufgenommenen Spektren; die Temperaturen reichen von etwa $\SI{234}{\kelvin}$ bis etwa $\SI{435}{\kelvin}$. Sie wurden mit einem Hahn-Echo mit einer Evolutionszeit von $t_p = \SI{15}{\micro s}$ aufgenommen und mit $\SI{500}{Hz}$ apodisiert. Es wurden je $\SI{8192}{}$ Datenpunkte mit einer Frequenz von $\SI{2}{MHz}$ erstellt. Die Spektren wurden in mehreren Messreihen aufgenommen und stellen eine repräsentative Auswahl dar, die es erlaubt, den Verlauf der Linienform nachzuvollziehen, ohne zu stark an Übersicht zu verlieren.
+
 Bei tiefen Temperaturen ist eine Form zu beobachten, die der des Czjzek-Spektrums aus Kapitel (***) ähnelt. Diese hält sich über weite Temperaturen, von etwa $\SI{235}{\kelvin}$ bis etwa $\SI{350}{\kelvin}$, fast unverändert. Zu höheren Temperaturen ändert sich die Linienform, sie nimmt die einer Lorentz-Funktion an, während die Spektren gleichzeitig schmaler werden und sich der Schwerpunkt zu niedrigeren Frequenzen verschiebt. Diese Bewegung findet ein Ende bei etwa $\SI{367}{\kelvin}$: Zu höheren Temperaturen verbreitern sich die Spektren wieder, ehe sie ab $\SI{410}{\kelvin}$ wieder schmaler werden. Der Schwerpunkt verschiebt sich ab 375K wieder gegen $\SI{0}{Hz}$, wo es ab 400K verweilt. Die Linienform ändert sich nicht mehr.
 
 Es ist auffällig, dass die Qualität der Spektren stark mit der Temperatur schwankt. Zwischen $\SI{235}{\kelvin}$ und $\SI{350}{\kelvin}$, $\SI{363}{\kelvin}$ und $\SI{387}{\kelvin}$, sowie zwischen $\SI{430}{\kelvin}$ und $\SI{435}{\kelvin}$ weisen die Spektren vergleichsweise geringes Rauschen und somit eine glattere Form auf. Das abschnittweise höhere Schwankungen lassen sich durch $T_2$-Minima bei den entsprechenden Temperaturen erklären -- diese sorgen für einen schnellen Abfall des Signals und entsprechend verrauschte Spektren. *** Lorentz
 
-Die am Bruker-Spektrometer aufgenommenen Spektren decken einen Temperaturbereich von $\SI{310}{\kelvin}$ bis $\SI{390}{\kelvin}$ ab, und wurden ebenfalls mit einem Hahn-Echo mit einer Evolutionszeit von $\SI{15}{\micro s}$ erstellt und mit $\SI{500}{Hz}$ apodisiert. Hier wurden je $\SI{4096}{}$ Datenpunkte mit einer Frequenz von $\SI{0.5}{MHz}$ aufgenommen. Da mit diesem Spektrometer weitaus weniger Spektren erstellt wurden als mit dem OBI-Spektrometer können in Abbildung \ref{fig:res:bruker_linienform} alle Spektren präsentiert werden.
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_lineshape.pdf}
+		\includegraphics[width=\textwidth]{graphics/plot/bruker_lineshape.pdf}
 	\end{center}
 	\caption{Bruker Linienform} \label{fig:res:bruker_linienform}
 \end{figure}
+Die am Bruker-Spektrometer aufgenommenen Spektren decken einen Temperaturbereich von $\SI{310}{\kelvin}$ bis $\SI{390}{\kelvin}$ ab, und wurden ebenfalls mit einem Hahn-Echo mit einer Evolutionszeit von $\SI{15}{\micro s}$ erstellt und mit $\SI{500}{Hz}$ apodisiert. Hier wurden je $\SI{4096}{}$ Datenpunkte mit einer Frequenz von $\SI{0.5}{MHz}$ aufgenommen. Da mit diesem Spektrometer weitaus weniger Spektren erstellt wurden als mit dem OBI-Spektrometer können in Abbildung \ref{fig:res:bruker_linienform} alle Spektren präsentiert werden.
+
 Der Verlauf der Linienform gleicht den Beschriebenen in dem entsprechenden Temperaturbereich gut. Es ist das geringe Rauschen der Spektren zu beachten, das, wie auch insbesondere die $T_2$-Daten ein Beleg für hohe Datenqualität des Bruker-Spektrometers in diesem Kontext ist.
 
 Als Ergänzung zu den experimentellen Daten wurden simulierte Spektren angefertigt. Dazu wurde die in Kapitel (***) vorgestellte Simulations-Software verwendet. Es wurden FIDs mit $\SI{4096}{}$ Datenpunkten mit einem Abstand von je $\SI{0.5}{\micro s}$, was einer Frequenz von $\SI{0.5}{MHz}$ entspricht, aufgenommen. Um einen Mittelwert zu bilden wurden, je nach Spektrum, zwischen $10^{7}$ und $10^{9}$ einzelne Simulationen gemittelt. Als Modell wurde ein isotroper Zufallssprung gewählt, welcher eine Czjzek-Verteilung als Ausgangspunkt hat; dieses war der simulierten Quadrupol-Wechselwirkung zweiter Ordnung ausgesetzt. Zur Bestimmung der Lebensdauer eines bestimmten Zustandes wird eine Exponentialverteilung genutzt, deren Parameter, die Lebenszeit, eine Verknüpfung mit Temperaturen ermöglicht. Es wurde eine Vogel-Fulcher-Funktion für die Lebenszeit mit den Parametern für CRN aus Kapitel (*** Andere $\tau_c$s, zum Beispiel aus DOI: 10.1103/PhysRevE.81.051504 zeigen keinen großen Unterschied.) verwendet. Zur besseren Vergleichbarkeit werden im Folgenden die Spektren mit den so berechneten Temperaturen anstatt mit den Lebenszeiten referenziert. Die resultierenden Spektren sind in Abbildung \ref{fig:res:sim_linienform} zu sehen.
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/SIM/sim_lineshape.pdf}
+		\includegraphics[width=\textwidth]{graphics/plot/sim_lineshape.pdf}
 	\end{center}
 	\caption{Simulation Linienform} \label{fig:res:sim_linienform}
 \end{figure}
+
 Bei tiefen Temperaturen gleichen die simulierten Spektren den experimentellen. (*** extra Vergleich?) Auch ist der Übergang zur Lorentz-Form, verbunden mit der Verschiebung des Schwerpunkts und Verschmälerung der Spektren bei etwa der gleichen Temperatur von $\SI{350}{\kelvin}$ zu beobachten. Im Gegensatz zu den experimentellen Spektren werden die simulierten Spektren mit steigender Temperatur jedoch immer schmaler und ändern den Schwerpunkt nicht mehr.
 
 
@@ -202,7 +205,7 @@ Um eine quantitative Behandlung der Spektren zu ermöglichen wurden zwei Messgr�
 mit einer least-squares-Methode an die Spektren angelegt. So entspricht $2 \gamma$ der Halbwertsbreite und das Maximum $f_0$, aufgrund der Symmetrie der Funktion, dem Schwerpunkt. Die so gewonnenen Halbwertsbreiten sind in Abbildung \ref{fig:res:spek_fwhm} zu sehen.
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plot/fwhm.pdf}
+		\includegraphics[width=.9\textwidth]{graphics/plot/fwhm.pdf}
 	\end{center}
 	\caption{Spektren FWHM} \label{fig:res:spek_fwhm}
 \end{figure}
@@ -222,11 +225,12 @@ Messungen an einem $\SI{600}{MHz}$-Spektrometer wären hilfreich um Aussagen üb
 In Abbildung \ref{fig:res:spek_mean} sind die Schwerpunkte der Spektren aufgetragen. Diese wurden mit Hilfe von numerischer Integration nach der Simpsonregel bestimmt. Bei stark verrauschten Spektren, wo dieses Vorgehen wenig Erfolg verspricht -- es wird eher der Schwerpunkt der Schwankungen bestimmt als des Signals --, wurden wieder Lorentz-Fits ausgenutzt, deren Parameter $f_0$ der Schwerpunkt ist.
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plot/mean.pdf} 
+		\includegraphics[width=.9\textwidth]{graphics/plot/mean.pdf} 
 	\end{center}
 	\caption{Spektren Schwerpunkt} \label{fig:res:spek_mean}
 \end{figure}
-Allen drei Kurvenverläufe ist gleich, dass sie bei tieferen Temperaturen bis etwa $\SI{360}{\kelvin}$ einen konstanten Wert zeigen, ehe sich der Schwerpunkt zu niedrigeren Frequenzen von etwa $\SI{-16}{\kilo Hz}$ verschiebt, was mit dem Übergang von der Czjzek-Form des Spektrums zur Lorentz-Form einhergeht. Die spezifischen konstanten Werte der tieferen Temperaturen unterscheiden sich jedoch zwischen den Daten des OBI-Spektrometers mit einem Schwerpunkt von etwa $\SI{-8}{\kilo Hz}$, und den Daten des Bruker-Spektrometers und der Simulation mit einem Schwerpunkt von etwa $\SI{-12}{\kilo Hz}$. Ab etwa $\SI{375}{\kelvin}$ ist eine Bewegung des Schwerpunkts der experimentellen Spektren zum Nullpunkt zu erkennen, die die Spektren des OBI-Spektrometers aufgrund des größeren abgedeckten Temperaturbereichs auch erreichen. Die simulierten Spektren verbleiben jedoch bei dem Wert von $\SI{-16}{\kilo Hz}$, der bei $\SI{370}{\kelvin}$ erreicht wurde.
+
+Allen drei Kurvenverläufe ist gleich, dass sie bei tieferen Temperaturen bis etwa $\SI{360}{\kelvin}$ einen konstanten Wert zeigen, ehe sich der Schwerpunkt zu niedrigeren Frequenzen von etwa $\SI{-16}{\kilo Hz}$ verschiebt, was mit dem Übergang von der Czjzek-Form des Spektrums zur Lorentz-Form einhergeht. Die spezifischen konstanten Werte der tieferen Temperaturen unterscheiden sich jedoch zwischen den Daten des OBI-Spektrometers mit einem Schwerpunkt von etwa $\SI{-8}{\kilo Hz}$, und den Daten des Bruker-Spektrometers und der Simulation mit einem Schwerpunkt von etwa $\SI{-12}{\kilo Hz}$. Ab etwa $\SI{375}{\kelvin}$ ist eine Bewegung des Schwerpunkts der experimentellen Spektren zum Nullpunkt zu erkennen, die die Spektren des OBI-Spektrometers aufgrund des größeren abgedeckten Temperaturbereichs auch erreichen. Die simulierten Spektren verbleiben jedoch bei dem Wert von $\SI{-16}{\kilo Hz}$, der bei $\SI{370}{\kelvin}$ erreicht wird.
 
 
 Auch hier ist einschränkend zu sagen, dass die Werte der Schwerpunkte aufgrund von externen Faktoren instabil sind, mehr noch als die Halbwertsbreiten. Wie in Kapitel \ref{section:exp:weiterverarbeitung} erwähnt, wird eine Phasenanpassung des Real- und Imaginärteils durchgeführt, um ein maximales Signal zu garantieren und mögliche Schwankungen der Phase durch experimentelle Einflüsse auszugleichen. Allerding kann eine Abweichung von $\pm \SI{1}{\degree}$ vom Optimalwert unter den schlechtesten Umständen eine Verschiebung des Schwerpunkts um $\SI{1}{\kilo Hz}$ bewirken. Diese Empfindlichkeit gegenüber kleinen Änderungen bedeutet, dass Schwankungen der dargestellten Werte nicht auszuschließen ist; die groben Merkmale der Kurvenverläufe können aber leicht durch eine Betrachtung der Spektren bestätigt werden.
@@ -239,6 +243,32 @@ Auch hier ist einschränkend zu sagen, dass die Werte der Schwerpunkte aufgrund 
 
 
 
+Führt man zunächst einen Vergleich der Halbwertsbreiten mit der Theorie durch, lässt sich leicht feststellen, dass signifikante Unterschiede zu beobachten sind: Die gemessenen Halbwertsbreiten sind ab $\SI{360}{\kelvin}$ aufwärts deutlich größer als vorhergesagt. Dies liegt am Einfluss des kurzen $T_1$, welches mit der zusätzlich Relaxation zur Verbreiterung des Spektrums beiträgt.
+
+Um einen Vergleich mit der Theorie dennoch durchführen zu können, wurde versucht den Einfluss von $T_1$ rechnerisch zu eliminieren. Im Bereich des Einflusses lassen sich die Spektren gut mit einem Lorentz-Fit (vgl. Gleichung \eqref{eqn:res:lorentz}) näheren. Die Fouriertransformierte hiervon ist eine gedämpfte Schwingung mit der Halbwertsbreite $2 \gamma = a/\pi$:
+\begin{align}
+	h(t) &= \exp{(-a |t|)} \cos{(2 \pi f_0 t)}      \\
+	H(t) &= \int_{-\infty}^{\infty} h(t) \text{d} t \\
+	H(f) &= \frac{2}{a} \cdot \frac{(a/2\pi)^2}{((a/2\pi)^2) + (f - f_0)^2}
+\end{align}
+
+Diese gedämpfte Schwingung soll durch eine normierte Kohlrausch-Funktion, welche für Fits an $T_1$ verwendet werden kann, geteilt werden.
+\begin{align}
+	f(t) = \exp{\left( {\left(\frac{-t}{T_1} \right)}^\beta \right) }
+\end{align}
+Hier wird $\beta = 1$ angenommen, was in der Regel eine annehmbare Näherung darstellt. Wird der Quotient der Funktionen zurück in den Frequenzraum transformiert, ergibt sich die modifizierte Halbwertsbreite $2\gamma = 2(f_0 - \frac{1}{\pi T_1})$.
+
+Dies bedeutet, dass für die Korrektur lediglich die schon vorliegenden Halbwertsbreiten mit $T_1$-Werten der passenden Temperatur modifiziert werden müssen. Diese wurden aus den durchgeführten $T_1$-Messungen gewonnen. Die Ergebnisse sind in Abbildung \ref{fig:res:spek_fwhm_t1} zu sehen.
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{graphics/plots/SPEK/spek_t1korr.pdf}
+	\end{center}
+	\caption{Spektren FWHM mit $T_1$-Korrektur} \label{fig:res:spek_fwhm_t1}
+\end{figure}
+Es ist zu erkennen, dass $T_1$ einen großen Einfluss auf die Halbwertsbreite hat und die entsprechend angepassten Halbwertsbreiten deutlich geringere Werte aufweisen. Bei Temperaturen über $\SI{410}{\kelvin}$ konnte keine Korrektur vorgenommen werden, weil die $T_1$-Werte in diesem Temperaturbereich zu stark streuen um aussagekräfige Daten zu produzieren.
+
+
+
 
 
 
@@ -248,40 +278,6 @@ Auch hier ist einschränkend zu sagen, dass die Werte der Schwerpunkte aufgrund 
 
 \section{Theorie} \label{section:res:theorie}
 
-
-
-
-
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/SPEK/spek_t1korr.pdf}
-	\end{center}
-	\caption{Spektren FWHM mit $T_1$-Korrektur} \label{fig:res:spek_fwhm_t1}
-\end{figure}
-Aufgrund der Bewegungsverschmälerung würde man annehmen, dass die Halbwertsbreite sinkt, und nicht ein so hohes Maximum zeigt. Ein großer Einfluss ist die in dem Temperaturbereich (380K - 430K) sehr kurze $T_1$-Zeit. Durch den Einfluss von $T_1$ fällt das Signal sehr stark ab und verbreitert so das Spektrum.
-
-Um den Einfluss von $T_1$ herauszurechnen: Die Spektren sind Fouriertransformierte der aufgenommenen Zeitsignale. Für die Spektren wird ein Lorentz
-\begin{align}
-	L(f) = \frac{1}{\pi \gamma} \cdot \frac{\gamma^2}{\gamma^2 + (f - f_0)^2}
-\end{align}
-angenommen. Lorentz hat zwei Parameter, Maximum $f_0$ (und Schwerpunkt) und Halbwertsbreite $2\gamma$. Die Fouriertransformierte davon ist eine gedämpfte Schwingung:
-\begin{align}
-	h(t) = \exp{(-a |t|)} \cos{(2 \pi f_0 t)}      \\
-	H(t) = \int_{-\infty}^{\infty} h(t) \text{d} t \\
-	H(f) = \frac{2}{a} \cdot \frac{(a/2\pi)^2}{((a/2\pi)^2) + (f - f_0)^2}
-\end{align}
-mit der Halbwertsbreite $2 \gamma = a/\pi$.
-
-Das ursprüngliche Zeitsignal soll durch die $T_1$-Kurve geteilt werden, um den Einfluss herauszurechnen. Dafür werden ein Kohlrausch mit $\beta = 1$ angenommen, damit sich die Rechnung einfacher gestaltet:
-\begin{align}
-	f(t) = \exp{(-t/T_1)^\beta}
-\end{align}
-, die $T_1$-Werte stammen aus $T_1$-Messungen bei gleicher Temperatur.
-
-Fouriertransformiert ergibt sich die modifizierte Halbwertsbreite $2\gamma = 2(\gamma_0 - \frac{1}{\pi T_1})$.
-
-Übrig bleibt ein kleinerer Peak (-> Theorie). Bei Temperaturen über 410K konnte keine Korrektur vorgenommen werden, weil die $T_1$-Werte da zu stark streuen.
 
 
 
@@ -362,7 +358,7 @@ Die aufgenommenen Daten unterstützen eine biexponentielle Interpretation wie in
 
 Für die Spektraldichte $J(\omega)$ kann, wie in Abbildung \ref{fig:triple_vergleich} zu sehen, mit $\eta^2 = 42 - 24 \sqrt{3} \approx \SI{0.43}{}$ \cite{caer} und den Parametern $C_Q = \SI{3e6}{Hz}$ und $\tau_c = \SI{3.9e-14}{s}$ eine vergleichsweise gute Übereinstimmung für die $T_1$-Werte erreicht werden, die Flanken unterscheiden sich jedoch deutlich. Die Abweichungen der FWHM-Werten und der Schwerpunkte sind mit einem Faktor von etwa 4 bzw. etwa 2 bedeutend.
 \begin{figure}[htbp]
-	\includegraphics[width=\textwidth]{graphics/zwischenbericht/J_fertig.pdf}
+	% \includegraphics[width=\textwidth]{graphics/zwischenbericht/J_fertig.pdf}
 	\caption{Vergleich der $T_1$-, FWHM- und Schwerpunkts-Daten (in blau) und der angepassten Theoriekurven (in orange). \label{fig:triple_vergleich}}
 \end{figure}
 
@@ -375,11 +371,11 @@ Für die Parameter $C_Q = \SI{2.85e6}{Hz}$, $\tau_c = \SI{7e-15}{s}$ und $\alpha
 	\centering
 	\begin{subfigure}{0.49\textwidth}
 		\centering
-		\includegraphics[width=0.95\textwidth]{graphics/zwischenbericht/J_cc.pdf}
+		% \includegraphics[width=0.95\textwidth]{graphics/zwischenbericht/J_cc.pdf}
 	\end{subfigure}%
 	\begin{subfigure}{0.49\textwidth}
 		\centering
-		\includegraphics[width=0.95\textwidth]{graphics/zwischenbericht/J_cd.pdf}
+		% \includegraphics[width=0.95\textwidth]{graphics/zwischenbericht/J_cd.pdf}
 	\end{subfigure}
 	\caption{Spektraldichten $J_{CC}$ (links) und $J_{CD}$ (rechts), angepasst an die Daten}
 	\label{fig:j_cc_j_cd}
@@ -389,6 +385,15 @@ Die nächsten Schritte in dieser Untersuchung sollen darin bestehen, die Auswirk
 
 
 
+
+
+
+
+
+
+
+
+***
 
 Werden die resultierenden Zeitkonstanten zusammen mit $T_2$ aufgetragen, zeigt sich eine hohe Ähnlichkeit, was vermuten lässt, dass mit der Methode $T_2$ gemessen wurde.
 \begin{figure}
