@@ -24,48 +24,23 @@ Repräsentative Rohdaten einer solchen Messung sind in Abbildung \ref{fig:res:T_
 Während sich die Kurven zwischen $\SI{305}{\kelvin}$ und $\SI{325}{\kelvin}$ sehr ähneln, verschieben sich die Kurven und damit auch die $T_1$-Werte bei höheren Temperaturen zu kürzeren Zeiten.
 
 Dies lässt sich auch in der Gesamtübersicht aller aufgenommenen $T_1$-Daten in Abbildung \ref{fig:res:T_1} erkennen. Während die $T_1$-Zeiten bei Temperaturen von $\SI{250}{\kelvin}$ bis $\SI{325}{\kelvin}$ nahezu unverändert im unteren Millisekunden-Bereich liegen, verkürzen sie sich bei steigenden Temperaturen bis in den zweistelligen Mikrosekunden-Bereich. Es ist ein $T_1$-Minimum bei etwa $\SI{390}{\kelvin}$ auszumachen, ehe die $T_1$-Zeiten stagnieren oder sogar länger werden.
-
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{graphics/plot/t1.pdf}
+	\end{center}
+	\caption{$T_1$ aus Fits nach Gleichung \eqref{eqn:theo:T_1_fit}. Unterschiedliche Farben indizieren hierbei gesonderte Messreihen; gelbe Punkte bieten einen Vergleich mit Daten von Zürn.} \label{fig:res:T_1}
+\end{figure}
 Während die Unsicherheiten weitestgehend vernachlässigbar sind, sind starke Schwankungen über $\SI{390}{\kelvin}$ zu erkennen. Die dort aufgenommenen Daten kann nicht mehr Bedeutung als einer groben Idee der Tatsachen zugemessen werden.
 
 Abgesehen von dem erwähnten Temperaturbereich ist eine gute Übereinstimmung zu den $T_1$-Daten von Zürn \cite{zuern_paper} und zwischen Messungen mit überlappenden Temperaturbereichen zu erkennen, was darauf schließen lässt, dass diese Daten gut reproduzierbar sind. Die am Bruker-Spektrometer aufgenommenen Daten folgen dem gleichen Verlauf und zeigen bis auf den Temperaturbereich zwischen $\SI{360}{\kelvin}$ und $\SI{390}{\kelvin}$ keinen nennenswerte Differenzen; dort aber sind die gemessenen $T_1$-Daten zu leicht längeren Zeiten verschoben.
 
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/T1/t1.pdf}
-	\end{center}
-	\caption{$T_1$ aus Fits nach Gleichung \eqref{eqn:theo:T_1_fit}. Unterschiedliche Farben indizieren hierbei gesonderte Messreihen; gelbe Punkte bieten einen Vergleich mit Daten von Zürn.} \label{fig:res:T_1}
-\end{figure}
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/T1/t1_beta.pdf}
-	\end{center}
-	\caption{$\beta_{T_1}$} \label{fig:res:beta_T_1}
-\end{figure}
-
-
 Im oberen Teil der Abbildung \ref{fig:res:T_1} sind die entsprechenden $\beta$ der Fits zu sehen. Von einem Wert von $\SI{0.6}{}$ bei tieferen Temperaturen steigen sie zu einem Wert von etwa $\SI{0.9}{}$ bei Temperaturen über $\SI{350}{\kelvin}$. Dies entspricht etwa den Ergebnissen von Zürn.
 
-Abweichungen gibt es lediglich bei den höheren Temperaturen, wo ein $\beta$ laut \cite{zuern_paper} nahe $\SI{1.0}{}$ liegt, allerdings mit größeren Messunsicherheiten, welche auch hier bei Temperaturen über $\SI{350}{\kelvin}$ zu beobachten sind. Werte über $\SI{380}{\kelvin}$ wurden ausgelassen, da die Messunsicherheiten zu groß waren, als dass den Werten eine Aussage zugestanden werden könnte. Diese stammen daher, dass mit den verwendeten Apparaturen nicht verlässlich Datenpunkte vor $\SI{10}{\micro s}$ aufgenommen werden können. Wenn die $T_1$ Zeit aber in der gleichen Größenordnung liegt und zum Zeitpunkt des $T_1$-Werts das Signal auf etwa $1/e$ abgefallen ist, ist es verständlich, dass ein Fit Schwierigkeiten bereiten kann. Lösen ließe sich dies theoretisch mit einer längeren Evolutionszeit des verwendeten Echos, dies ist aufgrund der kurzen $T_1$- und $T_2$-Zeiten in diesem Temperaturbereich jedoch nicht möglich -- das entstehende Signal ist zu klein um effektiv vom Rauschen getrennt zu werden.
+Abweichungen gibt es lediglich bei den höheren Temperaturen, wo ein $\beta$ laut \cite{zuern_paper} nahe $\SI{1.0}{}$ liegt, allerdings mit größeren Messunsicherheiten, welche auch hier bei Temperaturen über $\SI{350}{\kelvin}$ zu beobachten sind. Werte über $\SI{390}{\kelvin}$ wurden ausgelassen, da die Messunsicherheiten zu groß waren, als dass den Werten eine Aussage zugestanden werden könnte. Diese stammen daher, dass mit den verwendeten Apparaturen nicht verlässlich Datenpunkte vor $\SI{10}{\micro s}$ aufgenommen werden können. Wenn die $T_1$ Zeit aber in der gleichen Größenordnung liegt und zum Zeitpunkt des $T_1$-Werts das Signal auf etwa $1/e$ abgefallen ist, ist es verständlich, dass ein Fit Schwierigkeiten bereiten kann. Lösen ließe sich dies theoretisch mit einer längeren Evolutionszeit des verwendeten Echos, dies ist aufgrund der kurzen $T_1$- und $T_2$-Zeiten in diesem Temperaturbereich jedoch nicht möglich -- das entstehende Signal ist zu klein um effektiv vom Rauschen getrennt zu werden.
 
 Dennoch ist auffällig, dass trotz der Unsicherheiten von $\beta$ eine relativ gute Übereinstimmung mit den Daten von Zürn vorliegt -- auch von zwei Messreihen zwischen $\SI{315}{\kelvin}$ und $\SI{340}{\kelvin}$ produzierte $\beta$ mit einer Differenz von etwa $\SI{0.1}{}$, sind die entsprechenden $T_1$ in Übereinstimmung miteinander und mit der Literatur. Insofern ist fraglich, welche Aussagekraft den exakten Werten von $\beta$ zugemessen werden kann.
 
 Die Unsicherheiten der mit dem Bruker-Spektrometer bestimmten $\beta$ ist vergleichsweise gering. Dies ist mit der höheren Qualität der Daten (besonders auch in Abbildung \ref{fig:res:bruker_linienform} zu erkennen) und den niedrigeren $T_1$-Werten zu erklären.
-
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_t1.pdf}
-	\end{center}
-	\caption{Bruker $T_1$} \label{fig:res:bruker_t1}
-\end{figure}
-Die $T_1$-Werte und die dazugehörigen $\beta$ zeigen gute Übereinstimmung zu den anderen Daten auf.
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_t1beta.pdf}
-	\end{center}
-	\caption{Bruker $\beta{T_1}$} \label{fig:res:bruker_beta_t1}
-\end{figure}
 
 
 
@@ -87,36 +62,13 @@ Bruker ***
 An diese wurden Fit-Funktionen nach \eqref{eqn:theo:T_2_fit} angelegt, welche als Linien dargestellt sind. Es lässt sich mit den Fits eine gute Übereinstimmung zu den Daten erzielen. Auch hier lässt sich erkennen, dass $T_2$ bei Temperaturen bis etwa $\SI{320}{\kelvin}$ nahezu konstant verbleibt, und zu hoheren Temperaturen kleiner wird.
 
 Abbildung \label{fig:res:T_2} zeigt eine Übersicht über die aufgenommen $T_2$-Werte mit den zugehörigen $\beta$ der Fits. Unter $\SI{320}{\kelvin}$ verbleiben erstere im niedrigen Millisekunden-Bereich, ehe sie deutlich kürzer werden und sich bei etwa $\SI{360}{\kelvin}$ ein Minimum zeigt. Die Werte des Bruker-Spektrometers sind hiermit in guter Übereinstimmung, wobei wiederum festzuhalten ist, dass die Messunsicherheiten geringer sind. Ein zweites Minimum zeigt sich bei etwa $\SI{400}{\kelvin}$, das, ebenso wie das erste, im zweistelligen Mikrosekunden-Bereich liegt. Zwischen $\SI{400}{\kelvin}$ und $\SI{410}{\kelvin}$ ist zu erkennen, dass -- wohl durch die Kürze von $T_2$ bei diesen Temperaturen -- deutlich größere Unsicherheiten als im Rest der Messreihe vorliegen, wo sie in guter Näherung vernachlässigbar sind. 
-
-Auch die $\beta$-Werte zeigen bei höheren Temperaturen deutlich größere Unsicherheiten, hier allerdings schon zwischen $\SI{390}{\kelvin}$ und $\SI{425}{\kelvin}$, was eine Bestimmung der Werte verkompliziert. Sie scheinen zwischen $\SI{1}{}$ und $\SI{2}{}$ zu liegen. Bei tieferen Temperaturen klärt sich das Bild etwas: Während die Daten des OBI-Spektrometers ein $\beta$ zwischen $\SI{1}{}$ und $\SI{1.5}{}$ bei Temperaturen bis $\SI{350}{\kelvin}$ suggerieren, zeigen die Daten des Bruker-Spektrometers ein $\beta$ um $\SI{1}{}$ -- mit geringerer Unsicherheit. Bei nochmals tieferen Temperaturen scheint $\beta$ konsistent bei rund $\SI{1}{}$ zu liegen.
-
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/T2/t2.pdf}
+		\includegraphics[width=\textwidth]{graphics/plot/t2.pdf}
 	\end{center}
 	\caption{$T_2$ gegen Temperatur} \label{fig:res:T_2}
 \end{figure}
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/T2/t2_beta.pdf}
-	\end{center}
-	\caption{$\beta_{T_2}$ gegen Temperatur} \label{fig:res:beta_T_2}
-\end{figure}
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_t2.pdf}
-	\end{center}
-	\caption{Bruker $T_2$} \label{fig:res:bruker_t2}
-\end{figure}
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_t2beta.pdf}
-	\end{center}
-	\caption{Bruker $\beta{T_2}$} \label{fig:res:bruker_beta_t2}
-\end{figure}
+Auch die $\beta$-Werte zeigen bei höheren Temperaturen deutlich größere Unsicherheiten, hier allerdings schon zwischen $\SI{390}{\kelvin}$ und $\SI{425}{\kelvin}$, was eine Bestimmung der Werte verkompliziert. Sie scheinen zwischen $\SI{1}{}$ und $\SI{2}{}$ zu liegen. Bei tieferen Temperaturen klärt sich das Bild etwas: Während die Daten des OBI-Spektrometers ein $\beta$ zwischen $\SI{1}{}$ und $\SI{1.5}{}$ bei Temperaturen bis $\SI{350}{\kelvin}$ suggerieren, zeigen die Daten des Bruker-Spektrometers ein $\beta$ um $\SI{1}{}$ -- mit geringerer Unsicherheit. Bei nochmals tieferen Temperaturen scheint $\beta$ konsistent bei rund $\SI{1}{}$ zu liegen.
 
 
 
@@ -243,14 +195,14 @@ Als Ergänzung zu den experimentellen Daten wurden simulierte Spektren angeferti
 Bei tiefen Temperaturen gleichen die simulierten Spektren den experimentellen. (*** extra Vergleich?) Auch ist der Übergang zur Lorentz-Form, verbunden mit der Verschiebung des Schwerpunkts und Verschmälerung der Spektren bei etwa der gleichen Temperatur von $\SI{350}{\kelvin}$ zu beobachten. Im Gegensatz zu den experimentellen Spektren werden die simulierten Spektren mit steigender Temperatur jedoch immer schmaler und ändern den Schwerpunkt nicht mehr.
 
 
-Um eine quantitative Behandlung der Spektren zu ermöglichen wurden zwei Messgrößen verwendet: Die Halbwertsbreite (also die Breite auf der Höhe der Hälfte des Maximums) und der Schwerpunkt der Spektren. Um bei den stark verrauschten Spektren zwischen $\SI{350}{\kelvin}$ und $\SI{360}{\kelvin}$, und zwischen $\SI{390}{\kelvin}$ und $\SI{430}{\kelvin}$ gut vergleichbare Werte zu erhalten, wurde ein Lorentz-Fit der Form
+Um eine quantitative Behandlung der Spektren zu ermöglichen wurden zwei Messgrößen verwendet: Die Halbwertsbreite (also die Breite auf der Höhe der Hälfte des Maximums) und der Schwerpunkt der Spektren. Um bei den stark verrauschten Spektren des OBI-Spektrometers zwischen $\SI{350}{\kelvin}$ und $\SI{360}{\kelvin}$, und zwischen $\SI{390}{\kelvin}$ und $\SI{430}{\kelvin}$ gut vergleichbare Werte zu erhalten, wurde ein Lorentz-Fit der Form
 \begin{align}
 	L(f) = \frac{1}{\pi \gamma} \cdot \frac{\gamma^2}{\gamma^2 + (f - f_0)^2} \label{eqn:res:lorentz}
 \end{align}
 mit einer least-squares-Methode an die Spektren angelegt. So entspricht $2 \gamma$ der Halbwertsbreite und das Maximum $f_0$, aufgrund der Symmetrie der Funktion, dem Schwerpunkt. Die so gewonnenen Halbwertsbreiten sind in Abbildung \ref{fig:res:spek_fwhm} zu sehen.
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/SPEK/spek_fwhm.pdf}
+		\includegraphics[width=\textwidth]{graphics/plot/fwhm.pdf}
 	\end{center}
 	\caption{Spektren FWHM} \label{fig:res:spek_fwhm}
 \end{figure}
@@ -260,85 +212,29 @@ Dieser Verlauf der am OBI-Spektrometer aufgenommenen Spektren folgen auch die Ha
 
 Der Verlauf der Halbwertsbreiten der simulierten Spektren unterscheidet sich deutlich von dem der experimentellen Spektren. Während der grobe Verlauf übereinstimmt -- von breiten Spektren bei tiefen Temperaturen zu schmalen Spektren bei höheren Temperaturen -- sind starke Abweichungen zu sehen. Die simulierten Spektren werden zu höheren Temperaturen zunehmend schmaler, während die experimentellen Spektren ein weiteres Maximum aufweisen. Zudem ist ein Maximum der Halbwertsbreite der simulierten Spektren bei etwa $\SI{345}{\kelvin}$ beobachten, während die Halbwertsbreite der experimentellen Spektren einen fließenden Übergang der Breite von hohen zu tiefen Temperaturen zeigen.
 
-Es sollte darauf aufmerksam gemacht werden, dass die Halbwertsbreite nicht ausschließlich von der Breite des Spektrums abhängt, sondern zudem von der Form der Spitze beeinflusst wird, welche das Maximum und damit die Hälfte des Maximums bestimmt. Sind, wie bei den simulierten Spektren, extrem gut definierte Maxima zu sehen, drückt dies den Wert der Halbwertsbreiten im Vergleich zu den experimentellen Halbwertsbreiten nach unten. Dies erklärt den Abfall der Halbwertsbreiten der simulierten Spektren zu tieferen Temperaturen: Hier sind sehr scharfe Spitzen vorhanden, während die Lorentz-Form der höheren Temperaturen gleichermaßen abgerundete Spitzen aufweisen.
+Es sollte darauf aufmerksam gemacht werden, dass die Halbwertsbreite stark von der Form der Spitze beeinflusst wird, welche das Maximum und damit die Hälfte des Maximums bestimmt. Sind, wie bei den simulierten Spektren, extrem gut definierte Maxima zu sehen, drückt dies den Wert der Halbwertsbreiten im Vergleich zu den experimentellen Halbwertsbreiten nach unten. Dies erklärt den Abfall der Halbwertsbreiten der simulierten Spektren zu tieferen Temperaturen: Hier sind die scharfe Spitzen der Czjzek-Spektren gut ausgeprägt, sodass die Halbwertsbreite der Spektren beim Übergang zur abgerundeten Lorentz-Form ein Maximum durchläuft. Die experimentellen Spektren hingegen zeigen aufgrund von experimentellen Beschränkungen wie der Auflösung -- und möglicherweise durch weitere Effekte -- bei niedrigeren Temperaturen keine perfekte Spitze und daher auch keinen Peak in der Halbwertsbreite beim Übergang zur Lorentz-Form.
+
+
+Messungen an einem $\SI{600}{MHz}$-Spektrometer wären hilfreich um Aussagen über die chemische Verschiebung machen zu können. *** 
+
+
+
+In Abbildung \ref{fig:res:spek_mean} sind die Schwerpunkte der Spektren aufgetragen. Diese wurden mit Hilfe von numerischer Integration nach der Simpsonregel bestimmt. Bei stark verrauschten Spektren, wo dieses Vorgehen wenig Erfolg verspricht -- es wird eher der Schwerpunkt der Schwankungen bestimmt als des Signals --, wurden wieder Lorentz-Fits ausgenutzt, deren Parameter $f_0$ der Schwerpunkt ist.
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{graphics/plot/mean.pdf} 
+	\end{center}
+	\caption{Spektren Schwerpunkt} \label{fig:res:spek_mean}
+\end{figure}
+Allen drei Kurvenverläufe ist gleich, dass sie bei tieferen Temperaturen bis etwa $\SI{360}{\kelvin}$ einen konstanten Wert zeigen, ehe sich der Schwerpunkt zu niedrigeren Frequenzen von etwa $\SI{-16}{\kilo Hz}$ verschiebt, was mit dem Übergang von der Czjzek-Form des Spektrums zur Lorentz-Form einhergeht. Die spezifischen konstanten Werte der tieferen Temperaturen unterscheiden sich jedoch zwischen den Daten des OBI-Spektrometers mit einem Schwerpunkt von etwa $\SI{-8}{\kilo Hz}$, und den Daten des Bruker-Spektrometers und der Simulation mit einem Schwerpunkt von etwa $\SI{-12}{\kilo Hz}$. Ab etwa $\SI{375}{\kelvin}$ ist eine Bewegung des Schwerpunkts der experimentellen Spektren zum Nullpunkt zu erkennen, die die Spektren des OBI-Spektrometers aufgrund des größeren abgedeckten Temperaturbereichs auch erreichen. Die simulierten Spektren verbleiben jedoch bei dem Wert von $\SI{-16}{\kilo Hz}$, der bei $\SI{370}{\kelvin}$ erreicht wurde.
+
+
+Auch hier ist einschränkend zu sagen, dass die Werte der Schwerpunkte aufgrund von externen Faktoren instabil sind, mehr noch als die Halbwertsbreiten. Wie in Kapitel \ref{section:exp:weiterverarbeitung} erwähnt, wird eine Phasenanpassung des Real- und Imaginärteils durchgeführt, um ein maximales Signal zu garantieren und mögliche Schwankungen der Phase durch experimentelle Einflüsse auszugleichen. Allerding kann eine Abweichung von $\pm \SI{1}{\degree}$ vom Optimalwert unter den schlechtesten Umständen eine Verschiebung des Schwerpunkts um $\SI{1}{\kilo Hz}$ bewirken. Diese Empfindlichkeit gegenüber kleinen Änderungen bedeutet, dass Schwankungen der dargestellten Werte nicht auszuschließen ist; die groben Merkmale der Kurvenverläufe können aber leicht durch eine Betrachtung der Spektren bestätigt werden.
+
 
 
 
 ********************************************************************
-
-
- Messungen an einem $\SI{600}{MHz}$-Spektrometer wären hilfreich um Aussagen über die chemische Verschiebung machen zu können.
-
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/SPEK/spek_t1korr.pdf}
-	\end{center}
-	\caption{Spektren FWHM mit $T_1$-Korrektur} \label{fig:res:spek_fwhm_t1}
-\end{figure}
-Aufgrund der Bewegungsverschmälerung würde man annehmen, dass die Halbwertsbreite sinkt, und nicht ein so hohes Maximum zeigt. Ein großer Einfluss ist die in dem Temperaturbereich (380K - 430K) sehr kurze $T_1$-Zeit. Durch den Einfluss von $T_1$ fällt das Signal sehr stark ab und verbreitert so das Spektrum.
-
-Um den Einfluss von $T_1$ herauszurechnen: Die Spektren sind Fouriertransformierte der aufgenommenen Zeitsignale. Für die Spektren wird ein Lorentz 
-\begin{align}
-    L(f) = \frac{1}{\pi \gamma} \cdot \frac{\gamma^2}{\gamma^2 + (f - f_0)^2}
-\end{align}
-angenommen. Lorentz hat zwei Parameter, Maximum $f_0$ (und Schwerpunkt) und Halbwertsbreite $2\gamma$. Die Fouriertransformierte davon ist eine gedämpfte Schwingung:
-\begin{align}
-    h(t) = \exp{(-a |t|)} \cos{(2 \pi f_0 t)} \\
-    H(t) = \int_{-\infty}^{\infty} h(t) \text{d} t \\
-    H(f) = \frac{2}{a} \cdot \frac{(a/2\pi)^2}{((a/2\pi)^2) + (f - f_0)^2}
-\end{align}
-mit der Halbwertsbreite $2 \gamma = a/\pi$.
-
-Das ursprüngliche Zeitsignal soll durch die $T_1$-Kurve geteilt werden, um den Einfluss herauszurechnen. Dafür werden ein Kohlrausch mit $\beta = 1$ angenommen, damit sich die Rechnung einfacher gestaltet:
-\begin{align}
-    f(t) = \exp{(-t/T_1)^\beta}
-\end{align}
-, die $T_1$-Werte stammen aus $T_1$-Messungen bei gleicher Temperatur. 
-
-Fouriertransformiert ergibt sich die modifizierte Halbwertsbreite $2\gamma = 2(\gamma_0 - \frac{1}{\pi T_1})$.
-
-Übrig bleibt ein kleinerer Peak (-> Theorie). Bei Temperaturen über 410K konnte keine Korrektur vorgenommen werden, weil die $T_1$-Werte da zu stark streuen.
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/SIM/sim_fwhm.pdf}
-	\end{center}
-	\caption{Simulation FWHM} \label{fig:res:sim_fwhm}
-\end{figure}
-Zusätzlich zeigt die Halbwertsbreite einen Peak bei ca. 350K. Dies kann daran liegen, dass hier der Übergang von der Czjzek-Form mit einer Spitze zur abgerundeten Lorentz-Form ist. Das Abrunden verschiebt die halbe Höhe zu niedrigeren Werten, daher der Peak. Die experimentellen Spektren zeigen aufgrund von Störungen auch bei niedrigeren keine perfekte Spitze und daher auch keinen Peak in der Halbwertsbreite beim Übergang.
-
-
-
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/SPEK/spek_mean.pdf} 
-	\end{center}
-	\caption{Spektren Schwerpunkt} \label{fig:res:spek_mean}
-\end{figure}
-Schwerpunkte; bei den stark verrauschten Spektren wurden die Werte wieder aus Lorentz-Fits bestimmt.
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/BRUKER/bruker_mean.pdf} 
-	\end{center}
-	\caption{Bruker Schwerpunkt} \label{fig:res:bruker_mean}
-\end{figure}
-
-
-% \begin{figure} % ***
-% 	\begin{center}
-% 		\includegraphics[width=\textwidth]{graphics/plots/SIM/sim_mean.pdf} 
-% 	\end{center}
-% 	\caption{Simulation Schwerpunkt} \label{fig:res:sim_mean}
-% \end{figure}
-
-
-
-
-
-
 
 
 
@@ -351,6 +247,48 @@ Schwerpunkte; bei den stark verrauschten Spektren wurden die Werte wieder aus Lo
 
 
 \section{Theorie} \label{section:res:theorie}
+
+
+
+
+
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{graphics/plots/SPEK/spek_t1korr.pdf}
+	\end{center}
+	\caption{Spektren FWHM mit $T_1$-Korrektur} \label{fig:res:spek_fwhm_t1}
+\end{figure}
+Aufgrund der Bewegungsverschmälerung würde man annehmen, dass die Halbwertsbreite sinkt, und nicht ein so hohes Maximum zeigt. Ein großer Einfluss ist die in dem Temperaturbereich (380K - 430K) sehr kurze $T_1$-Zeit. Durch den Einfluss von $T_1$ fällt das Signal sehr stark ab und verbreitert so das Spektrum.
+
+Um den Einfluss von $T_1$ herauszurechnen: Die Spektren sind Fouriertransformierte der aufgenommenen Zeitsignale. Für die Spektren wird ein Lorentz
+\begin{align}
+	L(f) = \frac{1}{\pi \gamma} \cdot \frac{\gamma^2}{\gamma^2 + (f - f_0)^2}
+\end{align}
+angenommen. Lorentz hat zwei Parameter, Maximum $f_0$ (und Schwerpunkt) und Halbwertsbreite $2\gamma$. Die Fouriertransformierte davon ist eine gedämpfte Schwingung:
+\begin{align}
+	h(t) = \exp{(-a |t|)} \cos{(2 \pi f_0 t)}      \\
+	H(t) = \int_{-\infty}^{\infty} h(t) \text{d} t \\
+	H(f) = \frac{2}{a} \cdot \frac{(a/2\pi)^2}{((a/2\pi)^2) + (f - f_0)^2}
+\end{align}
+mit der Halbwertsbreite $2 \gamma = a/\pi$.
+
+Das ursprüngliche Zeitsignal soll durch die $T_1$-Kurve geteilt werden, um den Einfluss herauszurechnen. Dafür werden ein Kohlrausch mit $\beta = 1$ angenommen, damit sich die Rechnung einfacher gestaltet:
+\begin{align}
+	f(t) = \exp{(-t/T_1)^\beta}
+\end{align}
+, die $T_1$-Werte stammen aus $T_1$-Messungen bei gleicher Temperatur.
+
+Fouriertransformiert ergibt sich die modifizierte Halbwertsbreite $2\gamma = 2(\gamma_0 - \frac{1}{\pi T_1})$.
+
+Übrig bleibt ein kleinerer Peak (-> Theorie). Bei Temperaturen über 410K konnte keine Korrektur vorgenommen werden, weil die $T_1$-Werte da zu stark streuen.
+
+
+
+
+
+
+
 
 Die experimentellen Ergebnisse sollen mit den theoretischen Überlegungen vergleichen werden.
 
@@ -387,6 +325,12 @@ Alle drei Spektraldichten zeigen zwar gute, aber keine perfekten Übereinstimmun
 	\end{center}
 	\caption{Spektraldichte $J_{DC}$} \label{fig:res:theorie_j_dc}
 \end{figure}
+
+
+
+
+
+
 
 
 
