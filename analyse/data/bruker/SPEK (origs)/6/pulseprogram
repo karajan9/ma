@@ -1,0 +1,101 @@
+# 1 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/hahnecho.jb"
+;hahnecho.rs
+;
+;
+; Joachim Beerwerth / 14.07.2017
+;
+;
+; Hahn-Echo experiment
+; to be used in MAS experiments, echo delay is set to be an integer number
+; of rotor periods
+; acquisition starts immediately after 180 degree pulse to be able to sample whole echo
+; for short echo delays set parameter nsp equal to number of points before echo-top
+; in this case use digmod analog or digmod digital and dspfirm smooth
+; for full echo accumulation digmod digital and dspfirm sharp can also be used
+; set phc0=0 and phc1=d6*swh*360 and do straight fp, sine bell or squared sine bell
+; window functions may be used
+; for static experiments enter cnst31 = 1e6 and set l1 to desired echo delay in us
+;
+;
+;parameters:
+;pl1 : RF power level for 90/180 degree pulse
+;p1 : length for 90 degree pulse
+;p2 : =p1*2, time of 180 degree pulse
+;d1 : recycle delay
+;d6 : 1st echo delay (calculated for MAS)
+;d7 : 2nd echo delay (always calculated)
+;d8 : trigger time
+;cnst31 : MAS spin rate  (for MAS)
+;l31 : # of rotor cycles for delay
+;d20 : presaturation delay (T2<d20<T1)
+;l20 : presaturation loop number [5]
+;ns : 16*n
+;zgoptns : -Drot if spinning, -Ddec (if decoupling desired), -Dsat if saturation, -Dt1 if T1 measurement, -Dt2 for T2 measurement, -Dcp for crosspolarization or blank
+;td1     : number of elements in vd list
+;
+;$CLASS=Solids
+;$DIM=2D
+;$TYPE=direct excitation
+;$SUBTYPE=simple 1D/2D
+;$COMMENT=Hahn-Echo experiment, MAS or static, standard parameters for T1 measurement
+
+"p2=2.0*p1"
+
+# 47 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/hahnecho.jb"
+"d7=d6-de-d8"
+
+
+"acqt0=d8"
+# 1 "mc_line 76 file /opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/hahnecho.jb exp. def. part of mc cmd. before ze"
+; dimension 1D; AQ_mode 
+define delay MCWRK
+define delay MCREST
+"MCREST = 1m - 0.500000*1m"
+"MCWRK = 0.500000*1m"
+
+    dccorr
+# 76 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/hahnecho.jb"
+# 76 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/hahnecho.jb"
+1 ze
+# 1 "mc_line 76 file /opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/hahnecho.jb exp. def. of mc cmd. after ze"
+# 77 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/hahnecho.jb"
+
+# 1 "mc_line 78 file /opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/hahnecho.jb exp. start label for mc cmd."
+2 MCWRK do:f2
+  MCREST
+# 79 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/hahnecho.jb"
+
+# 94 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/hahnecho.jb"
+  d1
+
+
+# 101 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/hahnecho.jb"
+  (p1 pl1 ph1):f1
+
+
+# 116 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/hahnecho.jb"
+  d6
+
+
+# 120 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/hahnecho.jb"
+  (p2 pl1 ph2):f1
+  d7
+  go=2 ph31
+
+
+# 1 "mc_line 126 file /opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/hahnecho.jb exp. mc cmd. in line"
+  MCWRK  wr #0
+# 127 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/hahnecho.jb"
+# 127 "/opt/topspin3.5pl6/exp/stan/nmr/lists/pp/user/hahnecho.jb"
+exit
+
+ph0=0
+ph1=0 1 2 3
+ph2=0 0 0 0 1 1 1 1 2 2 2 2 3 3 3 3
+ph10=0
+ph11=0
+ph20=0
+ph30=0
+ph31=0 3 2 1 2 1 0 3
+
+;$id: $

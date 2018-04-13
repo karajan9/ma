@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PeakList>
+  <PeakList1D>
+    <PeakList1DHeader creator="nmrsu" date="2017-12-01T11:18:24.874+01:00" expNo="6" name="87Rb-CRN" owner="" procNo="1" source="/opt/topspin3.5pl6/data/e3b/joachim">
+      <PeakPickDetails>F1=1908.855957ppm, F2=-1908.706909ppm, MI=50.00cm, MAXI=10000.00cm, PC=4.000
+      </PeakPickDetails>
+    </PeakList1DHeader>
+    <Peak1D F1="-79.352722" intensity="1.000000e+02" type="0"/>
+  </PeakList1D>
+</PeakList>

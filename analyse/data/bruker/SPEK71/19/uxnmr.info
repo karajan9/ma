@@ -1,0 +1,129 @@
+CONFIGURATION INFORMATION
+=========================
+
+Path         : /opt/topspin3.5pl6/conf/instr/spect/uxnmr.info
+Date         : Mon Dec  4 14:09:44 2017
+Release      : TopSpin 3.5 pl 6
+Installed in : /opt/topspin3.5pl6
+Host         : CZC7097TW4
+OS           : CentOS Linux release 7.4.1708 (Core) 
+CPU          : Intel(R) Xeon(R) CPU E5-1620 v4 @ 3.50GHz (8 cores at 1428 MHz with Hyperthreading)
+User         : nmrsu (NMR Super User)
+System       : Avance III 400 NMR spectrometer
+1H-frequency : 400.26 MHz
+Description  : Avance III
+Bruker Order : HH010706
+Configured in: CZC7097TW4:/opt/topspin3.5pl6/conf/instr/spect
+
+IPSO: connected to spectrometer subnet
+- TCP/IP address = 149.236.99.90
+ - IPSO type: 19"
+- Tctrl : 1
+- Fctrls: 2
+- Gctrl1: with digital preemphasis
+- Rctrl : none
+- FREDs : none
+- DPP : 1
+
+DRU1: AQS DRU Z100977/00624 ECL 04.00
+- TCP/IP address = 149.236.99.89
+- Firmware Version = 151014
+- DRU1 controls AQS-Rack and HPPR/2
+
+AQS: connected to 149.236.99.89:/dev/tty10
+  _Slot_ SBSB _____________________Board_____________________
+  Number Addr Type HW-VS FW-VS ID  ECL Name   Description
+  -----------------------------------------------------------
+     2   0x10 0x72   0x3    AW  R  3.0 REC-1  AQS RXAD400 Z102116/761 ECL 03.00
+     3   0x34  0x2   0x1        X  5.0 REF-1  REF-400 Reference Board for AQS Receiver
+     4   0x24 0x11   0x8    AE  S  2.0 SGU-1  AQS SGU/2 400 Z103080/00447 ECL 02.00 FPGA-Vs=AF
+     5   0x25 0x11   0x8    AE  S  2.0 SGU-2  AQS SGU/2 400 Z103080/00449 ECL 02.00 FPGA-Vs=AF
+    21   0x21 0xcf     0        P  1.0 PSD-1  PSD/3 Power Supply Distribution Board
+    --   0x20 0xc6     0        B  1.4 AQS/2  AQS/2 chassis
+     1   0x20  0x7     0        B      MASTER AQS Rack Master
+  Logical Receiver/SGU configuration:
+
+
+Router: none installed
+
+
+Transmitters at the spectrometer subnet:
+----------------------------------------
+BLA_W1345088_0040 W1345088/0040 ECL 0:
+- TCP/IP address = 149.236.99.92
+- Firmware VS    = 20120627
+- Amplifier      = BLAH1000 E 200-600MHZ: W1345088/0040 ECL 0
+- Router         = BLMMR31 RF AMPLIFIER MODULE: W1345212/0425 ECL 0
+- Controller     = BLA CONTROL BOARD 6 2V V-USB: W1522040/0397 ECL 2
+BLA_W1345095_0075 W1345095/0075 ECL 0:
+- TCP/IP address = 149.236.99.91
+- Firmware VS    = 20120627
+- Amplifier      = BLAX1000 E 6-405MHZ: W1345095/0075 ECL 0
+- Router         = BLMMR31 RF AMPLIFIER MODULE: W1345212/0426 ECL 0
+- Controller     = BLA CONTROL BOARD 6 2V V-USB: W1522040/0452 ECL 2
+
+Gradient amplifiers at the spectrometer subnet:
+----------------------------------------------
+BGA1: BGAU_W1522066_0034
+- TCP/IP address   = 149.236.99.93
+- Firmware version = 20141128
+- Web version      = 2.1
+- Current limits   = 40.0/X, 40.0/Y, 40.0/Z (in A)
+
+BSMS: BSMS/2 connected to ethernet
+- TCP/IP address = 149.236.99.20
+- ELCB firmware version = 20160329
+- SCB channels = 20
+- Shim System = unknown
+- 2HTX Amplifier: not available
+- Lock: not available
+
+MAS2 control unit: connected to 149.236.99.90:/dev/tty04
+- Boot Software        : 20031216
+- Application Software : 20120329
+- Insert Time          : 10 s
+- Eject Time           : 10 s
+- Spin Lock Tolerance  : 3000 Hz
+
+Eurotherm VTU: device connected to 149.236.99.90:/dev/tty05
+
+Preamplifiers :
+HPPR2: - HPPR/2 preamplifier connected to 149.236.99.89:/dev/tty10
+    Type      : HPPR/2
+    Controller: Cover/1 with Application firmware = AQ
+                15 LEDs for tuning, 15 LEDs for matching
+    Module  1 : HPHP XBB31P
+                PN=Z003549, SN=00278 from 20070706
+    Module  2 : HPHP 19F/1H
+                PN=Z003544, SN=00060 from 20070301
+    Module  3 : HPLNA 1H (virtual 50 Ohm reference: 99.9%/0.1deg, reflection meter)
+                PN=Z103203, SN=00012 from 20070403
+    Module  4 : 1H/2H 1H (virtual 50 Ohm reference: 274.8%/82.8deg)
+                PN=Z003959, SN=00434 from 20070625
+    Module  5 : 1H/2H 2H (virtual 50 Ohm reference: 112.9%/-68.6deg)
+                PN=Z003959, SN=00434 from 20070625
+
+
+
+Gradient Controller cable connections
+--------------------------------------------------------------------
+GCtrl1: connected via DPP to GREAT MASTER UNIT E W1522066/0034
+
+RF cable connections (detected)
+--------------------------------------------------------------------
+SGU1 NORM output -> input 1 of transmitter 2 (BLAX1000 E 6-405MHZ W1345095/0075 at TCP/IP 149.236.99.91)
+SGU1 AUX  output -> input 2 of transmitter 1 (BLAH1000 E 200-600MHZ W1345088/0040 at TCP/IP 149.236.99.92)
+SGU2 NORM output -> input 1 of transmitter 1 (BLAH1000 E 200-600MHZ W1345088/0040 at TCP/IP 149.236.99.92)
+SGU2 AUX  output -> TUNE signal input of HPPR
+
+Blanking cable connections (detected)
+--------------------------------------------------------------------
+transmitter 1 = BLAH1000 E 200-600MHZ W1345088/0040 at TCP/IP 149.236.99.92:
+- amplifier 1H-1000W uses blanking 2
+- amplifier 1H-100W uses blanking 2
+
+transmitter 2 = BLAX1000 E 6-405MHZ W1345095/0075 at TCP/IP 149.236.99.91:
+- amplifier X-1000W uses blanking 1
+- amplifier X-300W uses blanking 1
+
+
