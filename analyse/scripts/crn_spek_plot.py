@@ -1,6 +1,8 @@
 # %%
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.interpolate import interp1d, UnivariateSpline
+
 # from scipy.optimize import curve_fit, minimize, leastsq
 import glob
 # import os
@@ -211,6 +213,9 @@ def plot_fwhm_bruker():
         "Hochtemperatur",
         "Pulslängenabh. Spektren",
     ]
+
+    temps = np.empty(0)
+    fwhms = np.empty(0)
     for i, file_name in enumerate(file_names):
         data = np.loadtxt(file_name)
         temp = data[:, 1]
@@ -218,6 +223,9 @@ def plot_fwhm_bruker():
         gamma_err = data[:, 6] * 2 / 1e3
 
         plt.errorbar(temp, gamma, yerr=gamma_err, color="tab:blue", fmt='o')
+
+        temps = np.hstack([temps, temp])
+        fwhms = np.hstack([fwhms, gamma])
 
     bruker_name = home_dir + "bruker_spek_quick.data"
     bruker_data = np.loadtxt(bruker_name)
@@ -232,10 +240,23 @@ def plot_fwhm_bruker():
         label="Bruker",
         fmt='s')
 
-plt.xlim(370, 400)
-plt.ylim(5, 25)
-plot_fwhm_bruker()
+    return temps, fwhms, bruker_temp, bruker_gamma
+
+# plt.xlim(370, 400)
+# plt.ylim(5, 25)
+temps, fwhms, bruker_temp, bruker_gamma = plot_fwhm_bruker()
+temps, fwhms = sort_values(temps, fwhms)
+print(temps)
+f1 = interp1d(temps, fwhms)
+f2 = interp1d(bruker_temp, bruker_gamma)
+x = np.linspace(np.min(bruker_temp), np.max(bruker_temp), 100)
+plt.plot(x, f1(x))
+plt.plot(x, f2(x))
+plt.show()
 plt.legend(loc=3)
+
+plt.plot(x, f1(x) / f2(x))
+
 # save_plot(plt, "/home/karajan/uni/master/analyse/plots/BRUKER/bruker_fwhm")
 
 
@@ -274,26 +295,26 @@ def plot_spek_multi():
             cmplx.real / cmplx.real.max() - i * 0.1,
             label=temp[i])
         plot_setup()
-    
-    plt.title("Bruker Spektren")
-        # try:
-        #     p_value, p_error, fit = fit_lorentz(freq,
-        #                                         cmplx.real / cmplx.real.max())
-        #     # print(experiment_number, phase, p_value[0], p_error[0], p_value[1], p_error[1], p_value[2], p_error[2])
-        #     # plt.plot(freq/1e3, fit - i * 0.75, color="r")
-        # except Exception as e:
-        #     print(e)
-        #     print(str(experiment_number) + ": fit failed")
-        # plt.plot([-250, 250], [-i * 0.75, -i * 0.75], color="y")
 
-        # gamma = data[:, 5] * 2
-        # idx = (np.abs(cmplx.real[freq < 0] / cmplx.real.max() - 0.5)).argmin()
-        # print(cmplx.real)
-        # print(freq[idx])
-        # plt.plot(
-        #     [freq[idx] / 1e3, freq[idx] / 1e3 + gamma[i] / 1e3],
-        #     [0.5 - i * 0.75, 0.5 - i * 0.75],
-        #     color="r")
+    plt.title("Bruker Spektren")
+    # try:
+    #     p_value, p_error, fit = fit_lorentz(freq,
+    #                                         cmplx.real / cmplx.real.max())
+    #     # print(experiment_number, phase, p_value[0], p_error[0], p_value[1], p_error[1], p_value[2], p_error[2])
+    #     # plt.plot(freq/1e3, fit - i * 0.75, color="r")
+    # except Exception as e:
+    #     print(e)
+    #     print(str(experiment_number) + ": fit failed")
+    # plt.plot([-250, 250], [-i * 0.75, -i * 0.75], color="y")
+
+    # gamma = data[:, 5] * 2
+    # idx = (np.abs(cmplx.real[freq < 0] / cmplx.real.max() - 0.5)).argmin()
+    # print(cmplx.real)
+    # print(freq[idx])
+    # plt.plot(
+    #     [freq[idx] / 1e3, freq[idx] / 1e3 + gamma[i] / 1e3],
+    #     [0.5 - i * 0.75, 0.5 - i * 0.75],
+    #     color="r")
 
 
 # plot_limits(xmin=-250, xmax=250)
