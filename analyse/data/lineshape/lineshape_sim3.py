@@ -11,9 +11,10 @@ home_dir = "/home/karajan/uni/master/analyse"
 sys.path.append(os.path.abspath("/home/karajan/uni/master/analyse/scripts"))
 from nmr_lib import *
 
+
+
 # %%
 # CRN taus
-
 
 def tau_c_4er(T):
     tau_co = 5.1e-14
@@ -44,27 +45,9 @@ def T_mauro_aug(tau_c):
 
 
 # %%
-neuelt = np.array([
-    336.,
-    337.,
-    338.,
-    339.,
-    341.,
-    342.,
-    343.,
-    344.,
-])
-neuelt2 = np.array([
-    334.0,
-    335.5,
-    336.5,
-    337.5,
-    338.5,
-    342.5,
-    344.5,
-])
-
-tau_c_4er(347)
+Ts = np.array([363., 364., 365., 366., 367., 370., 380.,  400.,])
+Ts = np.array([225., 250., 275., 300.,])
+tau_c_4er(Ts)
 
 # labels
 
@@ -364,76 +347,43 @@ for i, fn in enumerate(fn_apo):
 # FWHM Exp / Sim Vergleich
 plt.scatter(T_VFT_4er(labels / 128), fwhm * 100 * 2 * np.pi, color="r")
 
-# %%
-# FWHM plotten
-# plt.rcParams['figure.figsize'] = (12, 8)
-
-
-def plot_fwhm():
-    plt.xlabel("Temperatur [K]")
-    # plt.ylabel("FWHM [kHz]")
-    plt.ylabel("FWHM [kHz]")
-    plt.title("FWHM")
-    base_dir = "/home/karajan/uni/master/analyse/data/crn/data/SPEK/"
-    file_names = [
-        base_dir + "spek_230K_280K.data",
-        base_dir + "spek_270K_330K.data",
-        base_dir + "spek_300K_310K.data",
-        base_dir + "spek_310K_355K.data",
-        base_dir + "spek_342K_380K.data",
-        base_dir + "spek_360K_440K.data",
-        base_dir + "spek_305K_345K.data",
-        # "/home/karajan/uni/master/analyse/data/bruker/SPEK/bruker_spek.data",
-    ]
-
-    for i, file_name in enumerate(file_names):
-        data = np.loadtxt(file_name)
-        temp = data[:, 1]
-        gamma = data[:, 5] * 2 / 1e3
-        gamma_err = data[:, 6] * 2 / 1e3
-
-        plt.errorbar(temp, gamma, yerr=gamma_err, color="tab:blue", fmt='x')
-
-
-plot_fwhm()
-# plt.xlim(340, 350)
-# plt.scatter(T_VFT_4er(labels), fwhms / 125.0, color="g")
-# plt.scatter(T_VFT_4er(labels / 128), fwhms / 125.0, color="r")
-
-# %%
-# plot Maxima
-spek_dir = "/home/karajan/uni/master/analyse/data/crn/data/SPEK/"
-spek_fn = [
-    spek_dir + "spek_230K_280K.data",
-    spek_dir + "spek_270K_330K.data",
-    spek_dir + "spek_300K_310K.data",
-    spek_dir + "spek_310K_355K.data",
-    spek_dir + "spek_342K_380K.data",
-    spek_dir + "spek_360K_440K.data",
-    spek_dir + "spek_305K_345K.data",
-]
-
-
-def plot_maxima():
-    plt.xlabel("Temperatur [K]")
-    # plt.ylabel("FWHM [kHz]")
-    plt.ylabel("Maximum [kHz]")
-    plt.title("Spektren")
-
-    for i, file_name in enumerate(spek_fn):
-        data = np.loadtxt(file_name)
-        temp = data[:, 1]
-        gamma = data[:, 7] * 2 / 1e3
-        gamma_err = data[:, 8] * 2 / 1e3
-
-        plt.errorbar(temp, gamma, yerr=gamma_err, fmt='.')
 
 
 plot_maxima()
 
+
+# %%
+def plot_dofft(kind):
+    home_spek = "/home/karajan/uni/master/analyse/data/"
+    spek_dirs = [
+        home_spek + "170706/SPEK",
+        home_spek + "170713/SPEK",
+        home_spek + "170731/spektren",
+        home_spek + "170807/SPEK",
+        home_spek + "170817/SPEK",
+        home_spek + "170828/SPEK",
+        home_spek + "170906/SPEK/tau15",
+        home_spek + "170912/SPEK/tau_abh/tau0015",
+    ]
+    for spek_dir in spek_dirs:
+        fn_spek = glob.glob(spek_dir + "/*/*.spec.nmr")
+        print(spek_dir)
+        maxims = np.empty(len(fn_spek))
+        means = np.empty(len(fn_spek))
+        fwhm = np.empty(len(fn_spek))
+        temps = np.empty(len(fn_spek))
+        for i, fn in enumerate(fn_spek):
+            maxims[i], means[i], fwhm[i], temps[i] = get_dofft_info(fn)
+        if kind == "fwhm":
+            plt.scatter(temps, fwhm / 1e3, color="tab:blue", marker="v")
+        elif kind == "maxim":
+            plt.scatter(temps, maxims / 1e3, color="tab:blue", marker="v")
+        elif kind == "mean":
+            plt.scatter(temps, means / 1e3, color="tab:blue", marker="v")
+
+
 # %%
 # Exp / Sim Vergleich
-
 
 def get_dofft_info(fn):
     maxim = 0.0
@@ -471,8 +421,20 @@ def get_multi_info(dirs):
 
 
 def get_bruker_info():
-    home_bruker = "/home/karajan/uni/master/ma/analyse/data/bruker/SPEK/"
-    return get_multi_info(home_bruker)
+    home_bruker = ["/home/karajan/uni/master/ma/analyse/data/bruker/SPEK"]
+    fn_spek = glob.glob(home_bruker[0] + "/*/*.spec.nmr")
+    temp = np.array([
+        320.0, 340.0, 350.0, 350.0, 360.0, 360.0, 360.0, 370.0, 380.0, 390.0,
+        375.0, 385.0, 365.0, 355.0, 345.0, 330.0, 335.0, 320.0, 310.0, 340.0
+    ])
+    dirs = np.array([
+        "3", "4", "5", "6", "7", "8", "9", "10", "11", "16", "19", "22", "27",
+        "32", "37", "42", "45", "48", "51", "55"
+    ])
+    temp = temp[np.argsort(dirs)]
+    index = np.argsort(fn_spek)
+    temps, fwhms, means, maxims = get_multi_info(home_bruker)
+    return temp, fwhms[index], means[index], maxims[index]
 
 
 def get_obi_info():
@@ -490,104 +452,102 @@ def get_obi_info():
     return get_multi_info(spek_dirs)
 
 
-def plot_dofft(kind):
-    home_spek = "/home/karajan/uni/master/analyse/data/"
-    spek_dirs = [
-        home_spek + "170706/SPEK",
-        home_spek + "170713/SPEK",
-        home_spek + "170731/spektren",
-        home_spek + "170807/SPEK",
-        home_spek + "170817/SPEK",
-        home_spek + "170828/SPEK",
-        home_spek + "170906/SPEK/tau15",
-        home_spek + "170912/SPEK/tau_abh/tau0015",
-    ]
-    for spek_dir in spek_dirs:
-        fn_spek = glob.glob(spek_dir + "/*/*.spec.nmr")
-        print(spek_dir)
-        maxims = np.empty(len(fn_spek))
-        means = np.empty(len(fn_spek))
-        fwhm = np.empty(len(fn_spek))
-        temps = np.empty(len(fn_spek))
-        for i, fn in enumerate(fn_spek):
-            maxims[i], means[i], fwhm[i], temps[i] = get_dofft_info(fn)
-        if kind == "fwhm":
-            plt.scatter(temps, fwhm / 1e3, color="tab:blue", marker="v")
-        elif kind == "maxim":
-            plt.scatter(temps, maxims / 1e3, color="tab:blue", marker="v")
-        elif kind == "mean":
-            plt.scatter(temps, means / 1e3, color="tab:blue", marker="v")
+def get_sim_info():
+    directory = "/home/karajan/uni/master/analyse/data/lineshape/joined"
+    fn_apo = glob.glob(directory + "/*.fid.dat.spec.nmr")
+    fn_apo = sorted(fn_apo, key=lambda a: float(a.split("!")[1]))
+    stemps = np.array(sorted(float(fn.split("!")[1]) for fn in fn_apo))
+
+    smaxims = np.empty(len(fn_apo))
+    smeans = np.empty(len(fn_apo))
+    sfwhms = np.empty(len(fn_apo))
+    for i, fn in enumerate(fn_apo):
+        smaxims[i], smeans[i], sfwhms[i], stemp = get_dofft_info(fn)
+
+    return stemps, sfwhms, smeans, smaxims
 
 
-directory = "/home/karajan/uni/master/analyse/data/lineshape/joined"
+stemps, sfwhms, smeans, smaxims = get_sim_info()
+otemps, ofwhms, omeans, omaxims = get_obi_info()
+btemps, bfwhms, bmeans, bmaxims = get_bruker_info()
 
-fn_apo = glob.glob(directory + "/*.fid.dat.spec.nmr")
-fn_apo = sorted(fn_apo, key=lambda a: float(a.split("!")[1]))
-stemps = np.array(sorted(float(fn.split("!")[1]) for fn in fn_apo))
 
-smaxims = np.empty(len(fn_apo))
-smeans = np.empty(len(fn_apo))
-sfwhms = np.empty(len(fn_apo))
-for i, fn in enumerate(fn_apo):
-    smaxims[i], smeans[i], sfwhms[i], stemp = get_dofft_info(fn)
-# factor = 1000
-# smaxims /= factor
-# smeans /= factor
-# sfwhms /= factor
 
-print(labels)
-
+# plt.scatter(T_VFT_aug(labels / 128), means / 15, color="g", marker="^")
+# plt.scatter(T_mauro_aug(labels / 128), means / 15, color="y", marker="^")
 # plt.rcParams['figure.figsize'] = (12, 8)
 
 # # FWHM Exp / Sim Vergleich
-# plt.scatter(T_VFT_4er(labels), fwhm / factor, color="r")
-# # plt.scatter(T_VFT_aug(labels / 128), fwhm/8, color="r")
-# # plt.scatter(T_mauro_aug(labels / 128), fwhm/8, color="y")
-# plot_fwhm()
-# # spektemps, spekfwhm, spekt1, spekfwhm_t1 = get_fwhm_temp_t1()
-# # plt.scatter(spektemps, spekfwhm_t1 / 1e3, color="g")
-# plt.ylim(0, 50)
-# # plot_dofft("fwhm")
-# plt.xlabel("Temperatur [K]")
-# plt.ylabel("FWHM [kHz]")
-# # plt.title("CRN FWHM mit $T_1$-Korrektur")
-# plt.title("CRN FWHM Vergleich Simulation")
-# # plt.xlim(340, 350)
-# save_plot(plt, "/home/karajan/uni/master/analyse/plots/SIM/sim_fwhm")
-# plt.show()
+# plt.scatter(
+#     otemps,
+#     ofwhms / 1e3,
+#     color="tab:blue",
+#     # facecolors="none",
+#     marker="o",
+#     label="OBI")
+# plt.scatter(
+#     T_VFT_4er(stemps),
+#     sfwhms / 1e3,
+#     color="tab:green",
+#     # facecolors="none",
+#     marker="s",
+#     label="Simulation")
+# plt.scatter(
+#     btemps,
+#     bfwhms / 1e3,
+#     color="tab:red",
+#     # s=45,
+#     # facecolors="none",
+#     marker="D",
+#     label="Bruker")
 
-# # Maxim Exp / Sim Vergleich
-# plt.scatter(T_VFT_4er(labels / 128), maxims/8, color="r", marker="^")
-# # plt.scatter(T_VFT_aug(labels / 128), maxims/8, color="g", marker="^")
-# # plt.scatter(T_mauro_aug(labels / 128), maxims/8, color="y", marker="^")
-# plot_dofft("maxim")
+# # plt.xlim(340, 370)
+# plt.gca().tick_params(direction="in", top="on", right="on")
+# # plt.ylim(-25, 5)
+# plt.xlabel("Temperatur [K]")
+# plt.ylabel("Halbwertsbreite [kHz]")
+# plt.legend(loc=3)
+
+# save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEK2/fwhm")
+
+
 
 # Mean Exp / Sim Vergleich
+plt.scatter(
+    otemps,
+    omeans / 1e3,
+    color="tab:blue",
+    # facecolors="none",
+    marker="o",
+    label="OBI")
 plt.scatter(
     T_VFT_4er(stemps),
     smeans / 1e3,
     color="tab:green",
-    marker="^",
+    # facecolors="none",
+    marker="s",
     label="Simulation")
-# plt.scatter(T_VFT_aug(labels / 128), means / 15, color="g", marker="^")
-# plt.scatter(T_mauro_aug(labels / 128), means / 15, color="y", marker="^")
-otemps, ofwhms, omeans, omaxims = get_obi_info()
-plt.scatter(otemps, omeans / 1e3, color="tab:blue", marker="v", label="OBI")
+plt.scatter(
+    btemps,
+    bmeans / 1e3,
+    color="tab:red",
+    # s=45,
+    # facecolors="none",
+    marker="D",
+    label="Bruker")
 
-btemps, bfwhms, bmeans, bmaxims = get_bruker_info()
-plt.scatter(btemps, bmeans / 1e3, color="tab:red", marker="s", label="Bruker")
-
-print(btemps)
-
-# plot_dofft("mean")
-# plt.ylim(-25, 5)
+# plt.xlim(340, 370)
+plt.gca().tick_params(direction="in", top="on", right="on")
+plt.ylim(-25, 5)
 plt.xlabel("Temperatur [K]")
 plt.ylabel("Schwerpunkt [kHz]")
-plt.legend()
-# plt.title("CRN FWHM mit $T_1$-Korrektur")
-# plt.title("CRN Schwerpunkt")
-# save_plot(plt, "/home/karajan/uni/master/analyse/plots/SPEK/spek_mean")
-# save_plot(plt, "/home/karajan/uni/master/analyse/plots/SIM/sim_mean")
+plt.legend(loc=3)
+
+save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEK2/mean")
+
+
+
+
 
 # %%
 # Single Spektren Vergleich
@@ -664,3 +624,27 @@ plt.xlabel("Frequenz [Hz]")
 # plt.title("CRN FWHM mit $T_1$-Korrektur")
 plt.title("CRN Lineshape")
 # save_plot(plt, "/home/karajan/uni/master/analyse/plots/SPEK/spek_lineshape")
+
+
+# %%
+home_bruker = "/home/karajan/uni/master/ma/analyse/data/bruker/SPEK"
+fn_spek = glob.glob(home_bruker + "/*/*.spec.nmr")
+temp = np.array([
+    320.0, 340.0, 350.0, 350.0, 360.0, 360.0, 360.0, 370.0, 380.0, 390.0,
+    375.0, 385.0, 365.0, 355.0, 345.0, 330.0, 335.0, 320.0, 310.0, 340.0
+])
+dirs = np.array([
+    "3", "4", "5", "6", "7", "8", "9", "10", "11", "16", "19", "22", "27",
+    "32", "37", "42", "45", "48", "51", "55"
+])
+
+temp = temp[np.argsort(dirs)]
+index = np.argsort(temp)
+fn_spek = np.array(sorted(fn_spek))
+fn_spek = fn_spek[index]
+
+for i, fn in enumerate(fn_spek):
+    data = np.loadtxt(fn, comments="!")
+    plt.plot(data[:, 0], data[:, 1] / np.max(data[:, 1]) - 0.2 * i)
+
+plt.xlim(-1e5, 1e5)
