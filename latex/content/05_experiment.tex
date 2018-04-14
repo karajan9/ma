@@ -283,8 +283,7 @@ Auch hier ist einschränkend zu sagen, dass die Werte der Schwerpunkte aufgrund 
 
 Die experimentellen Ergebnisse sollen mit den theoretischen Überlegungen vergleichen werden. Dazu wurden die in Kapitel \ref{section:theo:eckert} beschriebenen Funktionen für $T_1$, Halbwertsbreite und Schwerpunkt verwendet. Um eine Übereinstimmung zur Theorie feststellen zu können, müssen sich alle Datensätze mit dem gleichen Satz geteilter Parameter beschreiben lassen. Im Falle der Spektraldichte $J(\omega)$ ist dies $C_Q$; für $J_{CC}$ und $J_{CD}$ sind $\alpha$ bzw. $\gamma$ zusätzliche Parameter.
 
-
-Nach \cite{PIMENOV199793} wird für CRN für die Korrelationszeit $\tau_c$ der Spektraldichten ein Vogel-Fulcher-Gesetz
+Für den Parameter $\eta$ der Spektraldichten wurde $\eta^2 = 42 - 24 \sqrt{3} \approx \SI{0.43}{}$ \cite{caer} verwendet. Nach \cite{PIMENOV199793} wird für CRN für die Korrelationszeit $\tau_c$ ein Vogel-Fulcher-Gesetz
 \begin{align}
 	\tau_c = \tau_{co} \exp \left( \frac{D T_\text{VF}}{T-T_\text{VF}} \right)
 \end{align}
@@ -343,6 +342,23 @@ Die aufgenommenen Spektren unterstützen eine biexponentielle Interpretation wie
 
 
 
+Zunächst sollen die Daten des OBI-Spektrometers vergleichen werden. Bei den $T_1$ Werten soll erwähnt werden, dass die Werte bei hohen Temperaturen mit starken Unsicherheiten belegt sind (vlg. Abbildung \ref{fig:res:T_1}) -- entsprechende Indikatoren wurden hier für eine bessere Übersicht ausgelassen.
+
+Für die Spektraldichte $J(\omega)$ kann bei höheren Temperaturen, wie in Abbildung *** zu sehen, mit dem Parameter $C_Q = \SI{3.6}{MHz}$ eine vergleichsweise gute Übereinstimmung für die Halbwertsbreiten und die Schwerpunkte erreicht werden. Zu tieferen Temperaturen gibt es jedoch gravierende Abweichungen. Für die stark ansteigenden Werte der Halbwertsbreite können anisotrope Effekte vermutet werden, deren Einfluss durch diese isotrope Theorie nicht abgedeckt wird. Gründe für die Abweichungen der Schwerpunkte sind noch offen -- diese Effekt wird jedoch gleichermaßen in experimentellen als auch simulierten Spektren beobachtet, was bedeutet, dass der Effekt vermutlich auf die von der Simulation berücksichtigten Wechselwirkungen eingeschränkt werden kann.
+
+Es kann eine grobe Vereinbarkeit der Theorie mit $T_1$-Werten im Maximum der Kurve erreicht werden, die Flanken unterscheiden sich jedoch deutlich. Da die Form der Theoriekurve mit der Spektraldichte $J_\text{BPP}$ unveränderlich ist, ist es schwerlich möglich, eine zufriedenstellende Übereinstimmung zu erreichen. Abhilfe schaffen könnten andere Spektraldichten -- dies soll im Folgenden untersucht werden.
+
+Für die Spektraldichten $J_\text{CC}$ und $J_\text{DC}$ lagen die für die theoretische Berechnung der Schwerpunkte benötigten Imaginärteile $Q_\text{CC}$ und $Q_\text{CD}$, weswegen für diese auf die Spektraldichte $J_\text{BPP}$ zurückgegriffen wurde. Für die Schwerpunkte kann der Vergleich daher nur als grobe Idee verstanden werden.
+
+Für $J_\text{CC}$ und $J_\text{DC}$ können mit den Parametern $C_Q = \SI{4.0}{MHz}$ und $\alpha = \SI{0.6}{}$ bzw. $C_Q = \SI{3.6}{MHz}$ und $\gamma = \SI{0.46}{}$ gute Übereinstimmungen für $T_1$ beobachtet werden -- zumindest bis zu einer Temperatur von etwa $\SI{350}{\kelvin}$. Für $J_\text{DC}$ scheint es zudem für Temperaturen über $\SI{400}{K}$ Abweichungen zu geben. Bessere Vereinbarkeit mit $T_1$-Werten kommt in beiden Fällen auf Kosten der vergleichsweise guten Übereinstimmung für Halbwertsbreite und Schwerpunkt, die mit $J_\text{BPP}$ erreicht werden konnten: Während für $J_\text{CC}$ die Schwerpunkte stark abweichen, ist dies bei $J_\text{DC}$ für die Halbwertsbreiten der Fall. Es bleibt festzuhalten, dass insgesamt eine gute Übereinstimmung mit der Theorie gezeigt werden konnte; es kann jedoch keine Spektraldichte besonders vorteilhaft hervorgehoben werden.
+
+
+\begin{figure}[htbp]
+	% \includegraphics[width=\textwidth]{graphics/zwischenbericht/J_fertig.pdf}
+	\caption{Vergleich der $T_1$-, FWHM- und Schwerpunkts-Daten (in blau) und der angepassten Theoriekurven (in orange). \label{fig:triple_vergleich}}
+\end{figure}
+
+
 
 
 ********************************************************************
@@ -355,16 +371,12 @@ Die aufgenommenen Spektren unterstützen eine biexponentielle Interpretation wie
 
 
 
-Für die Spektraldichte $J(\omega)$ kann, wie in Abbildung \ref{fig:triple_vergleich} zu sehen, mit $\eta^2 = 42 - 24 \sqrt{3} \approx \SI{0.43}{}$ \cite{caer} und den Parametern $C_Q = \SI{3e6}{Hz}$ und $\tau_c = \SI{3.9e-14}{s}$ eine vergleichsweise gute Übereinstimmung für die $T_1$-Werte erreicht werden, die Flanken unterscheiden sich jedoch deutlich. Die Abweichungen der FWHM-Werten und der Schwerpunkte sind mit einem Faktor von etwa 4 bzw. etwa 2 bedeutend.
-\begin{figure}[htbp]
-	% \includegraphics[width=\textwidth]{graphics/zwischenbericht/J_fertig.pdf}
-	\caption{Vergleich der $T_1$-, FWHM- und Schwerpunkts-Daten (in blau) und der angepassten Theoriekurven (in orange). \label{fig:triple_vergleich}}
-\end{figure}
 
 
 
 
-Aus diesem Grund jedoch soll für die Spektraldichten $J_{CC}$ und $J_{CD}$ die FWHM-Werte zunächst nicht betrachtet werden. Gleiches gilt für den Schwerpunkt, da die entsprechenden Imaginärteile der Spektraldichten, $Q_{CC}$ und $Q_{CD}$, nicht zur Verfügung stehen.
+
+
 
 Für die Parameter $C_Q = \SI{2.85e6}{Hz}$, $\tau_c = \SI{7e-15}{s}$ und $\alpha = \SI{0.38}{}$ kann mit der Spektraldichte $J_{CC}$ in diesem Temperaturbereich eine noch bessere Übereinstimmung zu den $T_1$-Daten erzielt werden, für die Parameter $C_Q = \SI{2.7e6}{Hz}$, $\tau_c = \SI{4.4e-14}{s}$ und $\gamma = \SI{0.66}{}$ erreicht die Spektraldichte $J_{CD}$ eine leicht bessere Übereinstimmung als die Spektraldichte $J$; die entsprechenden Plots sind in Abbildung \ref{fig:j_cc_j_cd} zu finden.
 \begin{figure}[H]
