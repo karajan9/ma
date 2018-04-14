@@ -238,36 +238,6 @@ Auch hier ist einschränkend zu sagen, dass die Werte der Schwerpunkte aufgrund 
 
 
 
-********************************************************************
-
-
-
-
-Führt man zunächst einen Vergleich der Halbwertsbreiten mit der Theorie durch, lässt sich leicht feststellen, dass signifikante Unterschiede zu beobachten sind: Die gemessenen Halbwertsbreiten sind ab $\SI{360}{\kelvin}$ aufwärts deutlich größer als vorhergesagt. Dies liegt am Einfluss des kurzen $T_1$, welches mit der zusätzlich Relaxation zur Verbreiterung des Spektrums beiträgt.
-
-Um einen Vergleich mit der Theorie dennoch durchführen zu können, wurde versucht den Einfluss von $T_1$ rechnerisch zu eliminieren. Im Bereich des Einflusses lassen sich die Spektren gut mit einem Lorentz-Fit (vgl. Gleichung \eqref{eqn:res:lorentz}) näheren. Die Fouriertransformierte hiervon ist eine gedämpfte Schwingung mit der Halbwertsbreite $2 \gamma = a/\pi$:
-\begin{align}
-	h(t) &= \exp{(-a |t|)} \cos{(2 \pi f_0 t)}      \\
-	H(t) &= \int_{-\infty}^{\infty} h(t) \text{d} t \\
-	H(f) &= \frac{2}{a} \cdot \frac{(a/2\pi)^2}{((a/2\pi)^2) + (f - f_0)^2}
-\end{align}
-
-Diese gedämpfte Schwingung soll durch eine normierte Kohlrausch-Funktion, welche für Fits an $T_1$ verwendet werden kann, geteilt werden.
-\begin{align}
-	f(t) = \exp{\left( {\left(\frac{-t}{T_1} \right)}^\beta \right) }
-\end{align}
-Hier wird $\beta = 1$ angenommen, was in der Regel eine annehmbare Näherung darstellt. Wird der Quotient der Funktionen zurück in den Frequenzraum transformiert, ergibt sich die modifizierte Halbwertsbreite $2\gamma = 2(f_0 - \frac{1}{\pi T_1})$.
-
-Dies bedeutet, dass für die Korrektur lediglich die schon vorliegenden Halbwertsbreiten mit $T_1$-Werten der passenden Temperatur modifiziert werden müssen. Diese wurden aus den durchgeführten $T_1$-Messungen gewonnen. Die Ergebnisse sind in Abbildung \ref{fig:res:spek_fwhm_t1} zu sehen.
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/SPEK/spek_t1korr.pdf}
-	\end{center}
-	\caption{Spektren FWHM mit $T_1$-Korrektur} \label{fig:res:spek_fwhm_t1}
-\end{figure}
-Es ist zu erkennen, dass $T_1$ einen großen Einfluss auf die Halbwertsbreite hat und die entsprechend angepassten Halbwertsbreiten deutlich geringere Werte aufweisen. Bei Temperaturen über $\SI{410}{\kelvin}$ konnte keine Korrektur vorgenommen werden, weil die $T_1$-Werte in diesem Temperaturbereich zu stark streuen um aussagekräfige Daten zu produzieren.
-
-
 
 
 
@@ -282,67 +252,45 @@ Es ist zu erkennen, dass $T_1$ einen großen Einfluss auf die Halbwertsbreite ha
 
 
 
+% \begin{figure}
+% 	\begin{center}
+% 		\includegraphics[width=\textwidth]{graphics/plots/THEO/J_01.pdf}
+% 	\end{center}
+% 	\caption{Spektraldichte $J$} \label{fig:res:theorie_j}
+% \end{figure}
+% Es werden verschiedene Spektraldichten verwendet, hier zuerst BPP. $\tau_c$ stammt aus dem 4er-Papier.
 
 
 
+% \begin{figure}
+% 	\begin{center}
+% 		\includegraphics[width=\textwidth]{graphics/plots/THEO/J_cc_02.pdf}
+% 	\end{center}
+% 	\caption{Spektraldichte $J_{CC}$} \label{fig:res:theorie_j_cc}
+% \end{figure}
 
-Die experimentellen Ergebnisse sollen mit den theoretischen Überlegungen vergleichen werden.
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/THEO/J_01.pdf}
-	\end{center}
-	\caption{Spektraldichte $J$} \label{fig:res:theorie_j}
-\end{figure}
-Es werden verschiedene Spektraldichten verwendet, hier zuerst BPP. $\tau_c$ stammt aus dem 4er-Papier.
-
-Für $C_Q = \SI{3.45}{MHz}$ gibt es eine gute Übereinstimmung für die $T_1$-bereinigte Halbwertsbreite und den Schwerpunkt, bei $T_1$ stimmt die grobe Form, bei den Flanken gibt es starke Abweichungen.
-
-Mit $J_{CC}$ lässt sich mit $C_Q = \SI{3.65}{MHz}$ und $\alpha = 0.64$ $T_1$ gut abbilden, aber es gibt große Abweichungen bei der Halbwertsbreite. 
-
-$J_{DC}$ ist mit $C_Q = \SI{3.2}{MHz}$ und $\gamma = 1.12$ ein Kompromiss in die andere Richtung, Schwerpunkt und Halbwertsbreite scheinen zu passen, aber bei $T_1$ gibt es wieder Abweichungen. 
-
-Bei den Schwerpunkten von $J_{CC}$ und $J_{DC}$ ist noch zu klären, ob die verwendete Funktion für den Imaginärteil der Spektraldichte korrekt ist.
-
-Alle drei Spektraldichten zeigen zwar gute, aber keine perfekten Übereinstimmungen mit den experimentellen Daten.
-
-
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/THEO/J_cc_02.pdf}
-	\end{center}
-	\caption{Spektraldichte $J_{CC}$} \label{fig:res:theorie_j_cc}
-\end{figure}
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/THEO/J_dc_01.pdf}
-	\end{center}
-	\caption{Spektraldichte $J_{DC}$} \label{fig:res:theorie_j_dc}
-\end{figure}
+% \begin{figure}
+% 	\begin{center}
+% 		\includegraphics[width=\textwidth]{graphics/plots/THEO/J_dc_01.pdf}
+% 	\end{center}
+% 	\caption{Spektraldichte $J_{DC}$} \label{fig:res:theorie_j_dc}
+% \end{figure}
 
 
 
 
 
 
+Die experimentellen Ergebnisse sollen mit den theoretischen Überlegungen vergleichen werden. Dazu wurden die in Kapitel \ref{section:theo:eckert} beschriebenen Funktionen für $T_1$, Halbwertsbreite und Schwerpunkt verwendet. Um eine Übereinstimmung zur Theorie feststellen zu können, müssen sich alle Datensätze mit dem gleichen Satz geteilter Parameter beschreiben lassen. Im Falle der Spektraldichte $J(\omega)$ ist dies $C_Q$; für $J_{CC}$ und $J_{CD}$ sind $\alpha$ bzw. $\gamma$ zusätzliche Parameter.
 
 
-
-\section{Theoretische Beschreibung experimenteller CRN-Daten} \label{section:theo:daten}
-
-
-Es wurde untersucht, ob vorliegende gemessenen Daten mit den beschriebenen Theorien in Einklang gebracht werden können. Dafür wurden die Daten zu $T_1$, zu Spektren untersucht; die $T_1$-Daten stammen dabei aus Messungen von C. Zürn \cite{zuern_paper} an einer 2Ca(NO$_3$)$_2$-3RbNO$_3$-Probe, während alle weiteren Daten mit der von Zürn verwendeten Probe im Rahmen dieser Masterarbeit aufgenommen wurden.
-
-Um eine Übereinstimmung zur Theorie feststellen zu können, müssen sich alle Datensätze mit dem gleichen Satz geteilter Parameter beschreiben lassen. Im Falle der Spektraldichte $J(\omega)$ sind dies $C_Q$ und $\tau_{co}$; für $J_{CC}$ und $J_{CD}$ sind $\alpha$ bzw. $\gamma$ zusätzliche Parameter.
-
-Nach \cite{PIMENOV199793} wird für CRN für die Korrelationszeit ein Vogel-Fulcher-Gesetz
+Nach \cite{PIMENOV199793} wird für CRN für die Korrelationszeit $\tau_c$ der Spektraldichten ein Vogel-Fulcher-Gesetz
 \begin{align}
-	\tau_c = \tau_{co} \exp \left( \frac{D T_\text{VF}}{T-T_\text{VF}} \right) 
+	\tau_c = \tau_{co} \exp \left( \frac{D T_\text{VF}}{T-T_\text{VF}} \right)
 \end{align}
-mit dem strength index $D = \SI{3.5}{}$, der Vogel-Fulcher-Temperatur $T_\text{VF} = \SI{294}{K}$ und dem Frequenzfaktor $\tau_{co} = \SI{5.1e-14}{s}$ (der beim Vergleich mit den Daten dennoch als freier Parameter angesehen werden soll um dem Fit eine größtmögliche Flexibilität zu erlauben) angenommen.
+mit dem strength index $D = \SI{3.5}{}$, der Vogel-Fulcher-Temperatur $T_\text{VF} = \SI{294}{K}$ und dem Frequenzfaktor $\tau_{co} = \SI{5.1e-14}{s}$ angenommen. Diese Werte wurden durch *** bestimmt.
 
+Am $T_1$-Minimum nach Gleichung \eqref{eqn:bpp} gilt $\omega \tau_c \approx \SI{0.61}{}$ \cite[S. 629]{omegatau061}. Das $T_1$-Minimum kann in den Daten bei etwa $T_\text{min} = \SI{390}{K}$ gefunden werden; die Larmorfrequenz liegt bei $\omega_L / 2\pi = \SI{97.1722}{MHz}$, was bedeutet, dass bei $T_\text{min}$ gilt $\tau_c \approx \frac{\SI{0.61}{}}{\omega_L} \approx \SI{1.0}{\nano s}$. Vergleicht man das Vogel-Fulcher-Gesetz mit diesem Punkt, lässt sich erkennen, dass eine gute Übereinstimmung vorliegt.
 \begin{wrapfigure}{r}{0.5\textwidth}
 	\vspace{-20pt}
 	\begin{center}
@@ -351,10 +299,61 @@ mit dem strength index $D = \SI{3.5}{}$, der Vogel-Fulcher-Temperatur $T_\text{V
 	\vspace{-20pt}
 	\caption{Vergleich von Korrelationszeiten basierend auf Vogel-Fulcher-Gesetz \label{fig:korrelationszeiten}}
 \end{wrapfigure}
-Am $T_1$-Minimum nach Gleichung \eqref{eqn:bpp} gilt $\omega \tau_c \approx \SI{0.61}{}$ \cite[S. 629]{omegatau061}. Das $T_1$-Minimum kann in den Daten bei etwa $T_\text{min} = \SI{390}{K}$ gefunden werden; die Larmorfrequenz liegt bei $\omega_L = \SI{97.1722}{MHz}$, was bedeutet, dass bei $T_\text{min}$ gilt $\tau_c \approx \frac{\SI{0.61}{}}{\omega_L} \approx \SI{6.28}{\nano s}$. Vergleicht man das Vogel-Fulcher-Gesetz mit diesem Punkt, lässt sich erkennen, dass eine gute Übereinstimmung vorliegt.
+
+Ein Vergleich mit den Parametern $D = \SI{4.72}{}$, $T_\text{VF} = \SI{285}{K}$ und $\tau_{co} = \SI{1.15e-14}{s}$ nach *** ist in Abbildung *** zu sehen. Während leichte Unterschiede zu sehen sind, ändert sich das Gesamtbild wenig, weswegen sich diese Ausführungen auf den ersten Parametersatz beschränken.
 
 
-Die aufgenommenen Daten unterstützen eine biexponentielle Interpretation wie in \eqref{eqn:trans_relax} nur schwerlich, daher wurde lediglich der deutlich zu beobachtende Anteil des Zentralübergangs, $\Delta_c$ und $\omega_c^{(2)}$, für die entsprechenden FWHM- bzw. Schwerpunkts-Daten betrachtet. Für die $T_1$-Daten wird Formel \eqref{eqn:bpp} verwendet. Um einen Ausgangspunkt für die Analyse zu schaffen, wurden alle Fits per Hand erstellt, wobei durch das Ändern der Parameter versucht wurde eine möglichst gute Übereinstimmung zu erreichen.
+
+
+Führt man zunächst einen Vergleich der Halbwertsbreiten mit der Theorie durch, lässt sich leicht feststellen, dass signifikante Unterschiede zu beobachten sind: Die gemessenen Halbwertsbreiten sind ab $\SI{360}{\kelvin}$ aufwärts deutlich größer als vorhergesagt. Dies liegt am Einfluss des kurzen $T_1$ von etwa $\SI{50}{\micro s}$, welches mit der zusätzlich Relaxation zur Verbreiterung des Spektrums beiträgt.
+
+Um einen Vergleich mit der Theorie dennoch durchführen zu können, wurde versucht den Einfluss von $T_1$ rechnerisch zu eliminieren. Im Bereich des Einflusses lassen sich die Spektren gut mit einem Lorentz-Fit (vgl. Gleichung \eqref{eqn:res:lorentz}) näheren. Die Fouriertransformierte hiervon ist eine gedämpfte Schwingung mit der Halbwertsbreite $2 \gamma = a/\pi$:
+\begin{align}
+	h(t) & = \exp{(-a |t|)} \cos{(2 \pi f_0 t)}                              \\
+	H(t) & = \int_{-\infty}^{\infty} h(t) \text{d} t                         \\
+	H(f) & = \frac{2}{a} \cdot \frac{(a/2\pi)^2}{((a/2\pi)^2) + (f - f_0)^2}
+\end{align}
+
+Diese gedämpfte Schwingung soll durch eine normierte Kohlrausch-Funktion, welche für Fits an $T_1$ verwendet werden kann, geteilt werden.
+\begin{align}
+	f(t) = \exp{\left( {\left(\frac{-t}{T_1} \right)}^\beta \right) }
+\end{align}
+Für eine vereinfachte Rechnung wird hier wird $\beta = 1$ angenommen, was in der Regel eine annehmbare Näherung darstellt. Wird der Quotient der Funktionen zurück in den Frequenzraum transformiert, ergibt sich die modifizierte Halbwertsbreite $2\gamma = 2(\gamma_0 - \frac{1}{\pi T_1})$.
+
+Dies bedeutet, dass für die Korrektur lediglich die schon vorliegenden Halbwertsbreiten mit $T_1$-Werten der passenden Temperaturen modifiziert werden müssen. Diese wurden aus den durchgeführten $T_1$-Messungen gewonnen. Die Ergebnisse sind in Abbildung \ref{fig:res:spek_fwhm_t1} zu sehen.
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\textwidth]{graphics/plots/SPEK/spek_t1korr.pdf}
+	\end{center}
+	\caption{Spektren FWHM mit $T_1$-Korrektur} \label{fig:res:spek_fwhm_t1}
+\end{figure}
+
+Es ist zu erkennen, dass $T_1$ einen großen Einfluss auf die Halbwertsbreite hat und die entsprechend angepassten Halbwertsbreiten deutlich geringere Werte aufweisen. Bei Temperaturen über $\SI{410}{\kelvin}$ konnte keine Korrektur vorgenommen werden, weil die $T_1$-Werte in diesem Temperaturbereich zu stark streuen um aussagekräfige Daten zu produzieren.
+
+
+
+
+
+
+Es wurden die am OBI- und am Bruker-Spektrometer aufgenommenen Daten getrennt untersucht, da durch die unterschiedlichen Larmorfrequenzen abweichende Ergebnisse der theoretischen Kurven zu erwarten sind. Bei den Halbwertsbreiten wurde der $T_1$-Einfluss nach der beschriebenen Methode berücksichtigt.
+
+
+
+Die aufgenommenen Spektren unterstützen eine biexponentielle Interpretation wie in \eqref{eqn:trans_relax} nur schwerlich, daher wurde lediglich der deutlich zu beobachtende Anteil des Zentralübergangs, $\Delta_c$ und $\omega_c^{(2)}$, für die entsprechenden FWHM- bzw. Schwerpunkts-Daten betrachtet. Für die $T_1$-Daten wird Formel \eqref{eqn:bpp} verwendet. Alle Fits wurden manuell erstellt.
+
+
+
+
+
+********************************************************************
+
+
+\section{Theoretische Beschreibung experimenteller CRN-Daten} \label{section:theo:daten}
+
+
+
+
+
 
 Für die Spektraldichte $J(\omega)$ kann, wie in Abbildung \ref{fig:triple_vergleich} zu sehen, mit $\eta^2 = 42 - 24 \sqrt{3} \approx \SI{0.43}{}$ \cite{caer} und den Parametern $C_Q = \SI{3e6}{Hz}$ und $\tau_c = \SI{3.9e-14}{s}$ eine vergleichsweise gute Übereinstimmung für die $T_1$-Werte erreicht werden, die Flanken unterscheiden sich jedoch deutlich. Die Abweichungen der FWHM-Werten und der Schwerpunkte sind mit einem Faktor von etwa 4 bzw. etwa 2 bedeutend.
 \begin{figure}[htbp]
@@ -362,7 +361,8 @@ Für die Spektraldichte $J(\omega)$ kann, wie in Abbildung \ref{fig:triple_vergl
 	\caption{Vergleich der $T_1$-, FWHM- und Schwerpunkts-Daten (in blau) und der angepassten Theoriekurven (in orange). \label{fig:triple_vergleich}}
 \end{figure}
 
-Eine mögliche Erklärung für die Abweichung der FWHM-Werte könnte sein, dass in diesem Fall nicht, wie nach Formel \eqref{eqn:fwhm}, nur $T_2$, sondern auch das bei Temperaturen um $\SI{400}{K}$ mit etwa $\SI{50}{\micro s}$ äußerst kurze $T_1$ zur Verbreiterung des Spektrums und damit zu dessen FWHM-Werten beiträgt. Erste Versuche, den Effekt der $T_1$-Relaxation aus dem Spektrum herauszurechnen, scheinen vielversprechend. Für die Abweichungen der Schwerpunkts-Daten von der Theorie steht eine entsprechende Erklärung noch aus.
+
+
 
 Aus diesem Grund jedoch soll für die Spektraldichten $J_{CC}$ und $J_{CD}$ die FWHM-Werte zunächst nicht betrachtet werden. Gleiches gilt für den Schwerpunkt, da die entsprechenden Imaginärteile der Spektraldichten, $Q_{CC}$ und $Q_{CD}$, nicht zur Verfügung stehen.
 
@@ -380,8 +380,6 @@ Für die Parameter $C_Q = \SI{2.85e6}{Hz}$, $\tau_c = \SI{7e-15}{s}$ und $\alpha
 	\caption{Spektraldichten $J_{CC}$ (links) und $J_{CD}$ (rechts), angepasst an die Daten}
 	\label{fig:j_cc_j_cd}
 \end{figure}
-
-Die nächsten Schritte in dieser Untersuchung sollen darin bestehen, die Auswirkungen der $T_1$-Relaxation auf die Spektrums-Breite zu bestimmen und schlussendlich zu ergründen, ob sich die Messdaten sich mit diesen Theorien zufriedenstellend erklären lassen.
 
 
 
