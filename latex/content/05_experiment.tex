@@ -1,88 +1,92 @@
 \chapter{Experimentelle Resultate und Analysen}
 \label{chapter:experiment}
 
-Alle Fits werden durch eine least-squares-Methode erstellt. ***
+Im Folgenden sollen die im Rahmen dieser Arbeit aufgenommenen Daten vorgestellt und ausgewertet werden. Dabei lassen sich diese in zwei separate Bemühungen unterteilen. Zum einen wurden Untersuchungen zur Dynamik in CRN angestellt, welche zuerst präsentiert werden sollen, zum anderen wurde die Linienformänderungen in Abhängigkeit der Temperatur untersucht und mit theoretischen Überlegungen verglichen.
 
-\section{$T_1$} \label{section:res:T_1}
+Im Verlauf der Auswertung werden die Daten teil nach dem verwendeten Spektrometer unterschieden. Dies liegt an der unterschiedlichen Larmorfrequenzen, $\omega_{L, \text{OBI}} = 2\pi \cdot \SI{97.1722}{MHz}$ im Vergleich zu $\omega_{L, \text{Bruker}} = 2\pi \cdot \SI{130.9736}{MHz}$ der Apparaturen, welche sich um etwa einen Faktor $\SI{1.35}{}$ unterscheiden -- genug um eine deutliche Auswirkung in den Daten beobachten zu können.
 
-Vor dem Beginn jeder NMR-Messung ist es sinnvoll, $T_1$ im zu untersuchenden Temperaturgebiet zu vermessen. Dies ist hilfreich um wichtige Parameter der Messungen abzustecken und mögliche Hindernisse im Vorhinein erahnen zu können. So sollte zwischen allen Messungen eine Zeit von mindestens $4 T_1$ gewartet werden, um sicherzugehen, dass sich die Magnetisierung in guter Näherung wieder im Gleichgewichtszustand befindet. Wird $T_1$ also im Laufe der Messung bei anderen Temperaturen länger, muss hierauf Rücksicht genommen werden. Wird $T_1$ auf der anderen Seite sehr kurz, kann es passieren, dass Signale sehr schnell zerfallen und den Experimentierenden mit einem schlechten Signal-Rausch-Verhältnis zurücklassen. Hinzu kommt, dass der Verlauf von $T_1$ nach Formel *** wertvolle Information über die Dynamik in der untersuchten Probe liefern kann. Zuletzt bietet diese recht einfache und reproduzierbare Messung die Möglichkeit, den Aufbau und die Probe auf Übereinstimmung mit Literaturdaten hin zu überprüfen. Daher wurden zu allen untersuchten Temperaturen $T_1$-Messungen aufgenommen.
+Bei beiden Spektrometern wurden für die grundlegenden Parameter bei allen Messungen etwa die gleichen Einstellungen verwendet: Für das OBI-Spektrometer wurde die Dauer eines $\SI{180}{\degree}$-Pulses auf einen Wert zwischen $\SI{6.5}{\micro s}$ und $\SI{7.1}{\micro s}$ gesetzt, beim Bruker-Spektrometer auf $\SI{5.2}{\micro s}$. Die Evolutionszeit $t_p$ der Echos beträgt in den meisten Fällen $\SI{15}{\micro s}$ und nie mehr als $\SI{20}{\micro s}$. Die Wiederholungszeit, also die Zeit zwischen zwei Pulsfolgen beträgt etwa $\SI{10}{\milli s}$. Der mit dem OBI-Spektrometer abgedeckte Temperaturbereich reicht von $\SI{230}{\kelvin}$ bis $\SI{435}{\kelvin}$, während sich der Temperaturbereich des Bruker-Spektrometers auf den Bereich von $\SI{310}{\kelvin}$ bis $\SI{390}{\kelvin}$ beschränkt.
 
-Zur Bestimmung von $T_1$ wurde eine Invertierungs-Pulsfolge mit Hahn-Echo verwendet. Dabei war die Evolutionszeit $t_p = \SI{15}{\micro s}$.
-
-Aufgenommen am OBI ($\SI{300}{MHz}$) mit Länge eines Pi-Pulses $\tau = \SI{7.6}{\micro s}$. Larmorfrequenz überall $\omega_L = 2 \pi \cdot \SI{97.1722}{MHz}$, sofern nicht anders notiert. ***
-
-Aufgenommen am Bruker ***  Neben dem $\SI{300}{MHz}$-Spektrometer wurden auch einige Messungen an einem $\SI{400}{MHz}$ Spektrometer von Bruker durchgeführt.
+Alle erwähnten Fits wurden durch eine least-squares-Methode erstellt.
 
 
-Repräsentative Rohdaten einer solchen Messung sind in Abbildung \ref{fig:res:T_1_roh} zu sehen. An die Daten wurden Fits mit $T_1$ und $\beta$ als freien Parametern entsprechend Gleichung \eqref{eqn:theo:T_2_fit} angelegt -- diese sind als Linien dargestellt. Die Daten wurden hier zudem auf den Bereich zwischen $1$ und $-1$ normiert, um einen besseren Vergleich zuzulassen. Es ist zu erkennen, dass die Fits eine gute Repräsentation der Daten ermöglichen.
+\section{Bestimmung von $T_1$ und $T_2$} \label{section:res:T_1}
+
+Vor dem Beginn jeder NMR-Messung ist es sinnvoll, $T_1$ im zu untersuchenden Temperaturgebiet zu vermessen. Dies ist hilfreich um wichtige Parameter der Messungen abzustecken und mögliche Hindernisse im Vorhinein erahnen zu können. So sollte zwischen allen Messungen eine Zeit von mindestens $4 T_1$ gewartet werden, um sicherzugehen, dass sich die Magnetisierung in guter Näherung wieder im Gleichgewichtszustand befindet. Wird $T_1$ also im Laufe der Messung bei anderen Temperaturen länger, muss hierauf Rücksicht genommen werden. Wird $T_1$ auf der anderen Seite sehr kurz, kann es passieren, dass Signale sehr schnell zerfallen und den Experimentierenden mit einem schlechten Signal-Rausch-Verhältnis zurücklassen. Hinzu kommt, dass der Verlauf von $T_1$ nach Formel \eqref{eqn:bpp} wertvolle Information über die Dynamik in der untersuchten Probe liefern kann. Zuletzt bietet diese recht einfache und reproduzierbare Messung die Möglichkeit, den Aufbau und die Probe auf Übereinstimmung mit Literaturdaten hin zu überprüfen. Daher wurden zu allen untersuchten Temperaturen $T_1$-Messungen aufgenommen.
+
+Zur Bestimmung von $T_1$ wurde eine Invertierungs-Pulsfolge mit Hahn-Echo verwendet.
+
+Repräsentative Rohdaten einer solchen Messung sind in Abbildung \ref{fig:res:T_1_roh} zu sehen. An die Daten wurden Fits mit $T_1$ und $\beta$ als freien Parametern entsprechend Gleichung \eqref{eqn:theo:T_1_fit} angelegt -- diese sind als Linien dargestellt. Die Daten wurden hier zudem auf den Bereich zwischen $1$ und $-1$ normiert, um einen besseren Vergleich zuzulassen. Es ist zu erkennen, dass die Fits eine gute Repräsentation der Daten ermöglichen.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plots/T1/t1_roh.pdf}
 	\end{center}
-	\caption{$T_1$ Rohdaten} \label{fig:res:T_1_roh}
+	\caption{Normierte $T_1$ Rohdaten. Linien stellen Fits an die Datenpunkte dar.} \label{fig:res:T_1_roh}
 \end{figure}
+
 Während sich die Kurven zwischen $\SI{305}{\kelvin}$ und $\SI{325}{\kelvin}$ sehr ähneln, verschieben sich die Kurven und damit auch die $T_1$-Werte bei höheren Temperaturen zu kürzeren Zeiten.
 
-Dies lässt sich auch in der Gesamtübersicht aller aufgenommenen $T_1$-Daten in Abbildung \ref{fig:res:T_1} erkennen. Während die $T_1$-Zeiten bei Temperaturen von $\SI{250}{\kelvin}$ bis $\SI{325}{\kelvin}$ nahezu unverändert im unteren Millisekunden-Bereich liegen, verkürzen sie sich bei steigenden Temperaturen bis in den zweistelligen Mikrosekunden-Bereich. Es ist ein $T_1$-Minimum bei etwa $\SI{390}{\kelvin}$ auszumachen, ehe die $T_1$-Zeiten stagnieren oder sogar länger werden.
+Dies lässt sich auch in der Gesamtübersicht aller aufgenommenen $T_1$-Daten in Abbildung \ref{fig:res:T_1} erkennen. Während die $T_1$-Zeiten bei Temperaturen von $\SI{250}{\kelvin}$ bis $\SI{325}{\kelvin}$ nahezu unverändert im unteren Millisekunden-Bereich liegen, verkürzen sie sich bei steigenden Temperaturen bis in den zweistelligen Mikrosekunden-Bereich. Es ist ein $T_1$-Minimum bei etwa $\SI{390}{\kelvin}$ mit einem Wert von ungefähr $\SI{20}{\micro s}$ auszumachen, ehe die $T_1$-Zeiten stagnieren oder sogar länger werden.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plot/t1.pdf}
 	\end{center}
-	\caption{$T_1$ aus Fits nach Gleichung \eqref{eqn:theo:T_1_fit}. Unterschiedliche Farben indizieren hierbei gesonderte Messreihen; gelbe Punkte bieten einen Vergleich mit Daten von Zürn.} \label{fig:res:T_1}
+	\caption{$T_1$ und $\beta$ aus Fits nach Gleichung \eqref{eqn:theo:T_1_fit}. Blaue und rote Symbole indizieren die am OBI- bzw. Bruker-Spektrometer aufgenommen Daten; orangene Kreuze bieten einen Vergleich mit Daten von Zürn \cite{zuern_paper}.} \label{fig:res:T_1}
 \end{figure}
-Während die Unsicherheiten weitestgehend vernachlässigbar sind, sind starke Schwankungen über $\SI{390}{\kelvin}$ zu erkennen. Die dort aufgenommenen Daten kann nicht mehr Bedeutung als einer groben Idee der Tatsachen zugemessen werden.
 
-Abgesehen von dem erwähnten Temperaturbereich ist eine gute Übereinstimmung zu den $T_1$-Daten von Zürn \cite{zuern_paper} und zwischen Messungen mit überlappenden Temperaturbereichen zu erkennen, was darauf schließen lässt, dass diese Daten gut reproduzierbar sind. Die am Bruker-Spektrometer aufgenommenen Daten folgen dem gleichen Verlauf und zeigen bis auf den Temperaturbereich zwischen $\SI{360}{\kelvin}$ und $\SI{390}{\kelvin}$ keinen nennenswerte Differenzen; dort aber sind die gemessenen $T_1$-Daten zu leicht längeren Zeiten verschoben.
+Während die Unsicherheiten weitestgehend vernachlässigbar sind und die größe der dargestellten Symbole nicht überschreiten, sind starke Schwankungen über $\SI{390}{\kelvin}$ zu erkennen. Einem Großteil der dort aufgenommenen Daten kann nicht mehr Bedeutung als einer groben Idee der Tatsachen zugemessen werden.
+
+Abgesehen von dem erwähnten Temperaturbereich ist eine gute Übereinstimmung zu den $T_1$-Daten von Zürn \cite{zuern_paper} und zwischen mehrfach durchgeführten Messungen mit überlappenden Temperaturbereichen zu erkennen, was darauf schließen lässt, dass diese Daten gut reproduzierbar sind. Die am Bruker-Spektrometer aufgenommenen Daten folgen dem gleichen, beschriebenen Verlauf und zeigen bis auf den Temperaturbereich zwischen $\SI{360}{\kelvin}$ und $\SI{390}{\kelvin}$ keinen nennenswerte Differenzen; dort aber sind die gemessenen $T_1$-Daten zu leicht längeren Zeiten verschoben. Der Quotient der $T_1$-Zeiten überschreitet den Wert $\SI{2}{}$ jedoch nicht.
 
 Im oberen Teil der Abbildung \ref{fig:res:T_1} sind die entsprechenden $\beta$ der Fits zu sehen. Von einem Wert von $\SI{0.6}{}$ bei tieferen Temperaturen steigen sie zu einem Wert von etwa $\SI{0.9}{}$ bei Temperaturen über $\SI{350}{\kelvin}$. Dies entspricht etwa den Ergebnissen von Zürn.
 
-Abweichungen gibt es lediglich bei den höheren Temperaturen, wo ein $\beta$ laut \cite{zuern_paper} nahe $\SI{1.0}{}$ liegt, allerdings mit größeren Messunsicherheiten, welche auch hier bei Temperaturen über $\SI{350}{\kelvin}$ zu beobachten sind. Werte über $\SI{390}{\kelvin}$ wurden ausgelassen, da die Messunsicherheiten zu groß waren, als dass den Werten eine Aussage zugestanden werden könnte. Diese stammen daher, dass mit den verwendeten Apparaturen nicht verlässlich Datenpunkte vor $\SI{10}{\micro s}$ aufgenommen werden können. Wenn die $T_1$ Zeit aber in der gleichen Größenordnung liegt und zum Zeitpunkt des $T_1$-Werts das Signal auf etwa $1/e$ abgefallen ist, ist es verständlich, dass ein Fit Schwierigkeiten bereiten kann. Lösen ließe sich dies theoretisch mit einer längeren Evolutionszeit des verwendeten Echos, dies ist aufgrund der kurzen $T_1$- und $T_2$-Zeiten in diesem Temperaturbereich jedoch nicht möglich -- das entstehende Signal ist zu klein um effektiv vom Rauschen getrennt zu werden.
+Abweichungen gibt es lediglich bei den höheren Temperaturen, wo $\beta$ laut \cite{zuern_paper} nahe $\SI{1.0}{}$ liegt -- welches hier nicht ganz erreicht wird --, allerdings mit größeren Messunsicherheiten, welche auch hier bei Temperaturen über $\SI{350}{\kelvin}$ zu beobachten sind. Werte über $\SI{390}{\kelvin}$ wurden ausgelassen, da die Messunsicherheiten zu groß waren, als dass den Werten eine Aussage zugestanden werden könnte. Diese stammen daher, dass mit den verwendeten Apparaturen nicht verlässlich Datenpunkte vor $\SI{10}{\micro s}$ aufgenommen werden können. Wenn die $T_1$ Zeit aber in der gleichen Größenordnung liegt und zum Zeitpunkt des $T_1$-Werts das Signal auf etwa $1/e$ abgefallen ist, ist es verständlich, dass ein Fit Schwierigkeiten bereiten kann. Lösen ließe sich dies theoretisch mit einer längeren Evolutionszeit des verwendeten Echos, dies ist aufgrund der kurzen $T_1$- und $T_2$-Zeiten in diesem Temperaturbereich jedoch nicht möglich -- das entstehende Signal ist zu klein um effektiv vom Rauschen getrennt zu werden.
 
-Dennoch ist auffällig, dass trotz der Unsicherheiten von $\beta$ eine relativ gute Übereinstimmung mit den Daten von Zürn vorliegt -- auch von zwei Messreihen zwischen $\SI{315}{\kelvin}$ und $\SI{340}{\kelvin}$ produzierte $\beta$ mit einer Differenz von etwa $\SI{0.1}{}$, sind die entsprechenden $T_1$ in Übereinstimmung miteinander und mit der Literatur. Insofern ist fraglich, welche Aussagekraft den exakten Werten von $\beta$ zugemessen werden kann.
+Dennoch ist auffällig, dass trotz der Unsicherheiten von $\beta$ eine relativ gute Übereinstimmung mit den Daten von Zürn vorliegt -- auch von zwei Messreihen zwischen $\SI{315}{\kelvin}$ und $\SI{340}{\kelvin}$ produzierte $\beta$ mit einer Differenz von etwa $\SI{0.1}{}$, sind die entsprechenden $T_1$ in Übereinstimmung miteinander und mit der Literatur. Dies gibt ein Indiz,welche Aussagekraft den exakten Werten von $\beta$ zugemessen werden kann.
 
-Die Unsicherheiten der mit dem Bruker-Spektrometer bestimmten $\beta$ ist vergleichsweise gering. Dies ist mit der höheren Qualität der Daten (besonders auch in Abbildung \ref{fig:res:bruker_linienform} zu erkennen) und den niedrigeren $T_1$-Werten zu erklären.
+Die Unsicherheiten der mit dem Bruker-Spektrometer bestimmten $\beta$ ist vergleichsweise gering. Dies ist mit der höheren Qualität der Daten (besonders auch in Abbildung \ref{fig:res:bruker_linienform} im Vergleich zu \ref{fig:res:spek_linienform} zu erkennen) und den niedrigeren $T_1$-Werten zu erklären.
 
 
 
-\section{$T_2$} \label{section:res:T_2}
+% \section{$T_2$} \label{section:res:T_2}
+\par\bigskip
 
-Ähnlich wie $T_1$ ist auch $T_2$ eine wichtige Größe, die Parameter für folgende Messungen bestimmen, oder Aufschluss über Dynamiken geben kann. Die praktikablen Längen von Echos werden von $T_2$ begrenzt. ***
+
+Ähnlich wie $T_1$ ist auch $T_2$ eine wichtige Größe, die Parameter für folgende Messungen bestimmen kann -- die praktikablen Längen von Echos werden von $T_2$ begrenzt --, oder nach Formel \eqref{eqn:theo:T_2_dyn} Aufschluss über Dynamiken gibt.
 
 In Abbildung \ref{fig:res:T_2_roh} sind exemplarisch Rohdaten verschiedener Temperaturen zu sehen. Diese wurden mit einem Hahn-Echo mit $\tau = \SI{15}{\micro s}$ aufgenommen und auf den Bereich zwischen $\SI{0}{}$ und $\SI{1}{}$ normiert.
-
-Bruker *** 
-
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plots/T2/t2_roh.pdf}
 	\end{center}
-	\caption{$T_2$ Rohdaten} \label{fig:res:T_2_roh}
+	\caption{Normierte $T_2$ Rohdaten. Linien stellen Fits an die Datenpunkte dar.} \label{fig:res:T_2_roh}
 \end{figure}
 
 An diese wurden Fit-Funktionen nach \eqref{eqn:theo:T_2_fit} angelegt, welche als Linien dargestellt sind. Es lässt sich mit den Fits eine gute Übereinstimmung zu den Daten erzielen. Auch hier lässt sich erkennen, dass $T_2$ bei Temperaturen bis etwa $\SI{320}{\kelvin}$ nahezu konstant verbleibt, und zu hoheren Temperaturen kleiner wird.
 
-Abbildung \label{fig:res:T_2} zeigt eine Übersicht über die aufgenommen $T_2$-Werte mit den zugehörigen $\beta$ der Fits. Unter $\SI{320}{\kelvin}$ verbleiben erstere im niedrigen Millisekunden-Bereich, ehe sie deutlich kürzer werden und sich bei etwa $\SI{360}{\kelvin}$ ein Minimum zeigt. Die Werte des Bruker-Spektrometers sind hiermit in guter Übereinstimmung, wobei wiederum festzuhalten ist, dass die Messunsicherheiten geringer sind. Ein zweites Minimum zeigt sich bei etwa $\SI{400}{\kelvin}$, das, ebenso wie das erste, im zweistelligen Mikrosekunden-Bereich liegt. Zwischen $\SI{400}{\kelvin}$ und $\SI{410}{\kelvin}$ ist zu erkennen, dass -- wohl durch die Kürze von $T_2$ bei diesen Temperaturen -- deutlich größere Unsicherheiten als im Rest der Messreihe vorliegen, wo sie in guter Näherung vernachlässigbar sind. 
+Abbildung \label{fig:res:T_2} zeigt eine Übersicht über die aufgenommen $T_2$-Werte mit den zugehörigen $\beta$ der Fits. Unter $\SI{320}{\kelvin}$ verbleiben erstere im niedrigen Millisekunden-Bereich, ehe sie deutlich kürzer werden und sich bei etwa $\SI{360}{\kelvin}$ ein Minimum zeigt. Die Werte des Bruker-Spektrometers sind hiermit in guter Übereinstimmung, wobei wiederum festzuhalten ist, dass die Messunsicherheiten geringer sind. Ein zweites Minimum zeigt sich bei etwa $\SI{400}{\kelvin}$, dessen Wert sich, ebenso wie der erste, im zweistelligen Mikrosekunden-Bereich befindet. Zwischen $\SI{400}{\kelvin}$ und $\SI{410}{\kelvin}$ ist zu erkennen, dass -- wohl durch die Kürze von $T_2$ bei diesen Temperaturen -- deutlich größere Unsicherheiten als im Rest der Messreihe vorliegen, wo sie in guter Näherung vernachlässigbar sind.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plot/t2.pdf}
 	\end{center}
-	\caption{$T_2$ gegen Temperatur} \label{fig:res:T_2}
+	\caption{$T_2$ und $\beta$ aus Fits nach Gleichung \eqref{eqn:theo:T_2_fit}. Blaue und rote Symbole indizieren die am OBI- bzw. Bruker-Spektrometer aufgenommen Daten.} \label{fig:res:T_2}
 \end{figure}
-Auch die $\beta$-Werte zeigen bei höheren Temperaturen deutlich größere Unsicherheiten, hier allerdings schon zwischen $\SI{390}{\kelvin}$ und $\SI{425}{\kelvin}$, was eine Bestimmung der Werte verkompliziert. Sie scheinen zwischen $\SI{1}{}$ und $\SI{2}{}$ zu liegen. Bei tieferen Temperaturen klärt sich das Bild etwas: Während die Daten des OBI-Spektrometers ein $\beta$ zwischen $\SI{1}{}$ und $\SI{1.5}{}$ bei Temperaturen bis $\SI{350}{\kelvin}$ suggerieren, zeigen die Daten des Bruker-Spektrometers ein $\beta$ um $\SI{1}{}$ -- mit geringerer Unsicherheit. Bei nochmals tieferen Temperaturen scheint $\beta$ konsistent bei rund $\SI{1}{}$ zu liegen.
+
+Auch die $\beta$-Werte zeigen bei höheren Temperaturen deutlich größere Unsicherheiten, hier allerdings schon zwischen $\SI{390}{\kelvin}$ und $\SI{425}{\kelvin}$, was eine Bestimmung der Werte verkompliziert. Sie scheinen zwischen $\SI{1}{}$ und $\SI{2}{}$ zu liegen. Bei tieferen Temperaturen klärt sich das Bild etwas: Während die Daten des OBI-Spektrometers bei Temperaturen bis $\SI{350}{\kelvin}$ ein $\beta$ zwischen $\SI{1}{}$ und $\SI{1.5}{}$ suggerieren, zeigen die Daten des Bruker-Spektrometers ein $\beta$ um $\SI{1}{}$ -- mit geringerer Unsicherheit. Bei nochmals tieferen Temperaturen scheint $\beta$ konsistent bei rund $\SI{1}{}$ zu liegen.
 
 
 
 
-\section{$F_2$} \label{section:res:F_2}
+\section{Dynamik bei stimulierten Echos und $t_p$-abhängigen Spektren} \label{section:res:F_2}
 
-Mit der Absicht einen möglichen Betaprozess zu identifizieren, wurden $F_2$-Messungen, also stimulierte Echos, durchgeführt. Dazu wurden am Spektrometer OBI über eine Reihe von Temperaturen von $\SI{230}{\kelvin}$ bis $\SI{310}{\kelvin}$ und Evolutionszeiten von $\SI{50}{\micro s}$ bis $\SI{1000}{\micro s}$ Messungen durchgeführt. Es wurde eine Drei-Puls-Folge verwendet und sowohl C ***
+Mit der Absicht einen möglichen Betaprozess zu identifizieren, wurden $F_2$-Messungen, also stimulierte Echos, durchgeführt. Dazu wurden am Spektrometer OBI über eine Reihe von Temperaturen von $\SI{230}{\kelvin}$ bis $\SI{310}{\kelvin}$ und Evolutionszeiten von $\SI{50}{\micro s}$ bis $\SI{1000}{\micro s}$ Messungen durchgeführt. Es wurde eine Drei-Puls-Folge verwendet und so sowohl Cos-Cos- als auch Sin-Sin-Korrelation gemessen.
 
 Die meisten ähnelten der hier beispielhaft ausgewählten Messung bei $\SI{280}{\kelvin}$ und einer Evolutionszeit von $t_p = \SI{1000}{\micro s}$: Die Daten lassen sich schwerlich oder gar nicht von einer $T_1$-Kurve unterscheiden, die bei gleicher Temperatur aufgenommen wurde, wie in Abbildung \ref{fig:res:F_2_tieftemp} zu sehen. Es scheint daher nicht möglich, in diesem Temperaturbereich mit dieser Methode Aussagen über mögliche Dynamik treffen zu können.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plots/F2/f2_tieftemp.pdf}
 	\end{center}
-	\caption{$F_2$ bei tiefen Temperaturen} \label{fig:res:F_2_tieftemp}
+	\caption{$F_2$ Messungen bei $\SI{280}{\kelvin}$. Grüne Linie zeigt einen Fit an die Daten, schwarze Linie zeigt den Fit mit der Zeitkonstante und $\beta$ ersetzt durch $T_1$ und $\beta_{T_1}$. Die Kurven sind fast identisch, was heißt, dass die Kurven keine Dynamik außer $T_1$ zeigen.} \label{fig:res:F_2_tieftemp}
 \end{figure}
 
 Lediglich bei den Temperaturen $\SI{300}{\kelvin}$ und $\SI{310}{\kelvin}$, sowie $t_p = \SI{1000}{\micro s}$ konnte ein nennenswerter Unterschied zu reinen $T_1$-Kurven beobachtet werden; die entsprechenden Messungen sollen im Folgenden besprochen werden.
@@ -96,17 +100,17 @@ Dieser Fit stellt die grüne Kurve in Abbildung \ref{fig:res:F_2_fit} dar.
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plots/F2/f2_fits.pdf}
 	\end{center}
-	\caption{$F_2$ Fits} \label{fig:res:F_2_fit}
+	\caption{$F_2$ Messungen bei $\SI{310}{\kelvin}$. Grüne Linie zeigt einen Fit an die Daten, schwarze Linie zeigt den Fit mit der Zeitkonstante und $\beta$ ersetzt durch $T_1$ und $\beta_{T_1}$. Es ist ein deutlicher Unterschied zwischen den Kurven zu erkennen, was auf stattfindende Dynamik hinweist.} \label{fig:res:F_2_fit}
 \end{figure}
-Die Werte $F_2$ und $\beta_{F_2}$ wurden dann durch $T_1$ und $\beta_{T_1}$ einer $T_1$-Messung gleicher Temperatur ersetzt -- das Resultat ist als schwarze Kurve gezeigt. Dieses Vorgehen macht es möglich, die $T_1$-Kurve an die $F_2$-Daten anzupassen. Es wurden nun die Daten durch die angepasste $T_1$-Kurve um den entsprechenden Anteil zu eliminieren. Das Resultat ist in Abbildung \ref{fig:res:F_2_T_1} gezeigt.
+Die Werte $F_2$ und $\beta_{F_2}$ wurden dann durch $T_1$ und $\beta_{T_1}$ einer $T_1$-Messung gleicher Temperatur ersetzt -- das Resultat ist als schwarze Kurve gezeigt. Dieses Vorgehen macht es möglich, die $T_1$-Kurve an die $F_2$-Daten anzupassen. Es wurden nun die Daten durch die angepasste $T_1$-Kurve geteilt um den entsprechenden Anteil zu eliminieren. Das Resultat ist in Abbildung \ref{fig:res:F_2_T_1} gezeigt.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plots/F2/f2_fit.pdf}
 	\end{center}
-	\caption{$F_2$ geteilt durch Fit, 310K} \label{fig:res:F_2_T_1}
+	\caption{$F_2$-Daten bei $\SI{310}{\kelvin}$ geteilt durch mit $T_1$ und $\beta_{T_1}$ modifiziertem Fit. An die entstandenden Daten wurden Kohlrausch-Fits (dargestellt als Linien) angelegt um Zeitkonstanten zu gewinnen.} \label{fig:res:F_2_T_1}
 \end{figure}
-Da die Daten bei Mischzeiten von über Eine ähnliche Auswertung wurde durchgeführt, wobei anstatt der Halbwertsbreite die Amplitude bei einer bestimmten Frequenz (beispielsweise )
- stark streuen wurden sie nicht dargestellt. An verbleibenden Punkte wiederum kann ein Kohlrausch-Fit angelegt werden, um über den beschriebenen Umweg zu einer Funktion ähnlich der aus Formel *** zu gelangen.
+
+Da die Daten bei Mischzeiten von über $\SI{100}{\milli s}$ stark streuen wurden sie nicht dargestellt. An verbleibenden Punkte wiederum kann ein Kohlrausch-Fit angelegt werden, um über den beschriebenen Umweg zu einer Funktion ähnlich der aus Formel *** zu gelangen.
 
 Es wurden je zwei Messungen einer Cos-Cos-Pulsfolge und einer Sin-Sin-Pulsfolge bei $\SI{310}{\kelvin}$ durchgeführt, sowie je eine Messung bei $\SI{300}{\kelvin}$. Die Resultate finden sich in Tabelle \ref{tab:res:F_2}
 
@@ -127,49 +131,55 @@ Es ist zu erkennen, dass die Größen zwischen den zwei Durchläufen teils mehr 
 
 
 
-\section{Spektren Dynamik} \label{section:res:spekdyn}
+% \section{Spektren Dynamik} \label{section:res:spekdyn}
+\par\bigskip
 
-Eine weitere Untersuchung zu möglicher Dynamik wurde an der sich ändernden Linienform von pulslängenabhängigen Spektren durchgeführt. Die Details von CRN-Spektren sollen in einem späteren Abschnitt diskutiert werden.
 
-Es wurde beobachtet, dass Spektren die mit einem Hahn-Echo mit unterschiedlicher Evolutionszeit aufgenommen wurden, eine unterschiedliche Linienform zeigen. Die Halbwertsbreiten der normierten Spektren ist also evolutionszeitabhängig, und das bei verschiedenen Temperaturen in verschiedenen Maßen. Dies lässt sich in Abbildung \ref{fig:res:spekdyn_305K} im Vergleich mit Abbildung \ref{fig:res:spekdyn_325K} erkennen, wo pulslängenabhängige Spektren für die Temperaturen $\SI{305}{\kelvin}$ bzw. $\SI{325}{\kelvin}$ gezeigt sind.
+
+Eine weitere Untersuchung zu möglicher Dynamik wurde an der sich ändernden Linienform von pulslängenabhängigen Spektren durchgeführt. Die Details von CRN-Spektren sollen im späteren Abschnitt \ref{section:res:spektren} diskutiert werden.
+
+Es wurde beobachtet, dass Spektren, die mit einem Hahn-Echo mit unterschiedlicher Evolutionszeit aufgenommen wurden, eine unterschiedliche Linienform zeigen. Die Halbwertsbreiten der normierten Spektren ist also evolutionszeitabhängig, und das bei verschiedenen Temperaturen in verschiedenen Maßen. Dies lässt sich in Abbildung \ref{fig:res:spekdyn_305K} im Vergleich mit Abbildung \ref{fig:res:spekdyn_325K} erkennen, wo pulslängenabhängige Spektren für die Temperaturen $\SI{305}{\kelvin}$ bzw. $\SI{325}{\kelvin}$ gezeigt sind.
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/SPEKDYN/spekdyn_305K.pdf}
+		\includegraphics[width=.8\textwidth]{graphics/plots/SPEKDYN/spekdyn_305K.pdf}
 	\end{center}
-	\caption{Spektren Linienform($\tau$) 305K} \label{fig:res:spekdyn_305K}
+	\caption{Änderung der Linienform der Spektren bei $\SI{305}{\kelvin}$ in Abhängigkeit der Evolutionszeit $t_p$.} \label{fig:res:spekdyn_305K}
 \end{figure}
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=\textwidth]{graphics/plots/SPEKDYN/spekdyn_325K.pdf}
+		\includegraphics[width=.8\textwidth]{graphics/plots/SPEKDYN/spekdyn_325K.pdf}
 	\end{center}
-	\caption{Spektren Linienform($\tau$) 325K} \label{fig:res:spekdyn_325K}
+	\caption{Änderung der Linienform der Spektren bei $\SI{325}{\kelvin}$ in Abhängigkeit der Evolutionszeit $t_p$. Im Vergleich zu \ref{fig:res:spekdyn_305K} ist eine deutlich stärkere Verschmälerung zu hohen $t_p$ zu erkennen.} \label{fig:res:spekdyn_325K}
 \end{figure}
 Alle Spektren wurden mit dem OBI-Spektrometer aufgenommen; dabei wurde ein Hahn-Echo mit variabler Evolutionszeit verwendet und die Spektren mit $\SI{500}{Hz}$ apodisiert.
 
-Zur Untersuchung dieses Phänomens wurde für jede Temperatur die Halbwertsbreite gegen die Evolutionszeit $t_p$ aufgetragen. Da die Spektren bei hohen Pulslängen teils sehr verrauscht sind, wurden die aufgetragengen Evolutionszeiten auf $\SI{2}{\milli s}$ begrenzt. Da diese Daten wurden Kohlrausch-Fits angelegt, die, zusammen mit dem Daten, als durchgezogene Linien in Abbildung \ref{fig:res:spekdyn_fits} zu sehen sind.
+Zur Untersuchung dieses Phänomens wurde für jede Temperatur die Halbwertsbreite gegen die Evolutionszeit $t_p$ aufgetragen. Da die Spektren bei hohen Pulslängen teils sehr verrauscht sind, wurden die aufgetragengen Evolutionszeiten auf $\SI{2}{\milli s}$ begrenzt. An diese Daten wurden Kohlrausch-Fits angelegt, die als durchgezogene Linien, zusammen mit dem Daten, in Abbildung \ref{fig:res:spekdyn_fits} zu sehen sind.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plots/SPEKDYN/spekdyn_fits.pdf}
 	\end{center}
-	\caption{FWHM Fits} \label{fig:res:spekdyn_fits}
+	\caption{Halbwertsbreiten in Abhängigkeit von $t_p$. An diese Daten wurden Kohlrausch-Fits angelegt, dargestellt als durchgezogene Lininen.} \label{fig:res:spekdyn_fits}
 \end{figure}
 
 
 Es wurde eine weitere, ähnliche Auswertung wurde durchgeführt, wobei anstatt der Halbwertsbreite die Amplitude bei einer bestimmten Frequenz (beispielsweise bei $\SI{-10}{\kilo Hz}$) als Variable genommen wurde. Die Ergebnisse glichen der der Halbwertsbreiten-Betrachtung, waren aber durchgehend mit größeren Unsicherheiten behaftet. Dies lässt sich durch die stark verrauschten Spektren bei hohen Evolutionszeiten erklären, die zu stark schwankenden Amplituden führen, welche wiederum einen guten Fit der Daten schwierig gestalten.
 
+Auswertung ***
 
 
 
 
-\section{Spektren} \label{section:res:spektren}
 
-Der zweite Abschnitt dieser Arbeit beschäftigt sich mit der Linienform-Untersuchung an CRN. Bei der Auswertung von Spektren wurde eine ungewöhnlich erscheinende Verbreiterung der Spektren in einem Temperaturbereich beobachtet, wo, aufgrund von Bewegungsverschmälerung, eher kleinere Halbwertsbreiten zu erwarten wären. Zur Untersuchung der Gegebenheiten wurden, neben einer vielzahl von experimenteller Spektren, Computer-Simulationen angefertigt, und versucht eine theoretische Erklärung der Daten zu bieten.
+
+\section{Linienform von experimentellen und simulierten CRN-Spektren} \label{section:res:spektren}
+
+Der zweite Abschnitt dieser Arbeit beschäftigt sich mit der Linienform-Untersuchung an CRN-Spektren. Bei der Auswertung von Spektren wurde eine ungewöhnlich erscheinende Verbreiterung der Spektren in einem Temperaturbereich beobachtet, wo, aufgrund von Bewegungsverschmälerung, eher kleinere Halbwertsbreiten zu erwarten wären. Zur Untersuchung der Gegebenheiten wurden, neben einer Vielzahl von experimenteller Spektren, Computer-Simulationen angefertigt, und versucht eine theoretische Erklärung der Daten zu bieten.
 
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plot/spek_lineshape.pdf}
 	\end{center}
-	\caption{Spektren Linienform} \label{fig:res:spek_linienform}
+	\caption{Vergleich der Linienform von am OBI-Spektrometer aufgenommen Spektren.} \label{fig:res:spek_linienform}
 \end{figure}
 Um eine Übersicht zu schaffen, werden zuerst die Linienformen der Spektren aus den verschiedenen Quellen in Abhängigkeit der Temperatur präsentiert. Abbildung \ref{fig:res:spek_linienform} zeigt die am OBI-Spektrometer aufgenommenen Spektren; die Temperaturen reichen von etwa $\SI{234}{\kelvin}$ bis etwa $\SI{435}{\kelvin}$. Sie wurden mit einem Hahn-Echo mit einer Evolutionszeit von $t_p = \SI{15}{\micro s}$ aufgenommen und mit $\SI{500}{Hz}$ apodisiert. Es wurden je $\SI{8192}{}$ Datenpunkte mit einer Frequenz von $\SI{2}{MHz}$ erstellt. Die Spektren wurden in mehreren Messreihen aufgenommen und stellen eine repräsentative Auswahl dar, die es erlaubt, den Verlauf der Linienform nachzuvollziehen, ohne zu stark an Übersicht zu verlieren.
 
@@ -181,18 +191,18 @@ Es ist auffällig, dass die Qualität der Spektren stark mit der Temperatur schw
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plot/bruker_lineshape.pdf}
 	\end{center}
-	\caption{Bruker Linienform} \label{fig:res:bruker_linienform}
+	\caption{Vergleich der Linienform von am Bruker-Spektrometer aufgenommen Spektren.} \label{fig:res:bruker_linienform}
 \end{figure}
 Die am Bruker-Spektrometer aufgenommenen Spektren decken einen Temperaturbereich von $\SI{310}{\kelvin}$ bis $\SI{390}{\kelvin}$ ab, und wurden ebenfalls mit einem Hahn-Echo mit einer Evolutionszeit von $\SI{15}{\micro s}$ erstellt und mit $\SI{500}{Hz}$ apodisiert. Hier wurden je $\SI{4096}{}$ Datenpunkte mit einer Frequenz von $\SI{0.5}{MHz}$ aufgenommen. Da mit diesem Spektrometer weitaus weniger Spektren erstellt wurden als mit dem OBI-Spektrometer können in Abbildung \ref{fig:res:bruker_linienform} alle Spektren präsentiert werden.
 
 Der Verlauf der Linienform gleicht den Beschriebenen in dem entsprechenden Temperaturbereich gut. Es ist das geringe Rauschen der Spektren zu beachten, das, wie auch insbesondere die $T_2$-Daten ein Beleg für hohe Datenqualität des Bruker-Spektrometers in diesem Kontext ist.
 
-Als Ergänzung zu den experimentellen Daten wurden simulierte Spektren angefertigt. Dazu wurde die in Kapitel (***) vorgestellte Simulations-Software verwendet. Es wurden FIDs mit $\SI{4096}{}$ Datenpunkten mit einem Abstand von je $\SI{0.5}{\micro s}$, was einer Frequenz von $\SI{0.5}{MHz}$ entspricht, aufgenommen. Um einen Mittelwert zu bilden wurden, je nach Spektrum, zwischen $10^{7}$ und $10^{9}$ einzelne Simulationen gemittelt. Als Modell wurde ein isotroper Zufallssprung gewählt, welcher eine Czjzek-Verteilung als Ausgangspunkt hat; dieses war der simulierten Quadrupol-Wechselwirkung zweiter Ordnung ausgesetzt. Zur Bestimmung der Lebensdauer eines bestimmten Zustandes wird eine Exponentialverteilung genutzt, deren Parameter, die Lebenszeit, eine Verknüpfung mit Temperaturen ermöglicht. Es wurde eine Vogel-Fulcher-Funktion für die Lebenszeit mit den Parametern für CRN aus Kapitel (*** Andere $\tau_c$s, zum Beispiel aus DOI: 10.1103/PhysRevE.81.051504 zeigen keinen großen Unterschied.) verwendet. Zur besseren Vergleichbarkeit werden im Folgenden die Spektren mit den so berechneten Temperaturen anstatt mit den Lebenszeiten referenziert. Die resultierenden Spektren sind in Abbildung \ref{fig:res:sim_linienform} zu sehen.
+Als Ergänzung zu den experimentellen Daten wurden simulierte Spektren angefertigt. Dazu wurde die in Kapitel (***) vorgestellte Simulations-Software verwendet. Es wurden FIDs mit $\SI{4096}{}$ Datenpunkten mit einem Abstand von je $\SI{0.5}{\micro s}$, was einer Frequenz von $\SI{2}{MHz}$ entspricht, aufgenommen. Um einen Mittelwert zu bilden wurden, je nach Spektrum, zwischen $10^{7}$ und $10^{9}$ einzelne Simulationen gemittelt. Als Modell wurde ein isotroper Zufallssprung gewählt, welcher eine Czjzek-Verteilung als Ausgangspunkt hat; dieses war der simulierten Quadrupol-Wechselwirkung zweiter Ordnung ausgesetzt. Zur Bestimmung der Lebensdauer eines bestimmten Zustandes wird eine Exponentialverteilung genutzt, deren Parameter, die Lebenszeit, eine Verknüpfung mit Temperaturen ermöglicht. Es wurde eine Vogel-Fulcher-Funktion für die Lebenszeit mit den Parametern für CRN aus Kapitel (***) verwendet. Zur besseren Vergleichbarkeit werden im Folgenden die Spektren mit den so berechneten Temperaturen anstatt mit den Lebenszeiten referenziert. Die resultierenden Spektren sind in Abbildung \ref{fig:res:sim_linienform} zu sehen.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plot/sim_lineshape.pdf}
 	\end{center}
-	\caption{Simulation Linienform} \label{fig:res:sim_linienform}
+	\caption{Vergleich der Linienform von mit Simulationen erstellte Spektren. Die angegebenen Temperaturen wurden mithilfe von den in Kapitel \ref{section:res:theorie} beschriebenen $\tau_c$ aus den verwendeten $\tau$ bestimmt.} \label{fig:res:sim_linienform}
 \end{figure}
 
 Bei tiefen Temperaturen gleichen die simulierten Spektren den experimentellen. (*** extra Vergleich?) Auch ist der Übergang zur Lorentz-Form, verbunden mit der Verschiebung des Schwerpunkts und Verschmälerung der Spektren bei etwa der gleichen Temperatur von $\SI{350}{\kelvin}$ zu beobachten. Im Gegensatz zu den experimentellen Spektren werden die simulierten Spektren mit steigender Temperatur jedoch immer schmaler und ändern den Schwerpunkt nicht mehr.
@@ -207,8 +217,9 @@ mit einer least-squares-Methode an die Spektren angelegt. So entspricht $2 \gamm
 	\begin{center}
 		\includegraphics[width=.9\textwidth]{graphics/plot/fwhm.pdf}
 	\end{center}
-	\caption{Spektren FWHM} \label{fig:res:spek_fwhm}
+	\caption{Die Halbwertsbreite der Spektren. Blaue und rote Symbole kennzeichnen am OBI- bzw. Bruker-Spektrometer aufgenommene Spektren, grüne Symbole stammen von simulierten Spektren. Der auffälligste Unterschied zwischen experimentellen und simulierten Spektren ist das zusätzliche Maximum bei hohen Temperaturen bzw. das Fehlen dessen.} \label{fig:res:spek_fwhm}
 \end{figure}
+
 Es ist zu erkennen, dass die Werte der Halbwertsbreite etwa dem entsprechen, was nach einer Betrachtung der Spektren zu erwarten wäre: Von einem breiteren Spektrum bei niedrigen Temperaturen gehen die Breiten zu einem Minimum bei etwa $\SI{375}{\kelvin}$ über, um nach einem Maximum bei etwa $\SI{400}{\kelvin}$ erneut abzufallen.
 
 Dieser Verlauf der am OBI-Spektrometer aufgenommenen Spektren folgen auch die Halbwertsbreiten der am Bruker-Spektrometer produzierten Daten. Letztere liegen allerdings konstant bei niedrigeren Werten. Das Verhältnis entspricht aber auch nicht durchgehend dem Verhältnis $4:3$, was die unterschiedlichen Larmorfrequenzen suggestieren würden; es liegt bei tiefen Temperaturen etwas niedriger und bei höheren Temperaturen etwas höher. So ist im Bereich zwischen $\SI{310}{\kelvin}$ und $\SI{350}{\kelvin}$ ein Verhältnis von etwa $\SI{1.15}{}:1$ zu finden, zwischen $\SI{360}{\kelvin}$ und $\SI{390}{\kelvin}$ ein Verhältnis von $\SI{1.45}{}:1$ bis $\SI{1.55}{}:1$.
@@ -227,7 +238,7 @@ In Abbildung \ref{fig:res:spek_mean} sind die Schwerpunkte der Spektren aufgetra
 	\begin{center}
 		\includegraphics[width=.9\textwidth]{graphics/plot/mean.pdf} 
 	\end{center}
-	\caption{Spektren Schwerpunkt} \label{fig:res:spek_mean}
+	\caption{Die Halbwertsbreite der Spektren. Blaue und rote Symbole kennzeichnen am OBI- bzw. Bruker-Spektrometer aufgenommene Spektren, grüne Symbole stammen von simulierten Spektren. Während der Schwerpunkt der experimentellen Spektren zu hohen Temperaturen gegen $\SI{0}{\kilo Hz}$ geht, verbleibt der Schwerpunkt der simulierten Spektren bei etwa $\SI{-16}{\kilo Hz}$.} \label{fig:res:spek_mean}
 \end{figure}
 
 Allen drei Kurvenverläufe ist gleich, dass sie bei tieferen Temperaturen bis etwa $\SI{360}{\kelvin}$ einen konstanten Wert zeigen, ehe sich der Schwerpunkt zu niedrigeren Frequenzen von etwa $\SI{-16}{\kilo Hz}$ verschiebt, was mit dem Übergang von der Czjzek-Form des Spektrums zur Lorentz-Form einhergeht. Die spezifischen konstanten Werte der tieferen Temperaturen unterscheiden sich jedoch zwischen den Daten des OBI-Spektrometers mit einem Schwerpunkt von etwa $\SI{-8}{\kilo Hz}$, und den Daten des Bruker-Spektrometers und der Simulation mit einem Schwerpunkt von etwa $\SI{-12}{\kilo Hz}$. Ab etwa $\SI{375}{\kelvin}$ ist eine Bewegung des Schwerpunkts der experimentellen Spektren zum Nullpunkt zu erkennen, die die Spektren des OBI-Spektrometers aufgrund des größeren abgedeckten Temperaturbereichs auch erreichen. Die simulierten Spektren verbleiben jedoch bei dem Wert von $\SI{-16}{\kilo Hz}$, der bei $\SI{370}{\kelvin}$ erreicht wird.
@@ -238,14 +249,9 @@ Auch hier ist einschränkend zu sagen, dass die Werte der Schwerpunkte aufgrund 
 
 
 
+\section{Vergleich von CRN-Spektren mit theoretischen Überlegungen} \label{section:res:theorie}
 
-
-
-\section{Theorie} \label{section:res:theorie}
-
-
-
-Die experimentellen Ergebnisse sollen mit den theoretischen Überlegungen vergleichen werden. Dazu wurden die in Kapitel \ref{section:theo:eckert} beschriebenen Funktionen für $T_1$, Halbwertsbreite und Schwerpunkt verwendet. Um eine Übereinstimmung zur Theorie feststellen zu können, müssen sich alle Datensätze mit dem gleichen Satz geteilter Parameter beschreiben lassen. Im Falle der Spektraldichte $J(\omega)$ ist dies $C_Q$; für $J_{CC}$ und $J_{CD}$ sind $\alpha$ bzw. $\gamma$ zusätzliche Parameter.
+Die experimentellen Ergebnisse sollen mit den theoretischen Überlegungen vergleichen werden. Dazu wurden die in Kapitel \ref{section:theo:eckert} beschriebenen Funktionen für $T_1$, Halbwertsbreite und Schwerpunkt verwendet. Um eine Übereinstimmung zur Theorie feststellen zu können, müssen sich alle Datensätze mit dem gleichen Satz geteilter Parameter beschreiben lassen. Im Falle der Spektraldichte $J(\omega)$ ist dies $C_Q$; für $J_\text{CC}$ und $J_\text{CD}$ sind $\alpha$ bzw. $\gamma$ zusätzliche Parameter.
 
 Für den Parameter $\eta$ der Spektraldichten wurde $\eta^2 = 42 - 24 \sqrt{3} \approx \SI{0.43}{}$ \cite{caer} verwendet. Nach \cite{PIMENOV199793} wird für CRN für die Korrelationszeit $\tau_c$ ein Vogel-Fulcher-Gesetz
 \begin{align}
@@ -253,17 +259,17 @@ Für den Parameter $\eta$ der Spektraldichten wurde $\eta^2 = 42 - 24 \sqrt{3} \
 \end{align}
 mit dem strength index $D = \SI{3.5}{}$, der Vogel-Fulcher-Temperatur $T_\text{VF} = \SI{294}{K}$ und dem Frequenzfaktor $\tau_{co} = \SI{5.1e-14}{s}$ angenommen. Diese Werte wurden durch *** bestimmt.
 
-Am $T_1$-Minimum nach Gleichung \eqref{eqn:bpp} gilt $\omega \tau_c \approx \SI{0.61}{}$ \cite[S. 629]{omegatau061}. Das $T_1$-Minimum kann in den Daten bei etwa $T_\text{min} = \SI{390}{K}$ gefunden werden; die Larmorfrequenz liegt bei $\omega_L / 2\pi = \SI{97.1722}{MHz}$, was bedeutet, dass bei $T_\text{min}$ gilt $\tau_c \approx \frac{\SI{0.61}{}}{\omega_L} \approx \SI{1.0}{\nano s}$. Vergleicht man das Vogel-Fulcher-Gesetz mit diesem Punkt, lässt sich erkennen, dass eine gute Übereinstimmung vorliegt.
+Das $T_1$-Minimum kann in den Daten bei etwa $T_\text{min} = \SI{390}{K}$ gefunden werden; die Larmorfrequenz liegt bei $\omega_L = 2\pi \cdot \SI{97.1722}{MHz}$, was bedeutet, dass bei $T_\text{min}$ gilt $\tau_c \approx \frac{\SI{0.61}{}}{\omega_L} \approx \SI{1.0}{\nano s}$. Vergleicht man das Vogel-Fulcher-Gesetz mit diesem Punkt, lässt sich erkennen, dass eine gute Übereinstimmung vorliegt.
 \begin{wrapfigure}{r}{0.5\textwidth}
 	\vspace{-20pt}
 	\begin{center}
 		\includegraphics[width=0.49\textwidth]{graphics/zwischenbericht/tau_c_arrhenius_vogel_fulcher.pdf}
 	\end{center}
 	\vspace{-20pt}
-	\caption{Vergleich von Korrelationszeiten basierend auf Vogel-Fulcher-Gesetz \label{fig:korrelationszeiten}}
+	\caption{Vergleich von Zeitkonstante aus $T_1$-Minimum mit Vogel-Fulcher-Gesetz \label{fig:korrelationszeiten} ***}
 \end{wrapfigure}
 
-Ein Vergleich mit den Parametern $D = \SI{4.72}{}$, $T_\text{VF} = \SI{285}{K}$ und $\tau_{co} = \SI{1.15e-14}{s}$ nach *** ist in Abbildung \ref{fig:res:theorie_j} zu sehen. Während leichte Unterschiede zu erkennen sind, ändert sich das Gesamtbild wenig, weswegen sich diese Ausführungen auf den ersten Parametersatz beschränken.
+Ein Vergleich mit den Parametern $D = \SI{4.72}{}$, $T_\text{VF} = \SI{285}{K}$ und $\tau_{co} = \SI{1.15e-14}{s}$ nach \cite{crn_augsburg} ist in Abbildung \ref{fig:res:theorie_j} zu sehen. Während leichte Unterschiede zu erkennen sind, ändert sich das Gesamtbild wenig, weswegen sich diese Ausführungen auf den ersten Parametersatz beschränken.
 
 
 
@@ -288,7 +294,7 @@ Dies bedeutet, dass für die Korrektur lediglich die schon vorliegenden Halbwert
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plots/SPEK/spek_t1korr.pdf}
 	\end{center}
-	\caption{Spektren FWHM mit $T_1$-Korrektur} \label{fig:res:spek_fwhm_t1}
+	\caption{Halbwertsbreite der OBI-Spektren in blau, mit der beschriebenen $T_1$-Korrektur in orange.} \label{fig:res:spek_fwhm_t1}
 \end{figure}
 
 Es ist zu erkennen, dass $T_1$ einen großen Einfluss auf die Halbwertsbreite hat und die entsprechend angepassten Halbwertsbreiten deutlich geringere Werte aufweisen. Bei Temperaturen über $\SI{410}{\kelvin}$ konnte keine Korrektur vorgenommen werden, weil die $T_1$-Werte in diesem Temperaturbereich zu stark streuen um aussagekräfige Daten zu produzieren.
@@ -311,61 +317,41 @@ Für die Spektraldichte $J_\text{BPP}$ kann bei höheren Temperaturen, wie in Ab
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plot/OBI_J_02.pdf}
 	\end{center}
-	\caption{Spektraldichte $J_\text{BPP}$} \label{fig:res:theorie_j}
+	\caption{Vergleich von $T_1$, Halbwertsbreite und Schwerpunkt der OBI-Daten in blau. In orange die Theorie-Kurve mit Spektraldichte $J_\text{BPP}$ mit Parametern nach \cite{PIMENOV199793}, in grün mit Parametern nach \cite{crn_augsburg}.} \label{fig:res:theorie_j}
 \end{figure}
 
 Es kann eine grobe Vereinbarkeit der Theorie mit $T_1$-Werten im Maximum der Kurve erreicht werden, die Flanken unterscheiden sich jedoch deutlich. Da die Form der Theoriekurve mit der Spektraldichte $J_\text{BPP}$ unveränderlich ist, ist es schwerlich möglich, eine zufriedenstellende Übereinstimmung zu erreichen. Abhilfe schaffen könnten andere Spektraldichten -- dies soll im Folgenden untersucht werden.
 
-Für die Spektraldichten $J_\text{CC}$ (Abbildung \ref{fig:res:theorie_j_cc} und $J_\text{DC}$ (Abbildung \ref{fig:res:theorie_j_dc}) lagen die für die theoretische Berechnung der Schwerpunkte benötigten Imaginärteile $Q_\text{CC}$ und $Q_\text{CD}$, weswegen für diese auf die Spektraldichte $J_\text{BPP}$ zurückgegriffen wurde. Für die Schwerpunkte kann der Vergleich daher nur als grobe Idee verstanden werden.
+Für die Spektraldichten $J_\text{CC}$ (Abbildung \ref{fig:res:theorie_j_cc} und $J_\text{CD}$ (Abbildung \ref{fig:res:theorie_j_dc}) lagen die für die theoretische Berechnung der Schwerpunkte benötigten Imaginärteile $Q_\text{CC}$ und $Q_\text{CD}$, weswegen für diese auf die Spektraldichte $J_\text{BPP}$ zurückgegriffen wurde. Für die Schwerpunkte kann der Vergleich daher nur als grobe Idee verstanden werden.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plot/OBI_J_cc_01.pdf}
 	\end{center}
-	\caption{Spektraldichte $J_\text{CC}$} \label{fig:res:theorie_j_cc}
+	\caption{Vergleich von $T_1$, Halbwertsbreite und Schwerpunkt der OBI-Daten in blau. In orange die Theorie-Kurve mit Spektraldichte $J_\text{CC}$ mit Parametern nach \cite{PIMENOV199793}.} \label{fig:res:theorie_j_cc}
 \end{figure}
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plot/OBI_J_dc_01.pdf}
 	\end{center}
-	\caption{Spektraldichte $J_\text{DC}$} \label{fig:res:theorie_j_dc}
+	\caption{Vergleich von $T_1$, Halbwertsbreite und Schwerpunkt der OBI-Daten in blau. In orange die Theorie-Kurve mit Spektraldichte $J_\text{CD}$ mit Parametern nach \cite{PIMENOV199793}.} \label{fig:res:theorie_j_dc}
 \end{figure}
 
-Für $J_\text{CC}$ und $J_\text{DC}$ können mit den Parametern $C_Q = \SI{4.0}{MHz}$ und $\alpha = \SI{0.6}{}$ bzw. $C_Q = \SI{3.6}{MHz}$ und $\gamma = \SI{0.46}{}$ gute Übereinstimmungen für $T_1$ beobachtet werden -- zumindest bis zu einer Temperatur von etwa $\SI{350}{\kelvin}$. Für $J_\text{DC}$ scheint es zudem für Temperaturen über $\SI{400}{K}$ Abweichungen zu geben. Bessere Vereinbarkeit mit $T_1$-Werten kommt in beiden Fällen auf Kosten der vergleichsweise guten Übereinstimmung für Halbwertsbreite und Schwerpunkt, die mit $J_\text{BPP}$ erreicht werden konnten: Während für $J_\text{CC}$ die Schwerpunkte stark abweichen, ist dies bei $J_\text{DC}$ für die Halbwertsbreiten der Fall. Es bleibt festzuhalten, dass insgesamt eine gute Übereinstimmung mit der Theorie gezeigt werden konnte; es kann jedoch keine Spektraldichte besonders vorteilhaft hervorgehoben werden.
+Für $J_\text{CC}$ und $J_\text{CD}$ können mit den Parametern $C_Q = \SI{4.0}{MHz}$ und $\alpha = \SI{0.6}{}$ bzw. $C_Q = \SI{3.6}{MHz}$ und $\gamma = \SI{0.46}{}$ gute Übereinstimmungen für $T_1$ beobachtet werden -- zumindest bis zu einer Temperatur von etwa $\SI{350}{\kelvin}$. Für $J_\text{CD}$ scheint es zudem für Temperaturen über $\SI{400}{K}$ Abweichungen zu geben. Bessere Vereinbarkeit mit $T_1$-Werten kommt in beiden Fällen auf Kosten der vergleichsweise guten Übereinstimmung für Halbwertsbreite und Schwerpunkt, die mit $J_\text{BPP}$ erreicht werden konnten: Während für $J_\text{CC}$ die Schwerpunkte stark abweichen, ist dies bei $J_\text{CD}$ für die Halbwertsbreiten der Fall. Es bleibt festzuhalten, dass insgesamt eine gute Übereinstimmung mit der Theorie gezeigt werden konnte; es kann jedoch keine Spektraldichte besonders vorteilhaft hervorgehoben werden.
 
 Für den Vergleich der Daten des Bruker-Spektrometers ist Ähnliches zu beobachten. Dabei fällt es hier aber schwerer, definitive Aussagen zu treffen, da der eingeschränkte Temperaturbereich nur einen bedingten Vergleich zulässt. Abbildung *** zeigt die Daten zusammen mit Theoriekurven basierend auf der Spektraldichte $J_\text{BPP}$ mit dem Parameter $C_Q = \SI{3.45}{MHz}$. Dabei ist zu sehen, dass die Daten im gleichen Maße Übereinstimmung und Unterschiede aufzeigen.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plot/Bruker_J_01.pdf}
 	\end{center}
-	\caption{Spektraldichte $J_\text{BPP}$} \label{fig:res:theorie_bruker}
+	\caption{Vergleich von $T_1$, Halbwertsbreite und Schwerpunkt der Bruker-Daten in blau. In orange die Theorie-Kurve mit Spektraldichte $J_\text{BPP}$ mit Parametern nach \cite{PIMENOV199793}.} \label{fig:res:theorie_bruker}
 \end{figure}
-
-
-
-
-********************************************************************
-
-
-\section{Theoretische Beschreibung experimenteller CRN-Daten} \label{section:theo:daten}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
 ***
+
 
 Werden die resultierenden Zeitkonstanten zusammen mit $T_2$ aufgetragen, zeigt sich eine hohe Ähnlichkeit, was vermuten lässt, dass mit der Methode $T_2$ gemessen wurde.
 \begin{figure}
