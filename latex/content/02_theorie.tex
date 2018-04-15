@@ -144,7 +144,7 @@ Verschiedene Wechselwirkungs-Hamiltonoperatoren haben unterschiedliche Lösungen
 
 \section{Quadrupol-Relaxation und Spektraldichten} \label{section:theo:eckert}
 
-Häufig mit der NMR aufgenommene Daten umfassen $T_1$- und $T_2$-Messungen, sowie Spektren, wobei deren Schwerpunkte oder Breiten interessante Kenngrößen sein können. All diese Eigenschaften sind in der Regel nuklid- und temperaturabhängig. So bewirkt beispielsweise die bei höherer Temperatur größere Bewegung der Atome oder Moleküle ein Herausmitteln der Effekte, die sonst zu einer Verbreiterung des Spektrums führen würden und es tritt Bewegungsverschmälerung oder „motional narrowing“ auf. Ein Abweichen von diesem Verhalten in den beobachteten Daten (siehe Abbildung \ref{fig:triple_vergleich}, Mitte) führte zu dem Versuch, das Phänomen mit den im Folgenden aufgeführten theoretischen Erläuterungen zu erklären. Aus diesem Grund erstreckt sich die Untersuchung nur auf den relevanten Temperaturbereich von $\SI{350}{K}$ bis $\SI{500}{K}$.
+Häufig mit der NMR aufgenommene Daten umfassen $T_1$- und $T_2$-Messungen, sowie Spektren, wobei deren Schwerpunkte oder Breiten interessante Kenngrößen sein können. All diese Eigenschaften sind in der Regel nuklid- und temperaturabhängig. So bewirkt beispielsweise die bei höherer Temperatur größere Bewegung der Atome oder Moleküle ein Herausmitteln der Effekte, die sonst zu einer Verbreiterung des Spektrums führen würden und es tritt Bewegungsverschmälerung oder „motional narrowing“ auf. Ein Abweichen von diesem Verhalten in den beobachteten Daten (siehe Abbildung \ref{fig:res:spek_fwhm}, Mitte) führte zu dem Versuch, das Phänomen mit den im Folgenden aufgeführten theoretischen Erläuterungen zu erklären. Aus diesem Grund erstreckt sich die Untersuchung nur auf den relevanten Temperaturbereich von $\SI{350}{K}$ bis $\SI{500}{K}$.
 
 Für $^{87}$Rb-NMR ist die Quadrupol-Wechselwirkung und damit auch die zugehörige Relaxation von besonderem Interesse. Es wird angenommen, dass ein sich im thermischen Gleichgewicht befindendes Spinsystem mit einem 90$^\circ$-Puls aus diesem ausgelenkt wird.
 
@@ -190,7 +190,7 @@ $\omega_{c/s}$ sind die Schwerpunkte des Spektrums, die sich neben der Breite au
 
 Für die entsprechenden $T_2$-Werte $T_{2c}$ und $T_{2s}$ ergeben sich folgende Zusammenhänge \cite{eckert}:
 \begin{align}
-    1/T_{2c} &= J(\omega_0) + J(2\omega_0) \\
+    1/T_{2c} &= J(\omega_0) + J(2\omega_0) \label{eqn:theo:T_2_dyn} \\
     1/T_{2s} &= J(0) + J(\omega_0).
 \end{align}
 
@@ -200,12 +200,12 @@ Wird für eine solche Messung ein FID (free induction decay) aufgenommen, so lä
     \Delta_s &= 1/(\pi T_{2s}).
 \end{align}
 
-Neben der hier vorgestellten Spektraldichte $J(\omega)$, die von einer einzelnen Korrelationszeit $\tau_c$ zur Beschreibung der Molekülbewegung ausgeht, existieren noch weitere Modelle, denen verschiedene Verteilungen von $\tau_c$ zugrunde liegen. Bekannte Spektraldichten sind von Cole-Cole ($J_{CC}$) und von Cole-Davidson ($J_{CD}$) \cite[S. 105-108]{beckmann_relaxation}, angepasst mit dem entsprechenden Vorfaktor aus Formel \eqref{eqn:spektraldichte_j}:
+Neben der hier vorgestellten Spektraldichte $J(\omega)$, die von einer einzelnen Korrelationszeit $\tau_c$ zur Beschreibung der Molekülbewegung ausgeht, existieren noch weitere Modelle, denen verschiedene Verteilungen von $\tau_c$ zugrunde liegen. Bekannte Spektraldichten sind von Cole-Cole ($J_\text{CC}$) und von Cole-Davidson ($J_\text{CD}$) \cite[S. 105-108]{beckmann_relaxation}, angepasst mit dem entsprechenden Vorfaktor aus Formel \eqref{eqn:spektraldichte_j}:
 \begin{align}
 \begin{split}
-    J_{CC}(\omega, \tau_c, \alpha) &= \frac{\pi^2}{5} {C_Q}^2 \left( 1 + \frac{\eta^2}{3} \right) \frac{2}{\omega} \sin \left( \frac{\alpha \pi}{2} \right) \\ &\times \left[ \frac{(\omega \tau_c)^\alpha}{1 + (\omega \tau_c)^{2\alpha} + 2 (\omega \tau_c)^\alpha \cos (\alpha \pi / 2)} \right],
+    J_\text{CC}(\omega, \tau_c, \alpha) &= \frac{\pi^2}{5} {C_Q}^2 \left( 1 + \frac{\eta^2}{3} \right) \frac{2}{\omega} \sin \left( \frac{\alpha \pi}{2} \right) \\ &\times \left[ \frac{(\omega \tau_c)^\alpha}{1 + (\omega \tau_c)^{2\alpha} + 2 (\omega \tau_c)^\alpha \cos (\alpha \pi / 2)} \right],
 \end{split} \\
-    J_{CD}(\omega, \tau_c, \gamma) &= \frac{\pi^2}{5} {C_Q}^2 \left( 1 + \frac{\eta^2}{3} \right) \frac{2}{\omega} \left\{ \frac{\sin [\gamma \arctan(\omega \tau_c)]}{(1 + \omega^2 {\tau_c}^2)^{2\gamma}} \right\}
+    J_\text{CD}(\omega, \tau_c, \gamma) &= \frac{\pi^2}{5} {C_Q}^2 \left( 1 + \frac{\eta^2}{3} \right) \frac{2}{\omega} \left\{ \frac{\sin [\gamma \arctan(\omega \tau_c)]}{(1 + \omega^2 {\tau_c}^2)^{2\gamma}} \right\}
 \end{align}
 Für $\alpha = 1$ bzw. $\gamma = 1$ korrespondieren diese Spektraldichten zu BPP.
 
