@@ -56,17 +56,17 @@ Wird das $B_1$-Feld vom Experimentierenden aktiviert, so vollführt die mittlere
 \begin{align}
 	t_\text{Puls} = \frac{\phi}{- \gamma B_1} \label{eqn:theo:pulslaenge}
 \end{align}
-lässt sich die Magnetisierung $M_\infty$ so beispielsweise mit einem $\phi = \SI{90}{\degree}$-Puls in die $x$-$y$-Ebene, auch Detektionsebene genannt, klappen oder mit einem 180$^\circ$-Puls invertieren. Durch das Kombinieren von Pulsen lassen sich Pulsfolgen entwickeln, um interessante Eigenschaften einer Probe zu untersuchen. Einige dieser werden in Kapitel \ref{section:exp:pulsfolgen} vorgestellt.
-
-In allen realen Systemen gibt es durch unterschiedliche Wechselwirkungen Relaxationen der longitudinalen und transversalen Magnetisierung, welche im nächsten Kapitel behandelt werden sollen.
+lässt sich die Magnetisierung $M_\infty$ so beispielsweise mit einem $\phi = \SI{90}{\degree}$-Puls in die $x$-$y$-Ebene, auch Detektionsebene genannt, klappen oder mit einem 180$^\circ$-Puls invertieren. Durch das Kombinieren von Pulsen lassen sich Pulsfolgen entwickeln, um interessante Eigenschaften einer Probe zu untersuchen. Einige dieser werden in Kapitel \ref{section:theo:pulsfolgen} vorgestellt.
 
 
 
 \section{Theoretische Aspekte der Relaxation} \label{section:theo:relax}
 
+In allen realen Systemen gibt es durch unterschiedliche Wechselwirkungen Relaxationen der longitudinalen und transversalen Magnetisierung, welche ein essentieller Teil jeder NMR-Messung sind und im Folgenden vorgestellt werden sollen.
+
 Werden Kernspins, beispielsweise durch einen 90$^\circ$-Puls, aus ihrem Gleichgewichtszustand ausgelenkt, sind sie nicht mehr im Boltzmann-Gleichgewicht und sollten daher in den Gleichgewichtszustand relaxieren. Bei den für die hier verwendeten Temperaturen von mehreren Hundert Kelvin sind jedoch die Besetzungsverhältnisse $\frac{N_+}{N_-} = \exp (\frac{- \hbar \gamma B}{k_B T})$ fast beliebig nah an 1 und die thermisch induzierten Relaxationsraten daher nahezu verschwindend gering. Energie aus anderen Quellen kann jedoch Übergänge zwischen den Zuständen und damit Relaxation ermöglichen.
 
-Durch die zufälligen Bewegungen der Atome oder Moleküle einer Probe ändern sich für ein untersuchtes Atom die entsprechenden lokalen elektromagnetischen Felder. Enthält das Spektrum der Feldfluktuationen Frequenzen der Larmorfrequenz (oder, je nach Wechselwirkung, Vielfache davon), können Relaxationsprozesse auftreten und somit schlussendlich die gesamte Magnetisierung in den Gleichgewichtszustand zurückkehren. Es ist offensichtlich, dass die Spektraldichte $J(\omega)$, die die Häufigkeit der entsprechenden Frequenzen angibt, eine wichtige Rolle bei der Beschreibung der Relaxation spielt. Zu berücksichtigende Wechselwirkungen sind -- je nach untersuchtem Stoff bzw. Kern -- zum Beispiel die chemische Verschiebung, die Dipol-Dipol-Wechselwirkung oder die Quadrupol-Wechselwirkung.
+Durch die zufälligen Bewegungen der Atome oder Moleküle einer Probe ändern sich für ein untersuchtes Atom die entsprechenden lokalen elektromagnetischen Felder. Enthält das Spektrum der Feldfluktuationen Frequenzen der Larmorfrequenz (oder, je nach Wechselwirkung, Vielfache davon), können Relaxationsprozesse auftreten und somit schlussendlich die gesamte Magnetisierung in den Gleichgewichtszustand zurückkehren. Es ist offensichtlich, dass die Spektraldichte $J(\omega)$, die die Häufigkeit der entsprechenden Frequenzen angibt, eine wichtige Rolle bei der Beschreibung der Relaxation spielt. Zu berücksichtigende Wechselwirkungen sind -- je nach untersuchtem Stoff bzw. Kern -- zum Beispiel die chemische Verschiebung, die Dipol-Dipol-Wechselwirkung oder die Quadrupol-Wechselwirkung, welche in Kapitel \ref{section:theo:qww} vorgestellt wird.
 
 Die durch die Bewegung der Atome induzierte Relaxation wird longitudinale Relaxation oder Spin-Gitter-Relaxation genannt; die zugehörige Konstante $T_1$ gibt an, auf welcher Zeitskala sie stattfindet.
 
@@ -142,13 +142,44 @@ Verschiedene Wechselwirkungs-Hamiltonoperatoren haben unterschiedliche Lösungen
 
 
 
-\section{Quadrupol-Relaxation und Spektraldichten} \label{section:theo:eckert}
 
-Häufig mit der NMR aufgenommene Daten umfassen $T_1$- und $T_2$-Messungen, sowie Spektren, wobei deren Schwerpunkte oder Breiten interessante Kenngrößen sein können. All diese Eigenschaften sind in der Regel nuklid- und temperaturabhängig. So bewirkt beispielsweise die bei höherer Temperatur größere Bewegung der Atome oder Moleküle ein Herausmitteln der Effekte, die sonst zu einer Verbreiterung des Spektrums führen würden und es tritt Bewegungsverschmälerung oder „motional narrowing“ auf. Ein Abweichen von diesem Verhalten in den beobachteten Daten (siehe Abbildung \ref{fig:res:spek_fwhm}, Mitte) führte zu dem Versuch, das Phänomen mit den im Folgenden aufgeführten theoretischen Erläuterungen zu erklären. Aus diesem Grund erstreckt sich die Untersuchung nur auf den relevanten Temperaturbereich von $\SI{350}{K}$ bis $\SI{500}{K}$.
+\section{Quadrupol-Wechselwirkung} \label{section:theo:qww}
 
-Für $^{87}$Rb-NMR ist die Quadrupol-Wechselwirkung und damit auch die zugehörige Relaxation von besonderem Interesse. Es wird angenommen, dass ein sich im thermischen Gleichgewicht befindendes Spinsystem mit einem 90$^\circ$-Puls aus diesem ausgelenkt wird.
+Auf die in diesem Kontext wichtigste Wechselwirkung soll nun eingegangen werden. Als die Quadrupol-Wechselwirkung wird die Wechselwirkung des Kernquadrupolmoment mit dem lokalen elektronischen Feld bezeichnet. Bei Kernen mit $I = ½$ ist die Ladung symmetrisch verteilt ist und daher kein Moment durch ein äußeres Feld zu beobachten. Diese Wechselwirkung tritt also nur bei Kernen mit $I \ge 1$ auf, ist dann aber meist dominant -- so auch in dem hier untersuchten Stoff CRN.
 
-Für die longitudinale Relaxation sagt die Theorie nach \cite{hubbard} im non-extreme narrowing Bereich, also bei $\omega \tau_c \gg 1$, eine biexponentielle Relaxation vorher:
+Der Hamiltonoperator der Quadrupol-Wechselwirkung lautet \cite[S. 208]{levitt}
+\begin{align}
+	\hat{H}_Q = \frac{eQ}{2I (2I - 1) \hbar} \hat{I} V \hat{I}.
+\end{align}
+Dabei ist $Q$ das Kernquadrupolmoment, $I$ die Spinquantenzahl und $V$ der elektronischen Feldgradienten (kurz EFG), der den Einfluss des äußeren Feldes, entstehend durch die Elektronenverteilung benachbarter Kerne, enthält.
+
+Die Matrixelemente des EFG lassen sich aus dem elektrostatischen Potential $V$ wie folgt berechnen:
+\begin{align}
+	V_{ij} = \frac{\partial^2 V}{\partial x_i \partial x_j}.
+\end{align}
+Da die Reihenfolge der Ableitungen in einem konservativen Potential keine Rolle spielt, gilt $V_{ij} = V_{ji}$ -- der Tensor ist symmetrisch. Zudem gibt die Laplace-Gleichung $\nabla^2 V(r) = 0$, was dazu führt, dass der Tensor zudem spurlos ist. Dies lässt den EFG mit 5 unabhängigen Parametern.
+
+Wird der EFG auf Hauptachsenform gebracht, ergeben sich drei Eigenwerte. Der Konvention folgend, werden diese wie folgt sortiert: $\lvert V_{zz} \rvert \ge \lvert V_{yy} \rvert \ge \lvert V_{xx} \rvert$. Da der EFG, wie erwähnt, spurlos ist, lassen sich diese Informationen in nur zwei Variablen darstellen:
+\begin{align}
+	eq                & = V_{zz}                         \\
+	\text{und}\; \eta & = \frac{V_{xx} - V_{yy}}{V_{zz}}
+\end{align}
+$\eta$ wird Asymmetrieparameter genannt und kann Werte zwischen $\SI{0}{}$ und $\SI{1}{}$ annehmen. Er kann, genauso wie $eq$ darüber Auskunft geben, wie sich die Form des EFG visualisieren lässt: $\eta = 0$ gibt beispielsweise einen rotationssymmetrischen EFG an. In diesem Fall indiziert ein positives $eq$, auch Anisotropieparameter genannt, eine Form, die an eine Zigarre erinnert -- ein negatives indiziert eine Scheiben-Form.
+
+Bei den in der NMR häufig verwendeten Magnetfeldern mit Stärken von mehreren Tesla gilt die Hochfeldnäherung, das bedeutet, dass die Zeeman-Wechselwirkung deutlich stärker ist als andere Wechselwirkungen, welche dann im Rahmen der Störungsrechnung untersucht werden dürfen. So ergibt sich für die erste Ordnung der Quadrupol-Wechselwirkung nach \cite[S. 209]{levitt}
+\begin{align}
+	\hat{H}_Q                   & = \omega_Q^{(1)} \frac{1}{6} \left( 3 {I_z}^2 - I(I + 1) \right) \\
+	\text{mit}\; \omega_Q^{(1)} & = \frac{3e^2qQ}{2I(2I - 1) \hbar}.
+\end{align}
+Anstatt der Kopplungsfrequenz $\omega_Q$ wird auch häufig die Kern\-quad\-ru\-pol-Kopp\-lungs\-kon\-stan\-te $C_Q = e^2qQ / h$ in Hertz angegeben.
+
+Es ist anzumerken, dass in der ersten Ordnung $H_Q$ nur vom Quadrat von $m$ abhängt und der Zentrallinienübergang von $-½ \to ½$ daher keine Korrektur erfährt. Dies ändert sich mit Betrachtung der zweiten Ordnung, was bei einer großen Stärke der Quadrupol-Wechselwirkung geschehen muss.
+
+\par\bigskip
+
+Da bei im Rahmen dieser Arbeit angestellten Messungen die zweite Ordnung von besonderem Interesse ist, wird im Folgenden eben darauf eingegangen -- ebenso wie auf daraus resultiertende Eigenschaften für messbare Größen wie $T_1$-Relaxation oder die Halbwertsbreite und die Verschiebung des Schwerpunkts von Spektren.
+
+Es wird angenommen, dass ein sich im thermischen Gleichgewicht befindendes Spinsystem mit einem 90$^\circ$-Puls aus diesem ausgelenkt wird. Für die longitudinale Relaxation sagt die Theorie nach \cite{hubbard} im non-extreme narrowing Bereich, also bei $\omega \tau_c \gg 1$, eine biexponentielle Relaxation vorher:
 \begin{align}
     - \frac{\Braket{I_z} - \Braket{I_z(\infty)}}{2\Braket{I_z(\infty)}} = \frac{4}{5}e^{-t/T_{1a}} + \frac{1}{5}e^{-t/T_{1b}}.
 \end{align}
@@ -167,7 +198,7 @@ als einziger $T_1$-Wert, mit der kernabhängigen Konstante $K$.
 
 Die Spektraldichte $J(\omega)$ kann je nach Modell unterschiedlich sein. In diesem Kontext wird eine Spektraldichte verwendet, die auf einer einzelnen Korrelationszeit $\tau_c$ für die Beschreibung der Molekülbewegungen basiert \cite{eckert}:
 \begin{align}
-    J(\omega) &= \frac{\pi^2}{5} {C_Q}^2 \left( 1 + \frac{\eta^2}{3} \right) \frac{\tau_c}{1 + \omega^2 {\tau_c}^2}. \label{eqn:spektraldichte_j}
+    J_\text{BPP}(\omega) &= \frac{\pi^2}{5} {C_Q}^2 \left( 1 + \frac{\eta^2}{3} \right) \frac{\tau_c}{1 + \omega^2 {\tau_c}^2}. \label{eqn:spektraldichte_j}
 \end{align}
 Dabei ist $C_Q$ die Kopplungskonstante der Quadrupol-Wechselwirkung und $\eta$ der Asymmetrieparameter der Beschreibung des elektrischen Feldgradienten. Für $\tau_c$ wird oft ein Arrhenius-Gesetz mit der Aktivierungsenergie $E_a$ und dem präexponentiellen Faktor $\tau_{co}$ angenommen:
 \begin{align}
@@ -181,7 +212,7 @@ Für die transversale Relaxation -- wieder nach einem 90$^\circ$-Puls -- gibt di
 \end{align}
 Auch hier sind zwei Exponentialfunktionen vorhanden (deren Effekt auch in Daten beobachtet werden kann); sie lassen sich als zugehörig zum Zentralübergang (Index $c$) bzw. zu den Satellitenübergängen (Index $s$) identifizieren. Dies kann, nach \cite{werbelow}, auch das Intensitätsverhältnis $\frac{2}{5}:\frac{3}{5}$ zwischen Zentralübergang und Satellitenübergängen wie folgt erklären: Die longitudinale Magnetisierung $\Braket{I_z}$ lässt sich durch die Populationen $P_i$ der jeweiligen Zustände $i$ ausdrücken als $\Braket{I_z} = (3/2)P_{3/2} + (1/2)P_{1/2} - (1/2)P_{-1/2} - (3/2)P_{-3/2}$. Einfaches Umformen ergibt $\Braket{I_z} = (3/2)(P_{3/2} - P_{1/2}) + (4/2)(P_{1/2} - P_{-1/2}) + (3/2)(P_{-1/2} - P_{-3/2})$. Hier lassen sich erster und dritter Term den Satellitenübergängen zuordnen, der zweite dem Zentralübergang; in der Summe ergibt sich dann genau das Verhältnis $\frac{4}{2}:\frac{6}{2}$ oder $\frac{2}{5}:\frac{3}{5}$.
 
-$\omega_{c/s}$ sind die Schwerpunkte des Spektrums, die sich neben der Breite aus der transversalen Relaxation gewinnen lassen. Diese sind mit dem Imaginärteil der Spektraldichte, dem dynamischen Frequenzverschiebung zweiter Ordnung, $Q(\omega, \tau_c)$, verbunden \cite{eckert}:
+$\omega_{c/s}$ sind die Schwerpunkte des Spektrums, die sich neben der Breite aus der transversalen Relaxation gewinnen lassen. Diese sind mit dem Imaginärteil der Spektraldichte, der dynamischen Frequenzverschiebung zweiter Ordnung, $Q(\omega, \tau_c)$, verbunden \cite{eckert}:
 \begin{align}
     \omega_c^{(2)} &= Q(2\omega_0) - Q(\omega_0) \\ \label{eqn:schwerpunkt}
     \omega_s^{(2)} &= Q(\omega_0), \\
@@ -200,12 +231,12 @@ Wird für eine solche Messung ein FID (free induction decay) aufgenommen, so lä
     \Delta_s &= 1/(\pi T_{2s}).
 \end{align}
 
-Neben der hier vorgestellten Spektraldichte $J(\omega)$, die von einer einzelnen Korrelationszeit $\tau_c$ zur Beschreibung der Molekülbewegung ausgeht, existieren noch weitere Modelle, denen verschiedene Verteilungen von $\tau_c$ zugrunde liegen. Bekannte Spektraldichten sind von Cole-Cole ($J_\text{CC}$) und von Cole-Davidson ($J_\text{CD}$) \cite[S. 105-108]{beckmann_relaxation}, angepasst mit dem entsprechenden Vorfaktor aus Formel \eqref{eqn:spektraldichte_j}:
+Neben der hier vorgestellten Spektraldichte $J_\text{BPP}(\omega)$, die von einer einzelnen Korrelationszeit $\tau_c$ zur Beschreibung der Molekülbewegung ausgeht, existieren noch weitere Modelle, denen verschiedene Verteilungen von $\tau_c$ zugrunde liegen. Bekannte Spektraldichten sind von Cole-Cole ($J_\text{CC}$) und von Cole-Davidson ($J_\text{CD}$) \cite[S. 105-108]{beckmann_relaxation}, angepasst mit dem entsprechenden Vorfaktor aus Formel \eqref{eqn:spektraldichte_j}:
 \begin{align}
 \begin{split}
-    J_\text{CC}(\omega, \tau_c, \alpha) &= \frac{\pi^2}{5} {C_Q}^2 \left( 1 + \frac{\eta^2}{3} \right) \frac{2}{\omega} \sin \left( \frac{\alpha \pi}{2} \right) \\ &\times \left[ \frac{(\omega \tau_c)^\alpha}{1 + (\omega \tau_c)^{2\alpha} + 2 (\omega \tau_c)^\alpha \cos (\alpha \pi / 2)} \right],
+    J_\text{CC}(\omega, \tau_c, \alpha) &= \frac{\pi^2}{5} {C_Q}^2 \left( 1 + \frac{\eta^2}{3} \right) \frac{1}{\omega} \sin \left( \frac{\alpha \pi}{2} \right) \\ &\times \left[ \frac{(\omega \tau_c)^\alpha}{1 + (\omega \tau_c)^{2\alpha} + 2 (\omega \tau_c)^\alpha \cos (\alpha \pi / 2)} \right],
 \end{split} \\
-    J_\text{CD}(\omega, \tau_c, \gamma) &= \frac{\pi^2}{5} {C_Q}^2 \left( 1 + \frac{\eta^2}{3} \right) \frac{2}{\omega} \left\{ \frac{\sin [\gamma \arctan(\omega \tau_c)]}{(1 + \omega^2 {\tau_c}^2)^{2\gamma}} \right\}
+    J_\text{CD}(\omega, \tau_c, \gamma) &= \frac{\pi^2}{5} {C_Q}^2 \left( 1 + \frac{\eta^2}{3} \right) \frac{1}{\omega} \left\{ \frac{\sin [\gamma \arctan(\omega \tau_c)]}{(1 + \omega^2 {\tau_c}^2)^{2\gamma}} \right\}
 \end{align}
 Für $\alpha = 1$ bzw. $\gamma = 1$ korrespondieren diese Spektraldichten zu BPP.
 
@@ -213,23 +244,34 @@ Für $\alpha = 1$ bzw. $\gamma = 1$ korrespondieren diese Spektraldichten zu BPP
 
 
 
-\section{Pulsfolgen} \label{section:exp:pulsfolgen}
+\section{Pulsfolgen} \label{section:theo:pulsfolgen}
 
 Um Größen wie $T_1$ und $T_2$ zu messen, werden unterschiedliche Pulsfolgen, also Sequenzen von RF-Pulsen mit bestimmten Längen und Abständen zwischeneinander, ausgenutzt.
 
-Um die longitudinale Relaxation $T_1$ zu messen, wurde folgende Pulsfolge verwendet:
+Um die longitudinale Relaxation $T_1$ zu messen wurde folgende Pulsfolge verwendet:
+\begin{figure}
+	\begin{center}
+		\input{graphics/pulsfolgen/pulsfolgeT1.pdf_tex}
+	\end{center}
+    \caption{Pulsfolge zum Messen von $T_1$; sie besteht aus einem $\SI{180}{\degree}$-Invertierungspuls, gefolgt von einer Wartezeit $t_w$, einem $\SI{90}{\degree}$-Puls und einem Hahn-Echo. $t_w$ ist der variable Parameter. Abbildung aus \cite{joachim_master}}\label{fig:theo:pulsT1}
+\end{figure}
 
-*** Bild
+Der erste Puls, ein $\SI{180}{\degree}$-Puls, invertiert die Magnetisierung von dem Gleichgewichtszustand $M_\infty$ zu $-M_\infty$, wonach sie anfängt zu relaxieren. Da die longitudinale Magnetisierung entlang $M_z$ aufgrund der Spulengeometrie nicht detektierbar ist, muss sie mit einem $\SI{90}{\degree}$-Puls in die Detektionsebene geklappt werden. Wird dies nach der Wartezeit $t_w$ getan, kann also die relaxierende Magnetisierung in Abhängigkeit von $t_w$ bestimmt werden und so Aufschluss über $T_1$ gewonnen werden.
 
-Der erste Puls, ein $\SI{180}{\degree}$-Puls, invertiert die Magnetisierung von dem Gleichgewichtszustand $M_\infty$ zu $-M_\infty$, wonach sie anfängt zu relaxieren. Da die longitudinale Magnetisierung entlang $M_z$ aufgrund der Spulengeometrie nicht detektierbar ist, muss sie mit $\SI{90}{\degree}$-Puls in die Detektionsebene geklappt werden. Wird dies nach der Wartezeit $t_w$ getan, kann also die relaxierende Magnetisierung in Abhängigkeit von $t_w$ bestimmt werden und so Aufschluss über $T_1$ gewonnen werden.
-
-Der letzte Puls, ein $t_p = \SI{180}{\degree}$-Puls, wird Hahn-Echo genannt. Häufig liegen die Momente direkt nach einem Puls in der Totzeit des Detektors, sodass die Magnetisierung faktisch erst gemessen werden kann, wenn sie eine gewisse Zeit vergangen ist, in der aber auch die Magnetisierung abklingt. Um dieses Problem zu umgehen wird das Hahn-Echo verwendet. Mit diesem können dephasierende Anteile der Magnetisierung, welche linear in $I_z$ sind, refokussiert werden. Zu den betroffenen Wechselwirkungen zählen zum Beispiel *** und lokale Feldinhomogenitäten. Nicht jedoch wiedergewonnen werden können Teile der Magnetisierung, die durch $T_2$-Effekte verloren wurden. Damit dieser Einfluss bei den Messungen konstant ist, wird in diesem Fall das gleiche $t_p$ für alle Messungen verwendet. *** Quelle
+Der letzte Puls, ein $\SI{180}{\degree}$-Puls nach der Evolutionszeit $t_p$, wird Hahn-Echo genannt. Häufig liegen die Momente direkt nach einem Puls in der Totzeit des Detektors, sodass die Magnetisierung faktisch erst gemessen werden kann, wenn sie eine gewisse Zeit vergangen ist, in der aber auch die Magnetisierung abklingt. Um dieses Problem zu umgehen wird das Hahn-Echo verwendet. Mit diesem können dephasierende Anteile der Magnetisierung, welche linear in $I_z$ sind, refokussiert werden; es kann dann ein „Echo“ des originalen Pulses zur Zeit $2 t_p$ beobachtet werden. Zu den betroffenen Wechselwirkungen zählen zum Beispiel *** und lokale Feldinhomogenitäten. Nicht jedoch wiedergewonnen werden können Teile der Magnetisierung, die durch $T_2$-Effekte verloren wurden. Damit dieser Einfluss bei den Messungen konstant ist, wird in diesem Fall das gleiche $t_p$ für alle Messungen verwendet. *** Quelle
 
 Es lässt sich so aber offensichtlich mit folgender Pulsfolge $T_2$ bestimmen:
-
-*** Bild
+\begin{figure}
+	\begin{center}
+		\input{graphics/pulsfolgen/pulsfolgeT2.pdf_tex}
+	\end{center}
+	\caption{Pulsfolge zum Messen von $T_2$; $t_p$ ist der variable Parameter. Abbildung aus \cite{joachim_master}}\label{fig:theo:pulsT2}
+\end{figure}
 
 Ein $\SI{90}{\degree}$-Puls kippt die Magnetisierung aus dem Gleichgewicht in die Detektionsebene, wo sie sodann anfängt zu dephasieren. Nach der Zeit $t_p$ wird ein Hahn-Echo durchgeführt und nach $2 t_p$ kann die verbliebene Stärke der Magnetisierung gemessen werden. $T_2$ kann so in Abhängigkeit von $t_p$ aufgenommen werden.
+
+Ein einfacher $\SI{90}{\degree}$-Puls wird FID, kurz für free induction decay, genannt. Er kann verwendet werden, wenn Einflüsse der Totzeit zu vernachlässigen sind -- neben experimentellen Umgebungen auch bei Simulationen.
+
 
 Sowohl an $T_1$- als auch an $T_2$-Daten können Varianten einer Kohlrauschfunktion gefittet werden.
 
@@ -238,6 +280,10 @@ Sowohl an $T_1$- als auch an $T_2$-Daten können Varianten einer Kohlrauschfunkt
     M_{T_2} (t_p) &= M_0 \exp{ \left(- { \left( \frac{2 t_p}{T_2} \right) }^{\beta_{T_2}} \right)} + M_\text{off} \label{eqn:theo:T_2_fit}
 \end{align}
 
-Dabei handelt es sich um Exponentialfunktionen, die mit einem Exponenten $\beta$ gestreckt werden können. Dieser Exponent erlaubt Abweichungen von der BPP-Theorie, die von einer einzelnen Korrelationszeit $\tau_c$ ausgeht. ***
+Dabei handelt es sich um Exponentialfunktionen, die mit einem Exponenten $\beta$ gestreckt werden können. %Dieser Exponent erlaubt Abweichungen von der BPP-Theorie, die von einer einzelnen Korrelationszeit $\tau_c$ ausgeht. ***
 
 Es ist anzumerken, dass nicht spezifiziert wurde, um welche Achse die Pulse ausgeführt werden müssen. Dies liegt daran, dass es für die meisten Pulse mehrere Optionen gibt: Egal ob die Gleichgewichtsmagnetisierung mit einem $\SI{180}{\degree}$-Puls oder einem $\SI{-180}{\degree}$-Puls invertiert wird, ob um die $x$-Achse oder die $y$-Achse -- das Ergebnis ist immer die invertierte Magnetisierung $-M_\infty$. In der Praxis wird daher eine Kombination aus mehreren verschiedenen Pulsfolgen verwendet, die aber alle das gleiche Ergebnis liefern. Werden die Ergebnisse gemittelt, verstärken sich die Signale und unerwünschte Anteile -- beispielsweise durch leicht falsch gewählte Pulslängen -- mitteln sich heraus. So können weitere Fehlerquellen eliminiert werden.
+
+
+
+
