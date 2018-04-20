@@ -1,0 +1,37 @@
+\chapter{Simulation}\label{chapter:simulation}
+
+Die hier verwendete Simulationssoftware, geschrieben in C++, wurde an diesem Lehrstuhl von J. Beerwerth entwickelt.
+
+
+Simulationen werden gerne verwendet um schnell und kostengünstig
+
+
+Ein besonderer Wert von Simulationen offenbaren sich im Vergleich mit experimentellen Daten.
+
+
+
+Während nicht jeder Teil der Simulationssoftware explizit benannt werden soll, soll dennoch der Aufbau nachvollzogen werden, um eine Einschätzung ihrer (Erweiterungs-)Möglichkeiten bieten zu können.
+
+
+Trajektorien
+
+
+Jede Simulation besteht aus drei Komponenten, die unabhängig von einander gewählt werden können: Die Art der Messung (beispielsweise ein 2D-Spektrum oder ein Hahn-Echo), das Bewegungsmodell (zum Beispiel Sprünge zwischen $N$ festen Plätzen oder ein isotroper Sprung) und die zu berücksichtigen Wechselwirkungen (wie die Quadrupol-Wechselwirkung oder die chemische Verschiebung).
+
+
+
+
+Zunächst muss entschieden werden, welche Art von Messung simuliert werden soll. Dies schließt zum Beispiel bestimmte Pulsfolgen wie FIDs oder Hahn-Echos ein, aber auch die Möglichkeit Spektren zu erstellen, ohne vollständige Trajektorien berechnen zu müssen.
+
+
+Die Klasse \texttt{NMRSimulation} bildet das Herzstück der Software. Per Komandozeile übergebene Parameter werden geparst und gespeichert, oder an die richtigen Stellen weitergeleitet.
+
+
+Die benötigten Zufallszahlen hierzu werden von einem Mersenne-Twister Algorithmus bereitgestellt, der heutzutage einen Standard in vielen Programmiersprachen darstellt und gute statistische Eigenschaften aufweist.
+
+
+
+Das Czjzek-Modell nach \cite{} geht von *** aus. Daraus ergeben sich bestimmte Wahrscheinlichkeitsverteilungen für die Parameter $V_{zz}$ und $\eta$, die, wie in Kapitel *** erwähnt, zur Parametrisierung eines EFGs genügen. Aus dieser Verteilung kann nun ein Parametersatz gezogen werden, der den simulierten EFG darstellen soll. Dies geschieht mit einem Neumannschen Rückweisungsverfahren
+
+Die Verteilung *** gibt die Wahrscheinlichkeit für die Kombination aus $V_{zz}$ und $\eta$ an
+

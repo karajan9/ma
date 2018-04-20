@@ -1,0 +1,46 @@
+Grundlegendes
+
+
+
+Ziel
+
+Ziel war, Vorgänge und Wechselwirkungen bei NMR-Experimenten zu simulieren.
+
+(Eigentliche Wert offenbart sich im Vergleich mit Experimenten)
+Bei Simulationen gehen bestimmte Dinge ein und die sind alle bekannt
+Angenommen, keine Fehler sind unterlaufen
+Sind Features von Experimenten auch in Sim zu sehen?
+Ich habe ein bestimmtes Modell im Verdacht -> zeigt die Sim das auch?
+Dinge (schnell) und kostengünstig ausprobieren, Sachen machen die in Experimenten nicht gehen
+
+
+Was kann es?
+
+Trajektorien berechnen, FID, HE, Spektren, 2D-Spektren -> nachgucken
+Verschiedenen WW, QWW 1/2 CS -> nachgucken
+Verschiedene Bewegungsmodelle
+
+
+Aufbau
+
+Klasse NMRSim: Wird zum Starten & Parsen der Argumente verwendet
+
+Job: Sagt, was aufgenommen wird, FID, Spektrum etc. und führt entsprechende Pulssequenz aus
+Bewegungsmodell (insb. Czj.): sagt, wann was wie hopst, dadurch ändert sich in der Regel die Frequenz
+Wechselwirkung: Berechnet die Frequenz.
+
+
+Was habe ich gemacht?
+
+Das aktuelle Modell (Czj) zieht mit einem Rückweisungsverfahren aus der Verteilung. Jedes Mal neu, da steht kein Stein mehr auf dem anderen.
+Um das flexibler zu machen: Neues Modell, ich rechne eine Elektronen-Verteilung aus, die E-Verteilung ergibt EFG zum Bestimmen der Frequenz und E, welche ich bewegen kann wie ich will
+
+Als ich untersucht habe aus Linienbreiten Dynamik zu holen: Der Schwerpunkt (und weiteres) der Diagonalen von 2D-Austausch-Soektren sind mit der Lebenszeit korreliert.
+
+
+
+
+
+
+Zufallszahlen mit MT19937
+
