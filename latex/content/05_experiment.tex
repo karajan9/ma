@@ -5,23 +5,27 @@ Im Folgenden sollen die im Rahmen dieser Arbeit aufgenommenen Daten vorgestellt 
 
 Im Verlauf der Auswertung werden die Daten zum Teil nach dem verwendeten Spektrometer unterschieden. Dies liegt an der unterschiedlichen Larmorfrequenzen der Apparaturen -- $\omega_{L, \text{OBI}} = 2\pi \cdot \SI{97.1722}{MHz}$ im Vergleich zu $\omega_{L, \text{Bruker}} = 2\pi \cdot \SI{130.9736}{MHz}$ -- welche sich um etwa einen Faktor $\SI{1.35}{}$ unterscheiden. Dies ist genug, um eine deutliche Auswirkung in den Daten beobachten zu können.
 
-Bei beiden Spektrometern wurden für die grundlegenden Parameter bei allen Messungen etwa die gleichen Einstellungen verwendet: Für das OBI-Spektrometer wurde die Dauer eines $\SI{180}{\degree}$-Pulses auf einen Wert zwischen $\SI{6.5}{\micro s}$ und $\SI{7.1}{\micro s}$ gesetzt, beim Bruker-Spektrometer auf $\SI{5.2}{\micro s}$. Die Evolutionszeit $t_p$ der Echos beträgt in den meisten Fällen $\SI{15}{\micro s}$ und nie mehr als $\SI{20}{\micro s}$. Die Wiederholungszeit, also die Zeit zwischen zwei Pulsfolgen beträgt etwa $\SI{10}{\milli s}$. Der mit dem OBI-Spektrometer abgedeckte Temperaturbereich reicht von $\SI{230}{\kelvin}$ bis $\SI{435}{\kelvin}$, während sich der Temperaturbereich des Bruker-Spektrometers auf den Bereich von $\SI{310}{\kelvin}$ bis $\SI{390}{\kelvin}$ beschränkt.
+Bei beiden Spektrometern wurden für die grundlegenden Parameter bei allen Messungen etwa die gleichen Einstellungen verwendet: Für das OBI-Spektrometer wurde die Dauer eines $\SI{180}{\degree}$-Pulses auf einen Wert zwischen $\SI{6.5}{\micro s}$ und $\SI{7.1}{\micro s}$ gesetzt, beim Bruker-Spektrometer auf $\SI{5.2}{\micro s}$. Dabei wurde selektiv die Zentrallinie angeregt. Das bedeutet, dass das $^\text{87}$Rb-NMR-Spektrum ist zu breit, als dass es nicht-selektiv angeregt werden könnte, und da es sich bei $^\text{87}$Rb um einen Kern mit halb-zahligen Spin handelt wird nur der Übergang $-\sfrac{1}{2} \leftrightarrow \sfrac{1}{2}$ -- welcher im Spektrum als sogenannte Zentrallinie zu sehen ist -- angeregt.
 
-Alle beschriebenen Fits wurden durch eine least-squares-Methode erstellt.
+Die Evolutionszeit $t_p$ der Echos beträgt in den meisten Fällen $\SI{15}{\micro s}$ und nie mehr als $\SI{20}{\micro s}$. Die Wiederholungszeit, also die Zeit zwischen zwei Pulsfolgen, beträgt zwischen $\SI{10}{\milli s}$ und $\SI{50}{\milli s}$. Diese soll dafür sorgen, dass die Magnetisierung nach jeder Pulsfolge wieder in den Ausgangszustand jeder Pulsfolge, der Gleichgewichtsmagnetisierung, zurückkehren kann. Dafür sollte ein Vielfaches der $T_1$-Zeitkonstante gewartet werden.
+
+Der mit dem OBI-Spektrometer abgedeckte Temperaturbereich reicht von $\SI{230}{\kelvin}$ bis $\SI{435}{\kelvin}$, während sich der Temperaturbereich des Bruker-Spektrometers auf den Bereich von $\SI{310}{\kelvin}$ bis $\SI{390}{\kelvin}$ beschränkt.
+
+Alle beschriebenen Fits wurden durch eine least-squares-Methode mit Hilfe von Python-Skripten, welche \texttt{scipy.optimize}- oder \texttt{lmfit}-Routinen verwenden, erstellt.
 
 
 \section{Bestimmung von $T_1$ und $T_2$} \label{section:res:T_1}
 
-Vor dem Beginn jeder NMR-Messung ist es sinnvoll, $T_1$ im zu untersuchenden Temperaturgebiet zu vermessen. Dies ist hilfreich, um wichtige Parameter der Messungen abzustecken und mögliche Hindernisse im Vorhinein abschätzen zu können. So sollte zwischen allen Messungen eine Zeit von mindestens $4 T_1$ gewartet werden, um sicherzugehen, dass sich die Magnetisierung in guter Näherung wieder im Gleichgewichtszustand befindet. Wird $T_1$ also im Laufe der Messung bei anderen Temperaturen länger, muss hierauf Rücksicht genommen werden. Wird $T_1$ auf der anderen Seite sehr kurz, kann es passieren, dass Signale sehr schnell zerfallen und den Experimentierenden mit einem schlechten Signal-Rausch-Verhältnis zurücklassen. Hinzu kommt, dass der Temperaturverlauf von $T_1$ nach Formel \eqref{eqn:bpp} wertvolle Information über die Dynamik in der untersuchten Probe liefern kann. Zuletzt bietet diese recht einfache und reproduzierbare Messung die Möglichkeit, den Aufbau und die Probe auf Übereinstimmung mit Literaturdaten hin zu überprüfen. Daher wurden zu allen untersuchten Temperaturen $T_1$-Messungen aufgenommen.
+Vor dem Beginn jeder NMR-Messung ist es sinnvoll, $T_1$, die Zeitkonstante der longitudinalen Relaxation, im zu untersuchenden Temperaturgebiet zu vermessen. Dies ist hilfreich, um wichtige Parameter der Messungen abzustecken und mögliche Hindernisse im Vorhinein abschätzen zu können. So sollte zwischen allen Messungen eine Zeit von mindestens $4 T_1$ gewartet werden, um sicherzugehen, dass sich die Magnetisierung in guter Näherung wieder im Gleichgewichtszustand befindet -- wird $T_1$ also im Laufe der Messung bei anderen Temperaturen länger, muss hierauf Rücksicht genommen werden. Wird $T_1$ auf der anderen Seite sehr kurz, kehrt die Magnetisierung sehr schnell in den Gleichgewichtszustand zurück und lassen dem Experimentierenden daher nur ein kleines Fenster, in dem Untersuchungen durchgeführt werden können. Hinzu kommt, dass der Temperaturverlauf von $T_1$ nach Formel \eqref{eqn:bpp} wertvolle Information über die Dynamik in der untersuchten Probe liefern kann. Zuletzt bietet diese recht einfache und reproduzierbare Messung die Möglichkeit, den Aufbau und die Probe auf Übereinstimmung mit Literaturdaten hin zu überprüfen. Daher wurden zu allen untersuchten Temperaturen $T_1$-Messungen aufgenommen.
 
 Zur Bestimmung von $T_1$ wurde eine Invertierungs-Pulsfolge mit Hahn-Echo verwendet.
 
 Repräsentative Rohdaten einer solchen Messung sind in Abbildung \ref{fig:res:T_1_roh} zu sehen. An die Daten wurden Fits mit $T_1$ und $\beta$ als freien Parametern entsprechend Gleichung \eqref{eqn:theo:T_1_fit} angelegt -- diese sind als Linien dargestellt. Die Daten wurden hier zudem auf den Bereich zwischen $1$ und $-1$ normiert, um einen besseren Vergleich zuzulassen. Es ist zu erkennen, dass die Fits eine gute Repräsentation der Daten ermöglichen.
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=.9\textwidth]{graphics/plots/T1/t1_roh.pdf}
+		\includegraphics[width=.9\textwidth]{graphics/plot/t1_roh2.pdf}
 	\end{center}
-	\caption{Normierte Aufbaukurven der longitudinalen Magnetisierung zur Bestimmung von $T_1$. Linien stellen Kohlrausch-Fits an die Datenpunkte dar.} \label{fig:res:T_1_roh}
+	\caption{Aufbaukurven der longitudinalen Magnetisierung zur Bestimmung von $T_1$. Linien stellen Kohlrausch-Fits an die Datenpunkte dar. Die Daten wurden auf $M_{T_1}(0)$ und $M_{T_1}(\infty)$ der Fits normiert.} \label{fig:res:T_1_roh}
 \end{figure}
 
 Während sich die Kurven zwischen $\SI{305}{\kelvin}$ und $\SI{325}{\kelvin}$ sehr ähneln, verschieben sich die Kurven und damit auch die $T_1$-Werte bei höheren Temperaturen zu kürzeren Zeiten.
@@ -31,7 +35,7 @@ Dies lässt sich auch in der Gesamtübersicht aller aufgenommenen $T_1$-Daten in
 	\begin{center}
 		\includegraphics[width=.9\textwidth]{graphics/plot/t1.pdf}
 	\end{center}
-	\caption{$T_1$ und $\beta$ aus Fits nach Gleichung \eqref{eqn:theo:T_1_fit}. Blaue und rote Symbole indizieren die am OBI- bzw. Bruker-Spektrometer aufgenommen Daten; orangene Kreuze bieten einen Vergleich mit Daten von Zürn \cite{zuern_paper}.} \label{fig:res:T_1}
+	\caption{$T_1$ und $\beta$ aus Fits nach Gleichung \eqref{eqn:theo:T_1_fit}. Blaue und rote Symbole zeigen die am OBI- bzw. Bruker-Spektrometer aufgenommen Daten. Bei Temperaturen über $\SI{390}{\kelvin}$ wurden die $\beta$ der Fits auf $\SI{1}{}$ festgesetzt -- diese Werte wurden mit Sternen anstatt Punkten symbolisiert. Orangene Dreiecke bieten einen Vergleich mit Daten von Zürn \cite{zuern_paper}.} \label{fig:res:T_1}
 \end{figure}
 
 Während die Unsicherheiten der Fits die Größe der dargestellten Symbole meist nicht überschreiten, sind starke Schwankungen über $\SI{390}{\kelvin}$ zu erkennen. Einem Großteil der dort aufgenommenen Daten kann nicht mehr Bedeutung als einer groben Idee der Tatsachen zugemessen werden.
@@ -57,9 +61,9 @@ Die Unsicherheiten der mit dem Bruker-Spektrometer bestimmten $\beta$ ist vergle
 In Abbildung \ref{fig:res:T_2_roh} sind exemplarisch Rohdaten verschiedener Temperaturen zu sehen. Diese wurden mit einem Hahn-Echo mit $\tau = \SI{15}{\micro s}$ aufgenommen und auf den Bereich zwischen $\SI{0}{}$ und $\SI{1}{}$ normiert.
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=.9\textwidth]{graphics/plots/T2/t2_roh.pdf}
+		\includegraphics[width=.9\textwidth]{graphics/plot/t2_roh2.pdf}
 	\end{center}
-	\caption{Normierte Messungen des transversalen Magnetisierungszerfalls zur Bestimmung von $T_2$. Linien stellen Fits an die Datenpunkte dar. (*** richtig normieren)} \label{fig:res:T_2_roh}
+	\caption{Kurven des transversalen Magnetisierungszerfalls zur Bestimmung von $T_2$. Linien stellen Kohlrausch-Fits an die Datenpunkte dar. Die Daten wurden auf $M_{T_2}(0)$ und $M_{T_2}(\infty)$ der Fits normiert.} \label{fig:res:T_2_roh}
 \end{figure}
 
 An diese wurden Fit-Funktionen nach \eqref{eqn:theo:T_2_fit} angelegt, welche als Linien dargestellt sind. Es lässt sich mit den Fits eine gute Übereinstimmung zu den Daten erzielen. Auch hier lässt sich erkennen, dass $T_2$ bei Temperaturen bis etwa $\SI{320}{\kelvin}$ nahezu konstant verbleibt, und zu hoheren Temperaturen kleiner wird.
@@ -69,7 +73,7 @@ Abbildung \label{fig:res:T_2} zeigt eine Übersicht über die aufgenommen $T_2$-
 	\begin{center}
 		\includegraphics[width=.9\textwidth]{graphics/plot/t2.pdf}
 	\end{center}
-	\caption{$T_2$ und $\beta$ aus Fits nach Gleichung \eqref{eqn:theo:T_2_fit}. Blaue und rote Symbole indizieren die am OBI- bzw. Bruker-Spektrometer aufgenommen Daten.} \label{fig:res:T_2}
+	\caption{$T_2$ und $\beta$ aus Fits nach Gleichung \eqref{eqn:theo:T_2_fit}. Blaue und rote Symbole zeigen die am OBI- bzw. Bruker-Spektrometer aufgenommen Daten. Bei Temperaturen über $\SI{390}{\kelvin}$ wurden zusätzlich Fits mit einem konstanten $\beta = \SI{1}{}$ erstellt -- diese Werte wurden mit Sternen anstatt Punkten symbolisiert.} \label{fig:res:T_2}
 \end{figure}
 
 Auch die $\beta$-Werte zeigen bei höheren Temperaturen deutlich größere Unsicherheiten, hier allerdings schon zwischen $\SI{390}{\kelvin}$ und $\SI{425}{\kelvin}$, was eine Bestimmung der Werte verkompliziert. Sie scheinen zwischen $\SI{1}{}$ und $\SI{2}{}$ zu liegen. Bei tieferen Temperaturen klärt sich das Bild etwas: Während die Daten des OBI-Spektrometers bei Temperaturen bis $\SI{350}{\kelvin}$ ein $\beta$ zwischen $\SI{1}{}$ und $\SI{1.5}{}$ suggerieren, zeigen die Daten des Bruker-Spektrometers ein $\beta$ um $\SI{1}{}$ -- mit geringerer Unsicherheit. Bei nochmals tieferen Temperaturen scheint $\beta$ konsistent bei rund $\SI{1}{}$ zu liegen.
@@ -121,7 +125,7 @@ Die Werte $\tau_2$ und $\beta_{F_2}$ wurden dann durch $T_1$ und $\beta_{T_1}$ e
 
 Da die Daten bei Mischzeiten von über $\SI{100}{\milli s}$ stark streuen wurden sie nicht dargestellt und aus der Analyse ausgeschlossen, um das Ergebnis nicht zu beeinträchtigen. An verbleibenden Punkte wiederum kann ein Kohlrausch-Fit angelegt werden, um über den beschriebenen Umweg zu einer Funktion ähnlich der aus Formel (*** stim. Echo) zu gelangen.
 
-Es wurden je zwei Messungen einer Cos-Cos-Pulsfolge und einer Sin-Sin-Pulsfolge bei $\SI{310}{\kelvin}$ durchgeführt, sowie je eine Messung bei $\SI{300}{\kelvin}$. Die Resultate finden sich in Tabelle \ref{tab:res:F_2} und später in Abbildung \ref{fig:res:dynvgl}:
+Es wurden je zwei Messungen einer Cos-Cos-Pulsfolge und einer Sin-Sin-Pulsfolge bei $\SI{310}{\kelvin}$ durchgeführt, sowie je eine Messung bei $\SI{300}{\kelvin}$. Die Resultate finden sich in Tabelle \ref{tab:res:F_2} und später in Abbildung \ref{fig:res:dynvgl}.
 \begin{table}
 	\centering
 	\begin{tabular}{lllll}
@@ -273,7 +277,7 @@ Für den Parameter $\eta$ der Spektraldichten wurde $\eta^2 = 42 - 24 \sqrt{3} \
 \end{align}
 mit dem strength index $D = \SI{3.5}{}$, der Vogel-Fulcher-Temperatur $T_\text{VF} = \SI{294}{K}$ und dem Frequenzfaktor $\tau_{co} = \SI{5.1e-14}{s}$ angenommen. Diese Werte wurden durch dielektrische Spektroskopie gewonnen.
 
-Am $T_1$-Minimum nach Gleichung \eqref{eqn:bpp} gilt $\omega \tau_c \approx \SI{0.61}{}$ \cite[S. 629]{omegatau061}. Das $T_1$-Minimum kann in den OBI-Daten bei etwa $T_{T_1 \text{min}} = \SI{390}{K}$ gefunden werden; die Larmorfrequenz liegt bei $\omega_L = 2\pi \cdot \SI{97.1722}{MHz}$, was bedeutet, dass bei $T_{T_1 \text{min}}$ gilt $\tau_c \approx \SI{0.61}{} / \omega_L \approx \SI{1.0}{\nano s}$. Vergleicht man das Vogel-Fulcher-Gesetz mit diesem Punkt, lässt sich erkennen, dass eine gute Übereinstimmung vorliegt.
+Am $T_1$-Minimum nach Gleichung \eqref{eqn:bpp} gilt $\omega \tau_c \approx \SI{0.61}{}$ \cite[S. 629]{omegatau061}. Das $T_1$-Minimum kann in den OBI-Daten bei etwa $T_{T_1 \text{min}} = \SI{410}{K}$ gefunden werden; die Larmorfrequenz liegt bei $\omega_L = 2\pi \cdot \SI{97.1722}{MHz}$, was bedeutet, dass bei $T_{T_1 \text{min}}$ gilt $\tau_c \approx \sfrac{\SI{0.61}{}}{\omega_L} \approx \SI{1.0}{\nano s}$. Vergleicht man das Vogel-Fulcher-Gesetz mit diesem Punkt, lässt sich erkennen, dass eine gute Übereinstimmung vorliegt.
 
 \begin{wrapfigure}{r}{0.5\textwidth}
 	\vspace{-20pt}
@@ -281,20 +285,19 @@ Am $T_1$-Minimum nach Gleichung \eqref{eqn:bpp} gilt $\omega \tau_c \approx \SI{
 		\includegraphics[width=0.49\textwidth]{graphics/plot/vftau.pdf}
 	\end{center}
 	\vspace{-20pt}
-	\caption{Vergleich von Zeitkonstante aus $T_1$-Minimum mit Vogel-Fulcher-Gesetz. \label{fig:korrelationszeiten}}
+	\caption{Vergleich von Zeitkonstante aus $T_1$-Minimum, und Vogel-Fulcher-Gesetz für CRN mit Parametern nach \cite{PIMENOV199793} in orange und Parametern nach \cite{crn_augsburg} in grün. \label{fig:korrelationszeiten}}
 \end{wrapfigure}
-
-Ein Vergleich mit den Parametern $D = \SI{4.72}{}$, $T_\text{VF} = \SI{285}{K}$ und $\tau_{co} = \SI{1.15e-14}{s}$ nach \cite{crn_augsburg}, ebenfalls bestimmt durch dielektrische Spektroskopie, ist in Abbildung \ref{fig:res:theorie_j} zu sehen. Während leichte Unterschiede zu erkennen sind, ändert sich das Gesamtbild wenig, weswegen sich diese Ausführungen auf den ersten Parametersatz beschränken.
+Ein Vergleich mit den Parametern $D = \SI{4.72}{}$, $T_\text{VF} = \SI{285}{K}$ und $\tau_{co} = \SI{1.15e-14}{s}$ nach \cite{crn_augsburg}, ebenfalls bestimmt durch dielektrische Spektroskopie, ist in den Abbildungen \ref{fig:korrelationszeiten} und \ref{fig:res:theorie_j} zu sehen. Während leichte Unterschiede zu erkennen sind, ändert sich das Gesamtbild wenig, weswegen sich diese Ausführungen auf den ersten Parametersatz beschränken.
 
 
 
 
 Führt man zunächst einen Vergleich der Halbwertsbreiten mit der Theorie durch, lässt sich leicht feststellen, dass signifikante Unterschiede zu beobachten sind: Die gemessenen Halbwertsbreiten sind ab $\SI{360}{\kelvin}$ aufwärts deutlich größer als vorhergesagt. Dies liegt am Einfluss des kurzen $T_1$ von etwa $\SI{50}{\micro s}$, welches mit der zusätzlich Relaxation zur Verbreiterung des Spektrums beiträgt.
 
-Um einen Vergleich mit der Theorie dennoch durchführen zu können, wurde versucht den Einfluss von $T_1$ rechnerisch zu eliminieren. Im Bereich des Einflusses lassen sich die Spektren gut mit einem Lorentz-Fit (vgl. Gleichung \eqref{eqn:res:lorentz}) näheren. Die Fouriertransformierte hiervon ist eine gedämpfte Schwingung mit der Halbwertsbreite $2 \gamma = a/\pi$:
+Um einen Vergleich mit der Theorie dennoch durchführen zu können, wurde versucht den Einfluss von $T_1$ rechnerisch zu eliminieren. Im Bereich des Einflusses lassen sich die Spektren gut mit einem Lorentz-Fit (vgl. Gleichung \eqref{eqn:res:lorentz}) näheren. Die Fouriertransformierte hiervon ist eine gedämpfte Schwingung mit der Halbwertsbreite $2 \gamma_0 = a/\pi$:
 \begin{align}
 	h(t) & = \exp{(-a |t|)} \cos{(2 \pi f_0 t)} \\
-	H(t) & = \int_{-\infty}^{\infty} h(t) \text{d} t \\
+	H(t) & = \int_{-\infty}^{\infty} h(t) \exp{i 2 \pi f t} \text{d} t \\
 	H(f) & = \frac{2}{a} \cdot \frac{(a/2\pi)^2}{((a/2\pi)^2) + (f - f_0)^2}
 \end{align}
 
@@ -302,17 +305,22 @@ Diese gedämpfte Schwingung soll durch eine normierte Kohlrausch-Funktion
 \begin{align}
 	f(t) = \exp{\left( {\left(-\frac{t}{T_1} \right)}^\beta \right) },
 \end{align}
-welche für Fits an $T_1$ verwendet werden kann, geteilt werden. Für eine vereinfachte Rechnung wird hier wird $\beta = 1$ angenommen, was in der Regel eine annehmbare Näherung darstellt. Wird der Quotient der Funktionen zurück in den Frequenzraum transformiert, ergibt sich die modifizierte Halbwertsbreite $2\gamma = 2(\gamma_0 - \frac{1}{\pi T_1})$.
+welche für Fits an $T_1$ verwendet werden kann, geteilt werden. Da die Messung der Signale per Definition immer bei 0 beginnt, kann $t$ durch $|t|$ ersetzt werden. Für eine vereinfachte Rechnung wird hier wird $\beta = 1$ angenommen, was in der Regel eine annehmbare Näherung darstellt.
+\begin{align}
+	h'(t) &= \exp{(-a \lvert t \rvert)} \cdot \cos{(2 \pi f_0 t)} \cdot \exp{\left(\frac{|t|}{T_1} \right)} \\
+	&= \exp{\left(- \left(a - \frac{1}{T_1}\right) |t|\right)} \cos{(2 \pi f_0 t)}
+\end{align}
+Wird der Quotient der Funktionen zurück in den Frequenzraum transformiert, ergibt sich $a' = a - \sfrac{1}{T_1}$ und damit die modifizierte Halbwertsbreite $2\gamma = 2\gamma_0 - \frac{1}{\pi T_1}$.
 
-Dies bedeutet, dass für die Korrektur lediglich die schon vorliegenden Halbwertsbreiten mit $T_1$-Werten der passenden Temperaturen modifiziert werden müssen. Diese wurden aus den durchgeführten $T_1$-Messungen der jeweiligen Spektrometer gewonnen. Die Ergebnisse sind in Abbildung \ref{fig:res:spek_fwhm_t1} zu sehen.
+Dies bedeutet, dass für die Korrektur lediglich die schon vorliegenden Halbwertsbreiten mit $T_1$-Werten der passenden Temperaturen modifiziert werden müssen. Diese wurden aus den durchgeführten $T_1$-Messungen der jeweiligen Spektrometer gewonnen. Da die $T_1$-Werte bei Temperaturen über $\SI{400}{\kelvin}$ stark schwanken, wurden für die Daten des OBI-Spektrometers die $T_1$-Werte der Fits mit konstantem $\beta = 1$ verwendet (siehe Kapitel \ref{section:res:T_1} und Abbildung \ref{fig:res:T_1}). Die Ergebnisse sind in Abbildung \ref{fig:res:spek_fwhm_t1} zu sehen.
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=.9\textwidth]{graphics/plots/SPEK/spek_t1korr.pdf}
+		\includegraphics[width=.8\textwidth]{graphics/plot/fwhm_t1.pdf}
 	\end{center}
-	\caption{Halbwertsbreite der OBI-Spektren in blau, mit der beschriebenen $T_1$-Korrektur in orange.} \label{fig:res:spek_fwhm_t1}
+	\caption{Halbwertsbreiten der OBI-Spektren in blau, mit der beschriebenen $T_1$-Korrektur in orange. Die gezeigten Unsicherheiten stammen aus den Unsicherheiten der $T_1$-Werte.} \label{fig:res:spek_fwhm_t1}
 \end{figure}
 
-Es ist zu erkennen, dass $T_1$ bei Temperaturen über $\SI{360}{\kelvin}$ einen großen Einfluss auf die Halbwertsbreite hat und die entsprechend angepassten Halbwertsbreiten deutlich geringere Werte aufweisen. Bei Temperaturen über $\SI{410}{\kelvin}$ konnte keine Korrektur vorgenommen werden, weil die $T_1$-Werte in diesem Temperaturbereich zu stark streuen um aussagekräfige Daten zu produzieren.
+Es ist zu erkennen, dass $T_1$ bei Temperaturen über $\SI{360}{\kelvin}$ einen großen Einfluss auf die Halbwertsbreite hat und die entsprechend angepassten Halbwertsbreiten deutlich geringere Werte aufweisen. Bei Temperaturen über $\SI{410}{\kelvin}$ können auch negative Halbwertsbreiten gefunden werden; diese sind aber aufgrund der hohen Schwankungen der $T_1$-Werte in diesem Temperaturbereich mit entsprechend hohen Unsicherheiten belegt. Eine präzisere Messung von $T_1$ würde eine Korrektur mit geringeren Unsicherheiten erlauben.
 
 
 
