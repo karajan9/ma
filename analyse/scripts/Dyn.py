@@ -156,14 +156,22 @@ def tau_c_4er(T):
     return tau_co * np.exp((D * T_VF) / (T - T_VF))
 
 
+def tau_c_aug(T):
+    tau_co = 1.15e-14
+    D = 4.72
+    T_VF = 285
+    return tau_co * np.exp((D * T_VF) / (T - T_VF))
+
+
 plt.gcf().set_size_inches(4, 3)
 T = np.linspace(350, 450, 1000)
 omega = np.geomspace(1, 2e12)
 # plt.plot(T, tau_c(T), label="Arrhenius")
-plt.plot(T, tau_c_4er(T), label="Vogel-Fulcher", color="tab:orange")
+plt.plot(T, tau_c_4er(T), label="$\\tau_c$ nach [Pim+97]", color="tab:orange")
+plt.plot(T, tau_c_aug(T), label="$\\tau_c$ nach [Lun+10]", color="tab:green")
 plt.scatter(
-    390,
-    1.0e-9,
+    410,
+    0.61 / 2 / np.pi / 97.2e6,
     marker='o',
     label="$\\omega \\tau_c = 0.61$",
     color="tab:blue")

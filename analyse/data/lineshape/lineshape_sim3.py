@@ -7,8 +7,8 @@ from lmfit import Model, Parameters
 from scipy.optimize import curve_fit, leastsq
 from scipy.special import lambertw
 import sys
-home_dir = "/home/karajan/uni/master/analyse"
-sys.path.append(os.path.abspath("/home/karajan/uni/master/analyse/scripts"))
+home_dir = "/home/karajan/uni/master/ma/analyse"
+sys.path.append(os.path.abspath("/home/karajan/uni/master/ma/analyse/scripts"))
 from nmr_lib import *
 
 
@@ -45,8 +45,8 @@ def T_mauro_aug(tau_c):
 
 
 # %%
-Ts = np.array([363., 364., 365., 366., 367., 370., 380.,  400.,])
-Ts = np.array([225., 250., 275., 300.,])
+Ts = np.array([360., 363., 364., 365., 366., 367., 370., 380.,])
+# Ts = np.array([225., 250., 275., 300.,])
 tau_c_4er(Ts)
 
 # labels
@@ -186,11 +186,16 @@ plt.legend()
 # %%
 # dofft plotten
 # plt.rcParams['figure.figsize'] = (12, 8)
-for i, fn in enumerate(fn_apo):
-    data_fft = np.loadtxt(fn, comments="!")
+directory = "/home/karajan/uni/master/ma/analyse/data/lineshape/run11"
+fn_apo = glob.glob(directory + "/*.fid.fft")
+fn_apo = sorted(fn_apo, key=lambda a: float(a.split("!")[1]))
+labels = np.array(sorted(float(fn.split("!")[1]) for fn in fn_apo))
+print(fn_apo)
+for i, fn in enumerate(fn_apo[::-1]):
+    data_fft = np.loadtxt(fn, comments="#")
     plt.plot(data_fft[:, 1], data_fft[:, 2], label=labels[i])
 
-plt.xlim(-5000, 5000)
+# plt.xlim(-5000, 5000)
 # plt.xlim(-500000, 500000)
 plt.legend()
 
@@ -246,21 +251,34 @@ def get_fwhm_temp_t1():
 
 
 def get_fwhm_temp_t1_2():
-    homedir = "/home/karajan/uni/master/analyse/data/crn/data/"
+    homedir = "/home/karajan/uni/master/ma/analyse/data/crn/data/"
+
     fwhm_data = np.loadtxt(homedir + "SPEK/spek_342K_380K.data")
-    t1_data = np.loadtxt(homedir + "T1/t1_342K_380K.data")
     temp_f = fwhm_data[:, 1]
     gamma = fwhm_data[:, 5]
+
+    t1_data = np.loadtxt(homedir + "T1/t1_342K_380K.data")
     t1 = t1_data[:, 3]
+    t1err = t1_data[:, 4]
+
     fwhm_data2 = np.loadtxt(homedir + "SPEK/spek_360K_440K.data")
-    t1_data2 = np.loadtxt(homedir + "T1/t1_360K_440K_170807.data")
     temp_f2 = fwhm_data2[:, 1]
     gamma2 = fwhm_data2[:, 5]
-    t12 = t1_data2[:, 3]
 
-    return np.hstack([temp_f, temp_f2[6:]]), np.hstack(
-        [(gamma - 1 / t1[1::2] / 2 / np.pi) * 2,
-         (gamma2[6:] - 1 / t12[6:] / 2 / np.pi) * 2])
+    t1_data2 = np.loadtxt(homedir + "T1/t1_360K_440K_170807.data")
+    t1_data2 = np.loadtxt(homedir + "T1/T1_170807_betafest.data")
+    t12 = t1_data2[:, 3]
+    t12err = t1_data2[:, 4]
+
+    # return (np.hstack([temp_f, temp_f2[6:]]),
+    #        np.hstack([(gamma - 1 / t1[1::2] / 2 / np.pi) * 2, (gamma2[6:] - 1 / t12[6:] / 2 / np.pi) * 2]),
+    #        np.hstack([t1[1::2], t12[6:]]),
+    #        np.hstack([t1err[1::2], t12err[6:]]))
+    return (np.hstack([temp_f, temp_f2]),
+            np.hstack([(gamma - 1 / t1[1::2] / 2 / np.pi) * 2,
+                       (gamma2 - 1 / t12 / 2 / np.pi) * 2]),
+            np.hstack([t1[1::2], t12]),
+            np.hstack([t1err[1::2], t12err]))
 
 
 # # test ob richtige Temperaturen gefunden wurden
@@ -268,21 +286,35 @@ def get_fwhm_temp_t1_2():
 # plt.scatter(t1temps, t1t1)
 # plt.scatter(spektemps, spekt1)
 
+
+
+
 # %%
 # T1 rausrechnen
 spektemps, spekfwhm, spekt1, spekfwhm_t1 = get_fwhm_temp_t1()
-spektemps_2, spekfwhm_t1_2 = get_fwhm_temp_t1_2()
-plt.scatter(spektemps, spekfwhm, label="FWHM")
-# plt.scatter(spektemps_2, spekfwhm_t1_2, label="FWHM mit $T_1$-Korrektur")
+spektemps_2, spekfwhm_t1_2, t1, t1err = get_fwhm_temp_t1_2()
+t1err /= 1e3
+plt.scatter(spektemps, spekfwhm / 1e3, label="Halbwertsbreite")
+print(spekfwhm_t1_2**2)
+plt.errorbar(
+    spektemps_2,
+    spekfwhm_t1_2 / 1e3,
+    yerr=-t1err/t1**2/np.pi,
+    marker="o",
+    linestyle="None",
+    color="tab:orange",
+    label="Halbwertsbreite mit $T_1$-Korrektur")
 
-plt.ylim(0, 50000)
+plt.gca().tick_params(direction="in", top="on", right="on")
+plt.ylim(-5, 50)
 plt.xlabel("Temperatur [K]")
-plt.ylabel("FWHM [Hz]")
+plt.ylabel("Halbwertsbreite [kHz]")
+plt.xlim(325, 430)
 # plt.title("CRN FWHM mit $T_1$-Korrektur")
-plt.title("CRN FWHM")
-plt.legend(loc=3)
+# plt.title("CRN FWHM")
+plt.legend(loc=1)
 
-save_plot(plt, "/home/karajan/uni/master/analyse/plots/SPEK/spek_fwhm")
+save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEK2/fwhm_t1")
 
 
 # %%
@@ -549,6 +581,7 @@ plt.scatter(
     marker="D",
     label="Bruker")
 
+plt.scatter(363, -15, color="tab:orange")
 
 # plt.xlim(340, 370)
 # plt.gcf().set_size_inches(9, 6)
@@ -559,7 +592,7 @@ plt.xlabel("Temperatur [K]")
 plt.ylabel("Schwerpunkt [kHz]")
 plt.legend(loc=3)
 
-save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEK2/mean")
+# save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEK2/mean")
 
 
 

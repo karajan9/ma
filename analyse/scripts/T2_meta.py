@@ -29,11 +29,36 @@ obeta = np.empty(0)
 obetaerr = np.empty(0)
 for file_name in fn:
     data = np.loadtxt(file_name)
+
     otemps = np.hstack([otemps, data[:, 1]])
     ot2 = np.hstack([ot2, data[:, 3]])
     ot2err = np.hstack([ot2err, data[:, 4]])
     obeta = np.hstack([obeta, data[:, 5]])
     obetaerr = np.hstack([obetaerr, data[:, 6]])
+
+
+fn_t2betafest = home_dir + "T2_170807_betafest.data"
+data_t2_bf = np.loadtxt(fn_t2betafest)
+
+otemps_bf = data_t2_bf[:, 1]
+ot2_bf = data_t2_bf[:, 3]
+ot2err_bf = data_t2_bf[:, 4]
+obeta_bf = data_t2_bf[:, 5]
+obetaerr_bf = data_t2_bf[:, 6]
+
+
+cutofftemp = 390
+# ot2 = ot2[otemps < cutofftemp]
+# ot2err = ot2err[otemps < cutofftemp]
+# obeta = obeta[otemps < cutofftemp]
+# obetaerr = obetaerr[otemps < cutofftemp]
+# otemps = otemps[otemps < cutofftemp]
+
+ot2_bf = ot2_bf[otemps_bf > cutofftemp]
+ot2err_bf = ot2err_bf[otemps_bf > cutofftemp]
+obeta_bf = obeta_bf[otemps_bf > cutofftemp]
+obetaerr_bf = obetaerr_bf[otemps_bf > cutofftemp]
+otemps_bf = otemps_bf[otemps_bf > cutofftemp]
 
 
 # Bruker
@@ -63,7 +88,17 @@ pltt2.errorbar(
     linestyle="None",
     color="tab:blue",
     marker="o",
-    label="OBI")
+    label="$f_{L}(\\mathrm{OBI}) = 97.2$ MHz")
+
+pltt2.errorbar(
+    otemps_bf,
+    ot2_bf,
+    yerr=ot2err_bf,
+    linestyle="None",
+    color="tab:blue",
+    marker="*",
+    # label="$f_{L}(\\mathrm{OBI}) = 97.2$ MHz"
+)
 
 pltt2.errorbar(
     bruker_temp,
@@ -72,7 +107,7 @@ pltt2.errorbar(
     linestyle="None",
     color="tab:red",
     marker="D",
-    label="Bruker")
+    label="$f_{L}(\\mathrm{Bruker}) = 131.0$ MHz")
 
 pltt2.set_yscale("log")
 # pltt2.set_xlim(220, 445)
@@ -91,6 +126,15 @@ pltbeta.errorbar(
     color="tab:blue",
     markersize=4,
     marker="o")
+
+pltbeta.errorbar(
+    otemps_bf,
+    obeta_bf,
+    yerr=obetaerr_bf,
+    linestyle="None",
+    color="tab:blue",
+    markersize=4,
+    marker="*")
 
 pltbeta.errorbar(
     bruker_temp,
