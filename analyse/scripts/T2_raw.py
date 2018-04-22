@@ -53,7 +53,7 @@ def analyze_data(directory, verbose=True, normed=False):
         # plt.plot(reptime, fit)
 
         plt.xscale("log")
-        plt.show()
+        # plt.show()
         print(experiment_number, temp, phase)
         print(result.fit_report())
 
@@ -105,12 +105,13 @@ data_id = "170912"
 data_dir = home_dir + "/data/" + data_id + "/T2"
 os.chdir(data_dir)
 
+plt.tick_params(which="both", direction="in", top=True, right=True)
 get_analyse(data_dir, verbose=True, normed=True)
 plt.xlabel("$t_p$ [s]")
 plt.ylabel("Magnetisierung (normiert)")
 plt.legend(loc=1)
 # plt.title("CRN $T_2$")
-# save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/T2/t2_roh2")
+save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/T2/t2_roh3")
 
 # %%
 get_analyse(data_dir, verbose=False, resultfile="T2err_" + data_id + ".data")

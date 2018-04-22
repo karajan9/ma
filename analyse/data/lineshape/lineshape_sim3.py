@@ -707,3 +707,19 @@ for i, fn in enumerate(fn_spek):
     plt.plot(data[:, 0], data[:, 1] / np.max(data[:, 1]) - 0.2 * i)
 
 plt.xlim(-1e5, 1e5)
+
+
+
+# %%
+def calcsigma(factor):
+    larmorfrequenz = 97.1722e6  # *2*np.pi
+    I = 3.0 / 2.0
+    hbar = 1.05457180013e-34
+
+    faktorohneeQ = 1 / larmorfrequenz * (3.0 / (2.0 * I * (
+        2 * I - 1.0)))**2 * (I * (I + 1) - 3.0 / 4.0)
+    sigmasq = factor / faktorohneeQ
+    # lasterror = 1.0 / 2.0 * np.sqrt(1 / (faktorohneeQ * factor)) * err
+    return np.sqrt(sigmasq) # , lasterror
+
+calcsigma(10000)

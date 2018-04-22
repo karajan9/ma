@@ -48,7 +48,7 @@ def analyze_data(directory, verbose=True, normed=False):
         # plt.plot(reptime, cmplx.imag, 'ro')
         plt.plot(reptime, fit)
         plt.xscale("log")
-        plt.show()
+        # plt.show()
         print(experiment_number, temp)
         print(result.fit_report())
 
@@ -65,7 +65,7 @@ def get_analyse(data_dir, verbose=True, resultfile="", normed=False):
                 + "Beta_err M0 M0_err Moff Moff_err\n")
         print()
 
-    for i, directory in enumerate(dirs):
+    for i, directory in enumerate(dirs[::2]):
         result, experiment_number, temp, phase = analyze_data(directory,
                                                               verbose,
                                                               normed)
@@ -105,9 +105,10 @@ data_dir = home_dir + "/data/" + data_id + "/T1"
 os.chdir(data_dir)
 
 # plt.rcParams['figure.figsize'] = (12, 8)
+plt.tick_params(which="both", direction="in", top=True, right=True)
 get_analyse(data_dir, verbose=True, normed=True)
 plt.xlabel("$t_w$ [s]")
 plt.ylabel("Magnetisierung (normiert)")
 plt.legend(loc=4)
 # plt.title("CRN $T_1$")
-# save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/T1/t1_roh2")
+save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/T1/t1_roh3")
