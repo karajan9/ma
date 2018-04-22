@@ -4,20 +4,20 @@ Simulationen werden in vielen Disziplinen der Physik gerne verwendet, da sie es 
 
 Auf der Gegenseite müssen sich Simulationen, die ein Experiment wie die NMR-Spektroskopie nachstellen, meist auf eine Auswahl der unter Laborbedingungen vorliegenden Einflüsse und Wechselwirkungen beschränken. Zu groß ist die Zahl der (teilweise auch unbekannten) Parameter. Daher kann eine Simulation in der Regel nur als eine Näherung eines Experiments verstanden werden.
 
-Daher ist der Vergleich von Simulation und Experiment von besonderer Bedeutung. Soll zum Beispiel untersucht werden, ob eine bestimmte gemessene Eigenschaft durch eine bestimmte Wechselwirkung hervorgerufen wird, kann eine entsprechende Simulation durchgeführt werden, wobei bei dieser die Zahl der möglichen Einflüsse deutlich reduziert werden kann -- andere Wechselwirkungen als die von Interesse müssen nicht simuliert werden. Ein Vergleich der simulierten Eigenschaften den gemessenen kann dann einen bestehenden Verdacht bestärken oder entkräften.
+Daher ist der Vergleich von Simulation und Experiment von besonderer Bedeutung. Soll zum Beispiel untersucht werden, ob eine bestimmte gemessene Eigenschaft durch eine bestimmte Wechselwirkung hervorgerufen wird, kann eine entsprechende Simulation durchgeführt werden, wobei bei dieser die Zahl der möglichen Einflüsse deutlich reduziert werden kann -- andere Wechselwirkungen als die von Interesse müssen nicht simuliert werden. Ein Vergleich der simulierten Eigenschaften mit den gemessenen kann dann einen bestehenden Verdacht bestärken oder entkräften, je nach dem, inwiefern sich Experiment und Simulation ähneln.
 
 
 Aus diesen Gründen wurde an diesem Lehrstuhl eine Simulationssoftware von J. Beerwerth in der Programmiersprache C++ geschrieben, aktiv weiterentwickelt, und beispielsweise in \cite{joachim_master} verwendet. Dabei handelt es sich um eine Random-Walk-Simulation. Diese soll NMR-Experimente simulieren und beinhaltet eine Vielzahl von Möglichkeiten. Während nicht jeder Teil der Simulationssoftware explizit benannt werden soll, soll dennoch der Aufbau nachvollzogen werden, um eine Einschätzung ihrer Möglichkeiten bieten zu können. Jede Simulation besteht aus drei Komponenten, die unabhängig von einander gewählt werden können: Die Art der Messung (beispielsweise ein 2D-Spektrum, Hahn-Echo oder ein stimuliertes Echo), das Bewegungsmodell (zum Beispiel Sprünge zwischen $N$ festen Plätzen oder ein isotroper Sprung) und die zu berücksichtigen Wechselwirkungen (wie die Quadrupol-Wechselwirkung erster oder zweiter Ordnung, oder die chemische Verschiebung).
 
-Die Software ist modular aufgebaut, um Erweiterungen, beispielsweise einer anderen Wechselwirkung, leicht zuzulassen. Dazu werden die drei Komponenten, die Wechselwirkung, das Bewegungsmodell, und die Art der Messung, mit Hilfe von abstrakten Klassen implementiert. Diese lauten \texttt{Frequency}, \texttt{MotionalModel}, und \texttt{Measurement}. Für zusätzliche Wechselwirkung muss nur von der entsprechende abstrakte Klasse \texttt{Frequency} geerbt werden um sie anstelle einer anderen Wechselwirkung verwendet zu können. Die Klasse \texttt{NMRSimulation} bildet das Herzstück der Software. Per Komandozeile übergebene Parameter werden geparst und gespeichert, oder an die richtigen Stellen weitergeleitet, und die eigentliche Simulation dann gestartet.
+Die Software ist modular aufgebaut, um Erweiterungen, beispielsweise einer anderen Wechselwirkung, leicht zuzulassen. Dazu werden die drei Komponenten, die Wechselwirkung, das Bewegungsmodell, und die Art der Messung, mit Hilfe von abstrakten Klassen implementiert. Diese lauten \texttt{Frequency}, \texttt{MotionalModel}, und \texttt{Measurement}. Zum Hinzufügen zusätzlicher Wechselwirkung muss von der entsprechende abstrakte Klasse \texttt{Frequency} geerbt werden, um sie anstelle einer anderen Wechselwirkung verwendet zu können. Die Klasse \texttt{NMRSimulation} bildet das Herzstück der Software. Per Komandozeile übergebene Parameter werden geparst und gespeichert oder an die richtigen Stellen weitergeleitet, und die eigentliche Simulation dann gestartet.
 
-Die eigentliche Arbeitsweise der Software soll an den drei Komponenten verdeutlicht werden, die für diese Arbeit verwendet wurden: Die FID-Pulsfolge, die Quadrupol-Wechselwirkung zweiter Ordnung, und das Bewegungsmodell des isotropen Sprungs.
+Die Arbeitsweise der Software soll an den drei Komponenten verdeutlicht werden, die für diese Arbeit verwendet wurden: Die FID-Pulsfolge, die Quadrupol-Wechselwirkung zweiter Ordnung, und das Bewegungsmodell des isotropen Sprungs.
 
-Mit Hilfe der Simulation soll beobachtet werden, wie der simulierte Kern eine Reihe Sprüngen durchläuft, welche jeweils in einer unterschiedlichen Elektronenumgebung resultieren. Der Kern verbleibt für eine bestimmte, zufällig gewählte Zeit, der sogenannten Lebenszeit, in jeder dieser Umgebungen. Die Lebenszeit wird aus einer Exponentialverteilung gezogen. Da mit steigender Temperatur in der Regel die Bewegung, und damit auch die Anzahl der Sprünge steigt, kann über diesen Parameter eine Verknüpfung zu Temperaturen hergestellt werden. Dazu können zum Beispiel Korrelationszeiten wie aus Gleichung \eqref{eqn:theo:tauc} verwendet werden.
+Mit Hilfe der Simulation soll beobachtet werden, wie ein simulierter Kern eine Reihe von Sprüngen durchläuft, welche jeweils in einer unterschiedlichen Ladungsumgebung resultieren. Der Kern verbleibt für eine bestimmte Zeit, der sogenannten Lebenszeit, in jeder dieser Umgebungen. Die Lebenszeit wird zufällig aus einer Exponentialverteilung gezogen. Da mit steigender Temperatur in der Regel die Bewegung, und damit auch die Anzahl der Sprünge steigt, kann über diesen Parameter eine Verknüpfung zu Temperaturen hergestellt werden. Dazu können zum Beispiel Korrelationszeiten wie aus Gleichung \eqref{eqn:theo:tauc} verwendet werden.
 
-Ist die Lebenszeit vergangen, wird ein neuer Sprung mit einer neuen Lebenszeit durchgeführt. So reihen sich eine Kette von Umgebungen, jede mit ihrer eigenen Dauer, aneinander. Dies wird so lange durchgeführt, bis das Ende der zu simulierenden Zeit erreicht ist. Diese bestimmt sich aus der Anzahl der aufzunehmenden Datenpunkte multipliziert mit dem Zeitabstand zwischen zwei Datenpunkten, genannt dwelltime.
+Ist die Lebenszeit vergangen, wird ein neuer Sprung mit einer neuen Lebenszeit durchgeführt. So reiht sich eine Kette von Umgebungen, jede mit ihrer eigenen Dauer, aneinander. Dies wird so lange durchgeführt, bis das Ende der zu simulierenden Zeit erreicht ist. Diese bestimmt sich aus der Anzahl der aufzunehmenden Datenpunkte multipliziert mit dem Zeitabstand zwischen zwei Datenpunkten, genannt dwelltime.
 
-In diesem Fall handelt es sich bei den erwähnten Sprüngen um isotrope Sprünge in Kombination mit dem Czjzek-Modell \cite{czjzek_atomic_1981}. Das Czjzek-Modell kann für Gläser oder ähnliche amorphe Stoffe angewandt werden, in dem die Ladungsverteilung nicht, wie beispielsweise durch ein Gitter, periodisch, sondern annähernd isotrop ist. Die aus den entsprechenden Ladungsverteilungen resultierenden EFGs und damit die resultierende Wahrscheinlichkeitsverteilung von $V_{zz}$ und $\eta$, Anisotropieparameter und Asymmetrieparameter des EFG, lässt sich wie folgt beschreiben \cite{caer}:
+In diesem Fall handelt es sich bei den erwähnten Sprüngen um isotrope Sprünge in Kombination mit dem Czjzek-Modell \cite{czjzek_atomic_1981}. Das Czjzek-Modell kann für Gläser oder ähnliche amorphe Stoffe angewandt werden, in dem die Ladungsverteilung nicht, wie beispielsweise durch ein Gitter, periodisch, sondern annähernd isotrop ist. Die aus den entsprechenden Ladungsverteilungen resultierenden EFGs und damit die resultierende Wahrscheinlichkeitsverteilung von $V_{zz}$ und $\eta$, Anisotropieparameter und Asymmetrieparameter des EFG, lässt sich wie folgt definieren \cite{caer}:
 \begin{align}
 	P \left( V_{zz}, \eta \right) & = \frac{V_{zz}^4 \eta}{\sqrt{2 \pi} \cdot \sigma^5} \left( 1 - \frac{\eta^2}{9} \right)\exp \left( - \frac{V_{zz}^2}{2 \sigma^2} \left( 1 + \frac{\eta^2}{3} \right) \right). \label{eqn:sim:czjzek}
 \end{align}
@@ -28,69 +28,10 @@ Die zugehörigen Randverteilungen lauten:
 \end{align}
 Die Verteilungen lassen sich also durch einen einzigen Parameter, $\sigma$, beschreiben.
 
-Dass isotrope Sprünge durchgeführt werden, bedeutet in diesem Fall, dass nach jedem Sprung eine Ladungsverteilung vorhanden ist, die mit der vorherigen nicht korreliert ist. Daher werden zu jedem Sprung die Parameter $V_{zz}$ und $\eta$ neu aus der Verteilung gezogen. Dazu wird ein Rückweisungsverfahren verwendet. Für dieses wird $V_{zz}$ auf das Intervall $\left[-10, 10 \right]$ beschränkt.
+Dass isotrope Sprünge durchgeführt werden, bedeutet in diesem Fall, dass nach jedem Sprung eine Ladungsverteilung vorhanden ist, die mit der vorherigen nicht korreliert ist. Daher werden zu jedem Sprung die Parameter $V_{zz}$ und $\eta$ neu aus der Verteilung gezogen. Dazu wird ein Rückweisungsverfahren verwendet. Für dieses wird $V_{zz}$ auf das Intervall $\left[-5, 5 \right]$ beschränkt, dabei werden etwa $\SI{5e-3}{\percent}$ der möglichen Werte ausgeschlossen, was durch den so entstehenden Geschwindigkeitsvorteil aufgewogen wird.
 
-Aus den gezogenen Parametern $V_{zz}$ und $\eta$ lässt sich nach Formel \ref{eqn:theo:omega2} die zugehörige Frequenz bestimmen. Die Winkel $\theta$ und $\phi$ werden zufällig so gezogen, dass die sich ergebenden Richtungen im Raum gleichverteilt sind. Dies ist äquivalent dazu, dass durch die Mittlung von vielen Trajektorien ein Pulvermittel simuliert wird.
+Aus den gezogenen Parametern $V_{zz}$ und $\eta$ lässt sich nach Formel \ref{eqn:theo:omega2} die zugehörige Frequenz bestimmen. Die Winkel $\theta$ und $\phi$ werden zufällig gezogen, und zwar so, dass die sich ergebenden Richtungen im Raum gleichverteilt sind. Dies ist äquivalent dazu, dass durch die Mittlung von vielen Trajektorien ein Pulvermittel simuliert wird.
 
+So ergibt sich die Zuordnung einer Frequenz zu jedem Zeitpunkt der Simulation. Werden diese Frequenzen aufintregriert, resultiert die Phase zu jedem Zeitpunkt. Nun können der Kosinus und der Sinus gebildet werden; es ergibt sich das Pedant zum Real- und Imaginärteil einer experimentellen Messung. 
 
-
-
-
-
-
-Simulation möchte die mittlere Magnetisierung in Abh. von der Zeit messen, wie das auch beim Experiment gemacht wird
-Ausgangspunkt: Nach einem 90°-Puls 
-
-
-Der beobachtete Kern führt Sprünge aus, nach jedem Sprung eine neue Elektronenumgebung
-Die wird durch EFG bzw. Vzz eta aus Czjzek gezogen
-Daraus wird die Frequenz berechnet
-Der Zustand hat eine Lebenszeit, nach der wird ein neuer Sprung ausgeführt
-So ergibt sich eine Zuordnung von einer Frequenz zu jedem Zeitpunkt.
-
-
-Virtuelle Funktion, die implementiert werden muss, wird aufgerufen: doWork
-
-
-während die aktuelle Zeit kleiner ist, als was simuliert werden soll / sind noch nicht am Ende angekommen:
-    die aktuelle Phase wird berechnet
-    über den Zeitraum von jetzt bis zum Ende der Lebenszeit des aktuellen Zustands wird die Phase integriert, dazu wird die Frequenz benötigt -> aus der Wechselwirkung
-    das Bewegungsmodell macht etwas, neuer Zustand und Lebenszeit
-
-die einzelnen Phasenbeiträge über den Verlauf werden akkumuliert und von jedem wird cos und sin gezogen -- das entspricht dem Real- und Imaginärteil
-
-
-Mit dem Bewwegungsmodell werden so lange 
-
-
-
-
-
-
-Das wird numtraj oft gemacht und addiert
-
-
-
-Im Folgenden wird die Berechnung einer einzelnen Trajektorie beschrieben. Eine Aussage über physikalische Eigenschaften kann erst getroffen werden, wenn über viele dieser Trajektorien gemittelt wird, sodass sich eine mittlere Magnetisierung ergibt.
-
-
-Zu jedem Zeitpunkt kann die dem aktuellen Zustand zugehörige Frequenz 
-
-
-
-
-
-
-
-Die kann, aufgrund der fehlenden Übereinstimmung 
-
-
-
-Die benötigten Zufallszahlen hierzu werden von einem Mersenne-Twister Algorithmus bereitgestellt, der heutzutage einen Standard in vielen Programmiersprachen darstellt und gute statistische Eigenschaften aufweist.
-
-
-
-Das Czjzek-Modell nach \cite{} geht von *** aus. Daraus ergeben sich bestimmte Wahrscheinlichkeitsverteilungen für die Parameter $V_{zz}$ und $\eta$, die, wie in Kapitel *** erwähnt, zur Parametrisierung eines EFGs genügen. Aus dieser Verteilung kann nun ein Parametersatz gezogen werden, der den simulierten EFG darstellen soll. Dies geschieht mit einem Neumannschen Rückweisungsverfahren
-
-Die Verteilung *** gibt die Wahrscheinlichkeit für die Kombination aus $V_{zz}$ und $\eta$ an
-
+Dies war die Beschreibung der Simulation einer einzelnen Trajektorie. Eine Aussage über physikalische Eigenschaften kann erst getroffen werden, wenn über viele dieser Trajektorien gemittelt wird, sodass die im Laufe der Simulation gezogenen Zufallszahlen in guter Näherung der Verteilung entsprechen, der sie entstammen.

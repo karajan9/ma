@@ -19,7 +19,7 @@ ist die Larmorfrequenz oder Resonanzfrequenz. Der Konvention folgend wird $\omeg
 
 
 
-In Anlehnung an das klassische Pendant, findet sich folgende Formel für den Drehimpuls $I$ und die Magnetisierung $M = \sfrac{1}{V} \sum_i \mu_i = \sfrac{\gamma \hbar}{V} \sum_i I_i$:
+In Anlehnung an das klassische Pendant findet sich folgende Formel für den Drehimpuls $I$ und die Magnetisierung $M = \sfrac{1}{V} \sum_i \mu_i = \sfrac{\gamma \hbar}{V} \sum_i I_i$:
 \begin{align}
     \frac{\text{d}\vec{M}}{\text{d}t} = \omega_L \times \vec{M}. \label{eqn:drehmoment}
 \end{align}
@@ -38,9 +38,9 @@ Um die folgenden Überlegungen einfacher zu gestalten, wird nun von dem Laborsys
 Dies hat nach Formel \eqref{eqn:lamorfrequenz} zur Folge, dass das Magnetfeld $B_0$ im rotierenden Koordinatensystem als geschwächt erscheint: $B_\text{eff} = B_0 - \sfrac{\omega}{\gamma}$. Ist $\omega = \omega_L$, so ist das effektive Magnetfeld null.
 
 
-Neben diesem Vorwissen ist es nötig, Spins aktiv beeinflussen zu können, um in der Lage zu sein effektiv Informationen zu sammeln. Daher wird häufig die Probe in einer Spule untergebracht, deren Achse senkrecht zu der des Magnetfeldes steht; die Konvention richtet diese Spule entlang der $x$-Achse aus. Wird an der Spule eine Wechselspannung angelegt, werden die Spins einem entsprechenden Magnetfeld $\vec{B}_1 = 2 B_{1,x} \cos(\omega_1 t)$ ausgesetzt.
+Neben diesem Vorwissen ist es nötig, Spins aktiv beeinflussen zu können, um in der Lage zu sein, effektiv Informationen zu sammeln. Daher wird häufig die Probe in einer Spule untergebracht, deren Achse senkrecht zu der des Magnetfeldes steht; die Konvention richtet diese Spule entlang der $x$-Achse aus. Wird an der Spule eine Wechselspannung angelegt, werden die Spins einem entsprechenden Magnetfeld $\vec{B}_1 = 2 B_{1,x} \cos(\omega_1 t)$ ausgesetzt.
 
-Da die Spule im Laborsystem stationär ist, rotiert das entstehende Magnetfeld im rotierenden Koordinatensystem mit $-\omega$. Um dies zu vermeiden wird $B_1$ als Superposition zweier Drehungen dargestellt:
+Da die Spule im Laborsystem stationär ist, rotiert das entstehende Magnetfeld im rotierenden Koordinatensystem mit $-\omega$. Um dies zu vermeiden, wird $B_1$ als Superposition zweier Drehungen dargestellt:
 \begin{align}
     \vec{B}_1 = B_1 \left[ \myvec{\cos(\omega) \\ \sin(\omega) \\ 0} + 
                       \myvec{\cos(\omega) \\ -\sin(\omega) \\ 0} \right].
@@ -56,7 +56,7 @@ Wird das $B_1$-Feld vom Experimentierenden aktiviert, so vollführt die mittlere
 \begin{align}
 	t_\text{Puls} = \frac{\phi}{- \gamma B_1} \label{eqn:theo:pulslaenge}
 \end{align}
-lässt sich die Magnetisierung manipulieren, so kann beispielsweise $M_\infty$ mit einem $\phi = \SI{90}{\degree}$-Puls in die $x$-$y$-Ebene, auch Detektionsebene genannt, geklappt, oder mit einem 180$^\circ$-Puls invertiert werden. Durch das Kombinieren von Pulsen lassen sich Pulsfolgen entwickeln, um interessante Eigenschaften einer Probe zu untersuchen. Einige dieser werden in Kapitel \ref{section:theo:pulsfolgen} vorgestellt.
+lässt sich die Magnetisierung manipulieren; so kann beispielsweise $M_\infty$ mit einem $\phi = \SI{90}{\degree}$-Puls in die $x$-$y$-Ebene, auch Detektionsebene genannt, geklappt, oder mit einem 180$^\circ$-Puls invertiert werden. Durch das Kombinieren von Pulsen lassen sich Pulsfolgen entwickeln, um interessante Eigenschaften einer Probe zu untersuchen. Einige dieser werden in Kapitel \ref{section:theo:pulsfolgen} vorgestellt.
 
 
 
@@ -98,7 +98,7 @@ Damit ergibt sich:
     \frac{\text{d} \hat{\rho}'}{\text{d}t} = - \int_0^t \text{d} \tau \left< \left[\hat{H}_\text{rot}(t), [\hat{H}_\text{rot}(t-\tau), \hat{\rho}'(t)] \right] \right>. \label{eqn:mastergleichung}
 \end{align}
 
-Das Lösen dieser Gleichung gestaltet sich recht umfangreich, daher soll die Rechnung hier nur in den groben Zügen nachvollzogen werden.
+Das Lösen dieser Gleichung gestaltet sich recht umfangreich, daher soll die Rechnung hier nur in groben Zügen nachvollzogen werden.
 Für die Darstellung des Hamilton-Operators werden sphärische Tensoren $\hat{T}^{l,m}$ verwendet, sodass sich mit den Laborsystem-Tensoren $A^{l,m}(t)$, eingesetzt in die Mastergleichung \eqref{eqn:mastergleichung}, Folgendes ergibt:
 \begin{align}
 \begin{split}
@@ -145,7 +145,7 @@ Verschiedene Wechselwirkungs-Hamiltonoperatoren haben unterschiedliche Lösungen
 
 \section{Quadrupol-Wechselwirkung} \label{section:theo:qww}
 
-Auf die im Kontext dieser Arbeit wichtigste Wechselwirkung soll nun eingegangen werden. Als die Quadrupol-Wechselwirkung wird die Wechselwirkung des Kernquadrupolmoment mit dem lokalen elektronischen Feld bezeichnet. Bei einem Kern mit $I = \sfrac{1}{2}$ ist dessen Ladung symmetrisch verteilt ist und daher kein Moment durch ein äußeres Feld zu beobachten. Diese Wechselwirkung tritt also nur bei Kernen mit $I \ge 1$ auf, ist dann aber meist dominant -- so auch in dem hier untersuchten Stoff CRN.
+Auf die im Kontext dieser Arbeit wichtigste Wechselwirkung soll nun eingegangen werden. Als die Quadrupol-Wechselwirkung wird die Wechselwirkung des Kernquadrupolmoment mit dem lokalen elektronischen Feld bezeichnet. Bei einem Kern mit $I = \sfrac{1}{2}$ ist dessen Ladung symmetrisch verteilt und daher kein Moment durch ein äußeres Feld zu beobachten. Diese Wechselwirkung tritt also nur bei Kernen mit $I \ge 1$ auf, ist dann aber meist dominant -- so auch in dem hier untersuchten Stoff CRN.
 
 Der Hamiltonoperator der Quadrupol-Wechselwirkung lautet \cite[S. 208]{levitt}
 \begin{align}
@@ -164,7 +164,7 @@ Wird der EFG auf Hauptachsenform gebracht, ergeben sich drei Eigenwerte. Der Kon
 	eq                & = V_{zz}                         \\
 	\text{und}\; \eta & = \frac{V_{xx} - V_{yy}}{V_{zz}}
 \end{align}
-$\eta$ wird Asymmetrieparameter genannt und kann Werte zwischen $\SI{0}{}$ und $\SI{1}{}$ annehmen. Er kann, genauso wie $eq$ darüber Auskunft geben, wie sich die Form des EFG visualisieren lässt: $\eta = 0$ gibt beispielsweise einen rotationssymmetrischen EFG an. In diesem Fall indiziert ein positives $eq$, auch Anisotropieparameter genannt, eine längliche Form, die an eine Zigarre erinnert -- ein negatives indiziert eine flache Scheiben-Form.
+$\eta$ wird Asymmetrieparameter genannt und kann Werte zwischen $\SI{0}{}$ und $\SI{1}{}$ annehmen. Er kann, genauso wie $eq$, darüber Auskunft geben, wie sich die Form des EFG visualisieren lässt: $\eta = 0$ gibt beispielsweise einen rotationssymmetrischen EFG an. In diesem Fall indiziert ein positives $eq$, auch Anisotropieparameter genannt, eine längliche Form, die an eine Zigarre erinnert -- ein negatives indiziert eine flache Scheiben-Form.
 
 Bei den -- in der NMR häufig verwendeten -- Magnetfeldern mit Stärken von mehreren Tesla gilt die Hochfeldnäherung, das bedeutet, dass die Zeeman-Wechselwirkung deutlich stärker ist als andere Wechselwirkungen, welche dann im Rahmen der Störungsrechnung untersucht werden dürfen. So ergibt sich für die erste Ordnung der Quadrupol-Wechselwirkung nach \cite[S. 209]{levitt}
 \begin{align}
@@ -173,7 +173,7 @@ Bei den -- in der NMR häufig verwendeten -- Magnetfeldern mit Stärken von mehr
 \end{align}
 Anstatt der Kopplungsfrequenz $\omega_Q$ wird auch häufig die Kern\-quad\-ru\-pol-Kopp\-lungs\-kon\-stan\-te $C_Q = e^2qQ / h$ in Hertz angegeben.
 
-Es ist anzumerken, dass in der ersten Ordnung $H_Q$ nur vom Quadrat von $m$ abhängt und der Zentrallinienübergang von $-\sfrac{1}{2} \to \sfrac{1}{2}$ daher keine Korrektur erfährt. Dies ändert sich mit Betrachtung der zweiten Ordnung, was bei einer großen Stärke der Quadrupol-Wechselwirkung geschehen muss. Für diese gilt folgende Korrektur der Zentrallinie \cite{man_quadrupole_2000}:
+Es ist anzumerken, dass in der ersten Ordnung $H_Q$ nur vom Quadrat von $m$ abhängt und der Zentrallinienübergang $-\sfrac{1}{2} \leftrightarrow \sfrac{1}{2}$ daher keine Korrektur erfährt. Dies ändert sich mit Betrachtung der zweiten Ordnung, was bei einer großen Stärke der Quadrupol-Wechselwirkung geschehen muss. Für diese gilt folgende Korrektur der Zentrallinie \cite{man_quadrupole_2000}:
 \begin{align}
     \begin{split}
         \omega_Q^{(2)} \left( \theta, \phi, \eta \right) =& - \frac{1}{6 \omega_L} \left(\frac{3 e^2 q Q}{2 I \left(2 I - 1 \right) \hbar}\right)^2 \left( I \left(I + 1 \right) - \frac{3}{4} \right) \\
@@ -259,7 +259,7 @@ Für $\alpha = 1$ bzw. $\gamma = 1$ korrespondieren diese Spektraldichten zu BPP
 
 Um Größen wie $T_1$ und $T_2$ zu messen, werden unterschiedliche Pulsfolgen, also Sequenzen von RF-Pulsen mit bestimmten Längen und Abständen zwischeneinander, ausgenutzt.
 
-Um die longitudinale Relaxation $T_1$ zu messen wurde die in Abbildung \ref{fig:theo:pulsT1} gezeigte Pulsfolge verwendet.
+Um die longitudinale Relaxation $T_1$ zu messen, wurde die in Abbildung \ref{fig:theo:pulsT1} gezeigte Pulsfolge verwendet.
 \begin{figure}
 	\begin{center}
 		\input{graphics/pulsfolgen/pulsfolgeT1.pdf_tex}
@@ -267,9 +267,9 @@ Um die longitudinale Relaxation $T_1$ zu messen wurde die in Abbildung \ref{fig:
     \caption{Pulsfolge zum Messen von $T_1$; sie besteht aus einem $\SI{180}{\degree}$-Invertierungspuls, gefolgt von einer Wartezeit $t_w$, einem $\SI{90}{\degree}$-Puls und einem Hahn-Echo mit der Evolutionszeit $t_p$. $t_w$ ist der variable Parameter. Abbildung aus \cite{joachim_master}}\label{fig:theo:pulsT1}
 \end{figure}
 
-Der erste Puls, ein $\SI{180}{\degree}$-Puls, invertiert die Magnetisierung von dem Gleichgewichtszustand $M_\infty$ zu $-M_\infty$, wonach sie anfängt zu relaxieren. Da die longitudinale Magnetisierung entlang $M_z$ aufgrund der Spulengeometrie nicht detektierbar ist, muss sie mit einem $\SI{90}{\degree}$-Puls in die Detektionsebene geklappt werden. Wird dies nach der Wartezeit $t_w$ getan, kann also die relaxierende Magnetisierung in Abhängigkeit von $t_w$ bestimmt werden und so Aufschluss über $T_1$ gewonnen werden.
+Der erste Puls, ein $\SI{180}{\degree}$-Puls, invertiert die Magnetisierung vom Gleichgewichtszustand $M_\infty$ zu $-M_\infty$, wonach sie anfängt zu relaxieren. Da die longitudinale Magnetisierung entlang $M_z$ aufgrund der Spulengeometrie nicht detektierbar ist, muss sie mit einem $\SI{90}{\degree}$-Puls in die Detektionsebene geklappt werden. Wird dies nach der Wartezeit $t_w$ getan, kann also die relaxierende Magnetisierung in Abhängigkeit von $t_w$ bestimmt werden und so Aufschluss über $T_1$ gewonnen werden.
 
-Der letzte Puls, ein $\SI{180}{\degree}$-Puls nach der Evolutionszeit $t_p$, wird Hahn-Echo genannt. Häufig liegen die Momente direkt nach einem Puls in der Totzeit des Detektors, sodass die Magnetisierung faktisch erst gemessen werden kann, wenn sie eine gewisse Zeit vergangen ist, in der aber auch die Magnetisierung abklingt. Um dieses Problem zu umgehen wird das Hahn-Echo verwendet. Mit diesem können dephasierende Anteile der Magnetisierung, welche linear in $I_z$ sind, refokussiert werden; es kann dann ein „Echo“ des originalen Pulses zur Zeit $2 t_p$ beobachtet werden. Zu den betroffenen Wechselwirkungen zählen zum Beispiel lokale Feldinhomogenitäten \cite[S.302]{levitt}. Nicht jedoch wiedergewonnen werden können Teile der Magnetisierung, die durch $T_2$-Effekte verloren wurden. Damit dieser Einfluss bei den Messungen konstant ist, wird in diesem Fall das gleiche $t_p$ für alle Messungen verwendet.
+Der letzte Puls, ein $\SI{180}{\degree}$-Puls nach der Evolutionszeit $t_p$, wird Hahn-Echo genannt. Häufig liegen die Momente direkt nach einem Puls in der Totzeit des Detektors, sodass die Magnetisierung faktisch erst gemessen werden kann, wenn sie eine gewisse Zeit vergangen ist, in der aber auch die Magnetisierung abklingt. Um dieses Problem zu umgehen, wird das Hahn-Echo verwendet. Mit diesem können dephasierende Anteile der Magnetisierung, welche linear in $I_z$ sind, refokussiert werden; es kann dann ein „Echo“ des originalen Pulses zur Zeit $2 t_p$ beobachtet werden. Zu den betroffenen Wechselwirkungen zählen zum Beispiel lokale Feldinhomogenitäten \cite[S.302]{levitt}. Nicht jedoch wiedergewonnen werden können Teile der Magnetisierung, die durch $T_2$-Effekte verloren wurden. Damit dieser Einfluss bei den Messungen konstant ist, wird in diesem Fall das gleiche $t_p$ für alle Messungen verwendet.
 
 Es lässt sich so aber offensichtlich mit der in Abbildung \ref{fig:theo:pulsT2} dargestellten Pulsfolge $T_2$ bestimmen:
 \begin{figure}
@@ -282,7 +282,7 @@ Ein $\SI{90}{\degree}$-Puls kippt die Magnetisierung aus dem Gleichgewicht in di
 
 Ein einfacher $\SI{90}{\degree}$-Puls, ohne nachfolgendes Echo, wird FID -- kurz für free induction decay -- genannt. Er kann verwendet werden, wenn Einflüsse der Totzeit zu vernachlässigen sind -- neben experimentellen Umgebungen auch bei Simulationen.
 
-Zum Studieren von Dynamik wird unter anderem die als stimuliertes Echo oder $F_2$ bezeichnete Pulsfolge verwendet, zu sehen in Abbildung \ref{fig:theo:pulsF2}:
+Zum Studieren von Dynamik wird unter anderem die als stimuliertes Echo oder $F_2$ bezeichnete Pulsfolge verwendet, zu sehen in Abbildung \ref{fig:theo:pulsF2}.
 \begin{figure}
 	\begin{center}
 		\input{graphics/pulsfolgen/pulsfolge2d.pdf_tex}
@@ -303,7 +303,7 @@ Eine theoretisch fundiertere Darstellung kann \cite[insb. Kap. 6.2 und 10.2.3]{s
 Es ist anzumerken, dass bei den meisten Pulsen nicht spezifiziert wurde, um welche Achse sie ausgeführt werden müssen. Dies liegt daran, dass es für die meisten Pulse mehrere Optionen gibt: Egal ob die Gleichgewichtsmagnetisierung mit einem $\SI{180}{\degree}$-Puls oder einem $\SI{-180}{\degree}$-Puls invertiert wird, ob um die $x$-Achse oder die $y$-Achse -- das Ergebnis ist immer die invertierte Magnetisierung $-M_\infty$. In der Praxis wird daher eine Kombination aus mehreren verschiedenen Pulsfolgen verwendet, die aber alle das gleiche Ergebnis liefern. Werden die Ergebnisse gemittelt, verstärken sich die Signale und unerwünschte Anteile -- beispielsweise durch leicht falsch gewählte Pulslängen -- mitteln sich heraus. So können weitere Fehlerquellen eliminiert werden.
 
 
-Sowohl an $T_1$, $T_2$-Daten, als auch an Daten von stimulierten Echos, können Varianten einer Kohlrauschfunktion gefittet werden. Dabei handelt es sich um eine Exponentialfunktion, oder Kombinationen von Exponentialfunktionen, die mit einem Exponenten $\beta$ gestreckt werden können:
+Sowohl an $T_1$-Daten, $T_2$-Daten als auch an Daten von stimulierten Echos können Varianten einer Kohlrauschfunktion gefittet werden. Dabei handelt es sich um eine Exponentialfunktion, oder Kombinationen von Exponentialfunktionen, die mit einem Exponenten $\beta$ gestreckt werden können:
 \begin{align}
 	M_{T_1} (t_w) & = M_0 \left[ 1 - 2 \exp{ \left(- { \left( \frac{t_w}{T_1} \right) }^{\beta_{T_1}} \right)} \right] + M_\text{off} \label{eqn:theo:T_1_fit}                                                                     \\
 	M_{T_2} (t_p) & = M_0 \exp{ \left(- { \left( \frac{2 t_p}{T_2} \right) }^{\beta_{T_2}} \right)} + M_\text{off} \label{eqn:theo:T_2_fit}                                                                                        \\
