@@ -173,7 +173,18 @@ Bei den -- in der NMR häufig verwendeten -- Magnetfeldern mit Stärken von mehr
 \end{align}
 Anstatt der Kopplungsfrequenz $\omega_Q$ wird auch häufig die Kern\-quad\-ru\-pol-Kopp\-lungs\-kon\-stan\-te $C_Q = e^2qQ / h$ in Hertz angegeben.
 
-Es ist anzumerken, dass in der ersten Ordnung $H_Q$ nur vom Quadrat von $m$ abhängt und der Zentrallinienübergang von $-\sfrac{1}{2} \to \sfrac{1}{2}$ daher keine Korrektur erfährt. Dies ändert sich mit Betrachtung der zweiten Ordnung, was bei einer großen Stärke der Quadrupol-Wechselwirkung geschehen muss.
+Es ist anzumerken, dass in der ersten Ordnung $H_Q$ nur vom Quadrat von $m$ abhängt und der Zentrallinienübergang von $-\sfrac{1}{2} \to \sfrac{1}{2}$ daher keine Korrektur erfährt. Dies ändert sich mit Betrachtung der zweiten Ordnung, was bei einer großen Stärke der Quadrupol-Wechselwirkung geschehen muss. Für diese gilt folgende Korrektur der Zentrallinie \cite{man_quadrupole_2000}:
+\begin{align}
+    \begin{split}
+        \omega_Q^{(2)} \left( \theta, \phi, \eta \right) =& - \frac{1}{6 \omega_L} \left(\frac{3 e^2 q Q}{2 I \left(2 I - 1 \right) \hbar}\right)^2 \left( I \left(I + 1 \right) - \frac{3}{4} \right) \\
+		& \cdot \left( A \left(\phi, \eta \right) \cos^4 \left( \theta \right) + B \left(\phi, \eta \right) \cos^2 \left( \theta \right) + C \left(\phi, \eta \right) \right), \label{eqn:theo:omega2}
+    \end{split}\\
+    \text{wobei}\,\, A \left( \phi, \eta \right) &= -\frac{27}{8} + \frac{9}{4} \eta \cos \left(2 \phi \right) - \frac{3}{8} \eta^2 \cos^2 \left(2 \phi \right), \\
+    B \left( \phi, \eta \right) &= -\frac{30}{8} - \frac{1}{2} \eta^2 - 2\eta \cos \left(2 \phi \right) + \frac{3}{4} \eta^2 \cos^2 \left(2 \phi \right), \\
+    C \left( \phi, \eta \right) &= -\frac{3}{8} + \frac{1}{3} \eta^2 - \frac{1}{4} \eta \cos \left(2 \phi \right) - \frac{3}{8} \eta^2 \cos^2 \left(2 \phi \right).
+\end{align}
+Dabei bezeichnen $\theta$ und $\phi$ als Polarwinkel und Azimutwinkel die Richtung der Hauptachse des EFG im Bezug zum externen Magnetfeld (welches per Definition entlang der $z$-Achse ausgerichtet ist). $\eta$ ist der Asymmetrieparameter des EFG.
+
 
 \par\bigskip
 
@@ -202,7 +213,7 @@ Die Spektraldichte $J(\omega)$ kann je nach Modell unterschiedlich sein. In dies
 \end{align}
 Dabei ist $C_Q$ die Kopplungskonstante der Quadrupol-Wechselwirkung und $\eta$ der Asymmetrieparameter der Beschreibung des elektrischen Feldgradienten. Für $\tau_c$ wird oft ein Arrhenius-Gesetz mit der Aktivierungsenergie $E_a$ und dem präexponentiellen Faktor $\tau_{co}$ angenommen:
 \begin{align}
-    \tau_c = \tau_{co} \exp \left( \frac{E_a}{k_B T} \right).
+    \tau_c = \tau_{co} \exp \left( \frac{E_a}{k_B T} \right). \label{eqn:theo:tauc}
 \end{align}
 
 
