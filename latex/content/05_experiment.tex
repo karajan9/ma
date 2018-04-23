@@ -82,7 +82,7 @@ Auch die $\beta$-Werte zeigen bei höheren Temperaturen deutlich größere Unsic
 
 \section{Untersuchung zur Dynamik von CRN} \label{section:res:F_2}
 
-Mit der Absicht, einen möglichen Betaprozess zu identifizieren, wurden $F_2$-Messungen (siehe Kapitel \ref{section:theo:pulsfolgen}) und pulsabstandsabhängige Spektren aufgenommen; die verwendeten Methoden und Ergebnisse sollen im Folgenden vorgestellt werden
+Mit der Absicht, einen möglichen Betaprozess zu identifizieren, wurden $F_2$-Messungen (siehe Kapitel \ref{section:theo:pulsfolgen}) und pulsabstandsabhängige Spektren aufgenommen; die verwendeten Methoden und Ergebnisse sollen im Folgenden vorgestellt werden.
 
 \subsection{Stimulierte Echos} \label{section:res:stimechos}
 
@@ -217,7 +217,7 @@ Die am Bruker-Spektrometer mit $\omega_{L, \text{Bruker}} = 2\pi \cdot \SI{131.0
 
 Der Verlauf der Linienform gleicht der beschriebenen in dem entsprechenden Temperaturbereich gut. Es ist das geringe Rauschen der Spektren zu beachten, welches ein Indiz für hohe Datenqualität des Bruker-Spektrometers in diesem Kontext ist.
 
-Als Ergänzung zu den experimentellen Daten wurden Spektren simuliert. Dazu wurde die in Kapitel \ref{chapter:simulation} vorgestellte Simulations-Software verwendet. Es wurden FIDs mit $\SI{4096}{}$ Datenpunkten mit einem Abstand von je $\SI{0.5}{\micro s}$, was einer Frequenz von $\SI{2}{MHz}$ entspricht, simuliert. Um einen Mittelwert zu bilden, wurden, je nach Spektrum, zwischen $10^{7}$ und $10^{9}$ einzelne Trajektorien gemittelt. Als Modell wurde ein isotroper Zufallssprung gewählt, welcher eine Czjzek-Verteilung als Ausgangspunkt hat; dieses war der simulierten Quadrupol-Wechselwirkung zweiter Ordnung ausgesetzt. Zur Bestimmung der Lebensdauer eines bestimmten Zustandes wurde eine Exponentialverteilung genutzt, deren Parameter, die Lebenszeit, eine Verknüpfung mit Temperaturen ermöglicht. Es wurde eine Vogel-Fulcher-Funktion für die Lebenszeit mit den Parametern für CRN aus \cite{PIMENOV199793} verwendet; eine detailliertere Beschreibung von Funktion und Parameter findet sich in \ref{section:res:theorie}. Zur besseren Vergleichbarkeit werden im Folgenden die Spektren mit den so berechneten Temperaturen anstatt mit den Lebenszeiten referenziert. Die resultierenden Spektren sind in Abbildung \ref{fig:res:sim_linienform} zu sehen. Die verwendete Czjzek-Verteilung aus Gleichung \eqref{eqn:sim:czjzek} besitzt nur einen Parameter: $\sigma$. Dieser wurde durch den Vergleich der Linienform von simulierten Spektren und Spektren des OBI-Spektrometers mit $\omega_{L, \text{OBI}} = 2\pi \cdot \SI{97.2}{MHz}$ -- beide bei tiefen Temperaturen -- auf $\sigma = \SI{1.14}{MHz}$ gesetzt.
+Als Ergänzung zu den experimentellen Daten wurden Spektren simuliert. Dazu wurde die in Kapitel \ref{chapter:simulation} vorgestellte Simulations-Software verwendet. Es wurden FIDs mit $\SI{4096}{}$ Datenpunkten mit einem Abstand von je $\SI{0.5}{\micro s}$, was einer Frequenz von $\SI{2}{MHz}$ entspricht, simuliert. Um einen Mittelwert zu bilden, wurden, je nach Spektrum, zwischen $10^{7}$ und $10^{9}$ einzelne Trajektorien gemittelt. Als Modell wurde ein isotroper Zufallssprung gewählt, welcher eine Czjzek-Verteilung als Ausgangspunkt hat; dieses war der simulierten Quadrupol-Wechselwirkung zweiter Ordnung ausgesetzt. Zur Bestimmung der Lebensdauer eines bestimmten Zustandes wurde eine Exponentialverteilung genutzt, deren Parameter, die Lebenszeit, eine Verknüpfung mit Temperaturen ermöglicht. Es wurde eine Vogel-Fulcher-Funktion für die Lebenszeit mit den Parametern für CRN aus \cite{PIMENOV199793} verwendet; eine detailliertere Beschreibung von Funktion und Parametern findet sich in \ref{sub:res:tauc}. Zur besseren Vergleichbarkeit werden im Folgenden die Spektren mit den so berechneten Temperaturen anstatt mit den Lebenszeiten referenziert. Die resultierenden Spektren sind in Abbildung \ref{fig:res:sim_linienform} zu sehen. Die verwendete Czjzek-Verteilung aus Gleichung \eqref{eqn:sim:czjzek} besitzt nur einen Parameter: $\sigma$. Dieser wurde durch den Vergleich der Linienform von simulierten Spektren und Spektren des OBI-Spektrometers mit $\omega_{L, \text{OBI}} = 2\pi \cdot \SI{97.2}{MHz}$ -- beide bei tiefen Temperaturen -- auf $\sigma = \SI{1.14}{MHz}$ gesetzt.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=\textwidth]{graphics/plot/sim_lineshape.pdf}
@@ -236,7 +236,7 @@ Die Halbwertsbreiten von Simulation, OBI- und Bruker-Spektrometer sind in Abbild
 	\begin{center}
 		\includegraphics[width=.9\textwidth]{graphics/plot/fwhm.pdf}
 	\end{center}
-	\caption{Die Halbwertsbreite der Spektren. Blaue und rote Symbole kennzeichnen am OBI- bzw. Bruker-Spektrometer aufgenommene Spektren, grüne Symbole stammen von simulierten Spektren. Der auffälligste Unterschied zwischen experimentellen und simulierten Spektren ist das zusätzliche Maximum bei hohen Temperaturen bzw. dessen Fehlen.} \label{fig:res:spek_fwhm}
+	\caption{Die Halbwertsbreite der Spektren. Blaue und rote Symbole kennzeichnen am OBI- bzw. Bruker-Spektrometer mit $\omega_{L, \text{OBI}} = 2\pi \cdot \SI{97.2}{MHz}$ bzw. $\omega_{L, \text{Bruker}} = 2\pi \cdot \SI{131.0}{MHz}$ aufgenommene Spektren. Grüne Symbole stammen von simulierten Spektren.} \label{fig:res:spek_fwhm}
 \end{figure}
 
 Es ist zu erkennen, dass die Werte der Halbwertsbreite etwa dem entsprechen, was nach einer Betrachtung der Spektren zu erwarten wäre: Von einem Spektrum mit etwa $\SI{40}{kHz}$ Breite bei niedrigen Temperaturen gehen die Werte zu einem Minimum von etwa $\SI{10}{kHz}$ bei etwa $\SI{375}{\kelvin}$ über, um nach einem lokalen Maximum von rund $\SI{20}{kHz}$ bei etwa $\SI{400}{\kelvin}$ erneut abzufallen.
@@ -269,7 +269,10 @@ Auch hier ist einschränkend zu sagen, dass die Werte der Schwerpunkte instabil 
 
 \section{Vergleich von CRN-Spektren mit theoretischen Überlegungen} \label{section:res:theorie}
 
-Die experimentellen Ergebnisse sollen mit den theoretischen Überlegungen vergleichen werden. Dazu wurden die in Kapitel \ref{section:theo:qww} beschriebenen Funktionen für $T_1$, Halbwertsbreite und Schwerpunkt verwendet. Um eine Übereinstimmung zur Theorie feststellen zu können, müssen sich alle Datensätze mit dem gleichen Satz geteilter Parameter beschreiben lassen. Im Falle der Spektraldichte $J_\text{BPP}$ ist dies $C_Q$; für $J_\text{CC}$ und $J_\text{CD}$ sind $\alpha$ bzw. $\gamma$ zusätzliche Parameter.
+Die experimentellen Ergebnisse sollen mit den theoretischen Überlegungen vergleichen werden. Dazu wurden die in Kapitel \ref{section:theo:qww} beschriebenen Funktionen für $T_1$, Halbwertsbreite und Schwerpunkt verwendet. Um eine Übereinstimmung zur Theorie feststellen zu können, müssen sich alle Datensätze mit dem gleichen Satz geteilter Parameter beschreiben lassen. Im Falle der Spektraldichte $J_\text{BPP}$ (Formel \eqref{eqn:spektraldichte_j}) ist dies $C_Q$; für $J_\text{CC}$ (Formel \eqref{eqn:theo:jcc}) und $J_\text{CD}$ (Formel \eqref{eqn:theo:jcd}) sind $\alpha$ bzw. $\gamma$ zusätzliche Parameter.
+
+
+\subsection{Korrelationszeiten} \label{sub:res:tauc}
 
 Für den Parameter $\eta$ der Spektraldichten wurde $\eta^2 = 42 - 24 \sqrt{3} \approx \SI{0.43}{}$ \cite{caer} verwendet. Nach \cite{PIMENOV199793} wird für CRN für die Korrelationszeit $\tau_c$ ein Vogel-Fulcher-Gesetz
 \begin{align}
@@ -290,7 +293,7 @@ Am $T_1$-Minimum nach Gleichung \eqref{eqn:bpp} gilt $\omega \tau_c \approx \SI{
 Ein Vergleich mit den Parametern $D = \SI{4.72}{}$, $T_\text{VF} = \SI{285}{K}$ und $\tau_{co} = \SI{1.15e-14}{s}$ nach \cite{crn_augsburg}, ebenfalls bestimmt durch dielektrische Spektroskopie, ist in den Abbildungen \ref{fig:korrelationszeiten} und \ref{fig:res:theorie_j} zu sehen. Während leichte Unterschiede zu erkennen sind, ändert sich das Gesamtbild wenig, weswegen sich diese Ausführungen auf den ersten Parametersatz beschränken.
 
 
-
+\subsection{$T_1$-Korrektur der Halbwertsbreiten} \label{sub:res:t1korr}
 
 Führt man zunächst einen Vergleich der Halbwertsbreiten mit der Theorie durch, lässt sich leicht feststellen, dass signifikante Unterschiede zu beobachten sind: Die gemessenen Halbwertsbreiten sind ab $\SI{360}{\kelvin}$ aufwärts deutlich größer als vorhergesagt. Dies liegt am Einfluss des kurzen $T_1$ von etwa $\SI{50}{\micro s}$, welches mit der zusätzlich Relaxation zur Verbreiterung des Spektrums beiträgt.
 
@@ -312,61 +315,80 @@ welche für Fits an $T_1$ verwendet werden kann, geteilt werden. Da die Messung 
 \end{align}
 Wird der Quotient der Funktionen zurück in den Frequenzraum transformiert, ergibt sich $a' = a - \sfrac{1}{T_1}$ und damit die modifizierte Halbwertsbreite $2\gamma = 2\gamma_0 - \frac{1}{\pi T_1}$.
 
-Dies bedeutet, dass für die Korrektur lediglich die schon vorliegenden Halbwertsbreiten mit $T_1$-Werten der passenden Temperaturen modifiziert werden müssen. Diese wurden aus den durchgeführten $T_1$-Messungen der jeweiligen Spektrometer gewonnen. Da die $T_1$-Werte bei Temperaturen über $\SI{400}{\kelvin}$ stark schwanken, wurden für die Daten des OBI-Spektrometers die $T_1$-Werte der Fits mit konstantem $\beta = 1$ verwendet (siehe Kapitel \ref{section:res:T_1} und Abbildung \ref{fig:res:T_1}). Die Ergebnisse sind in Abbildung \ref{fig:res:spek_fwhm_t1} zu sehen.
+Dies bedeutet, dass für die Korrektur lediglich die schon vorliegenden Halbwertsbreiten mit $T_1$-Werten der passenden Temperaturen modifiziert werden müssen. Diese wurden aus den durchgeführten $T_1$-Messungen der jeweiligen Spektrometer gewonnen. Da die $T_1$-Werte des OBI-Spektrometers bei Temperaturen über $\SI{400}{\kelvin}$ stark schwanken, wurden für diese Daten die $T_1$-Werte der Fits mit konstantem $\beta = 1$ verwendet (siehe Kapitel \ref{section:res:T_1} und Abbildung \ref{fig:res:T_1}). Die Ergebnisse sind für beide Spektrometer in Abbildung \ref{fig:res:spek_fwhm_t1} zu sehen.
 \begin{figure}
-	\begin{center}
+	\centering
+	\begin{subfigure}{\textwidth}
+		\centering
 		\includegraphics[width=.8\textwidth]{graphics/plot/fwhm_t1.pdf}
-	\end{center}
-	\caption{Halbwertsbreiten der OBI-Spektren in blau, mit der beschriebenen $T_1$-Korrektur in orange. Die gezeigten Unsicherheiten stammen aus den Unsicherheiten der $T_1$-Werte.} \label{fig:res:spek_fwhm_t1}
+	\end{subfigure} \\
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=.8\textwidth]{graphics/plot/fwhm_t1_bruker.pdf}
+	\end{subfigure}
+	\caption{Halbwertsbreiten in blau, Halbwertsbreiten mit der beschriebenen $T_1$-Korrektur in orange. Die gezeigten Unsicherheiten stammen aus den Unsicherheiten der $T_1$-Werte. Oben die Daten des OBI-Spektrometers, unten die des Bruker-Spektrometers.}
+	\label{fig:res:spek_fwhm_t1}
 \end{figure}
 
-Es ist zu erkennen, dass $T_1$ bei Temperaturen über $\SI{360}{\kelvin}$ einen großen Einfluss auf die Halbwertsbreite hat und die entsprechend angepassten Halbwertsbreiten deutlich geringere Werte aufweisen. Bei Temperaturen über $\SI{410}{\kelvin}$ können auch negative Halbwertsbreiten gefunden werden; diese sind aber aufgrund der hohen Schwankungen der $T_1$-Werte in diesem Temperaturbereich mit entsprechend hohen Unsicherheiten belegt. Eine präzisere Messung von $T_1$ würde eine Korrektur mit geringeren Unsicherheiten erlauben.
+Es ist zu erkennen, dass $T_1$ bei Temperaturen über $\SI{360}{\kelvin}$ einen großen Einfluss auf die Halbwertsbreite hat und die entsprechend angepassten Halbwertsbreiten deutlich geringere Werte aufweisen. Bei Temperaturen über $\SI{410}{\kelvin}$ können bei den angepassten Halbwertsbreiten des OBI-Spektrometers auch negative Halbwertsbreiten gefunden werden; diese sind aber aufgrund der hohen Schwankungen der $T_1$-Werte in diesem Temperaturbereich mit entsprechend hohen Unsicherheiten belegt. Eine präzisere Messung von $T_1$ würde eine Korrektur mit geringeren Unsicherheiten erlauben. Aufgrund der geringeren Unsicherheiten in $T_1$ der Daten des Bruker-Spektrometers (siehe Abbildung \ref{section:res:T_1}) sind die Unsicherheiten der angepassten Halbwertsbreiten entsprechend gering.
 
 
+\subsection{Auswertung der präparierten Daten} \label{sub:res:auswertung}
 
+Es wurden die am OBI- und am Bruker-Spektrometer aufgenommenen Daten getrennt untersucht, da durch die unterschiedlichen Larmorfrequenzen abweichende Ergebnisse der theoretischen Kurven zu erwarten sind. Bei den Halbwertsbreiten wurde der $T_1$-Einfluss nach der beschriebenen Methode berücksichtigt und herausgerechnet. Bei den Daten des OBI-Spektrometers wurden zudem bei Temperaturen über $\SI{390}{\kelvin}$ $T_1$ aus Fits mit festen $\beta = 1$ verwendet. Bei Temperaturen über $\SI{360}{\kelvin}$ wurden die Schwerpunkte aus Lorentz-Fits bestimmt, bei tieferen Temperaturen wurden sie durch Integration berechnet.
 
-Es wurden die am OBI- und am Bruker-Spektrometer aufgenommenen Daten getrennt untersucht, da durch die unterschiedlichen Larmorfrequenzen abweichende Ergebnisse der theoretischen Kurven zu erwarten sind. Bei den Halbwertsbreiten wurde der $T_1$-Einfluss nach der beschriebenen Methode berücksichtigt.
-
-
-
-Die aufgenommenen Spektren unterstützen eine biexponentielle Interpretation wie in \eqref{eqn:trans_relax} nur schwerlich, daher wurde lediglich der deutlich zu beobachtende Anteil des Zentralübergangs, $\Delta_c$ und $\omega_c^{(2)}$, für die entsprechenden FWHM- bzw. Schwer\-punkts-Da\-ten betrachtet. Für die $T_1$-Daten wird Formel \eqref{eqn:bpp} verwendet. Die Anpassung der Kurven wurde manuell durchgeführt.
+Die aufgenommenen Spektren unterstützen eine biexponentielle Interpretation, wie sie \eqref{eqn:trans_relax} vorhersagt, nur schwerlich, daher wurde lediglich der deutlich zu beobachtende Anteil des Zentralübergangs, $\Delta_c$ (Formel \eqref{eqn:fwhm}) und $\omega_c^{(2)}$ (Formel \eqref{eqn:schwerpunkt}), für die entsprechenden FWHM- bzw. Schwer\-punkts-Da\-ten betrachtet. Für die $T_1$-Daten wird Formel \eqref{eqn:bpp} verwendet. Die Anpassung der Kurven wurde manuell durchgeführt.
 
 
 
 Zunächst sollen die Daten des OBI-Spektrometers vergleichen werden. Bei den $T_1$-Werten soll erwähnt werden, dass die Werte bei hohen Temperaturen mit starken Unsicherheiten belegt sind (vgl. Abbildung \ref{fig:res:T_1}) -- entsprechende Indikatoren wurden hier für eine bessere Übersicht ausgelassen.
 
-Für die Spektraldichte $J_\text{BPP}$ kann bei höheren Temperaturen, wie in Abbildung \ref{fig:res:theorie_j} zu sehen, mit dem Parameter $C_Q = \SI{3.6}{MHz}$ eine vergleichsweise gute Übereinstimmung für die Halbwertsbreiten und die Schwerpunkte erreicht werden. Zu tieferen Temperaturen gibt es jedoch gravierende Abweichungen. Für die stark ansteigenden Werte der Halbwertsbreite können anisotrope Effekte vermutet werden, deren Einfluss durch diese isotrope Theorie nicht abgedeckt wird und daher diesen Unterschied kreiert. Gründe für die Abweichungen der Schwerpunkte sind noch offen -- dieser Effekt wird jedoch gleichermaßen in experimentellen als auch simulierten Spektren beobachtet, was bedeutet, dass der Effekt vermutlich auf die von der Simulation berücksichtigten Wechselwirkungen eingeschränkt werden kann.
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=.9\textwidth]{graphics/plot/OBI_J_02.pdf}
-	\end{center}
-	\caption{Vergleich von $T_1$, Halbwertsbreite und Schwerpunkt der OBI-Daten in blau. In orange die Theorie-Kurve mit Spektraldichte $J_\text{BPP}$ mit Parametern nach \cite{PIMENOV199793}, in grün mit Parametern nach \cite{crn_augsburg}.} \label{fig:res:theorie_j}
-\end{figure}
+Für die Spektraldichte $J_\text{BPP}$ kann bei höheren Temperaturen, wie in Abbildung \ref{fig:res:theorie_j} oben zu sehen, mit dem Parameter $C_Q = \SI{3.6}{MHz}$ eine vergleichsweise gute Übereinstimmung für die Halbwertsbreiten erreicht werden. Zu tieferen Temperaturen ab $\SI{370}{\kelvin}$ gibt es jedoch gravierende Abweichungen. Für die stark ansteigenden Werte der Halbwertsbreite können Effekte vermutet werden, die von Theorie der Quadrupol-Wechselwirkung zweiter Ordnung nicht abgedeckt werden und daher diesen Unterschied kreiert. Aufgrund von Bewegungsverschmälerung ist jedoch ein Übergang von breiten zu schmalen Spektren bei steigender Temperatur durchaus zu erwarten.
+
+Für hohe Temperaturen kann eine gute Übereinstimmung zu den Schwerpunkts-Daten gefunden werden, Erklärungen für das Abweichen der Schwerpunkte zu tieferen Temperaturen sind jedoch noch offen. Bis zu Temperaturen von $\SI{370}{\kelvin}$ könnte ein Grund die in Kapitel \ref{section:res:spektren} erwähnten Unsicherheiten im Bezug auf die Phase bei der Bestimmung der Schwerpunkte sein.
 
 Es kann eine grobe Vereinbarkeit der Theorie mit $T_1$-Werten im Maximum der Kurve erreicht werden, die Flanken unterscheiden sich jedoch deutlich. Da die Form der Theoriekurve mit der Spektraldichte $J_\text{BPP}$ unveränderlich ist, ist es schwerlich möglich, eine zufriedenstellende Übereinstimmung zu erreichen. Abhilfe schaffen könnten andere Spektraldichten -- dies soll im Folgenden untersucht werden.
 
-Für die Spektraldichten $J_\text{CC}$ (Abbildung \ref{fig:res:theorie_j_cc}) und $J_\text{CD}$ (Abbildung \ref{fig:res:theorie_j_dc}) lagen die für die theoretische Berechnung der Schwerpunkte benötigten Imaginärteile $Q_\text{CC}$ und $Q_\text{CD}$ nicht vor, weswegen für diese auf die Spektraldichte $J_\text{BPP}$ zurückgegriffen wurde. Für die Schwerpunkte kann der Vergleich daher nur als grobe Idee verstanden werden.
 \begin{figure}
-	\begin{center}
-		\includegraphics[width=.8\textwidth]{graphics/plot/OBI_J_cc_01.pdf}
-	\end{center}
-	\caption{Vergleich von $T_1$, Halbwertsbreite und Schwerpunkt der OBI-Daten in blau. In orange die Theoriekurve mit Spektraldichte $J_\text{CC}$ mit Parametern nach \cite{PIMENOV199793}.} \label{fig:res:theorie_j_cc}
-\end{figure}
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=.8\textwidth]{graphics/plot/OBI_J_dc_01.pdf}
-	\end{center}
-	\caption{Vergleich von $T_1$, Halbwertsbreite und Schwerpunkt der OBI-Daten in blau. In orange die Theorie-Kurve mit Spektraldichte $J_\text{CD}$ mit Parametern nach \cite{PIMENOV199793}.} \label{fig:res:theorie_j_dc}
+	\centering
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=.8\textwidth]{graphics/SPEK3/OBI_J_01.pdf}
+	\end{subfigure} \\
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=.8\textwidth]{graphics/SPEK3/OBI_J_cc_01.pdf}
+	\end{subfigure}
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=.8\textwidth]{graphics/SPEK3/OBI_J_cd_01.pdf}
+	\end{subfigure}
+	\caption{Vergleich von $T_1$, Halbwertsbreite und Schwerpunkt der OBI-Daten in blau. In orange und grün die Theoriekurven mit Spektraldichte $J_\text{BPP}$ oben mit $C_Q = \SI{3.6}{MHz}$, $J_\text{CC}$ in der Mitte mit $C_Q = \SI{4.0}{MHz}$ und $\alpha = \SI{0.6}{}$, sowie $J_\text{CD}$ unten mit $C_Q = \SI{3.6}{MHz}$ und $\gamma = \SI{0.46}{}$. Orangene Theoriekurven mit $\tau_c$ nach \cite{PIMENOV199793}, grüne Theoriekurven mit $\tau_c$ nach \cite{crn_augsburg}.}
+	\label{fig:res:theorie_j}
 \end{figure}
 
-Für $J_\text{CC}$ und $J_\text{CD}$ können mit den Parametern $C_Q = \SI{4.0}{MHz}$ und $\alpha = \SI{0.6}{}$ bzw. $C_Q = \SI{3.6}{MHz}$ und $\gamma = \SI{0.46}{}$ gute Übereinstimmungen für $T_1$ beobachtet werden -- zumindest oberhalb einer Temperatur von etwa $\SI{350}{\kelvin}$. Für $J_\text{CD}$ scheint es zudem für Temperaturen über $\SI{400}{K}$ Abweichungen zu geben. Eine bessere Vereinbarkeit mit $T_1$-Werten kommt in beiden Fällen auf Kosten der vergleichsweise guten Übereinstimmungen für Halbwertsbreite und Schwerpunkt zustande, die mit $J_\text{BPP}$ erreicht werden konnten: Während für $J_\text{CC}$ die Schwerpunkte stark abweichen, ist dies bei $J_\text{CD}$ für die Halbwertsbreiten der Fall. Es bleibt festzuhalten, dass insgesamt eine gute Übereinstimmung mit der Theorie gezeigt werden konnte; es kann jedoch keine Spektraldichte besonders vorteilhaft hervorgehoben werden.
+Für die Spektraldichten $J_\text{CC}$ (Abbildung \ref{fig:res:theorie_j} mitte) und $J_\text{CD}$ (Abbildung \ref{fig:res:theorie_j} unten) lagen die für die theoretische Berechnung der Schwerpunkte benötigten Imaginärteile $Q_\text{CC}$ und $Q_\text{CD}$ nicht vor, weswegen für diese auf die Spektraldichte $J_\text{BPP}$ zurückgegriffen wurde. Für die Schwerpunkte kann der Vergleich daher nur als grobe Idee verstanden werden, weswegen der Vergleich Schwerpunkte mit den Spektraldichten $J_\text{CC}$ und $J_\text{CD}$ nicht weiter diskutiert werden soll.
 
-Für den Vergleich der Daten des Bruker-Spektrometers ist Ähnliches zu beobachten. Dabei fällt es hier aber schwerer, definitive Aussagen zu treffen, da der eingeschränkte Temperaturbereich nur einen bedingten Vergleich zulässt. Abbildung \ref{fig:res:theorie_bruker} zeigt die Daten zusammen mit Theoriekurven basierend auf der Spektraldichte $J_\text{BPP}$ mit dem Parameter $C_Q = \SI{3.45}{MHz}$. Dabei ist zu sehen, dass die Daten im gleichen Maße wie die OBI-Daten Übereinstimmungen und Unterschiede aufzeigen.
+Für $J_\text{CC}$ und $J_\text{CD}$ können mit den Parametern $C_Q = \SI{4.0}{MHz}$ und $\alpha = \SI{0.6}{}$ bzw. $C_Q = \SI{3.6}{MHz}$ und $\gamma = \SI{0.46}{}$ gute Übereinstimmungen für $T_1$ beobachtet werden -- zumindest oberhalb einer Temperatur von etwa $\SI{350}{\kelvin}$. Für $J_\text{CD}$ scheint es zudem für Temperaturen über $\SI{400}{K}$ Abweichungen zu geben. Eine bessere Vereinbarkeit mit $T_1$-Werten kommt in beiden Fällen auf Kosten der vergleichsweise guten Übereinstimmung für die Halbwertsbreite zustande, welche mit $J_\text{BPP}$ erreicht werden konnten. Es bleibt festzuhalten, dass eine recht gute Übereinstimmung mit der Theorie gezeigt werden konnte; es kann jedoch keine Spektraldichte besonders vorteilhaft hervorgehoben werden und es bleiben noch einige offene Fragen.
+
+
+Für den Vergleich der Daten des Bruker-Spektrometers ist Ähnliches zu beobachten. Dabei fällt es hier aber schwerer, definitive Aussagen zu treffen, da der eingeschränkte Temperaturbereich nur einen bedingten Vergleich zulässt. Abbildung \ref{fig:res:theorie_j_bruker} zeigt die Daten oben zusammen mit Theoriekurven basierend auf der Spektraldichte $J_\text{BPP}$ mit dem Parameter $C_Q = \SI{3.45}{MHz}$, in der Mitte basierend auf der Spektraldichte $J_\text{CC}$ mit den Parametern $C_Q = \SI{3.8}{MHz}$ und $\alpha = \SI{0.6}{}$, und unten basierend auf der Spektraldichte $J_\text{CD}$ mit $C_Q = \SI{3.45}{MHz}$ und $\gamma = \SI{0.42}{}$. Dabei ist zu sehen, dass die Daten im gleichen Maße wie die OBI-Daten Übereinstimmungen und Unterschiede aufzeigen. Einzig ist der Vergleich der Schwerpunkte mit Theoriekurve basierend auf $J_\text{BPP}$ hervorzuheben. Dieser weist auch bei tieferen Temperaturen bis $\SI{370}{K}$ gute Übereinstimmungen auf.
 \begin{figure}
-	\begin{center}
-		\includegraphics[width=.9\textwidth]{graphics/plot/Bruker_J_01.pdf}
-	\end{center}
-	\caption{Vergleich von $T_1$, Halbwertsbreite und Schwerpunkt der Bruker-Daten in blau. In orange die Theorie-Kurve mit Spektraldichte $J_\text{BPP}$ mit Parametern nach \cite{PIMENOV199793}.} \label{fig:res:theorie_bruker}
+	\centering
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=.7\textwidth]{graphics/plot/Bruker_J_01.pdf}
+	\end{subfigure} \\
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=.7\textwidth]{graphics/plot/Bruker_J_cc_02.pdf}
+	\end{subfigure}
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=.7\textwidth]{graphics/plot/Bruker_J_dc_01.pdf}
+	\end{subfigure}
+	\caption{Vergleich von $T_1$, Halbwertsbreite und Schwerpunkt der Bruker-Daten in blau. In orange die Theoriekurven mit $\tau_c$ nach \cite{PIMENOV199793}. Die Spektraldichte $J_\text{BPP}$ oben mit $C_Q = \SI{3.45}{MHz}$, $J_\text{CC}$ in der Mitte mit $C_Q = \SI{3.8}{MHz}$ und $\alpha = \SI{0.6}{}$, sowie $J_\text{CD}$ unten mit $C_Q = \SI{3.45}{MHz}$ und $\gamma = \SI{0.42}{}$.}
+	\label{fig:res:theorie_j_bruker}
 \end{figure}
 
 

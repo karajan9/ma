@@ -23,7 +23,7 @@ Der Aufbau des OBI-Spektrometers ist in Abbildung \ref{fig:exp:aufbau} skizziert
 		\label{fig:exp:bruker}
 	\end{subfigure}
 	\caption{Fotografien der verwendeten Spektrometer. Links das OBI-Spektrometer, rechts das Bruker-Spektrometer.}
-	\label{fig:exp:proben}
+	\label{fig:exp:spektrometer}
 \end{figure}
 
 \begin{figure}
@@ -56,7 +56,7 @@ Für mehr Informationen zu den hier beschriebenen Aufbauten können \cite{lueg_i
 
 Alle so aufgenommen Daten bestehen aus einem Zeitpunkt $t$ und dem zugehörigen Amplitudenwert von Real- und Imaginärteil. Werden Messungen wie eine $T_1$-, $T_2$- oder $F_2$-Messung durchgeführt, ergeben sich variablenabhängige Messreihen. Es wird diese Variable (z.B. Evolutions- oder Mischzeit) meist logarithmisch gegen das Maximum des Realteils der jeweiligen Messung aufgetragen; dann können die Daten analysiert werden. Um ein möglichst großes Realteil-Signal am Ort $t_\text{Max}$ des Maximums zu gewährleisten, sollte dort der Imaginärteil einen Nulldurchgang aufweisen. Dies lässt sich mit einer entsprechenden Einstellung der Phase über die Phasenansteuerungs-Karte erreichen.
 
-Sollen Spektren untersucht werden, wird das Zeitsignal fouriertransformiert. Für eine hohe Auflösung sollte ein möglichst langes Zeitsignal aufgenommen werden; für eine große Frequenz-Spanne ein Zeitsignal mit möglichst hoher Frequenz der ADC-Karte.
+Sollen Spektren untersucht werden, wird das Zeitsignal fouriertransformiert. Für eine hohe Auflösung des resultierenden Spektrums sollte ein möglichst langes Zeitsignal aufgenommen werden; für eine große Bandbreite des Spektrums ein Zeitsignal mit möglichst hoher Frequenz der ADC-Karte.
 
 
 
@@ -64,7 +64,7 @@ Sollen Spektren untersucht werden, wird das Zeitsignal fouriertransformiert. Fü
 
 NMR-Messungen bei mehreren Hundert Grad Celsius durchzuführen, kann sich mitunter als eine Herausforderung gestalten. Lötzinne, die häufig verwendet werden um die Resonanzspule an dem Probenkopf anzubringen, schmelzen je nach Art bei weniger als $\SI{200}{\degreeCelsius}$. Aber auch Tuningkondensator und Match\-ing\-spu\-le sowie der für die Resonanzspule verwendete Draht sind häufig nur für bestimmte Temperaturen ausgelegt. Zudem ist es offensichtlich, dass für höhere Temperaturen eine gute Isolierung und gegebenenfalls Kühlung des Probenkopfs gegeben sein muss, befindet er doch in direkter Umgebung des mit flüssigem Helium gekühlten Magneten.
 
-Für solche Anwendungen ist also ein spezieller Probenkopf notwendig, welcher in Form des Hochtemperaturprobenkopfs (intern als „Ofen“ bezeichnet) als eine Spezialanfertigung realisiert wurde. Dessen Konstruktionszeichnung ist in Abbildung \ref{fig:exp:ofen_aufbau} zu sehen; eine detaillierte Beschreibung findet sich in \cite{tilly_master}.
+Für solche Anwendungen ist also ein spezieller Probenkopf notwendig, welcher in Form des Hochtemperaturprobenkopfs als eine Spezialanfertigung realisiert wurde. Dessen Konstruktionszeichnung ist in Abbildung \ref{fig:exp:ofen_aufbau} zu sehen; eine detaillierte Beschreibung findet sich in \cite{tilly_master}.
 
 \begin{sidewaysfigure}
 	\begin{figure}[H]

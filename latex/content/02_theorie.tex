@@ -225,7 +225,7 @@ Auch hier sind zwei Exponentialfunktionen vorhanden (deren Effekt auch in Daten 
 
 $\omega_{c/s}$ sind die Schwerpunkte des Spektrums, die sich neben der Breite aus der transversalen Relaxation gewinnen lassen. Diese sind mit dem Imaginärteil der Spektraldichte, der dynamischen Frequenzverschiebung zweiter Ordnung, $Q(\omega, \tau_c)$, verbunden \cite{eckert}:
 \begin{align}
-    \omega_c^{(2)} &= Q(2\omega_0) - Q(\omega_0) \\ \label{eqn:schwerpunkt}
+    \omega_c^{(2)} &= Q(2\omega_0) - Q(\omega_0) \label{eqn:schwerpunkt} \\ 
     \omega_s^{(2)} &= Q(\omega_0), \\
     \text{wobei } Q(\omega) &= \frac{\pi^2}{5} {C_Q}^2 \left( 1 + \frac{\eta^2}{3} \right) \frac{\omega {\tau_c}^2}{1 + \omega^2 {\tau_c}^2}.
 \end{align}
@@ -238,16 +238,16 @@ Für die entsprechenden $T_2$-Werte $T_{2c}$ und $T_{2s}$ ergeben sich folgende 
 
 Wird für eine solche Messung ein FID (free induction decay) aufgenommen, so lässt dieser sich mittels einer Fouriertransformation in ein Frequenzspektrum überführen. Bei der hier relevanten Exponentialfunktion entsteht eine Lorentzfunktion, deren Breite oder FWHM (full width at half maximum) $\Delta_{c/s}$ wie folgt mit $T_{2c}$ bzw. $T_{2s}$ verknüpft ist \cite{werbelow}:
 \begin{align}
-    \Delta_c &= 1/(\pi T_{2c}) \\ \label{eqn:fwhm}
+    \Delta_c &= 1/(\pi T_{2c}) \label{eqn:fwhm} \\ 
     \Delta_s &= 1/(\pi T_{2s}).
 \end{align}
 
 Neben der hier vorgestellten Spektraldichte $J_\text{BPP}(\omega)$, die von einer einzelnen Korrelationszeit $\tau_c$ zur Beschreibung der Molekülbewegung ausgeht, existieren noch weitere Modelle, denen verschiedene Verteilungen von $\tau_c$ zugrunde liegen. Bekannte Spektraldichten sind von Cole-Cole ($J_\text{CC}$) und von Cole-Davidson ($J_\text{CD}$) \cite[S. 105-108]{beckmann_relaxation}, angepasst mit dem entsprechenden Vorfaktor aus Formel \eqref{eqn:spektraldichte_j}:
 \begin{align}
 \begin{split}
-    J_\text{CC}(\omega, \tau_c, \alpha) &= \frac{\pi^2}{5} {C_Q}^2 \left( 1 + \frac{\eta^2}{3} \right) \frac{1}{\omega} \sin \left( \frac{\alpha \pi}{2} \right) \\ &\times \left[ \frac{(\omega \tau_c)^\alpha}{1 + (\omega \tau_c)^{2\alpha} + 2 (\omega \tau_c)^\alpha \cos (\alpha \pi / 2)} \right],
+    J_\text{CC}(\omega, \tau_c, \alpha) &= \frac{\pi^2}{5} {C_Q}^2 \left( 1 + \frac{\eta^2}{3} \right) \frac{1}{\omega} \sin \left( \frac{\alpha \pi}{2} \right) \\ &\times \left[ \frac{(\omega \tau_c)^\alpha}{1 + (\omega \tau_c)^{2\alpha} + 2 (\omega \tau_c)^\alpha \cos (\alpha \pi / 2)} \right], \label{eqn:theo:jcc}
 \end{split} \\
-    J_\text{CD}(\omega, \tau_c, \gamma) &= \frac{\pi^2}{5} {C_Q}^2 \left( 1 + \frac{\eta^2}{3} \right) \frac{1}{\omega} \left\{ \frac{\sin [\gamma \arctan(\omega \tau_c)]}{(1 + \omega^2 {\tau_c}^2)^{2\gamma}} \right\}
+    J_\text{CD}(\omega, \tau_c, \gamma) &= \frac{\pi^2}{5} {C_Q}^2 \left( 1 + \frac{\eta^2}{3} \right) \frac{1}{\omega} \left\{ \frac{\sin [\gamma \arctan(\omega \tau_c)]}{(1 + \omega^2 {\tau_c}^2)^{2\gamma}} \right\} \label{eqn:theo:jcd}
 \end{align}
 Für $\alpha = 1$ bzw. $\gamma = 1$ korrespondieren diese Spektraldichten zu BPP.
 
