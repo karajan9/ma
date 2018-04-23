@@ -138,49 +138,52 @@ Es ist zu erkennen, dass die Größen zwischen den zwei Messreihen teils mehr sc
 
 \subsection{Pulslängenabhängige Spektren} \label{section:res:spekdyn}
 
-Eine weitere Untersuchung zu möglicher Dynamik wurde an der sich ändernden Linienform von pulslängenabhängigen Spektren durchgeführt. Während hier nur auf die Bestimmung von Zeitkonstanten eingegangen werden soll, werden die Details von CRN-Spektren im späteren Abschnitt \ref{section:res:spektren} diskutiert.
+Eine weitere Untersuchung zu möglicher Dynamik wurde an der sich ändernden Linienform von pulslängenabhängigen Spektren durchgeführt. Während hier nur auf die Bestimmung von Zeitkonstanten eingegangen werden soll, werden die Details von der Linienform von CRN-Spektren im späteren Abschnitt \ref{section:res:spektren} diskutiert.
 
-Es wurde beobachtet, dass Spektren, die mit einem Hahn-Echo mit unterschiedlicher Evolutionszeit aufgenommen wurden, eine unterschiedliche Linienform zeigen. Die Halbwertsbreiten der normierten Spektren sind also evolutionszeitabhängig, und das bei verschiedenen Temperaturen in verschiedenen Maßen. Dies lässt sich in Abbildung \ref{fig:res:spekdyn_305K} im Vergleich mit Abbildung \ref{fig:res:spekdyn_325K} erkennen, wo pulslängenabhängige Spektren für die Temperaturen $\SI{305}{\kelvin}$ bzw. $\SI{325}{\kelvin}$ gezeigt sind.
+Es wurde beobachtet, dass Spektren, die mit einem Hahn-Echo mit unterschiedlicher Evolutionszeit $t_p$ aufgenommen wurden, eine unterschiedliche Linienform zeigen. Die Halbwertsbreiten der normierten Spektren sind also evolutionszeitabhängig, und das bei verschiedenen Temperaturen in verschiedenen Maßen. Dies lässt sich in Abbildung \ref{fig:res:spekdyn_305K} erkennen, wo normierte, pulslängenabhängige Spektren für die Temperaturen $\SI{305}{\kelvin}$ oben bzw. $\SI{325}{\kelvin}$ unten gezeigt sind. Die Daten wurden am OBI-Spektrometer mit $\omega_{L, \text{OBI}} = 2\pi \cdot \SI{97.1722}{MHz}$ aufgenommen und mit Gaußfunktion mit einer Breite von $\SI{500}{Hz}$ apodisiert. Diese Faltung sorgt für eine Verbreiterung der Spektren, welche zwar die Auflösung, aber auch das Rauschen verringert.
 \begin{figure}
-	\begin{center}
-		\includegraphics[width=.8\textwidth]{graphics/plots/SPEKDYN/spekdyn_305K.pdf}
-	\end{center}
-	\caption{Änderung der Linienform der Spektren bei $\SI{305}{\kelvin}$ in Abhängigkeit der Evolutionszeit $t_p$.} \label{fig:res:spekdyn_305K}
-\end{figure}
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=.8\textwidth]{graphics/plots/SPEKDYN/spekdyn_325K.pdf}
-	\end{center}
-	\caption{Änderung der Linienform der Spektren bei $\SI{325}{\kelvin}$ in Abhängigkeit der Evolutionszeit $t_p$. Im Vergleich zu \ref{fig:res:spekdyn_305K} ist eine deutlich stärkere Verschmälerung zu hohen $t_p$ zu erkennen.} \label{fig:res:spekdyn_325K}
-\end{figure}
-Alle Spektren wurden mit dem OBI-Spektrometer aufgenommen; dabei wurde ein Hahn-Echo mit variabler Evolutionszeit verwendet und die Spektren mit $\SI{500}{Hz}$ apodisiert.
-
-Zur Untersuchung dieses Phänomens wurde für jede Temperatur die Halbwertsbreite gegen die Evolutionszeit $t_p$ aufgetragen. Da die Spektren bei hohen Pulslängen teils sehr verrauscht sind, wurden die verwendeten Evolutionszeiten auf $\SI{2}{\milli s}$ begrenzt, um Fits nicht ungünstig zu beeinflussen. An diese Daten wurden Kohlrausch-Fits angelegt, die als durchgezogene Linien, zusammen mit dem Daten, in Abbildung \ref{fig:res:spekdyn_fits} zu sehen sind.
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=.9\textwidth]{graphics/plots/SPEKDYN/spekdyn_fits.pdf}
-	\end{center}
-	\caption{Halbwertsbreiten in Abhängigkeit von $t_p$. An diese Daten wurden Kohlrausch-Fits angelegt, dargestellt als durchgezogene Linien.} \label{fig:res:spekdyn_fits}
+	\centering
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=.9\textwidth]{graphics/plot/spekdyn_305K2.pdf}
+	\end{subfigure} \\
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=.9\textwidth]{graphics/plot/spekdyn_325K2.pdf}
+	\end{subfigure}
+	\caption{Änderung der Linienform der mit einem Hahn-Echo aufgenommenen Spektren bei $\SI{305}{\kelvin}$ (oben) und bei $\SI{325}{\kelvin}$ (unten) in Abhängigkeit der Evolutionszeit $t_p$. Die Daten wurden am OBI-Spektrometer mit $\omega_{L, \text{OBI}} = 2\pi \cdot \SI{97.1722}{MHz}$ aufgenommen und auf ihr Maximum normiert.}
+	\label{fig:res:spekdyn_305K}
+	\label{fig:res:spekdyn_325K}
 \end{figure}
 
-Es wurde eine weitere, ähnliche Auswertung durchgeführt, wobei anstatt der Halbwertsbreite die Amplitude bei einer bestimmten Frequenz (beispielsweise bei $\SI{-15}{\kilo Hz}$) als Variable genommen wurde. Die Ergebnisse glichen der der Halbwertsbreiten-Betrachtung, waren aber durchgehend mit größeren Unsicherheiten behaftet. Dies lässt sich durch die stark verrauschten Spektren bei hohen Evolutionszeiten erklären, die zu stark schwankenden Amplituden führen, welche wiederum einen guten Fit der Daten schwierig gestalten.
+Zur Untersuchung der Evo\-lu\-tions\-zeit-Ab\-häng\-ig\-keit wurde für jede Temperatur die Halbwertsbreite -- als Maß für die Linienform -- gegen die Evolutionszeit $t_p$ aufgetragen. An diese Daten wurden Kohlrausch-Fits angelegt, die als durchgezogene Linien, zusammen mit dem Daten, in Abbildung \ref{fig:res:spekdyn_fits} zu sehen sind. Alle Spektren wurden am OBI-Spektrometer aufgenommen. Da die Spektren bei zunehmenden Pulslängen ein immer schlechteres Sig\-nal-Rausch-Ver\-hält\-nis aufweisen -- beispielhaft zu erkennen in der unteren Hälfte der Abbildung \ref{fig:res:spekdyn_325K} für $t_p = \SI{2.7}{\milli s}$ --, wurden die verwendeten Evolutionszeiten auf $\SI{2}{\milli s}$ begrenzt. 
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=.9\textwidth]{graphics/plot/spekdyn_fits2.pdf}
+	\end{center}
+	\caption{Halbwertsbreiten der Spektren in Abhängigkeit von $t_p$. An diese Daten wurden Kohlrausch-Fits angelegt, dargestellt als durchgezogene Linien.} \label{fig:res:spekdyn_fits}
+\end{figure}
+
+Es wurde eine weitere, ähnliche Auswertung durchgeführt, wobei anstatt der Halbwertsbreite die Amplitude bei einer bestimmten Frequenz (beispielsweise bei $\SI{-15}{\kilo Hz}$) als Variable genommen wurde. Die Ergebnisse glichen der der Halbwertsbreiten-Betrachtung, waren aber durchgehend mit Unsicherheiten in Größenordnung der eigentlichen Werte behaftet. Dies lässt sich durch die stark verrauschten Spektren bei hohen Evolutionszeiten erklären, die zu stark schwankenden Amplituden führen, welche wiederum einen guten Fit der Daten schwierig gestalten. Es ist die Untersuchung der Halbwertsbreiten dieser Methode vorzuziehen.
 
 
 
 \subsection{Auswertung der experimentell bestimmten Zeitkonstanten} \label{section:res:dynausw}
 
-Werden die bestimmten Zeitkonstanten der $T_1$-, $T_2$-, $F_2$- und $t_p$-abhängigen Spek\-trums-Mess\-un\-gen zusammen mit dem Fit der Werte des $\beta$-Prozesses (vgl. Abbildung ***) aufgetragen, ergibt sich das in Abbildung \ref{fig:res:dynvgl} gezeigt Bild.
+Werden die bestimmten Zeitkonstanten der $T_1$-, $T_2$-, $F_2$- und $t_p$-abhängigen Spek\-trums-Mess\-un\-gen zusammen aufgetragen, ergibt sich das in Abbildung \ref{fig:res:dynvgl} gezeigt Bild.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=.9\textwidth]{graphics/plot/dyn.pdf}
 	\end{center}
-	\caption{Vergleich der gewonnenen Zeitkonstanten.} \label{fig:res:dynvgl}
+	\caption{Vergleich der gewonnenen Zeitkonstanten.
+	
+	Die braune Linie entspricht der gestrichelten Linie aus Abbildung \ref{fig:einl:zuernpaper}, welche ein Fit an Zeitkonstanten eines Betaprozesses ist.} \label{fig:res:dynvgl}
 \end{figure}
-Alle bestimmten Zeitkonstanten liegen -- im Rahmen der Unsicherheiten -- zwischen den bestimmten $T_1$- und $T_2$-Werten. Diese Unsicherheiten sind bei fast allen Messungen, mit Ausnahme der $F_2$-Messungen, unter der verwendeten Symbolgröße und können vernachlässigt werden. Die höheren Unsicherheiten der $F_2$-Messungen sind aufgrund der verwendeten mehrschrittigen Auswertung verständlich.
+Alle bestimmten Zeitkonstanten liegen -- im Rahmen der Unsicherheiten -- zwischen den bestimmten $T_1$- und $T_2$-Werten. Diese Unsicherheiten sind bei fast allen Messungen, mit Ausnahme der $F_2$-Messungen, unter der verwendeten Symbolgröße und können vernachlässigt werden. Gründe für die höheren Unsicherheiten der $F_2$-Messungen könnten die mehrschrittige Auswertung und die verrauschten Signale bei hohen Evolutionszeiten sein.
 
 Ab $\SI{320}{\kelvin}$ bis $\SI{330}{\kelvin}$ zeigen alle Zeitkonstanten einen Übergang zu kürzeren Zeiten, der wohl mit der höheren Bewegung der Atome in der Nähe der Glasübergangstemperatur von $T_g = \SI{333}{\kelvin}$ einhergeht. Dieser Effekt ist auch als Bewegungsverschmälerung in Spektren zu sehen (vgl. Abbildung \ref{fig:res:spek_fwhm}).
 
-Die braune Linie stellt dabei einen Fit durch die in Abbildung (*** Bild Zürn Paper) gezeigten, zum $\beta$-Prozess gehörenden Werte dar, um eine Abschätzung zu geben, in welcher Größenordnung der Prozess im untersuchten Temperaturbereich liegt, sollte sich der angedeutete Trend linear fortsetzen. Wie zu erkennen, befindet sich keine der bestimmten Zeitkonstanten in der entsprechenden Größenordnung. Dies bedeutet entweder, dass der Prozess mit den verwendeten Methoden nicht detektiert werden konnte -- möglicherweise aufgrund eines zu geringen Einflusses --, oder, dass die Grundannahme eines $\beta$-Prozesses in dieser Größenordnung in diesem Temperaturbereich in CRN nicht korrekt ist. Weitere Untersuchungen sind nötig, um diese Frage abschließend klären zu können.
+Die braune Linie stellt dabei einen Fit durch die in Abbildung \ref{fig:einl:zuernpaper} gezeigten, zum Betaprozess gehörenden Werte dar. Die Linie kann eine Abschätzung zu geben, in welcher Größenordnung der Prozess im untersuchten Temperaturbereich liegt, sollte sich der angedeutete Trend im Arrhenius-Diagramm \ref{fig:einl:zuernpaper} linear fortsetzen. Wie zu erkennen, befindet sich keine der bestimmten Zeitkonstanten in der entsprechenden Größenordnung. Dies bedeutet möglicherweise, dass der Prozess mit den hier verwendeten Methoden nicht detektiert werden kann -- ein zu geringer Einfluss könnte der Grund sein. Weitere Untersuchungen sind nötig, um diese Frage abschließend klären zu können.
 
 
 
