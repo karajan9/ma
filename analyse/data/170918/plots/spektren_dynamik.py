@@ -21,10 +21,10 @@ from nmr_lib import *
 # %%
 def plot_spek(directory, take, temp):
     plt.xscale("linear")
-    plt.xlabel("Frequenz [Hz]")
+    plt.xlabel("Frequenz [kHz]")
     plt.ylabel("Amplitude [normiert]")
-    plt.title("Spektren {}K".format(temp))
-    plt.xlim(-1e5, 1e5)
+    # plt.title("Spektren {}K".format(temp))
+    plt.xlim(-1e2, 1e2)
     plt.ylim(-0.2, 1.1)
 
     spek_dirs = np.take(sorted(glob.glob(directory + "/*/")), take)
@@ -33,7 +33,8 @@ def plot_spek(directory, take, temp):
         freq, real, imag = load_spek(spek_dir)
         real /= np.max(real)
 
-        plt.plot(freq, real, label=tau)
+        plt.plot(freq/1e3, real, label="$t_p$ = {:.1e} s".format(tau))
+    plt.tick_params(which="both", direction="in", top=True, right=True)
     plt.legend()
 
 
@@ -61,7 +62,7 @@ def plot_spek(directory, take, temp):
 
 #     axarr[1].plot(taus, 0.5 - left)
 #     # plt.plot(taus, right, label=temp, ls="-.")
- 
+
 
 # # %%
 # def diff2(directory):
@@ -141,14 +142,17 @@ def plot_spek(directory, take, temp):
 
 
 # %%
+
+
+# FWHM mit Fits plotten
 def fwhm(directory):
-    plt.grid(True)
+    # plt.grid(True)
     plt.xscale("log")
-    plt.xlabel("log($\\tau$/s)")
+    plt.xlabel("$t_p$ [s]")
     # axarr[0].set_ylabel("FWHM [kHz]")
-    plt.gcf().set_size_inches(9, 6)
-    plt.ylabel("FWHM [kHz]")
-    plt.title("FWHM($\\tau$)")
+    # plt.gcf().set_size_inches(9, 6)
+    plt.ylabel("Halbwertsbreite [kHz]")
+    # plt.title("FWHM($\\tau$)")
 
     temps, fwhms = load_FWHMs(directory)
     taus = np.zeros(fwhms.shape)
@@ -173,13 +177,25 @@ def fwhm(directory):
                 p_value[0], p_error[0],
                 p_value[3], p_error[3])
 
+    plt.tick_params(which="both", direction="in", top=True, right=True)
+
     color = plt.gca()._get_lines.get_next_color()
     x = np.geomspace(1e-5, 2e-2)
     fit = kohlrausch(x, p_value[0], p_value[1], p_value[2], p_value[3])
-    plt.scatter(taus, fwhms/1e3, label=temp, color=color)
+    plt.scatter(taus, fwhms / 1e3, label="T = {} K".format(np.round(temp, 1)), color=color)
     plt.plot(x, fit/1e3, color=color)
 
-    # show_plot()
+
+fwhm_dir = home_dir + "/data/170918/SPEKkombiniert/temp_abh"
+print(
+    "# Messungs_ID Temperature[K] tau[s] tau_error Beta Beta_error M0 M0_error Moff Moff_err"
+)
+for i, directory in enumerate(sorted(glob.glob(fwhm_dir + "/*/"))):
+    fwhm(directory)
+
+plt.legend(loc=3)
+
+save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEKDYN/spekdyn_fits2")
 
 
 # %%
@@ -202,8 +218,8 @@ def vergleich_fwhm_t2():
     plt.scatter(fwhm[:,0], fwhm[:,1], label="FWHM")
     # plt.scatter(fwhm2[:,0], fwhm2[:,1], label="fwhm2 tau")
 
-    plt.legend()
-    
+    plt.legend(loc=1)
+
 
 vergleich_fwhm_t2()
 save_plot(plt, "/home/karajan/uni/master/analyse/plots/SPEKDYN/spekdyn_t2")
@@ -218,31 +234,22 @@ plt.gcf().set_size_inches(9, 6)
 
 # %%
 # show spectra
-dir_305 = home_dir + "/data/170918/SPEKkombiniert/temp_abh/305K"
-plot_spek(dir_305, [0, 8, 10, 11], 305)
-save_plot(plt, "/home/karajan/uni/master/analyse/plots/SPEKDYN/spekdyn_305K")
-plt.show()
+# dir_305 = home_dir + "/data/170918/SPEKkombiniert/temp_abh/305K"
+# plot_spek(dir_305, [0, 8, 10, 11], 305)
+# save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEKDYN/spekdyn_305K2")
+# plt.show()
 
 dir_325 = home_dir + "/data/170918/SPEKkombiniert/temp_abh/325K"
 plot_spek(dir_325, [0, 8, 10, 11], 325)
-save_plot(plt, "/home/karajan/uni/master/analyse/plots/SPEKDYN/spekdyn_325K")
+save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEKDYN/spekdyn_325K2")
 plt.show()
 
-dir_345 = home_dir + "/data/170918/SPEKkombiniert/temp_abh/345K"
-plot_spek(dir_345, [0, 4, 5, 6], 345)
-plt.show()
+# dir_345 = home_dir + "/data/170918/SPEKkombiniert/temp_abh/345K"
+# plot_spek(dir_345, [0, 4, 5, 6], 345)
+# plt.show()
 
 
 
-# %%
-# FWHM mit Fits plotten
-fwhm_dir = home_dir + "/data/170918/SPEKkombiniert/temp_abh"
-print("# Messungs_ID Temperature[K] tau[s] tau_error Beta Beta_error M0 M0_error Moff Moff_err")
-for i, directory in enumerate(sorted(glob.glob(fwhm_dir + "/*/"))):
-    fwhm(directory)
-    
-plt.legend()
-save_plot(plt, "/home/karajan/uni/master/analyse/plots/SPEKDYN/spekdyn_fits")
 
 # # %%
 # plt.gca().set_prop_cycle(None)
@@ -266,4 +273,3 @@ save_plot(plt, "/home/karajan/uni/master/analyse/plots/SPEKDYN/spekdyn_fits")
 # # plt.ylim(-0.05, 0.7)
 # # save_plot("/home/jens/Documents/projekte/crn/170918/plots/spek3")
 # show_plot()
-

@@ -88,6 +88,12 @@ spektemps = spekdata[:, 0]
 spektaus = spekdata[:, 1]
 spektauserr = spekdata[:, 2]
 
+spek_fn_diff = home_dir + "/data/170918/SPEKkombiniert/temp_abh/spek_diffleft_305K_345K.data"
+spekdata_diff = np.loadtxt(spek_fn_diff)
+spektemps_diff = spekdata_diff[:, 0]
+spektaus_diff = spekdata_diff[:, 1]
+spektauserr_diff = spekdata_diff[:, 2]
+
 
 
 # %%
@@ -136,6 +142,15 @@ plt.errorbar(
     marker="D",
     color="tab:orange")
 
+plt.errorbar(
+    spektemps_diff,
+    spektaus_diff,
+    yerr=spektauserr_diff,
+    label="$t_p$-abh. Spek.",
+    linestyle="None",
+    marker="D",
+    color="tab:grey")
+
 
 plt.xlim(296, 350)
 plt.ylim(5e-5, 2e-2)
@@ -144,7 +159,7 @@ plt.ylabel("Zeitkonstante [s]")
 plt.legend(bbox_to_anchor=(1.02, 1.02), loc="upper left")
 
 
-save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEK2/dyn")
+# save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEK2/dyn")
 
 
 
