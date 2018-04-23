@@ -317,9 +317,10 @@ plt.ylabel("Halbwertsbreite [kHz]")
 plt.xlim(325, 430)
 # plt.title("CRN FWHM mit $T_1$-Korrektur")
 # plt.title("CRN FWHM")
+plt.text(330, 2, "$f_{L}(\\mathrm{OBI}) = 97.2$ MHz", fontsize=12)
 plt.legend(loc=1)
 
-# save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEK2/fwhm_t1")
+save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEK2/fwhm_t1")
 
 
 
@@ -381,6 +382,7 @@ plt.errorbar(
     linestyle="None",
     color="tab:orange",
     label="Halbwertsbreite mit $T_1$-Korrektur")
+plt.text(330, 5, "$f_{L}(\\mathrm{Bruker}) = 131.0$ MHz", fontsize=12)
 
 print(spekt1)
 
