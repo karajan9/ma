@@ -49,6 +49,8 @@ Ts = np.array([360., 363., 364., 365., 366., 367., 370., 380.,])
 # Ts = np.array([225., 250., 275., 300.,])
 tau_c_4er(Ts)
 
+T_VFT_4er(tau_c_4er(Ts)*10)
+
 # labels
 
 # %%
@@ -91,7 +93,7 @@ for i, fn in enumerate(fn_fft):
 
 # %%
 # invert
-directory = "/home/karajan/uni/master/analyse/data/lineshape/run7"
+directory = "/home/karajan/uni/master/ma/analyse/data/lineshape/run11/inv"
 fn_fft = glob.glob(directory + "/*.fid.dat")
 print(fn_fft)
 fn_fft = sorted(fn_fft, key=lambda a: float(a.split("!")[1]))
@@ -99,6 +101,7 @@ labels = np.array(sorted(float(fn.split("!")[1]) for fn in fn_fft))
 
 for i, fn in enumerate(fn_fft):
     data_fft = np.loadtxt(fn)
+    data_fft[:, 1] *= 1
     data_fft[:, 2] = data_fft[:, 2] * -1
     print(data_fft[:, 2])
     # data_fft[:,3] = data_fft[:,3][::-1]
@@ -183,17 +186,19 @@ plt.xlim(-1000, 500)
 # plt.xlim(-500000, 500000)
 plt.legend()
 
+
 # %%
 # dofft plotten
 # plt.rcParams['figure.figsize'] = (12, 8)
 directory = "/home/karajan/uni/master/ma/analyse/data/lineshape/run11"
+directory = "/home/karajan/uni/master/ma/analyse/data/lineshape/joined2"
 fn_apo = glob.glob(directory + "/*.fid.fft")
 fn_apo = sorted(fn_apo, key=lambda a: float(a.split("!")[1]))
 labels = np.array(sorted(float(fn.split("!")[1]) for fn in fn_apo))
 print(fn_apo)
 for i, fn in enumerate(fn_apo[::-1]):
     data_fft = np.loadtxt(fn, comments="#")
-    plt.plot(data_fft[:, 1], data_fft[:, 2], label=labels[i])
+    plt.plot(data_fft[:, 1]/1e3, data_fft[:, 2], label=labels[i])
 
 # plt.xlim(-5000, 5000)
 # plt.xlim(-500000, 500000)
@@ -464,6 +469,32 @@ def get_multi_info(dirs):
     return temps, fwhms, means, maxims
 
 
+def get_lorentz():
+    home_spek = "/home/karajan/uni/master/analyse/data/"
+    spek_fns = [
+        home_spek + "crn/data/SPEK/spek_230K_280K.data",
+        home_spek + "crn/data/SPEK/spek_270K_330K.data",
+        home_spek + "crn/data/SPEK/spek_300K_310K.data",
+        home_spek + "crn/data/SPEK/spek_305K_345K.data",
+        home_spek + "crn/data/SPEK/spek_310K_355K.data",
+        home_spek + "crn/data/SPEK/spek_342K_380K.data",
+        home_spek + "crn/data/SPEK/spek_360K_440K.data",
+    ]
+    maxims = np.empty(0)
+    means = np.empty(0)
+    fwhms = np.empty(0)
+    temps = np.empty(0)
+    for spek_fn in spek_fns:
+        data = np.loadtxt(spek_fn, comments="#")
+        maxims = np.hstack([maxims, data[:, 7]])
+        means = np.hstack([means, data[:, 7]])
+        fwhms = np.hstack([fwhms, data[:, 5]])
+        temps = np.hstack([temps, data[:, 1]])
+
+    return temps, fwhms, means, maxims
+
+
+
 def get_bruker_info():
     home_bruker = ["/home/karajan/uni/master/ma/analyse/data/bruker/SPEK"]
     fn_spek = glob.glob(home_bruker[0] + "/*/*.spec.nmr")
@@ -497,7 +528,7 @@ def get_obi_info():
 
 
 def get_sim_info():
-    directory = "/home/karajan/uni/master/analyse/data/lineshape/joined"
+    directory = "/home/karajan/uni/master/ma/analyse/data/lineshape/joined"
     fn_apo = glob.glob(directory + "/*.fid.dat.spec.nmr")
     fn_apo = sorted(fn_apo, key=lambda a: float(a.split("!")[1]))
     stemps = np.array(sorted(float(fn.split("!")[1]) for fn in fn_apo))
@@ -514,12 +545,15 @@ def get_sim_info():
 stemps, sfwhms, smeans, smaxims = get_sim_info()
 otemps, ofwhms, omeans, omaxims = get_obi_info()
 btemps, bfwhms, bmeans, bmaxims = get_bruker_info()
+ltemps, lfwhms, lmeans, lmaxims = get_lorentz()
 
-
+stemps = T_VFT_4er(stemps)
 
 # plt.scatter(T_VFT_aug(labels / 128), means / 15, color="g", marker="^")
 # plt.scatter(T_mauro_aug(labels / 128), means / 15, color="y", marker="^")
 # plt.rcParams['figure.figsize'] = (12, 8)
+
+# cutofftemp = 360
 
 # # FWHM Exp / Sim Vergleich
 # plt.scatter(
@@ -529,6 +563,12 @@ btemps, bfwhms, bmeans, bmaxims = get_bruker_info()
 #     # facecolors="none",
 #     marker="o",
 #     label="OBI")
+# plt.scatter(
+#     ltemps[ltemps > cutofftemp],
+#     lfwhms[ltemps > cutofftemp] / 1e3,
+#     color="tab:orange",
+#     # facecolors="none",
+#     marker="*")
 # plt.scatter(
 #     T_VFT_4er(stemps),
 #     sfwhms / 1e3,
@@ -549,29 +589,31 @@ btemps, bfwhms, bmeans, bmaxims = get_bruker_info()
 # # plt.gcf().set_size_inches(7.5, 5)
 # plt.gca().tick_params(direction="in", top="on", right="on")
 # # plt.ylim(-25, 5)
+# # plt.xlim(350, 370)
 # plt.xlabel("Temperatur [K]")
 # plt.ylabel("Halbwertsbreite [kHz]")
 # plt.legend(loc=3)
 
 # save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEK2/fwhm")
 
-
+cutofftemp = 360
 
 # Mean Exp / Sim Vergleich
 plt.scatter(
-    otemps,
-    omeans / 1e3,
+    otemps[otemps < cutofftemp],
+    omeans[otemps < cutofftemp] / 1e3,
     color="tab:blue",
     # facecolors="none",
     marker="o",
     label="OBI")
 plt.scatter(
-    T_VFT_4er(stemps),
-    smeans / 1e3,
-    color="tab:green",
+    ltemps[ltemps > cutofftemp],
+    lmeans[ltemps > cutofftemp] / 1e3,
+    color="tab:blue",
     # facecolors="none",
-    marker="s",
-    label="Simulation")
+    marker="*")
+
+
 plt.scatter(
     btemps,
     bmeans / 1e3,
@@ -580,19 +622,32 @@ plt.scatter(
     # facecolors="none",
     marker="D",
     label="Bruker")
+plt.scatter(
+    stemps[stemps > cutofftemp],
+    smaxims[stemps > cutofftemp] / 1e3,
+    color="tab:green",
+    # facecolors="none",
+    marker="*")
+plt.scatter(
+    stemps[stemps < cutofftemp],
+    smeans[stemps < cutofftemp] / 1e3,
+    color="tab:green",
+    # facecolors="none",
+    marker="s",
+    label="Simulation")
 
-plt.scatter(363, -15, color="tab:orange")
 
 # plt.xlim(340, 370)
 # plt.gcf().set_size_inches(9, 6)
 # plt.gcf().set_size_inches(7.5, 5)
 plt.gca().tick_params(direction="in", top="on", right="on")
 plt.ylim(-25, 5)
+# plt.xlim(350, 380)
 plt.xlabel("Temperatur [K]")
 plt.ylabel("Schwerpunkt [kHz]")
 plt.legend(loc=3)
 
-# save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEK2/mean")
+save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEK2/mean4")
 
 
 
@@ -613,17 +668,26 @@ plt.legend(loc=3)
 # plt.xlim(-2e5, 2e5)
 # save_plot(plt, "/home/karajan/uni/master/analyse/plots/SIM/sim_exp_347")
 
-home_dir = "/home/karajan/uni/master/analyse/data/"
-simfn = "lineshape/joined/lineshape_lifetime!3395656250000.0!.fid.dat.spec.nmr"
-sim = np.loadtxt(home_dir + simfn, comments="!")
-expfn = "lineshape/exp-sel/dummyfolder/CRN_T2_310K_1504_1.ts.spec.nmr"
-exp2 = np.loadtxt(home_dir + expfn, comments="!")
+# home_dir = "/home/karajan/uni/master/analyse/data/"
+# simfn = "lineshape/joined/lineshape_lifetime!3395656250000.0!.fid.dat.spec.nmr"
+# sim = np.loadtxt(home_dir + simfn, comments="!")
+# expfn = "lineshape/exp-sel/dummyfolder/CRN_T2_310K_1504_1.ts.spec.nmr"
+# exp2 = np.loadtxt(home_dir + expfn, comments="!")
 
-plt.plot(sim[:, 0], sim[:, 1] / np.max(sim[:, 1]) * np.max(exp2[:, 1]))
-plt.plot(exp2[:, 0], exp2[:, 1])
+# plt.plot(sim[:, 0], sim[:, 1] / np.max(sim[:, 1]) * np.max(exp2[:, 1]))
+# plt.plot(exp2[:, 0], exp2[:, 1])
+# plt.xlim(-2e5, 2e5)
+# save_plot(plt, "/home/karajan/uni/master/analyse/plots/SIM/sim_exp_310")
+
+
+home_dir = "/home/karajan/uni/master/ma/analyse/data/"
+simfn = "lineshape/joined/lineshape_lifetime!7.844609375e-10!.fid.fft"
+sim = np.loadtxt(home_dir + simfn, comments="#")
+
+phase, cmplx = phase_fit(sim[:, 2] + 1j * sim[:, 3], 0)
+plt.plot(sim[:, 1], cmplx.real)
 plt.xlim(-2e5, 2e5)
-save_plot(plt, "/home/karajan/uni/master/analyse/plots/SIM/sim_exp_310")
-
+# save_plot(plt, "/home/karajan/uni/master/analyse/plots/SIM/sim_exp_310")
 
 
 
