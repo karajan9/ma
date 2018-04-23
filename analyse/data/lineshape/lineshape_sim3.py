@@ -319,7 +319,78 @@ plt.xlim(325, 430)
 # plt.title("CRN FWHM")
 plt.legend(loc=1)
 
-save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEK2/fwhm_t1")
+# save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEK2/fwhm_t1")
+
+
+
+# %%
+
+
+def get_bruker_info():
+    home_bruker = ["/home/karajan/uni/master/ma/analyse/data/bruker/SPEK"]
+    fn_spek = glob.glob(home_bruker[0] + "/*/*.spec.nmr")
+    temp = np.array([
+        320.0, 340.0, 350.0, 350.0, 360.0, 360.0, 360.0, 370.0, 380.0, 390.0,
+        375.0, 385.0, 365.0, 355.0, 345.0, 330.0, 335.0, 320.0, 310.0, 340.0
+    ])
+    dirs = np.array([
+        "3", "4", "5", "6", "7", "8", "9", "10", "11", "16", "19", "22", "27",
+        "32", "37", "42", "45", "48", "51", "55"
+    ])
+    temp = temp[np.argsort(dirs)]
+    index = np.argsort(fn_spek)
+    temps, fwhms, means, maxims = get_multi_info(home_bruker)
+    return temp, fwhms[index], means[index], maxims[index]
+
+
+def get_fwhm_temp_t1():
+    bruker_name = "/home/karajan/uni/master/ma/analyse/data/crn/data/T1/bruker_t1.data"
+    bruker_data = np.loadtxt(bruker_name)
+    bruker_temp = bruker_data[:, 1]
+    bruker_t1 = bruker_data[:, 3]
+    bruker_t1err = bruker_data[:, 4]
+
+    t1temps = bruker_temp
+    t1t1 = bruker_t1
+    t1err = bruker_t1err
+
+    temps, fwhms, means, maxims = get_bruker_info()
+
+    # beste T1 Temperatur finden
+    spekt1 = np.empty(len(temps))
+    spekt1err = np.empty(len(temps))
+    for i, temp in enumerate(temps):
+        tempindex = np.argmin(np.abs(t1temps - temp))
+        spekt1[i] = t1t1[tempindex]
+        spekt1err[i] = t1err[tempindex]
+
+    spekfwhm_t1 = fwhms - 1 / spekt1 / np.pi
+    return temps, fwhms, spekt1, spekfwhm_t1, spekt1err
+
+
+spektemps, spekfwhm, spekt1, spekfwhm_t1, spekt1err = get_fwhm_temp_t1()
+# spektemps_2, spekfwhm_t1_2, t1, t1err = get_fwhm_temp_t1_2()
+spekt1err /= 1e3
+plt.scatter(spektemps, spekfwhm / 1e3, label="Halbwertsbreite")
+# plt.scatter(spektemps, spekfwhm_t1 / 1e3, label="Halbwertsbreite")
+plt.errorbar(
+    spektemps,
+    spekfwhm_t1 / 1e3,
+    yerr=spekt1err / spekt1**2 / np.pi,
+    marker="o",
+    linestyle="None",
+    color="tab:orange",
+    label="Halbwertsbreite mit $T_1$-Korrektur")
+
+print(spekt1)
+
+plt.gca().tick_params(direction="in", top="on", right="on")
+plt.ylim(0, 40)
+plt.xlabel("Temperatur [K]")
+plt.ylabel("Halbwertsbreite [kHz]")
+plt.xlim(325, 400)
+plt.legend(loc=1)
+save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEK2/fwhm_t1_bruker")
 
 
 # %%
@@ -553,101 +624,101 @@ stemps = T_VFT_4er(stemps)
 # plt.scatter(T_mauro_aug(labels / 128), means / 15, color="y", marker="^")
 # plt.rcParams['figure.figsize'] = (12, 8)
 
-# cutofftemp = 360
-
-# # FWHM Exp / Sim Vergleich
-# plt.scatter(
-#     otemps,
-#     ofwhms / 1e3,
-#     color="tab:blue",
-#     # facecolors="none",
-#     marker="o",
-#     label="OBI")
-# plt.scatter(
-#     ltemps[ltemps > cutofftemp],
-#     lfwhms[ltemps > cutofftemp] / 1e3,
-#     color="tab:orange",
-#     # facecolors="none",
-#     marker="*")
-# plt.scatter(
-#     T_VFT_4er(stemps),
-#     sfwhms / 1e3,
-#     color="tab:green",
-#     # facecolors="none",
-#     marker="s",
-#     label="Simulation")
-# plt.scatter(
-#     btemps,
-#     bfwhms / 1e3,
-#     color="tab:red",
-#     # s=45,
-#     # facecolors="none",
-#     marker="D",
-#     label="Bruker")
-
-# # plt.xlim(340, 370)
-# # plt.gcf().set_size_inches(7.5, 5)
-# plt.gca().tick_params(direction="in", top="on", right="on")
-# # plt.ylim(-25, 5)
-# # plt.xlim(350, 370)
-# plt.xlabel("Temperatur [K]")
-# plt.ylabel("Halbwertsbreite [kHz]")
-# plt.legend(loc=3)
-
-# save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEK2/fwhm")
-
 cutofftemp = 360
 
-# Mean Exp / Sim Vergleich
+# FWHM Exp / Sim Vergleich
 plt.scatter(
-    otemps[otemps < cutofftemp],
-    omeans[otemps < cutofftemp] / 1e3,
+    otemps,
+    ofwhms / 1e3,
     color="tab:blue",
     # facecolors="none",
     marker="o",
     label="OBI")
 plt.scatter(
     ltemps[ltemps > cutofftemp],
-    lmeans[ltemps > cutofftemp] / 1e3,
-    color="tab:blue",
+    2*lfwhms[ltemps > cutofftemp] / 1e3,
+    color="tab:orange",
     # facecolors="none",
     marker="*")
-
-
+plt.scatter(
+    T_VFT_4er(stemps),
+    sfwhms / 1e3,
+    color="tab:green",
+    # facecolors="none",
+    marker="s",
+    label="Simulation")
 plt.scatter(
     btemps,
-    bmeans / 1e3,
+    bfwhms / 1e3,
     color="tab:red",
     # s=45,
     # facecolors="none",
     marker="D",
     label="Bruker")
-plt.scatter(
-    stemps[stemps > cutofftemp],
-    smaxims[stemps > cutofftemp] / 1e3,
-    color="tab:green",
-    # facecolors="none",
-    marker="*")
-plt.scatter(
-    stemps[stemps < cutofftemp],
-    smeans[stemps < cutofftemp] / 1e3,
-    color="tab:green",
-    # facecolors="none",
-    marker="s",
-    label="Simulation")
-
 
 # plt.xlim(340, 370)
-# plt.gcf().set_size_inches(9, 6)
 # plt.gcf().set_size_inches(7.5, 5)
 plt.gca().tick_params(direction="in", top="on", right="on")
-plt.ylim(-25, 5)
-# plt.xlim(350, 380)
+# plt.ylim(-25, 5)
+# plt.xlim(350, 370)
 plt.xlabel("Temperatur [K]")
-plt.ylabel("Schwerpunkt [kHz]")
+plt.ylabel("Halbwertsbreite [kHz]")
 plt.legend(loc=3)
 
-save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEK2/mean4")
+# save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEK2/fwhm")
+
+# cutofftemp = 360
+
+# # Mean Exp / Sim Vergleich
+# plt.scatter(
+#     otemps[otemps < cutofftemp],
+#     omeans[otemps < cutofftemp] / 1e3,
+#     color="tab:blue",
+#     # facecolors="none",
+#     marker="o",
+#     label="OBI")
+# plt.scatter(
+#     ltemps[ltemps > cutofftemp],
+#     lmeans[ltemps > cutofftemp] / 1e3,
+#     color="tab:blue",
+#     # facecolors="none",
+#     marker="*")
+
+
+# plt.scatter(
+#     btemps,
+#     bmeans / 1e3,
+#     color="tab:red",
+#     # s=45,
+#     # facecolors="none",
+#     marker="D",
+#     label="Bruker")
+# plt.scatter(
+#     stemps[stemps > cutofftemp],
+#     smaxims[stemps > cutofftemp] / 1e3,
+#     color="tab:green",
+#     # facecolors="none",
+#     marker="*")
+# plt.scatter(
+#     stemps[stemps < cutofftemp],
+#     smeans[stemps < cutofftemp] / 1e3,
+#     color="tab:green",
+#     # facecolors="none",
+#     marker="s",
+#     label="Simulation")
+
+
+# # plt.xlim(340, 370)
+# # plt.gcf().set_size_inches(9, 6)
+# # plt.gcf().set_size_inches(7.5, 5)
+# plt.gca().tick_params(direction="in", top="on", right="on")
+# plt.ylim(-25, 5)
+# # plt.xlim(350, 380)
+# plt.xlabel("Temperatur [K]")
+# plt.ylabel("Schwerpunkt [kHz]")
+# plt.legend(loc=3)
+
+# save_plot(plt, "/home/karajan/uni/master/ma/analyse/plots/SPEK2/mean4")
 
 
 
