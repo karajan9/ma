@@ -4,7 +4,7 @@ Im Folgenden sollen die in dieser Arbeit verwendeten Aufbauten und Methoden für
 
 \section{Spektrometer} \label{section:exp:spektrometer}
 
-Für diese Arbeit wurden zwei Spektrometer verwendet: Zum einen ein kommerziell erhältliches Spektrometer der Firma Bruker, welches mit einem Magneten mit einer Protonenfrequenz von etwa $\SI{400}{MHz}$ operiert; zum anderen ein Eigenbau, intern „OBI“ genannt, welcher eine Protonenfrequenz von etwa $\SI{300}{MHz}$ hat. Beide sind in Abbildung \ref{fig:exp:proben} dargestellt.
+Für diese Arbeit wurden zwei Spektrometer verwendet: Zum einen ein kommerziell erhältliches Spektrometer der Firma Bruker, welches mit einem Magneten mit einer Protonenfrequenz von etwa $\SI{400}{MHz}$ operiert; zum anderen ein Eigenbau, intern „OBI“ genannt, dessen Magnet der Firma Oxford eine Protonenfrequenz von etwa $\SI{300}{MHz}$ hat. Beide sind in Abbildung \ref{fig:exp:proben} dargestellt.
 
 Der Aufbau des OBI-Spektrometers ist in Abbildung \ref{fig:exp:aufbau} skizziert und soll im Folgenden vorgestellt werden. Die Weiterverarbeitung der mit dem Spektrometer gewonnenen Daten, sowie die Temperaturkontrolle (die, ebenso wie der supraleitende Magnet in der Abbildung nicht gezeigt ist), werden danach besprochen.
 
@@ -33,7 +33,7 @@ Der Aufbau des OBI-Spektrometers ist in Abbildung \ref{fig:exp:aufbau} skizziert
 	\caption{Skizzierter Aufbau eines NMR-Spektrometers. Abbildung aus \cite[S. 29]{lueg_implementierung_2016}} \label{fig:exp:aufbau}
 \end{figure}
 
-Die Beschreibung vollzieht den Aufbau entlang des Signalwegs nach. Die Steuerung aller Messungen geschieht über einen Computer, der mit der in Python geschriebenen Software DAMARIS (Darmstadt Magnetic Resonance Instrument Software \cite{gadke_damaris_2007}) ausgestattet ist. Diese erlaubt es, Messprogramme zu definieren, mit Hilfe von Pythons serieller Schnittstelle die Verbindung zu verschiedenen Geräten herzustellen, und die produzierten Signale aufzunehmen, anzuzeigen und zur Weiterverarbeitung zu speichern.
+Die Beschreibung vollzieht den Aufbau entlang des Signalwegs nach. Die Steuerung aller Messungen geschieht über einen Computer, der mit der in Python geschriebenen Software DAMARIS (Darmstadt Magnetic Resonance Instrument Software \cite{gadke_damaris_2007}) ausgestattet ist. Diese erlaubt es, Messprogramme zu definieren, mit Hilfe von Pythons serieller Schnittstelle Verbindungen zu verschiedenen Geräten herzustellen, und die produzierten Signale aufzunehmen, anzuzeigen und zur Weiterverarbeitung zu speichern.
 
 Durchgängig läuft ein Frequenzgenerator, dessen Frequenz auf die Larmorfrequenz des zu untersuchenden Kerns im jeweiligen Magneten eingestellt ist. Ist diese Frequenz nicht bekannt, empfiehlt sich in der Regel das Aufnehmen eines Spektrums von einer Flüssigkeit oder Lösung, die den gewünschten Kern enthält. Aufgrund der geringen Breite des Flüssigkeitsspektrum lässt sich so die magnetfeldabhängige Larmorfrequenz bestimmen.
 
@@ -86,7 +86,7 @@ Der sich in dem Verbindungsteil befindliche Netzfilter soll den Heizstrom von st
 
 Um den Aufbau zu betreiben, sind im unteren Drittel eine Reihe von Anschlüssen vorhanden:
 \begin{itemize}
-	\item Ein BNC-Anschluss der vom Richtkoppler kommend zum Schwingkreis führt,
+	\item Ein BNC-Anschluss, der vom Richtkoppler kommend zum Schwingkreis führt,
 	\item Bohrungen für die beiden Thermoelemente, welche von einem Temperatur-Controller ausgelesen werden,
 	\item ein Anschluss für den Heizstrom, welcher von einem Temperatur-Controller bereitgestellt wird,
 	\item je eine Rändelstange für die Einstellung von Matching\-spu\-le und Tuningkondensator,
@@ -95,7 +95,7 @@ Um den Aufbau zu betreiben, sind im unteren Drittel eine Reihe von Anschlüssen 
 
 Unter anderem aufgrund der beschriebenen Probleme mit der Positionierung des Hochtemperaturprobenkopfes im Magnetfeld war dieser Probenkopf nicht einsatzfähig um die im Rahmen dieser Arbeit geplanten Messungen durchzuführen. Daher wurde der Probenkopf für keine der im Verlauf der Arbeit präsentierten Messungen verwendet.
 
-„Reguläre“ Probenköpfe sind im Vergleich zum Hochtemperaturprobenkopf recht einfach gehalten. Da die Temperatursteuerung meist nicht durch den Probenkopf selbst geleistet wird, fallen die Heizeinheit, Isolation, Wasserkühlung und Netzfilter heraus, und es bleiben nur Schwingkreis und Temperaturfühler. Dies ist zum Beispiel bei dem, mit dem OBI-Spektrometer verwendeten, Probenkopf P1 der Fall. Dieser besitzt zudem keine Match\-ing\-spu\-le, sodass sich das Abstimmen des Probenkopfs deutlich umständlicher gestaltet und durch eine sehr genaue (und dadurch aufwändigere) Wickelung der Probenspule geleistet werden muss.
+„Reguläre“ Probenköpfe sind im Vergleich zum Hochtemperaturprobenkopf recht einfach gehalten. Da die Temperatursteuerung meist nicht durch den Probenkopf selbst geleistet wird, fallen die Heizeinheit, Isolation, Wasserkühlung und Netzfilter heraus, und es bleiben nur Schwingkreis und Temperaturfühler. Dies ist zum Beispiel bei dem mit dem OBI-Spektrometer verwendeten Probenkopf P1 der Fall. Dieser besitzt zudem keine Match\-ing\-spu\-le, sodass sich das Abstimmen des Probenkopfs deutlich umständlicher gestaltet und durch eine sehr genaue (und dadurch aufwändigere) Wickelung der Probenspule geleistet werden muss.
 
 Das Bruker-Spektrometer verwendet einen zum Spektrometer gehörigen, kommerziellen Probenkopf. Beide Probenköpfe sind in Abbildung \ref{fig:exp:probenkoepfe} dargestellt.
 \begin{figure}
@@ -120,11 +120,11 @@ Das Bruker-Spektrometer verwendet einen zum Spektrometer gehörigen, kommerziell
 
 \section{Temperaturkontrolle} \label{section:exp:temperaturkontrolle}
 
-Um häufig gewünschte temperaturabhängige Messungen durchführen zu können, lassen sich über Pythons serielle Schnittstelle Temperatur-Controller, wie zum Beispiel die beim OBI-Spektrometer verwendeten Lakeshore-Einheiten, benutzen. So wird ein Auslesen der aktuellen Temperatur sowie das Setzen einer Soll-Temperatur ermöglicht. Der Temperatur-Controller wiederum steuert Temperatureinheiten im Probenkopf (im Falle des Hochtemperaturprobenkopfs) oder im Kryostaten (im Falle des Probenkopfs P1) an. Die aktuelle Temperatur wird über Temperaturfühler erfasst. Dabei handelt es sich im Falle des Hochtemperaturprobenkopfes um Thermoelemente vom Typ N, im Falle des Probenkopfes P1 um PT100-Elemente.
+Um häufig gewünschte temperaturabhängige Messungen durchführen zu können, lassen sich über Pythons serielle Schnittstelle Temperatur-Controller, wie zum Beispiel die beim OBI-Spektrometer verwendeten Lakeshore-Einheiten, benutzen. So wird ein Auslesen der aktuellen Temperatur sowie das Setzen einer Soll-Temperatur ermöglicht. Der Temperatur-Controller wiederum steuert Temperatureinheiten mit Heizdrähten im Probenkopf (im Falle des Hochtemperaturprobenkopfs) oder im Kryostaten (im Falle des Probenkopfs P1) an. Die aktuelle Temperatur wird über Temperaturfühler erfasst. Dabei handelt es sich im Falle des Hochtemperaturprobenkopfes um Thermoelemente vom Typ N, im Falle des Probenkopfes P1 um PT100-Elemente.
 
 Im Bruker-Probenkopf kann die Probe durch einen erwärmten Luftstrom, der zur Probe geleitet wird, auf bis zu $\SI{390}{\kelvin}$ erwärmt werden. 
 
-Das OBI-Spektrometer hat zudem die Option, die Probe abzukühlen. Dazu wird, mit Hilfe eines Unterdrucks, aus einer Kanne mit flüssigem Stickstoff kaltes Stickstoffgas an der Probe vorbei geleitet. Da das Kühlen auf diese Weise nicht sehr präzise ist, kann mit dem Kryostaten gegengeheizt werden, um die gewünschte Temperatur zu erreichen. Auf diese Weise kann das OBI-Spektrometer Temperaturen von etwa $\SI{80}{\kelvin}$ bis $\SI{440}{\kelvin}$ abdecken.
+Das OBI-Spektrometer hat zudem die Option, die Probe abzukühlen. Dazu wird, mit Hilfe eines Unterdrucks, aus einer Kanne mit flüssigem Stickstoff kaltes Stickstoffgas an der Probe vorbei geleitet. Da das Kühlen auf diese Weise nicht präzise regelbar ist, kann mit dem Kryostaten gegengeheizt werden, um die gewünschte Temperatur zu erreichen. Auf diese Weise kann das OBI-Spektrometer Temperaturen von etwa $\SI{80}{\kelvin}$ bis etwa $\SI{440}{\kelvin}$ abdecken.
 
 
 
@@ -137,7 +137,7 @@ CRN, kurz für Calciumrubidiumnitrat, ist eine Mischung aus Calciumnitrat und Ru
 
 Es wurde an $^\text{87}$Rb gemessen, welches aufgrund seines höheren gyromagnetischen Verhältnisses von $\gamma = 2\pi \cdot \SI{13.984}{Mhz / T}$, trotz eines verhältnismäßig geringem natürlichen Vorkommen von $\SI{27.83}{\percent}$ dem häufigeren Isotop $^\text{85}$Rb für NMR-Untersuchungen vorzuziehen ist. $^\text{87}$Rb hat einen Kernspin von $\sfrac{3}{2}$ und ein Quadrupolmoment von $\SI{133.5}{mb}$.
 
-Bei den durchgeführten Messungen wurden sechs verschiedene Proben verwendet:
+Im Verlauf der Arbeit wurden sechs verschiedene Proben hergestellt oder verwendet:
 
 \begin{table}[H]
 	\centering
@@ -152,7 +152,7 @@ Bei den durchgeführten Messungen wurden sechs verschiedene Proben verwendet:
 5	& RbCl in D$_\text{2}$O &	J. Adam &	30.08.17 &	Duran &	gerade & 	$\SI{5}{\milli\meter}$ &	(d) \\
 6	& RbCl in D$_\text{2}$O &	J. Adam &	30.08.17 &	Duran &	gebogen & 	$\SI{5}{\milli\meter}$ &	(d) \\ \hline
 	\end{tabular} 
-	\caption{In dieser Arbeit verwendete Proben. CRN bezeichnet dabei 2Ca(NO$_\text{3}$)$_\text{2}$-3RbNO$_\text{3}$. \label{tab:exp:proben}}
+	\caption{Im Laufe dieser Arbeit verwendete oder hergestellte Proben. CRN bezeichnet dabei 2Ca(NO$_\text{3}$)$_\text{2}$-3RbNO$_\text{3}$. \label{tab:exp:proben}}
 \end{table}
 
 \begin{figure}[H]
@@ -181,11 +181,11 @@ Bei den durchgeführten Messungen wurden sechs verschiedene Proben verwendet:
 		\caption{ }
 		\label{fig:exp:probe_d}
 	\end{subfigure}
-	\caption{Fotografien der verwendeten Proben. Die Merkmale finden sich in Tabelle \ref{tab:exp:proben}}
+	\caption{Fotografien der verwendeten oder hergestellten Proben. Die Merkmale finden sich in Tabelle \ref{tab:exp:proben}}
 	\label{fig:exp:proben}
 \end{figure}
 
-Die Herstellung von C. Zürns Probe 1 ist in \cite{zuern_arbeit} dokumentiert. Der Herstellungsprozess gleich im Wesentlichen dem im Folgenden beschriebenen.
+Die Herstellung von C. Zürns Probe 1 ist in \cite{zuern_arbeit} dokumentiert. Der Herstellungsprozess gleicht im Wesentlichen dem im Folgenden beschriebenen.
 
 Für die Herstellung der Proben 3 und 4 wurde Calciumrubidiumnitrat zu einem möglichst feinen Pulver zermörsert und ein gerades bzw. gebogenes Duran-Glas-Röhrchen gefüllt. Um störende Einflüsse von Feuchtigkeit in der Probe möglichst gut zu elimieren, wurden die Proben dann über Nacht bei $\SI{160}{\degreeCelsius}$ in einem evakuierten Ofen getrocknet, der im Anschluss mit Stickstoffgas gelöscht wurde.
 
@@ -193,8 +193,8 @@ So präpariert wurden die Proben unter Anwendung eines Freeze-Pump-Thaw-Ver\-fah
 
 Mit dem gleichen Verfahren wurde am 13.07.2017 die Probe 2 erstellt, wobei hier die Probe \emph{vor} dem Abschmelzen in den Glaszustand gebracht wurde. Tests mit dieser Probe zeigten jedoch, dass sie kaum stabil im Glaszustand zu halten war sondern schnell auskristallisierte.
 
-Zum Bestimmen der Larmorfrequenz von $^\text{87}$Rb wurden zudem zwei Proben, Proben 5 und 6, mit in D$_\text{2}$O gelöstem RbCl erstellt. Es wurde eine gesättigte Lösung mit etwas weniger als $\SI{1}{mg}$ RbCl pro $\SI{1}{ml}$ D$_\text{2}$O erstellt, welche in Duran-Glas-Röhrchen eingefüllt wurde. Um die Proben unter Vakuum abschmelzen zu können, mussten sie zuerst gefroren werden. Dazu wurden die Spitzen der Proben in flüssigen Stickstoff getaucht, sodass die sich in Spitze befindliche Lösung gefriert, der Rest der Probe jedoch zunächst flüssig bleibt. Dies gibt dem, durch den Übergang zum Eis gestiegenen Volumen, Raum zum Ausweichen, was ein Springen des Glasröhrchens verhindern soll. Anschließend wurden die Proben durch Eintauchen in flüssigen Stickstoff komplett eingefroren und dann abgeschmolzen. An den verwendeten Spektrometern wurde die Larmorfrequenz für $^\text{87}$Rb jedoch schon zuvor auf $\omega_{L, \text{OBI}} = 2\pi \cdot \SI{97.1722}{MHz}$ und $\omega_{L, \text{Bruker}} = 2\pi \cdot \SI{130.9736}{MHz}$ bestimmt, sodass diese Proben an diesen Spektrometern nicht verwendet werden mussten.
+Zum Bestimmen der Larmorfrequenz von $^\text{87}$Rb wurden zudem zwei Proben, Proben 5 und 6, mit in D$_\text{2}$O gelöstem RbCl erstellt. Es wurde eine gesättigte Lösung mit etwas weniger als $\SI{1}{mg}$ RbCl pro $\SI{1}{ml}$ D$_\text{2}$O erstellt, welche in Duran-Glas-Röhrchen eingefüllt wurde. Um die Proben unter Vakuum abschmelzen zu können, mussten sie zuerst gefroren werden. Dazu wurden die Spitzen der Proben in flüssigen Stickstoff getaucht, sodass die sich in der Spitze befindliche Lösung gefriert, der Rest der Probe jedoch zunächst flüssig bleibt. Dies gibt dem, durch den Übergang zum Eis gestiegenen Volumen, Raum zum Ausweichen, was ein Springen des Glasröhrchens verhindern soll. Anschließend wurden die Proben durch Eintauchen in flüssigen Stickstoff komplett eingefroren und dann abgeschmolzen. An den verwendeten Spektrometern wurde die Larmorfrequenz für $^\text{87}$Rb jedoch schon zuvor auf $\omega_{L, \text{OBI}} = 2\pi \cdot \SI{97.1722}{MHz}$ und $\omega_{L, \text{Bruker}} = 2\pi \cdot \SI{130.9736}{MHz}$ bestimmt, sodass diese Proben an diesen Spektrometern nicht verwendet werden mussten.
 
 In dieser Arbeit wurden die Proben 1 und 4 verwendet. Mit dem OBI-Spektrometer wurde ausschließlich Probe 1 verwendet, mit dem Bruker-Spektrometer ausschließlich Probe 4.
 
-Probe 1 wurde schon in der Arbeit \cite{joachim_master} verwendet. Hier traten Probleme mit einem häufigen Auskristallisieren der Probe auf. Dieses Problem trat Verlauf der Arbeit nur sehr selten auf, sodass ein größerer Temperaturbereich abgedeckt werden konnte. Wodurch diese Änderung bewirkt wurde, ist nicht bekannt.
+Probe 1 wurde schon in der Arbeit \cite{joachim_master} verwendet. Hier traten Probleme mit einem häufigen Auskristallisieren der Probe auf. Dieses Problem trat Verlauf dieser Arbeit nur sehr selten auf, sodass ein größerer Temperaturbereich abgedeckt werden konnte. Wodurch diese Änderung entstanden ist, ist nicht bekannt.
