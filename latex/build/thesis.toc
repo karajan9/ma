@@ -1,0 +1,29 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {german}
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Theoretische Einführung}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Theoretische Grundlagen der NMR}{4}{section.2.1}
+\contentsline {section}{\numberline {2.2}Theoretische Aspekte der Relaxation}{6}{section.2.2}
+\contentsline {section}{\numberline {2.3}Quadrupol-Wechselwirkung}{9}{section.2.3}
+\contentsline {section}{\numberline {2.4}Pulsfolgen}{13}{section.2.4}
+\contentsline {chapter}{\numberline {3}Simulation}{17}{chapter.3}
+\contentsline {chapter}{\numberline {4}Experimentelle Details}{20}{chapter.4}
+\contentsline {section}{\numberline {4.1}Spektrometer}{20}{section.4.1}
+\contentsline {section}{\numberline {4.2}Weiterverarbeitung der Signale}{23}{section.4.2}
+\contentsline {section}{\numberline {4.3}Probenköpfe}{23}{section.4.3}
+\contentsline {section}{\numberline {4.4}Temperaturkontrolle}{27}{section.4.4}
+\contentsline {section}{\numberline {4.5}Proben}{27}{section.4.5}
+\contentsline {chapter}{\numberline {5}Experimentelle Resultate und Analysen}{30}{chapter.5}
+\contentsline {section}{\numberline {5.1}Bestimmung von $T_1$ und $T_2$}{31}{section.5.1}
+\contentsline {section}{\numberline {5.2}Untersuchung zur Dynamik in CRN}{38}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Stimulierte Echos}{38}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Pulsabstandsabhängige Spektren}{41}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Auswertung der experimentell bestimmten Zeitkonstanten}{41}{subsection.5.2.3}
+\contentsline {section}{\numberline {5.3}Linienform von experimentellen und simulierten CRN-Spektren}{45}{section.5.3}
+\contentsline {section}{\numberline {5.4}Vergleich von CRN-Spektren mit theoretischen Überlegungen}{54}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Korrelationszeiten}{54}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}$T_1$-Korrektur der Halbwertsbreiten}{55}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Auswertung der präparierten Daten}{58}{subsection.5.4.3}
+\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{62}{chapter.6}
+\contentsline {chapter}{\nonumberline Literatur}{64}{chapter*.31}

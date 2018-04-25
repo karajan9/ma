@@ -1,0 +1,945 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nyt/global/}
+    \entry{abragam1961principles}{book}{}
+      \name{author}{2}{}{%
+        {{hash=d0d4811469cb0f2ec8fa6428d2f09f05}{%
+           family={Abragam},
+           familyi={A\bibinitperiod},
+           given={P.A.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=119593534ffac1e95c1ada9985dcb2d3}{%
+           family={Abragam},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Clarendon Press}%
+      }
+      \strng{namehash}{571cd70334d3efc904a0d7133fd85844}
+      \strng{fullhash}{571cd70334d3efc904a0d7133fd85844}
+      \strng{authornamehash}{571cd70334d3efc904a0d7133fd85844}
+      \strng{authorfullhash}{571cd70334d3efc904a0d7133fd85844}
+      \field{labelalpha}{AA61}
+      \field{sortinit}{A}
+      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780198520146}
+      \field{series}{International series of monographs on physics}
+      \field{title}{The Principles of Nuclear Magnetism}
+      \field{year}{1961}
+      \verb{url}
+      \verb https://books.google.de/books?id=9M8U%5C_JK7K54C
+      \endverb
+    \endentry
+    \entry{beckmann_relaxation}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6207587636ce125ac8a3fc2735b3cf73}{%
+           family={Beckman},
+           familyi={B\bibinitperiod},
+           given={Peter\bibnamedelima A},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6207587636ce125ac8a3fc2735b3cf73}
+      \strng{fullhash}{6207587636ce125ac8a3fc2735b3cf73}
+      \strng{authornamehash}{6207587636ce125ac8a3fc2735b3cf73}
+      \strng{authorfullhash}{6207587636ce125ac8a3fc2735b3cf73}
+      \field{labelalpha}{Bec88}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract We investigate the properties of ten spectral densities relevant for nuclear spin relaxation studies in solids. This is preceded by a brief review of nuclear spin relaxation in solids which includes a discussion of the appropriate spin-dependent interactions and the various relaxation rates which can be measured. Also, the link between nuclear spin relaxation and dielectric relaxation is discussed. Where possible and/or appropriate each of the spectral densities is expressed as a continuous distribution of Bloembergen-Purcell-Pound (or Debye) spectral densities 2ξ /(1 + ξ2 ω2) for nuclear Larmor angular frequency ω and correlation time ξ. The spectral densities are named after their originators or the shape of the distributions of correlation times or both and are (1) Bloembergen-Purcell-Pound or δ-function, (2) Havriliak-Negami, (3) Cole-Cole, (4) Davidson-Cole, (5) Fang, (6) Fuoss-Kirkwood, (7) Bryn Mawr, (8) Wagner or log-Gaussian, (9) log-Lorentzian, and (10) Fröhlich or energy box. The Havriliak-Negami spectral density is related to the Dissado-Hill theory for dielectric relaxation. The spectral densities are expressed in a way which makes them easy to compare with each other and with experimental data. Many plots of the distributions of correlation times and of the spectral densities vs. various correlation times characterizing the distributions are given.}
+      \field{issn}{0370-1573}
+      \field{journaltitle}{Phys. Rep.}
+      \field{number}{3}
+      \field{title}{Spectral densities and nuclear spin relaxation in solids}
+      \field{volume}{171}
+      \field{year}{1988}
+      \field{pages}{85\bibrangedash 128}
+      \range{pages}{44}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0370-1573(88)90073-7
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/0370157388900737
+      \endverb
+    \endentry
+    \entry{joachim_master}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=19b368f59e2f6c0cb88a6f260c306754}{%
+           family={Beerwerth},
+           familyi={B\bibinitperiod},
+           given={Joachim},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {{TU} Dortmund}%
+      }
+      \list{location}{1}{%
+        {Dortmund}%
+      }
+      \strng{namehash}{19b368f59e2f6c0cb88a6f260c306754}
+      \strng{fullhash}{19b368f59e2f6c0cb88a6f260c306754}
+      \strng{authornamehash}{19b368f59e2f6c0cb88a6f260c306754}
+      \strng{authorfullhash}{19b368f59e2f6c0cb88a6f260c306754}
+      \field{labelalpha}{Bee17}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Quadrupolare NMR Spektroskopie: Messung und Analyse von Zweizeitkorrelationen}
+      \field{type}{Masterarbeit}
+      \field{year}{2017}
+      \field{dateera}{ce}
+    \endentry
+    \entry{benesi}{book}{}
+      \name{author}{1}{}{%
+        {{hash=3c6235400215313a28dcd6c8d4c8e689}{%
+           family={Benesi},
+           familyi={B\bibinitperiod},
+           given={A.J.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{3c6235400215313a28dcd6c8d4c8e689}
+      \strng{fullhash}{3c6235400215313a28dcd6c8d4c8e689}
+      \strng{authornamehash}{3c6235400215313a28dcd6c8d4c8e689}
+      \strng{authorfullhash}{3c6235400215313a28dcd6c8d4c8e689}
+      \field{labelalpha}{Ben15}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781119051992}
+      \field{title}{A Primer of NMR Theory with Calculations in Mathematica}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://books.google.de/books?id=w6icCQAAQBAJ
+      \endverb
+    \endentry
+    \entry{bpp}{article}{}
+      \name{author}{3}{}{%
+        {{hash=e837fd668dec852f903302dbc098e65f}{%
+           family={Bloembergen},
+           familyi={B\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=4ef6f93878347f386b9c8f66579e37e3}{%
+           family={Purcell},
+           familyi={P\bibinitperiod},
+           given={E.\bibnamedelimi M.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=1c054dd84943694107b87e6b8a55e68a}{%
+           family={Pound},
+           familyi={P\bibinitperiod},
+           given={R.\bibnamedelimi V.},
+           giveni={R\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{b7ec3506784170c11ca616f4c07e988b}
+      \strng{fullhash}{32b3e34f23e78b8c6ac1ba80ba644ad3}
+      \strng{authornamehash}{b7ec3506784170c11ca616f4c07e988b}
+      \strng{authorfullhash}{32b3e34f23e78b8c6ac1ba80ba644ad3}
+      \field{labelalpha}{BPP48}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{7}
+      \field{journaltitle}{Phys. Rev.}
+      \field{title}{Relaxation Effects in Nuclear Magnetic Resonance Absorption}
+      \field{volume}{73}
+      \field{year}{1948}
+      \field{pages}{679\bibrangedash 712}
+      \range{pages}{34}
+      \verb{doi}
+      \verb 10.1103/PhysRev.73.679
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.73.679
+      \endverb
+    \endentry
+    \entry{caer}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ee5845a4edff4b0449f928cb372cc161}{%
+           family={Caër},
+           familyi={C\bibinitperiod},
+           given={G\bibnamedelima Le},
+           giveni={G\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=310dc21f88d9ef893d87e6ae6200c934}{%
+           family={Brand},
+           familyi={B\bibinitperiod},
+           given={R\bibnamedelima A},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e44793f5f4df334e2fc25c2db5a6e43a}
+      \strng{fullhash}{e44793f5f4df334e2fc25c2db5a6e43a}
+      \strng{authornamehash}{e44793f5f4df334e2fc25c2db5a6e43a}
+      \strng{authorfullhash}{e44793f5f4df334e2fc25c2db5a6e43a}
+      \field{labelalpha}{CB98}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Phys. Condens. Mat.}
+      \field{number}{47}
+      \field{title}{General models for the distributions of electric field gradients in disordered solids}
+      \field{volume}{10}
+      \field{year}{1998}
+      \field{pages}{10715}
+      \range{pages}{1}
+      \verb{url}
+      \verb http://stacks.iop.org/0953-8984/10/i=47/a=020
+      \endverb
+    \endentry
+    \entry{czjzek_atomic_1981}{article}{}
+      \name{author}{7}{}{%
+        {{hash=f741464f601f56a626b4d3a51f4ae689}{%
+           family={Czjzek},
+           familyi={C\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=8991d5aad7fdd5f3f637a407e427f672}{%
+           family={Fink},
+           familyi={F\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d90a7bbe24b2b53f96fe3aa22833055e}{%
+           family={Götz},
+           familyi={G\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=cdd8accdeb5dcc7e4e0926c204d787cf}{%
+           family={Schmidt},
+           familyi={S\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=3fb7fa156e52b6fc459628241d3c8fe5}{%
+           family={Coey},
+           familyi={C\bibinitperiod},
+           given={J.\bibnamedelimi M.\bibnamedelimi D.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=ec8418e8f3555a921ed8e0ba5b1e8a10}{%
+           family={Rebouillat},
+           familyi={R\bibinitperiod},
+           given={J.-P.},
+           giveni={J\bibinithyphendelim P\bibinitperiod}}}%
+        {{hash=fbe8273b907193348dd93f8da1ad66cc}{%
+           family={Liénard},
+           familyi={L\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{aa9a5ea00321c3009b5dceb81f3ea23e}
+      \strng{fullhash}{899caf0e89373f282cba68bf577e9554}
+      \strng{authornamehash}{aa9a5ea00321c3009b5dceb81f3ea23e}
+      \strng{authorfullhash}{899caf0e89373f282cba68bf577e9554}
+      \field{labelalpha}{Czj+81}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The observation of nuclear quadrupole interactions in amorphous solids provides a unique possibility of obtaining information about the angular distribution of local ionic coordinations, complementary to the information about radial distributions deduced from x-ray and neutron diffraction and from extended x-ray absorption fine structure measurements. In the present paper the relation between ionic coordinations and the distribution of electric field gradients ({EFG}) is investigated. It is shown that the distribution function P(Vzz,η) of the splitting parameters Vzz (the electric field gradient) and η (the asymmetry parameter) in general yields zero probability both for Vzz=0 and for η=0. For solids which are isotropic on the average, the distribution function of the components Vik of the {EFG} tensor depends only on two variables, the invariant functions of the tensor components [Det(Vik) and ΣV2ik]. Expressions for these quantities in terms of the radial coordinates of the ions causing the {EFG} and of the bond angles between pairs of ions are given. For amorphous solids with random ionic coordination an analytic approximation for the distribution function P(Vzz,η) is derived. This function is strongly dominated by the distribution of ions in the first coordination shell. The results are applied to the analysis of Mössbauer spectra of Gd155 in amorphous Gd-Ni alloys.}
+      \field{journaltitle}{Physical Review B}
+      \field{number}{6}
+      \field{shortjournal}{Phys. Rev. B}
+      \field{title}{Atomic coordination and the distribution of electric field gradients in amorphous solids}
+      \field{urlday}{9}
+      \field{urlmonth}{6}
+      \field{urlyear}{2016}
+      \field{volume}{23}
+      \field{year}{1981}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{2513\bibrangedash 2530}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.23.2513
+      \endverb
+      \verb{file}
+      \verb APS Snapshot:/home/joachim/.zotero/zotero/ppdpwh0m.default/zotero/storage/CP2G5HNR/PhysRevB.23.html:text/html;APS Snapshot:/home/joachim/.zotero/zotero/ppdpwh0m.default/zotero/storage/73QR5F2W/PhysRevB.23.html:text/html;PhysRevB.23.2513CzjzekModel.pdf:/home/joachim/.zotero/zotero/ppdpwh0m.default/zotero/storage/NIRA58BT/PhysRevB.23.2513CzjzekModel.pdf:application/pdf;PhysRevB.23.2513.pdf:/home/joachim/.zotero/zotero/ppdpwh0m.default/zotero/storage/W6ZPSN5I/PhysRevB.23.2513.pdf:application/pdf
+      \endverb
+      \verb{url}
+      \verb http://link.aps.org/doi/10.1103/PhysRevB.23.2513
+      \endverb
+    \endentry
+    \entry{gadke_damaris_2007}{article}{}
+      \name{author}{4}{}{%
+        {{hash=5d175c07a0213fef31c766269b2e4c26}{%
+           family={Gädke},
+           familyi={G\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c06c4ed2398a5b8aa6e35982d74f39d0}{%
+           family={Schmitt},
+           familyi={S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=6eacdfe1d011a2a3f4cb92f0fff5aab0}{%
+           family={Stork},
+           familyi={S\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=daa2a505ced40b4d2650828ab19291b7}{%
+           family={Nestle},
+           familyi={N\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{4fb1a3f42d191c715e3d10306d41a776}
+      \strng{fullhash}{b85a5189bb8ab338e95fa6f38d29c42c}
+      \strng{authornamehash}{4fb1a3f42d191c715e3d10306d41a776}
+      \strng{authorfullhash}{b85a5189bb8ab338e95fa6f38d29c42c}
+      \field{labelalpha}{Gäd+07}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0730-725X, 1873-5894}
+      \field{journaltitle}{Magnetic Resonance Imaging}
+      \field{number}{4}
+      \field{shortjournal}{Magnetic Resonance Imaging}
+      \field{title}{{DAMARIS} — a flexible and open software platform for {NMR} spectrometer control}
+      \field{urlday}{18}
+      \field{urlmonth}{3}
+      \field{urlyear}{2017}
+      \field{volume}{25}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{576}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.mri.2007.01.081
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/joachim/.zotero/zotero/ppdpwh0m.default/zotero/storage/IZDUBK6E/Gädke et al. - 2007 - DAMARIS — a flexible and open software platform fo.pdf:application/pdf;Snapshot:/home/joachim/.zotero/zotero/ppdpwh0m.default/zotero/storage/QZEUHVQS/abstract.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.mrijournal.com/article/S0730-725X(07)00101-4/abstract
+      \endverb
+    \endentry
+    \entry{hubbard}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5a010af9a7f5d17a94f575e8a1c58494}{%
+           family={Hubbard},
+           familyi={H\bibinitperiod},
+           given={Paul\bibnamedelima S.},
+           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{5a010af9a7f5d17a94f575e8a1c58494}
+      \strng{fullhash}{5a010af9a7f5d17a94f575e8a1c58494}
+      \strng{authornamehash}{5a010af9a7f5d17a94f575e8a1c58494}
+      \strng{authorfullhash}{5a010af9a7f5d17a94f575e8a1c58494}
+      \field{labelalpha}{Hub70}
+      \field{sortinit}{H}
+      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Chem. Phys.}
+      \field{number}{3}
+      \field{title}{Nonexponential Nuclear Magnetic Relaxation by Quadrupole Interactions}
+      \field{volume}{53}
+      \field{year}{1970}
+      \field{pages}{985\bibrangedash 987}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1063/1.1674167
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1063/1.1674167
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1063/1.1674167
+      \endverb
+    \endentry
+    \entry{omegatau061}{book}{}
+      \name{author}{2}{}{%
+        {{hash=7424d3466acc0a9091a39a1f099bc664}{%
+           family={Kremer},
+           familyi={K\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=83dd7f1d144b80bc1aa2e35007adf13c}{%
+           family={Schönhals},
+           familyi={S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{b750098ef252725d20beeb5f71b8456e}
+      \strng{fullhash}{b750098ef252725d20beeb5f71b8456e}
+      \strng{authornamehash}{b750098ef252725d20beeb5f71b8456e}
+      \strng{authorfullhash}{b750098ef252725d20beeb5f71b8456e}
+      \field{labelalpha}{KS12}
+      \field{sortinit}{K}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9783642561207}
+      \field{title}{Broadband Dielectric Spectroscopy}
+      \field{year}{2012}
+      \verb{url}
+      \verb https://books.google.de/books?id=z5LzCAAAQBAJ
+      \endverb
+    \endentry
+    \entry{levitt}{book}{}
+      \name{author}{1}{}{%
+        {{hash=0b31ff31756de8a668af2d1830465be8}{%
+           family={Levitt},
+           familyi={L\bibinitperiod},
+           given={Malcolm\bibnamedelima H.},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Chichester}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons Ltd}%
+      }
+      \strng{namehash}{0b31ff31756de8a668af2d1830465be8}
+      \strng{fullhash}{0b31ff31756de8a668af2d1830465be8}
+      \strng{authornamehash}{0b31ff31756de8a668af2d1830465be8}
+      \strng{authorfullhash}{0b31ff31756de8a668af2d1830465be8}
+      \field{labelalpha}{Lev08}
+      \field{sortinit}{L}
+      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-470-51118-3}
+      \field{series}{Basics of Nuclear Magnetic Resonance}
+      \field{title}{Spin Dynamics}
+      \field{year}{2008}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb spin_dynamics.pdf:/home/joachim/.zotero/zotero/ppdpwh0m.default/zotero/storage/CPPEN44E/spin_dynamics.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{lueg_implementierung_2016}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=d7769b45d5261d15bba7c1713efc69c4}{%
+           family={Lueg},
+           familyi={L\bibinitperiod},
+           given={Jonas},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {{TU} Dortmund}%
+      }
+      \list{location}{1}{%
+        {Dortmund}%
+      }
+      \strng{namehash}{d7769b45d5261d15bba7c1713efc69c4}
+      \strng{fullhash}{d7769b45d5261d15bba7c1713efc69c4}
+      \strng{authornamehash}{d7769b45d5261d15bba7c1713efc69c4}
+      \strng{authorfullhash}{d7769b45d5261d15bba7c1713efc69c4}
+      \field{labelalpha}{Lue16}
+      \field{sortinit}{L}
+      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Implementierung eines Doppel-Resonanz-{NMR}-Spektrometers und Untersuchungen von kristallinem Dimethylsulfon}
+      \field{type}{Masterarbeit}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb Masterarbeit_Jonas_Lueg.pdf:/home/joachim/.zotero/zotero/ppdpwh0m.default/zotero/storage/ZC8DJAPF/Masterarbeit_Jonas_Lueg.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{crn_augsburg}{article}{}
+      \name{author}{4}{}{%
+        {{hash=95627d68cb37f9ec3a314f6dae00f791}{%
+           family={Lunkenheimer},
+           familyi={L\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=077ce56bc4e3862da56cd4c68fd51bbe}{%
+           family={Kastner},
+           familyi={K\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c4a40edb2782f036c850ca78bb7cea15}{%
+           family={Köhler},
+           familyi={K\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ce0e78674c1eb1b1ce4258160006410e}{%
+           family={Loidl},
+           familyi={L\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{3ead37708f8be7afe359819c505c8e06}
+      \strng{fullhash}{99e4960437995c0b4b3e65e602d316e0}
+      \strng{authornamehash}{3ead37708f8be7afe359819c505c8e06}
+      \strng{authorfullhash}{99e4960437995c0b4b3e65e602d316e0}
+      \field{labelalpha}{Lun+10}
+      \field{sortinit}{L}
+      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{5}
+      \field{journaltitle}{Phys. Rev. E}
+      \field{month}{5}
+      \field{title}{Temperature development of glassy $\ensuremath{\alpha}$-relaxation dynamics determined by broadband dielectric spectroscopy}
+      \field{volume}{81}
+      \field{year}{2010}
+      \field{pages}{051504}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevE.81.051504
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevE.81.051504
+      \endverb
+    \endentry
+    \entry{johari_beta}{article}{}
+      \name{author}{4}{}{%
+        {{hash=c64fa4ce13ada21954f7d25de2acd430}{%
+           family={Maï},
+           familyi={M\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=bd5ac2997f99058611966f684380bc8a}{%
+           family={Etienne},
+           familyi={E\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4de5b61d2b53630137f99bb17f9cc56e}{%
+           family={Perez},
+           familyi={P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ce54c18af5fb26dc45bcbb7c6b32982b}{%
+           family={Johari},
+           familyi={J\bibinitperiod},
+           given={G.\bibnamedelimi P.},
+           giveni={G\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor & Francis}%
+      }
+      \strng{namehash}{ea3033bda876ac4f3607fcdb8a19827c}
+      \strng{fullhash}{1a2520ef53358644f2c546569c4d3750}
+      \strng{authornamehash}{ea3033bda876ac4f3607fcdb8a19827c}
+      \strng{authorfullhash}{1a2520ef53358644f2c546569c4d3750}
+      \field{labelalpha}{Maï+84}
+      \field{sortinit}{M}
+      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Philosophical Magazine B}
+      \field{number}{6}
+      \field{title}{Mechanical relaxation in an ionic glass}
+      \field{volume}{50}
+      \field{year}{1984}
+      \field{pages}{657\bibrangedash 663}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1080/13642818408238890
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1080/13642818408238890
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/13642818408238890
+      \endverb
+    \endentry
+    \entry{man_quadrupole_2000}{inreference}{}
+      \name{author}{1}{}{%
+        {{hash=064b574c28ef03453bc59958502abbc5}{%
+           family={Man},
+           familyi={M\bibinitperiod},
+           given={Pascal\bibnamedelima P.},
+           giveni={P\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Chichester}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons Ltd}%
+      }
+      \strng{namehash}{064b574c28ef03453bc59958502abbc5}
+      \strng{fullhash}{064b574c28ef03453bc59958502abbc5}
+      \strng{authornamehash}{064b574c28ef03453bc59958502abbc5}
+      \strng{authorfullhash}{064b574c28ef03453bc59958502abbc5}
+      \field{labelalpha}{Man00}
+      \field{sortinit}{M}
+      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Encyclopedia of Analytical Chemistry}
+      \field{title}{Quadrupole Couplings in Nuclear Magnetic Resonance, General}
+      \field{year}{2000}
+      \field{dateera}{ce}
+      \field{pages}{12224\bibrangedash 12265}
+      \range{pages}{42}
+      \verb{file}
+      \verb 0c96051adee255d99d000000.pdf:/home/joachim/.zotero/zotero/ppdpwh0m.default/zotero/storage/5Q5EBBIR/0c96051adee255d99d000000.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{PIMENOV199793}{article}{}
+      \name{author}{6}{}{%
+        {{hash=3bee6fc59ecaa24252fad2445e989f17}{%
+           family={Pimenov},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=95627d68cb37f9ec3a314f6dae00f791}{%
+           family={Lunkenheimer},
+           familyi={L\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=ad2536a8cd443b06d35230c16dc94a32}{%
+           family={Nicklas},
+           familyi={N\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=339c7718883d97320c413bffc60f5656}{%
+           family={Böhmer},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ce0e78674c1eb1b1ce4258160006410e}{%
+           family={Loidl},
+           familyi={L\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=be66c9b60e0b39cfe37ad074dcfd8a37}{%
+           family={Angell},
+           familyi={A\bibinitperiod},
+           given={C.A.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{7ee8f6d1c0ad63f5f98a484d8f9c628d}
+      \strng{fullhash}{4475e90070e6515c65085e02d2318ce0}
+      \strng{authornamehash}{7ee8f6d1c0ad63f5f98a484d8f9c628d}
+      \strng{authorfullhash}{4475e90070e6515c65085e02d2318ce0}
+      \field{labelalpha}{Pim+97}
+      \field{sortinit}{P}
+      \field{sortinithash}{24100cef455d7974167575052c29146e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-3093}
+      \field{journaltitle}{J. Non-Cryst. Solids}
+      \field{number}{1}
+      \field{title}{Ionic transport and heat capacity of glass-forming metal-nitrate mixtures}
+      \field{volume}{220}
+      \field{year}{1997}
+      \field{pages}{93\bibrangedash 101}
+      \range{pages}{9}
+      \verb{doi}
+      \verb https://doi.org/10.1016/S0022-3093(97)00231-7
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S0022309397002317
+      \endverb
+    \endentry
+    \entry{Rudloff_blue_print}{thesis}{}
+      \name{author}{2}{}{%
+        {{hash=e3c35e840471189cadd2056f4a7f225e}{%
+           family={Rudloff},
+           familyi={R\bibinitperiod},
+           given={Klaus},
+           giveni={K\bibinitperiod}}}%
+        {{hash=c5bc69bd3d64ac4813a31b4ac071fa7a}{%
+           family={Lange},
+           familyi={L\bibinitperiod},
+           given={Lidia},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {TU Dortmund}%
+      }
+      \strng{namehash}{7997af95345758350e76c1f537dd15b7}
+      \strng{fullhash}{7997af95345758350e76c1f537dd15b7}
+      \strng{authornamehash}{7997af95345758350e76c1f537dd15b7}
+      \strng{authorfullhash}{7997af95345758350e76c1f537dd15b7}
+      \field{labelalpha}{RL15}
+      \field{sortinit}{R}
+      \field{sortinithash}{c15bc8eb6936bc6b3c8baa9e8575af53}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Konstruktionszeichnungen des Hochtemperatur-Probenkopfes}
+      \field{type}{Konstruktionsbüro Physik}
+      \field{year}{2015}
+    \endentry
+    \entry{schmidt-rohr_multidimensional_1994}{book}{}
+      \name{author}{2}{}{%
+        {{hash=2bd718506a7b6babe5fd8f1729dd848b}{%
+           family={Schmidt-Rohr},
+           familyi={S\bibinithyphendelim R\bibinitperiod},
+           given={Klaus},
+           giveni={K\bibinitperiod}}}%
+        {{hash=8e1c8224afe1fc61e21747a27dab3525}{%
+           family={Spiess},
+           familyi={S\bibinitperiod},
+           given={Hans\bibnamedelima Wolfgang},
+           giveni={H\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {London; San Diego}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press}%
+      }
+      \strng{namehash}{3d3e802e79f7c27ceda8311a703720a4}
+      \strng{fullhash}{3d3e802e79f7c27ceda8311a703720a4}
+      \strng{authornamehash}{3d3e802e79f7c27ceda8311a703720a4}
+      \strng{authorfullhash}{3d3e802e79f7c27ceda8311a703720a4}
+      \field{labelalpha}{SS94}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{NMR} spectroscopy is the most valuable and versatile analytical tool in chemistry. While excellent monographs exist on high-resolution {NMR} in liquids and solids, this is the first book to address multidimensional solid-state {NMR}. Multidimensional techniques enable researchers to obtain detailed information about the structure, dynamics, orientation, and phase separation of solids, which provides the basis of a better understanding of materials properties on the molecular level.Dramatic progress-much of it pioneered by the authors-has been achieved in this area, especially in synthetic polymers. Solid-state {NMR} now favorably competes with well-established techniques, such as light, x-ray, or neutron scattering, electron microscopy, and dielectric and mechanical relaxation.The application of multidimensional solid-state {NMR} inevitably involves use of concepts from different fields of science. This book also provides the first comprehensive treatment of both the new experimental techniques and the theoretical concepts needed in more complex data analysis. The text addresses spectroscopists and polymer scientists by treating the subject on different levels; descriptive, technical, and mathematical approaches are used when appropriate. It presents an overview of new developments with numerous experimental examples and illustrations, which will appeal to readers interested in both the information content as well as the potential of solid-state {NMR}. The book also contains many previously unpublished details that will be appreciated by those who want to perform the experiments. The techniques described are applicable not only to the study of synthetic polymers but to numerous problems in solid-state physics, chemistry, materials science, and biophysics. Key Features* Presents original theories and new perspectives on scattering techniques* Provides a systematic treatment of the whole subject* Gives readers access to previously unpublished material* Includes extensive illustrations}
+      \field{isbn}{978-0-12-626630-6}
+      \field{title}{Multidimensional Solid-State {NMR} and Polymers}
+      \field{year}{1994}
+      \field{dateera}{ce}
+    \endentry
+    \entry{spiess}{book}{}
+      \name{author}{2}{}{%
+        {{hash=6698b0055f51eae8553dee2067bbe06e}{%
+           family={Steigel},
+           familyi={S\bibinitperiod},
+           given={Alois},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8e1c8224afe1fc61e21747a27dab3525}{%
+           family={Spiess},
+           familyi={S\bibinitperiod},
+           given={Hans\bibnamedelima Wolfgang},
+           giveni={H\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag Berlin; New York}%
+      }
+      \strng{namehash}{824217d558f76c61ce483a481ac7d9ba}
+      \strng{fullhash}{824217d558f76c61ce483a481ac7d9ba}
+      \strng{authornamehash}{824217d558f76c61ce483a481ac7d9ba}
+      \strng{authorfullhash}{824217d558f76c61ce483a481ac7d9ba}
+      \field{labelalpha}{SS78}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{3-540-08784-2}
+      \field{title}{Dynamic NMR spectroscopy}
+      \field{type}{Book}
+      \field{year}{1978}
+    \endentry
+    \entry{tilly_master}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=e944c44b3da74bf40ce3a8c4e060e5ff}{%
+           family={Tilly},
+           familyi={T\bibinitperiod},
+           given={Julius},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {{TU} Dortmund}%
+      }
+      \list{location}{1}{%
+        {Dortmund}%
+      }
+      \strng{namehash}{e944c44b3da74bf40ce3a8c4e060e5ff}
+      \strng{fullhash}{e944c44b3da74bf40ce3a8c4e060e5ff}
+      \strng{authornamehash}{e944c44b3da74bf40ce3a8c4e060e5ff}
+      \strng{authorfullhash}{e944c44b3da74bf40ce3a8c4e060e5ff}
+      \field{labelalpha}{Til17}
+      \field{sortinit}{T}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NMR-Untersuchungen der Ionendynamik in Lithiumborat Glas und Natriumionenleitern}
+      \field{type}{Masterarbeit}
+      \field{year}{2017}
+      \field{dateera}{ce}
+    \endentry
+    \entry{werbelow}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0d116598d9d14d47457500c0e35b1eb1}{%
+           family={Werbelow},
+           familyi={W\bibinitperiod},
+           given={Lawrence\bibnamedelima G},
+           giveni={L\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=6a68b53947515163bcf1f56b8862fc9e}{%
+           family={Marshall},
+           familyi={M\bibinitperiod},
+           given={Alan\bibnamedelima G},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{c09887956c749274c2623224a4bd3a7e}
+      \strng{fullhash}{c09887956c749274c2623224a4bd3a7e}
+      \strng{authornamehash}{c09887956c749274c2623224a4bd3a7e}
+      \strng{authorfullhash}{c09887956c749274c2623224a4bd3a7e}
+      \field{labelalpha}{WM81}
+      \field{sortinit}{W}
+      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract Interrelationships between the second-order dynamic frequency shift and the observable lineshape for various NMR studies of spin-32 nuclei are considered. It is shown that DISPA plots provide a convenient aid for studying these relationships. It is also demonstrated that whenever extreme narrowing does not obtain, “null-time” studies provide a simple means for separating the various relaxation parameters of this spin system. Mixing effects of the observing pulse are also considered.}
+      \field{issn}{0022-2364}
+      \field{journaltitle}{J. Magn. Reson. (1969)}
+      \field{number}{3}
+      \field{title}{The NMR of spin-3/2 nuclei: The effect of second-order dynamic frequency shifts}
+      \field{volume}{43}
+      \field{year}{1981}
+      \field{pages}{443\bibrangedash 448}
+      \range{pages}{6}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0022-2364(81)90055-X
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/002223648190055X
+      \endverb
+    \endentry
+    \entry{eckert}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c275d6d298fbaadf566deb904f32cfd4}{%
+           family={Witschas},
+           familyi={W\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=aa4c3d7c41befea31e2ca872d5d71d00}{%
+           family={Eckert},
+           familyi={E\bibinitperiod},
+           given={Hellmut},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b5afffba89592949fdd096e3971bbe8}
+      \strng{fullhash}{7b5afffba89592949fdd096e3971bbe8}
+      \strng{authornamehash}{7b5afffba89592949fdd096e3971bbe8}
+      \strng{authorfullhash}{7b5afffba89592949fdd096e3971bbe8}
+      \field{labelalpha}{WE99}
+      \field{sortinit}{W}
+      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The high-temperature phases of sodium orthophosphate, HT-Na3PO4, and of the solid solutions (Na2SO4)x−(Na3PO4)1-x are characterized by their plastic crystalline state with dynamically disordered PO43- and SO42- anions and a remarkably high cation conductivity. Since HT-Na3PO4 possesses a fully occupied cation sublattice (no vacancies), it has been proposed that cation transport and anion reorientations are dynamically coupled (“paddle-wheel mechanism”). However, no direct evidence for this coupling has been reported. In the present study, the validity of this mechanism is investigated on the basis of 23Na and 31P nuclear magnetic resonance (NMR) experiments. Temperature-dependent measurements of the static 31P linewidth indicate that in the solid solutions with 0.04 ≤ x ≤ 0.25 the acceleration of sodium ionic mobility is closely correlated with the acceleration of phosphate rotational motion, associated with a second-order phase transition near 400 K. Temperature-dependent measurements of the 23Na longitudinal and transverse relaxation times have been analyzed using the theory of quadrupolar relaxation under nonextreme narrowing conditions. Consistent with theoretical predictions sizeable dynamic frequency shifts are detected. All of the data are consistently analyzed quantitatively in terms of two distinct motional processes. A low-temperature process, whose relaxation strength is independent of sample composition, is clearly accelerated by the onset of fast anion rotation occurring at the second-order phase transition temperature. In addition, a high-temperature process, which is almost absent in HT-Na3PO4 but whose importance increases with increasing sulfate content, signifies vacancy hopping. This dependence on composition is easily understood because the substitution of PO43- by SO42- generates cation vacancies. The activation energies of both processes are near 0.45 eV, and the corresponding timescales grow increasingly similar with increasing sodium sulfate content. Altogether, the results give strong evidence for a dynamic coupling between anionic reorientation and cation diffusion, supporting the concept of a paddle-wheel mechanism.}
+      \field{journaltitle}{J. Phys. Chem. A}
+      \field{number}{50}
+      \field{title}{$^{\textrm{31}}$P and $^{\textrm{23}}$Na Solid-State NMR Studies of Cation Dynamics in HT-Sodium Orthophosphate and the Solid Solutions \\(Na$_{\textrm{2}}$SO$_{\textrm{4}}$)$_x$−(Na$_{\textrm{3}}$PO$_{\textrm{4}}$)$_{1-x}$}
+      \field{volume}{103}
+      \field{year}{1999}
+      \field{pages}{10764\bibrangedash 10775}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1021/jp992763i
+      \endverb
+      \verb{eprint}
+      \verb http://dx.doi.org/10.1021/jp992763i
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1021/jp992763i
+      \endverb
+    \endentry
+    \entry{zuern_paper}{article}{}
+      \name{author}{4}{}{%
+        {{hash=e6a4aa102bbb5bdcc3e73a677a031363}{%
+           family={Zürn},
+           familyi={Z\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=1f483dc134b09025220764998d3df900}{%
+           family={Titze},
+           familyi={T\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3850dc862f52709b3bc27f1b226e11fc}{%
+           family={Diezemann},
+           familyi={D\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=339c7718883d97320c413bffc60f5656}{%
+           family={Böhmer},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{81453ea3f6f71ce10813affde53b2900}
+      \strng{fullhash}{5f5fb552673886bba8d321b9423ee351}
+      \strng{authornamehash}{81453ea3f6f71ce10813affde53b2900}
+      \strng{authorfullhash}{5f5fb552673886bba8d321b9423ee351}
+      \field{labelalpha}{Zür+99}
+      \field{sortinit}{Z}
+      \field{sortinithash}{35589aa085e881766b72503e53fd4c97}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Calcium rubidium nitrate, 2Ca(NO3)2−3RbNO3 (CRN), has been studied in its molten and glassy states using 87Rb NMR techniques. In the solid phase asymmetric and smeared quadrupole perturbed spectra of the central Rb resonance reflect a highly disordered ionic local structure. At low temperatures, T < 80 K, the spin−lattice relaxation times follow a power law, T1 ∝ T-α with α = 3. A local T1 minimum near T = 145 K reveals the slow down of the 3-fold rotation of the planar nitrate group. The NMR results are compared with the conductivity relaxation in CRN.}
+      \field{journaltitle}{J. Phys. Chem. B}
+      \field{number}{20}
+      \field{title}{$^{\textrm{87}}$Rb NMR Studies of Molten and Glassy 2Ca(NO$_{\textrm{3}}$)$_{\textrm{2}}$−3RbNO$_{\textrm{3}}$}
+      \field{volume}{103}
+      \field{year}{1999}
+      \field{pages}{4109\bibrangedash 4112}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1021/jp9839246
+      \endverb
+      \verb{eprint}
+      \verb http://dx.doi.org/10.1021/jp9839246
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1021/jp9839246
+      \endverb
+    \endentry
+    \entry{zuern_arbeit}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=ade46c293ffb0a08797b574ba7afe56e}{%
+           family={Zürn},
+           familyi={Z\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Johannes-Gutenberg-Universität Mainz}%
+      }
+      \strng{namehash}{ade46c293ffb0a08797b574ba7afe56e}
+      \strng{fullhash}{ade46c293ffb0a08797b574ba7afe56e}
+      \strng{authornamehash}{ade46c293ffb0a08797b574ba7afe56e}
+      \strng{authorfullhash}{ade46c293ffb0a08797b574ba7afe56e}
+      \field{labelalpha}{Zür98}
+      \field{sortinit}{Z}
+      \field{sortinithash}{35589aa085e881766b72503e53fd4c97}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NMR-Untersuchung am System 2Ca(NO$_{\textrm{3}}$)$_{\textrm{2}}$-3RbNO$_{\textrm{3}}$ im Glaszustand}
+      \field{type}{Wissenschaftliche Prüfungsarbeit für das erste Staatsexamen}
+      \field{year}{1998}
+      \field{dateera}{ce}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+
